@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.5.1 D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g 2016-12-04 14:57:30
+// $ANTLR 3.5.1 D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g 2016-12-04 15:16:39
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 168, 219
@@ -16,6 +16,10 @@
 #pragma warning disable 162
 // Missing XML comment for publicly visible type or member 'Type_or_Member'
 #pragma warning disable 1591
+
+
+	using System;
+	using System.Collections;
 
 
 using System.Collections.Generic;
@@ -70,6 +74,9 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 	public override string GrammarFileName { get { return "D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g"; } }
 
 
+		Hashtable memory = new Hashtable();
+
+
 	[Conditional("ANTLR_TRACE")]
 	protected virtual void OnCreated() {}
 	[Conditional("ANTLR_TRACE")]
@@ -84,7 +91,7 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 	[Conditional("ANTLR_TRACE")]
 	protected virtual void LeaveRule_calc() {}
 	// $ANTLR start "calc"
-	// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:10:8: public calc : ( statement )+ ;
+	// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:18:8: public calc : ( statement )+ ;
 	[GrammarRule("calc")]
 	public void calc()
 	{
@@ -92,15 +99,15 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 		EnterRule("calc", 1);
 		TraceIn("calc", 1);
 		try { DebugEnterRule(GrammarFileName, "calc");
-		DebugLocation(10, 1);
+		DebugLocation(18, 1);
 		try
 		{
-			// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:11:2: ( ( statement )+ )
+			// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:19:2: ( ( statement )+ )
 			DebugEnterAlt(1);
-			// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:11:4: ( statement )+
+			// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:19:4: ( statement )+
 			{
-			DebugLocation(11, 4);
-			// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:11:4: ( statement )+
+			DebugLocation(19, 4);
+			// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:19:4: ( statement )+
 			int cnt1=0;
 			try { DebugEnterSubRule(1);
 			while (true)
@@ -120,10 +127,10 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:11:4: statement
+					// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:19:4: statement
 					{
-					DebugLocation(11, 4);
-					PushFollow(Follow._statement_in_calc44);
+					DebugLocation(19, 4);
+					PushFollow(Follow._statement_in_calc53);
 					statement();
 					PopFollow();
 
@@ -161,7 +168,7 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 			LeaveRule("calc", 1);
 			LeaveRule_calc();
 	    }
-	 	DebugLocation(12, 1);
+	 	DebugLocation(20, 1);
 		} finally { DebugExitRule(GrammarFileName, "calc"); }
 		return;
 
@@ -174,18 +181,22 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 	[Conditional("ANTLR_TRACE")]
 	protected virtual void LeaveRule_statement() {}
 	// $ANTLR start "statement"
-	// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:14:1: statement : ( expr NEWLINE | ID '=' expr NEWLINE | NEWLINE );
+	// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:21:1: statement : ( expr NEWLINE | ID '=' expr NEWLINE | NEWLINE );
 	[GrammarRule("statement")]
 	private void statement()
 	{
 		EnterRule_statement();
 		EnterRule("statement", 2);
 		TraceIn("statement", 2);
+	    IToken ID2 = default(IToken);
+	    int expr1 = default(int);
+	    int expr3 = default(int);
+
 		try { DebugEnterRule(GrammarFileName, "statement");
-		DebugLocation(14, 1);
+		DebugLocation(21, 1);
 		try
 		{
-			// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:15:2: ( expr NEWLINE | ID '=' expr NEWLINE | NEWLINE )
+			// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:22:2: ( expr NEWLINE | ID '=' expr NEWLINE | NEWLINE )
 			int alt2=3;
 			try { DebugEnterDecision(2, decisionCanBacktrack[2]);
 			switch (input.LA(1))
@@ -236,42 +247,46 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:15:4: expr NEWLINE
+				// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:22:4: expr NEWLINE
 				{
-				DebugLocation(15, 4);
-				PushFollow(Follow._expr_in_statement56);
-				expr();
+				DebugLocation(22, 4);
+				PushFollow(Follow._expr_in_statement64);
+				expr1=expr();
 				PopFollow();
 
-				DebugLocation(15, 9);
-				Match(input,NEWLINE,Follow._NEWLINE_in_statement58); 
+				DebugLocation(22, 9);
+				Match(input,NEWLINE,Follow._NEWLINE_in_statement66); 
+				DebugLocation(22, 17);
+				 Console.WriteLine(expr1); 
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:16:4: ID '=' expr NEWLINE
+				// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:23:4: ID '=' expr NEWLINE
 				{
-				DebugLocation(16, 4);
-				Match(input,ID,Follow._ID_in_statement63); 
-				DebugLocation(16, 7);
-				Match(input,15,Follow._15_in_statement65); 
-				DebugLocation(16, 11);
-				PushFollow(Follow._expr_in_statement67);
-				expr();
+				DebugLocation(23, 4);
+				ID2=(IToken)Match(input,ID,Follow._ID_in_statement73); 
+				DebugLocation(23, 7);
+				Match(input,15,Follow._15_in_statement75); 
+				DebugLocation(23, 11);
+				PushFollow(Follow._expr_in_statement77);
+				expr3=expr();
 				PopFollow();
 
-				DebugLocation(16, 16);
-				Match(input,NEWLINE,Follow._NEWLINE_in_statement69); 
+				DebugLocation(23, 16);
+				Match(input,NEWLINE,Follow._NEWLINE_in_statement79); 
+				DebugLocation(23, 24);
+				 memory.Add((ID2!=null?ID2.Text:default(string)), expr3); 
 
 				}
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:17:4: NEWLINE
+				// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:24:4: NEWLINE
 				{
-				DebugLocation(17, 4);
-				Match(input,NEWLINE,Follow._NEWLINE_in_statement74); 
+				DebugLocation(24, 4);
+				Match(input,NEWLINE,Follow._NEWLINE_in_statement86); 
 
 				}
 				break;
@@ -289,7 +304,7 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 			LeaveRule("statement", 2);
 			LeaveRule_statement();
 	    }
-	 	DebugLocation(18, 1);
+	 	DebugLocation(25, 1);
 		} finally { DebugExitRule(GrammarFileName, "statement"); }
 		return;
 
@@ -302,28 +317,36 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 	[Conditional("ANTLR_TRACE")]
 	protected virtual void LeaveRule_expr() {}
 	// $ANTLR start "expr"
-	// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:20:1: expr : multExpression ( '+' multExpression | '-' multExpression )* ;
+	// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:27:1: expr returns [int value] : me1= multExpression ( '+' me2= multExpression | '-' me2= multExpression )* ;
 	[GrammarRule("expr")]
-	private void expr()
+	private int expr()
 	{
 		EnterRule_expr();
 		EnterRule("expr", 3);
 		TraceIn("expr", 3);
+	    int value = default(int);
+
+
+	    int me1 = default(int);
+	    int me2 = default(int);
+
 		try { DebugEnterRule(GrammarFileName, "expr");
-		DebugLocation(20, 1);
+		DebugLocation(27, 1);
 		try
 		{
-			// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:21:2: ( multExpression ( '+' multExpression | '-' multExpression )* )
+			// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:28:2: (me1= multExpression ( '+' me2= multExpression | '-' me2= multExpression )* )
 			DebugEnterAlt(1);
-			// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:21:4: multExpression ( '+' multExpression | '-' multExpression )*
+			// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:28:4: me1= multExpression ( '+' me2= multExpression | '-' me2= multExpression )*
 			{
-			DebugLocation(21, 4);
-			PushFollow(Follow._multExpression_in_expr86);
-			multExpression();
+			DebugLocation(28, 7);
+			PushFollow(Follow._multExpression_in_expr104);
+			me1=multExpression();
 			PopFollow();
 
-			DebugLocation(22, 2);
-			// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:22:2: ( '+' multExpression | '-' multExpression )*
+			DebugLocation(28, 23);
+			value = me1;
+			DebugLocation(29, 2);
+			// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:29:2: ( '+' me2= multExpression | '-' me2= multExpression )*
 			try { DebugEnterSubRule(3);
 			while (true)
 			{
@@ -346,29 +369,33 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:22:3: '+' multExpression
+					// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:29:3: '+' me2= multExpression
 					{
-					DebugLocation(22, 3);
-					Match(input,12,Follow._12_in_expr91); 
-					DebugLocation(22, 7);
-					PushFollow(Follow._multExpression_in_expr93);
-					multExpression();
+					DebugLocation(29, 3);
+					Match(input,12,Follow._12_in_expr110); 
+					DebugLocation(29, 10);
+					PushFollow(Follow._multExpression_in_expr114);
+					me2=multExpression();
 					PopFollow();
 
+					DebugLocation(29, 26);
+					value += me2;
 
 					}
 					break;
 				case 2:
 					DebugEnterAlt(2);
-					// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:23:3: '-' multExpression
+					// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:30:3: '-' me2= multExpression
 					{
-					DebugLocation(23, 3);
-					Match(input,13,Follow._13_in_expr98); 
-					DebugLocation(23, 7);
-					PushFollow(Follow._multExpression_in_expr100);
-					multExpression();
+					DebugLocation(30, 3);
+					Match(input,13,Follow._13_in_expr120); 
+					DebugLocation(30, 10);
+					PushFollow(Follow._multExpression_in_expr124);
+					me2=multExpression();
 					PopFollow();
 
+					DebugLocation(30, 26);
+					value -= me2;
 
 					}
 					break;
@@ -398,9 +425,9 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 			LeaveRule("expr", 3);
 			LeaveRule_expr();
 	    }
-	 	DebugLocation(24, 1);
+	 	DebugLocation(31, 1);
 		} finally { DebugExitRule(GrammarFileName, "expr"); }
-		return;
+		return value;
 
 	}
 	// $ANTLR end "expr"
@@ -411,28 +438,36 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 	[Conditional("ANTLR_TRACE")]
 	protected virtual void LeaveRule_multExpression() {}
 	// $ANTLR start "multExpression"
-	// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:26:1: multExpression : a1= atom ( '*' a2= atom | '/' a2= atom )* ;
+	// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:33:1: multExpression returns [int value] : a1= atom ( '*' a2= atom | '/' a2= atom )* ;
 	[GrammarRule("multExpression")]
-	private void multExpression()
+	private int multExpression()
 	{
 		EnterRule_multExpression();
 		EnterRule("multExpression", 4);
 		TraceIn("multExpression", 4);
+	    int value = default(int);
+
+
+	    int a1 = default(int);
+	    int a2 = default(int);
+
 		try { DebugEnterRule(GrammarFileName, "multExpression");
-		DebugLocation(26, 1);
+		DebugLocation(33, 1);
 		try
 		{
-			// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:27:2: (a1= atom ( '*' a2= atom | '/' a2= atom )* )
+			// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:34:2: (a1= atom ( '*' a2= atom | '/' a2= atom )* )
 			DebugEnterAlt(1);
-			// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:27:4: a1= atom ( '*' a2= atom | '/' a2= atom )*
+			// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:34:4: a1= atom ( '*' a2= atom | '/' a2= atom )*
 			{
-			DebugLocation(27, 6);
-			PushFollow(Follow._atom_in_multExpression115);
-			atom();
+			DebugLocation(34, 6);
+			PushFollow(Follow._atom_in_multExpression144);
+			a1=atom();
 			PopFollow();
 
-			DebugLocation(27, 12);
-			// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:27:12: ( '*' a2= atom | '/' a2= atom )*
+			DebugLocation(34, 12);
+			value = a1;
+			DebugLocation(35, 2);
+			// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:35:2: ( '*' a2= atom | '/' a2= atom )*
 			try { DebugEnterSubRule(4);
 			while (true)
 			{
@@ -455,29 +490,33 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:27:13: '*' a2= atom
+					// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:35:3: '*' a2= atom
 					{
-					DebugLocation(27, 13);
-					Match(input,11,Follow._11_in_multExpression118); 
-					DebugLocation(27, 19);
-					PushFollow(Follow._atom_in_multExpression122);
-					atom();
+					DebugLocation(35, 3);
+					Match(input,11,Follow._11_in_multExpression150); 
+					DebugLocation(35, 9);
+					PushFollow(Follow._atom_in_multExpression154);
+					a2=atom();
 					PopFollow();
 
+					DebugLocation(35, 15);
+					value *= a2;
 
 					}
 					break;
 				case 2:
 					DebugEnterAlt(2);
-					// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:27:27: '/' a2= atom
+					// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:36:3: '/' a2= atom
 					{
-					DebugLocation(27, 27);
-					Match(input,14,Follow._14_in_multExpression126); 
-					DebugLocation(27, 33);
-					PushFollow(Follow._atom_in_multExpression130);
-					atom();
+					DebugLocation(36, 3);
+					Match(input,14,Follow._14_in_multExpression160); 
+					DebugLocation(36, 9);
+					PushFollow(Follow._atom_in_multExpression164);
+					a2=atom();
 					PopFollow();
 
+					DebugLocation(36, 15);
+					value /= a2;
 
 					}
 					break;
@@ -507,9 +546,9 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 			LeaveRule("multExpression", 4);
 			LeaveRule_multExpression();
 	    }
-	 	DebugLocation(28, 1);
+	 	DebugLocation(37, 1);
 		} finally { DebugExitRule(GrammarFileName, "multExpression"); }
-		return;
+		return value;
 
 	}
 	// $ANTLR end "multExpression"
@@ -520,18 +559,25 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 	[Conditional("ANTLR_TRACE")]
 	protected virtual void LeaveRule_atom() {}
 	// $ANTLR start "atom"
-	// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:30:1: atom : ( ID | INT | '(' expr ')' );
+	// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:39:1: atom returns [int value] : ( ID | INT | '(' expr ')' );
 	[GrammarRule("atom")]
-	private void atom()
+	private int atom()
 	{
 		EnterRule_atom();
 		EnterRule("atom", 5);
 		TraceIn("atom", 5);
+	    int value = default(int);
+
+
+	    IToken ID4 = default(IToken);
+	    IToken INT5 = default(IToken);
+	    int expr6 = default(int);
+
 		try { DebugEnterRule(GrammarFileName, "atom");
-		DebugLocation(30, 1);
+		DebugLocation(39, 1);
 		try
 		{
-			// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:31:2: ( ID | INT | '(' expr ')' )
+			// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:40:2: ( ID | INT | '(' expr ')' )
 			int alt5=3;
 			try { DebugEnterDecision(5, decisionCanBacktrack[5]);
 			switch (input.LA(1))
@@ -564,35 +610,41 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:31:4: ID
+				// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:40:4: ID
 				{
-				DebugLocation(31, 4);
-				Match(input,ID,Follow._ID_in_atom144); 
+				DebugLocation(40, 4);
+				ID4=(IToken)Match(input,ID,Follow._ID_in_atom183); 
+				DebugLocation(40, 7);
+				value = (int)memory[(ID4!=null?ID4.Text:default(string))];
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:32:4: INT
+				// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:41:4: INT
 				{
-				DebugLocation(32, 4);
-				Match(input,INT,Follow._INT_in_atom149); 
+				DebugLocation(41, 4);
+				INT5=(IToken)Match(input,INT,Follow._INT_in_atom190); 
+				DebugLocation(41, 8);
+				value = int.Parse((INT5!=null?INT5.Text:default(string)));
 
 				}
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:33:4: '(' expr ')'
+				// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:42:4: '(' expr ')'
 				{
-				DebugLocation(33, 4);
-				Match(input,9,Follow._9_in_atom154); 
-				DebugLocation(33, 8);
-				PushFollow(Follow._expr_in_atom156);
-				expr();
+				DebugLocation(42, 4);
+				Match(input,9,Follow._9_in_atom197); 
+				DebugLocation(42, 8);
+				PushFollow(Follow._expr_in_atom199);
+				expr6=expr();
 				PopFollow();
 
-				DebugLocation(33, 13);
-				Match(input,10,Follow._10_in_atom158); 
+				DebugLocation(42, 13);
+				Match(input,10,Follow._10_in_atom201); 
+				DebugLocation(42, 17);
+				value = expr6;
 
 				}
 				break;
@@ -610,9 +662,9 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 			LeaveRule("atom", 5);
 			LeaveRule_atom();
 	    }
-	 	DebugLocation(34, 1);
+	 	DebugLocation(43, 1);
 		} finally { DebugExitRule(GrammarFileName, "atom"); }
-		return;
+		return value;
 
 	}
 	// $ANTLR end "atom"
@@ -622,29 +674,29 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 	#region Follow sets
 	private static class Follow
 	{
-		public static readonly BitSet _statement_in_calc44 = new BitSet(new ulong[]{0x3C2UL});
-		public static readonly BitSet _expr_in_statement56 = new BitSet(new ulong[]{0x100UL});
-		public static readonly BitSet _NEWLINE_in_statement58 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _ID_in_statement63 = new BitSet(new ulong[]{0x8000UL});
-		public static readonly BitSet _15_in_statement65 = new BitSet(new ulong[]{0x2C0UL});
-		public static readonly BitSet _expr_in_statement67 = new BitSet(new ulong[]{0x100UL});
-		public static readonly BitSet _NEWLINE_in_statement69 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _NEWLINE_in_statement74 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _multExpression_in_expr86 = new BitSet(new ulong[]{0x3002UL});
-		public static readonly BitSet _12_in_expr91 = new BitSet(new ulong[]{0x2C0UL});
-		public static readonly BitSet _multExpression_in_expr93 = new BitSet(new ulong[]{0x3002UL});
-		public static readonly BitSet _13_in_expr98 = new BitSet(new ulong[]{0x2C0UL});
-		public static readonly BitSet _multExpression_in_expr100 = new BitSet(new ulong[]{0x3002UL});
-		public static readonly BitSet _atom_in_multExpression115 = new BitSet(new ulong[]{0x4802UL});
-		public static readonly BitSet _11_in_multExpression118 = new BitSet(new ulong[]{0x2C0UL});
-		public static readonly BitSet _atom_in_multExpression122 = new BitSet(new ulong[]{0x4802UL});
-		public static readonly BitSet _14_in_multExpression126 = new BitSet(new ulong[]{0x2C0UL});
-		public static readonly BitSet _atom_in_multExpression130 = new BitSet(new ulong[]{0x4802UL});
-		public static readonly BitSet _ID_in_atom144 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _INT_in_atom149 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _9_in_atom154 = new BitSet(new ulong[]{0x2C0UL});
-		public static readonly BitSet _expr_in_atom156 = new BitSet(new ulong[]{0x400UL});
-		public static readonly BitSet _10_in_atom158 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _statement_in_calc53 = new BitSet(new ulong[]{0x3C2UL});
+		public static readonly BitSet _expr_in_statement64 = new BitSet(new ulong[]{0x100UL});
+		public static readonly BitSet _NEWLINE_in_statement66 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _ID_in_statement73 = new BitSet(new ulong[]{0x8000UL});
+		public static readonly BitSet _15_in_statement75 = new BitSet(new ulong[]{0x2C0UL});
+		public static readonly BitSet _expr_in_statement77 = new BitSet(new ulong[]{0x100UL});
+		public static readonly BitSet _NEWLINE_in_statement79 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _NEWLINE_in_statement86 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _multExpression_in_expr104 = new BitSet(new ulong[]{0x3002UL});
+		public static readonly BitSet _12_in_expr110 = new BitSet(new ulong[]{0x2C0UL});
+		public static readonly BitSet _multExpression_in_expr114 = new BitSet(new ulong[]{0x3002UL});
+		public static readonly BitSet _13_in_expr120 = new BitSet(new ulong[]{0x2C0UL});
+		public static readonly BitSet _multExpression_in_expr124 = new BitSet(new ulong[]{0x3002UL});
+		public static readonly BitSet _atom_in_multExpression144 = new BitSet(new ulong[]{0x4802UL});
+		public static readonly BitSet _11_in_multExpression150 = new BitSet(new ulong[]{0x2C0UL});
+		public static readonly BitSet _atom_in_multExpression154 = new BitSet(new ulong[]{0x4802UL});
+		public static readonly BitSet _14_in_multExpression160 = new BitSet(new ulong[]{0x2C0UL});
+		public static readonly BitSet _atom_in_multExpression164 = new BitSet(new ulong[]{0x4802UL});
+		public static readonly BitSet _ID_in_atom183 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _INT_in_atom190 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _9_in_atom197 = new BitSet(new ulong[]{0x2C0UL});
+		public static readonly BitSet _expr_in_atom199 = new BitSet(new ulong[]{0x400UL});
+		public static readonly BitSet _10_in_atom201 = new BitSet(new ulong[]{0x2UL});
 	}
 	#endregion Follow sets
 }

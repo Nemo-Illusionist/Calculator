@@ -6,34 +6,46 @@ options
 }
 @parser::namespace { Generated }
 @lexer::namespace  { Generated }
+@header{
+	using System;
+	using System.Collections;
+}
+
+@members{
+	Hashtable memory = new Hashtable();
+}
 
 public calc	
 	: statement+
 	;
-
+	
 statement
-	: expr NEWLINE
-	| ID '=' expr NEWLINE
+	: expr NEWLINE { Console.WriteLine($expr.value); }
+	| ID '=' expr NEWLINE { memory.Add($ID.text, $expr.value); }
 	| NEWLINE
 	;
 	
-expr
-	: multExpression 
-	('+' multExpression 
-	|'-' multExpression)*
+expr returns[int value]	
+	: me1=multExpression {$value = me1;}
+	('+' me2=multExpression {$value += $me2.value;}
+	|'-' me2=multExpression {$value -= $me2.value;})*
 	;
 
-multExpression
-	: a1=atom ('*' a2=atom | '/' a2=atom)*
+multExpression returns[int value]
+	: a1=atom {$value = $a1.value;}
+	('*' a2=atom {$value *= $a2.value;}
+	|'/' a2=atom {$value /= $a2.value;})*
 	;
 	
-atom
-	: ID
-	| INT
-	| '(' expr ')'
+atom returns[int value]
+	: ID {$value = (int)memory[$ID.text];}
+	| INT {$value = int.Parse($INT.text);}
+	| '(' expr ')' {$value = $expr.value;}
 	;
 
-ID  :	('a'..'z'|'A'..'Z'|'_') ('a'..'z'|'A'..'Z'|'0'..'9'|'_')*
+ID  :	
+    ('a'..'z'|'A'..'Z'|'_'|'À'..'ÿ') 
+    ('a'..'z'|'A'..'Z'|'0'..'9'|'_'|'À'..'ÿ')*
     ;
 
 INT :	'0'..'9'+

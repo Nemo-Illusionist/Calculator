@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.5.1 D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g 2016-12-04 14:57:30
+// $ANTLR 3.5.1 D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g 2016-12-04 15:16:39
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 168, 219
@@ -348,12 +348,12 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
     		{
     		int _type = ID;
     		int _channel = DefaultTokenChannel;
-    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:36:5: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )* )
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:45:5: ( ( 'a' .. 'z' | 'A' .. 'Z' | '_' | 'À' .. 'ÿ' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' | 'À' .. 'ÿ' )* )
     		DebugEnterAlt(1);
-    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:36:7: ( 'a' .. 'z' | 'A' .. 'Z' | '_' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:46:5: ( 'a' .. 'z' | 'A' .. 'Z' | '_' | 'À' .. 'ÿ' ) ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' | 'À' .. 'ÿ' )*
     		{
-    		DebugLocation(36, 7);
-    		if ((input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z'))
+    		DebugLocation(46, 5);
+    		if ((input.LA(1)>='A' && input.LA(1)<='Z')||input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z')||(input.LA(1)>='\u0410' && input.LA(1)<='\u044F'))
     		{
     			input.Consume();
     		}
@@ -365,8 +365,8 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
     			throw mse;
     		}
 
-    		DebugLocation(36, 31);
-    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:36:31: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' )*
+    		DebugLocation(47, 5);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:47:5: ( 'a' .. 'z' | 'A' .. 'Z' | '0' .. '9' | '_' | 'À' .. 'ÿ' )*
     		try { DebugEnterSubRule(1);
     		while (true)
     		{
@@ -374,7 +374,7 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
     			try { DebugEnterDecision(1, decisionCanBacktrack[1]);
     			int LA1_1 = input.LA(1);
 
-    			if (((LA1_1>='0' && LA1_1<='9')||(LA1_1>='A' && LA1_1<='Z')||LA1_1=='_'||(LA1_1>='a' && LA1_1<='z')))
+    			if (((LA1_1>='0' && LA1_1<='9')||(LA1_1>='A' && LA1_1<='Z')||LA1_1=='_'||(LA1_1>='a' && LA1_1<='z')||(LA1_1>='\u0410' && LA1_1<='\u044F')))
     			{
     				alt1 = 1;
     			}
@@ -387,7 +387,7 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
     				DebugEnterAlt(1);
     				// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:
     				{
-    				DebugLocation(36, 31);
+    				DebugLocation(47, 5);
     				input.Consume();
 
 
@@ -435,12 +435,12 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
     		{
     		int _type = INT;
     		int _channel = DefaultTokenChannel;
-    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:39:5: ( ( '0' .. '9' )+ )
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:50:5: ( ( '0' .. '9' )+ )
     		DebugEnterAlt(1);
-    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:39:7: ( '0' .. '9' )+
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:50:7: ( '0' .. '9' )+
     		{
-    		DebugLocation(39, 7);
-    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:39:7: ( '0' .. '9' )+
+    		DebugLocation(50, 7);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:50:7: ( '0' .. '9' )+
     		int cnt2=0;
     		try { DebugEnterSubRule(2);
     		while (true)
@@ -462,7 +462,7 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
     				DebugEnterAlt(1);
     				// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:
     				{
-    				DebugLocation(39, 7);
+    				DebugLocation(50, 7);
     				input.Consume();
 
 
@@ -515,7 +515,7 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
     		{
     		int _type = FLOAT;
     		int _channel = DefaultTokenChannel;
-    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:43:5: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ EXPONENT )
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:54:5: ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ EXPONENT )
     		int alt9=3;
     		try { DebugEnterDecision(9, decisionCanBacktrack[9]);
     		try
@@ -532,10 +532,10 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
     		{
     		case 1:
     			DebugEnterAlt(1);
-    			// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:43:9: ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )?
+    			// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:54:9: ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )?
     			{
-    			DebugLocation(43, 9);
-    			// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:43:9: ( '0' .. '9' )+
+    			DebugLocation(54, 9);
+    			// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:54:9: ( '0' .. '9' )+
     			int cnt3=0;
     			try { DebugEnterSubRule(3);
     			while (true)
@@ -557,7 +557,7 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
     					DebugEnterAlt(1);
     					// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:
     					{
-    					DebugLocation(43, 9);
+    					DebugLocation(54, 9);
     					input.Consume();
 
 
@@ -579,10 +579,10 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
 
     			} finally { DebugExitSubRule(3); }
 
-    			DebugLocation(43, 21);
+    			DebugLocation(54, 21);
     			Match('.'); 
-    			DebugLocation(43, 25);
-    			// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:43:25: ( '0' .. '9' )*
+    			DebugLocation(54, 25);
+    			// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:54:25: ( '0' .. '9' )*
     			try { DebugEnterSubRule(4);
     			while (true)
     			{
@@ -603,7 +603,7 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
     					DebugEnterAlt(1);
     					// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:
     					{
-    					DebugLocation(43, 25);
+    					DebugLocation(54, 25);
     					input.Consume();
 
 
@@ -620,8 +620,8 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
 
     			} finally { DebugExitSubRule(4); }
 
-    			DebugLocation(43, 37);
-    			// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:43:37: ( EXPONENT )?
+    			DebugLocation(54, 37);
+    			// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:54:37: ( EXPONENT )?
     			int alt5=2;
     			try { DebugEnterSubRule(5);
     			try { DebugEnterDecision(5, decisionCanBacktrack[5]);
@@ -636,9 +636,9 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
     			{
     			case 1:
     				DebugEnterAlt(1);
-    				// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:43:37: EXPONENT
+    				// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:54:37: EXPONENT
     				{
-    				DebugLocation(43, 37);
+    				DebugLocation(54, 37);
     				mEXPONENT(); 
 
     				}
@@ -652,12 +652,12 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
     			break;
     		case 2:
     			DebugEnterAlt(2);
-    			// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:44:9: '.' ( '0' .. '9' )+ ( EXPONENT )?
+    			// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:55:9: '.' ( '0' .. '9' )+ ( EXPONENT )?
     			{
-    			DebugLocation(44, 9);
+    			DebugLocation(55, 9);
     			Match('.'); 
-    			DebugLocation(44, 13);
-    			// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:44:13: ( '0' .. '9' )+
+    			DebugLocation(55, 13);
+    			// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:55:13: ( '0' .. '9' )+
     			int cnt6=0;
     			try { DebugEnterSubRule(6);
     			while (true)
@@ -679,7 +679,7 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
     					DebugEnterAlt(1);
     					// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:
     					{
-    					DebugLocation(44, 13);
+    					DebugLocation(55, 13);
     					input.Consume();
 
 
@@ -701,8 +701,8 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
 
     			} finally { DebugExitSubRule(6); }
 
-    			DebugLocation(44, 25);
-    			// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:44:25: ( EXPONENT )?
+    			DebugLocation(55, 25);
+    			// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:55:25: ( EXPONENT )?
     			int alt7=2;
     			try { DebugEnterSubRule(7);
     			try { DebugEnterDecision(7, decisionCanBacktrack[7]);
@@ -717,9 +717,9 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
     			{
     			case 1:
     				DebugEnterAlt(1);
-    				// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:44:25: EXPONENT
+    				// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:55:25: EXPONENT
     				{
-    				DebugLocation(44, 25);
+    				DebugLocation(55, 25);
     				mEXPONENT(); 
 
     				}
@@ -733,10 +733,10 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
     			break;
     		case 3:
     			DebugEnterAlt(3);
-    			// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:45:9: ( '0' .. '9' )+ EXPONENT
+    			// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:56:9: ( '0' .. '9' )+ EXPONENT
     			{
-    			DebugLocation(45, 9);
-    			// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:45:9: ( '0' .. '9' )+
+    			DebugLocation(56, 9);
+    			// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:56:9: ( '0' .. '9' )+
     			int cnt8=0;
     			try { DebugEnterSubRule(8);
     			while (true)
@@ -758,7 +758,7 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
     					DebugEnterAlt(1);
     					// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:
     					{
-    					DebugLocation(45, 9);
+    					DebugLocation(56, 9);
     					input.Consume();
 
 
@@ -780,7 +780,7 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
 
     			} finally { DebugExitSubRule(8); }
 
-    			DebugLocation(45, 21);
+    			DebugLocation(56, 21);
     			mEXPONENT(); 
 
     			}
@@ -813,11 +813,11 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
     	TraceIn("EXPONENT", 11);
     		try
     		{
-    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:50:10: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:61:10: ( ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+ )
     		DebugEnterAlt(1);
-    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:50:12: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:61:12: ( 'e' | 'E' ) ( '+' | '-' )? ( '0' .. '9' )+
     		{
-    		DebugLocation(50, 12);
+    		DebugLocation(61, 12);
     		if (input.LA(1)=='E'||input.LA(1)=='e')
     		{
     			input.Consume();
@@ -830,8 +830,8 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
     			throw mse;
     		}
 
-    		DebugLocation(50, 22);
-    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:50:22: ( '+' | '-' )?
+    		DebugLocation(61, 22);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:61:22: ( '+' | '-' )?
     		int alt10=2;
     		try { DebugEnterSubRule(10);
     		try { DebugEnterDecision(10, decisionCanBacktrack[10]);
@@ -848,7 +848,7 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
     			DebugEnterAlt(1);
     			// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:
     			{
-    			DebugLocation(50, 22);
+    			DebugLocation(61, 22);
     			input.Consume();
 
 
@@ -858,8 +858,8 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
     		}
     		} finally { DebugExitSubRule(10); }
 
-    		DebugLocation(50, 33);
-    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:50:33: ( '0' .. '9' )+
+    		DebugLocation(61, 33);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:61:33: ( '0' .. '9' )+
     		int cnt11=0;
     		try { DebugEnterSubRule(11);
     		while (true)
@@ -881,7 +881,7 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
     				DebugEnterAlt(1);
     				// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:
     				{
-    				DebugLocation(50, 33);
+    				DebugLocation(61, 33);
     				input.Consume();
 
 
@@ -932,12 +932,12 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
     		{
     		int _type = NEWLINE;
     		int _channel = DefaultTokenChannel;
-    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:51:9: ( ( '\\r' )? '\\n' )
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:62:9: ( ( '\\r' )? '\\n' )
     		DebugEnterAlt(1);
-    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:51:11: ( '\\r' )? '\\n'
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:62:11: ( '\\r' )? '\\n'
     		{
-    		DebugLocation(51, 11);
-    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:51:11: ( '\\r' )?
+    		DebugLocation(62, 11);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:62:11: ( '\\r' )?
     		int alt12=2;
     		try { DebugEnterSubRule(12);
     		try { DebugEnterDecision(12, decisionCanBacktrack[12]);
@@ -952,9 +952,9 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
     		{
     		case 1:
     			DebugEnterAlt(1);
-    			// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:51:11: '\\r'
+    			// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:62:11: '\\r'
     			{
-    			DebugLocation(51, 11);
+    			DebugLocation(62, 11);
     			Match('\r'); 
 
     			}
@@ -963,7 +963,7 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
     		}
     		} finally { DebugExitSubRule(12); }
 
-    		DebugLocation(51, 17);
+    		DebugLocation(62, 17);
     		Match('\n'); 
 
     		}
@@ -1167,7 +1167,7 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
 			this.transition = DFA9_transition;
 		}
 
-		public override string Description { get { return "42:1: FLOAT : ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ EXPONENT );"; } }
+		public override string Description { get { return "53:1: FLOAT : ( ( '0' .. '9' )+ '.' ( '0' .. '9' )* ( EXPONENT )? | '.' ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ EXPONENT );"; } }
 
 		public override void Error(NoViableAltException nvae)
 		{
@@ -1184,7 +1184,7 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
 		private const string DFA13_minS =
 			"\x1\xA\x8\xFFFF\x1\x2E\x3\xFFFF";
 		private const string DFA13_maxS =
-			"\x1\x7A\x8\xFFFF\x1\x65\x3\xFFFF";
+			"\x1\x44F\x8\xFFFF\x1\x65\x3\xFFFF";
 		private const string DFA13_acceptS =
 			"\x1\xFFFF\x1\x1\x1\x2\x1\x3\x1\x4\x1\x5\x1\x6\x1\x7\x1\x8\x1\xFFFF\x1"+
 			"\xA\x1\xB\x1\x9";
@@ -1194,7 +1194,7 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
 			{
 				"\x1\xB\x2\xFFFF\x1\xB\x1A\xFFFF\x1\x1\x1\x2\x1\x3\x1\x4\x1\xFFFF\x1"+
 				"\x5\x1\xA\x1\x6\xA\x9\x3\xFFFF\x1\x7\x3\xFFFF\x1A\x8\x4\xFFFF\x1\x8"+
-				"\x1\xFFFF\x1A\x8",
+				"\x1\xFFFF\x1A\x8\x395\xFFFF\x40\x8",
 				"",
 				"",
 				"",

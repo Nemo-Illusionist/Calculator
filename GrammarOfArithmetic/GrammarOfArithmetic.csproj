@@ -46,6 +46,7 @@
   <ItemGroup>
     <Compile Include="GrammarOfArithmeticLexer.cs" />
     <Compile Include="GrammarOfArithmeticParser.cs" />
+    <Compile Include="Parser.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>

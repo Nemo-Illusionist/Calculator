@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.5.1 D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g 2016-12-04 14:49:22
+// $ANTLR 3.5.1 D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g 2016-12-04 14:57:30
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 168, 219

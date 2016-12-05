@@ -10,13 +10,18 @@ options
 	using System;
 	using System.Collections;
 }
+@members{
+	Hashtable memory = new Hashtable();
+	
+}
+
 
 public calc returns[double value]	
 	: expr NEWLINE { $value = $expr.value; }
 	;
 
 expr returns[double value]	
-	: me1=multExpression {$value = me1;}
+	: ('-' me1=multExpression {$value = -me1;}|me1=multExpression {$value = me1;})
 	('+' me2=multExpression {$value += $me2.value;}
 	|'-' me2=multExpression {$value -= $me2.value;})*
 	;
@@ -26,9 +31,12 @@ multExpression returns[double value]
 	('*' a2=fanc {$value *= $a2.value;}
 	|'/' a2=fanc {$value /= $a2.value;})*
 	;
+	
 
 fanc 	returns[double value]
 	: exponentiationFanc {$value = $exponentiationFanc.value;}
+	| trigonometryFanc {$value = $trigonometryFanc.value;}
+	| bracket {$value = $bracket.value;}
 	;
 
 
@@ -40,9 +48,18 @@ bracket returns[double value]
 	
 exponentiationFanc returns[double value]
 	: EXP {$value = Math.E;}
-	| a1 = bracket '^' a2 = bracket {$value = Math.Pow($a1.value, $a2.value);} 
+	//| a1 = bracket '^' a2 = bracket {$value = Math.Pow($a1.value, $a2.value);} 
 	| LOG '(' a1 = expr ', ' a2 = expr ')' {$value = Math.Log($a1.value, $a2.value);}
 	| LN '(' expr ')' {$value = Math.Log($addition.value);}
+	;
+	
+	
+trigonometryFanc returns[double value]
+	: Pi  {$value = Math.Pi;}
+	| SIN '(' a1 = expr ')' {$value = Math.Sin($a1.value);}
+	| COS '(' a1 = expr ')' {$value = Math.Cos($a1.value);}
+	| TG '(' a1 = expr ')' {$value = Math.Tan($a1.value);}
+	| CTG '(' a1 = expr ')' {$value = 1.0/Math.Tan($a1.value);}
 	;
 	
 /*
@@ -108,14 +125,14 @@ SEPARATOR :('.'| ',');
 fragment
 EXPONENT: EXP ('+'|'-')? ('0'..'9')+ ;
 EXP 	: ('e'|'E');
-Pi 	: 'Pi' | 'PI' |'pi';
+LOG	: ('L'| 'l') 'og';
+LN	: ('L'| 'l') 'n';
 
+Pi 	: 'Pi' | 'PI' |'pi';
 SIN 	: ('S'|'s') 'in';
 COS 	: ('C'|'c') 'os';
 TG 	: ('T'|'t') 'g';
 CTG 	: ('C'|'c') 'tg';
-LN	: ('L'| 'l') 'n';
-LOG	: ('L'| 'l') 'og';
 
 NEWLINE : '\r'? '\n';
 

@@ -15,51 +15,76 @@ options
 	Hashtable memory = new Hashtable();
 }
 
-public calc	
-	: statement+
+public calc returns[double value]	
+	: addition NEWLINE { $value = $expr.value; }
 	;
-	
-statement
-	: expr NEWLINE { Console.WriteLine($expr.value); }
-	| ID '=' expr NEWLINE { memory.Add($ID.text, $expr.value); }
-	| NEWLINE
-	;
-	
-expr returns[int value]	
-	: me1=multExpression {$value = me1;}
-	('+' me2=multExpression {$value += $me2.value;}
-	|'-' me2=multExpression {$value -= $me2.value;})*
+		
+addition returns[double value]	
+	: m1=multiplication {$value = $m1;}
+	('+' m2=multiplication {$value += $m2.value;}
+	|'-' m2=multiplication {$value -= $m2.value;})*
 	;
 
-multExpression returns[int value]
+multiplication returns[double value]
 	: a1=atom {$value = $a1.value;}
 	('*' a2=atom {$value *= $a2.value;}
 	|'/' a2=atom {$value /= $a2.value;})*
 	;
 	
-atom returns[int value]
-	: ID {$value = (int)memory[$ID.text];}
-	| INT {$value = int.Parse($INT.text);}
-	| '(' expr ')' {$value = $expr.value;}
+atom returns[double value]
+	: exponentiationFanc {$value = $exponentiationFanc.value;}
+	| trigonometryFanc {$value = $trigonometryFanc.value;}
+	| bracket '!' {
+                    double factorial = 1;
+                    for (int i = 1; i <= $bracket.value; i++){
+                        factorial *= i;
+                    }
+                $valu = factorial;
+                }
+        | bracket {$value = $bracket.value; }
 	;
 
-ID  :	
-    ('a'..'z'|'A'..'Z'|'_'|'À'..'ÿ') 
-    ('a'..'z'|'A'..'Z'|'0'..'9'|'_'|'À'..'ÿ')*
-    ;
+bracket	returns[double value]
+	: FLOAT {$value = double.Parse($FLOAT.text);}
+	| '(' addition ')' {$value = $addition.value);}
+	| '[' addition ']' {$value = Math.Abs($addition.value);}
+	;
 
-INT :	'0'..'9'+
-    ;
+exponentiationFanc returns[double value]
+	: EXP {$value = Math.E;}
+	| a1 = bracket '^' a2 = bracket {$value = Math.Pow($a1.value, $a2.value);} 
+	| LOG '(' a1 = addition ', ' a2 = addition ')' {$value = Math.Log($a1.value, $a2.value);}
+	| LN '(' addition ')' {$value = Math.Log($addition.value);}
+	;
+
+trigonometryFanc returns[double value]
+	: Pi  {$value = Math.Pi;}
+	| SIN '(' addition ')' {$value = Math.Sin($addition.value);}
+	| COS '(' addition ')' {$value = Math.Cos($addition.value);}
+	| TG '(' addition ')' {$value = Math.Tan($addition.value);}
+	| CTG '(' addition ')' {$value = 1.0/Math.Tan($addition.value);}
+	;
+
 
 FLOAT
-    :   ('0'..'9')+ '.' ('0'..'9')* EXPONENT?
-    |   '.' ('0'..'9')+ EXPONENT?
-    |   ('0'..'9')+ EXPONENT
+    :	('0'..'9')+ EXPONENT?
+    |   ('0'..'9')+ SEPARATOR ('0'..'9')* EXPONENT?
+    |   SEPARATOR ('0'..'9')+ EXPONENT?
     ;
 
 fragment
-EXPONENT : ('e'|'E') ('+'|'-')? ('0'..'9')+ ;
+SEPARATOR :('.'| ',');
+fragment
+EXPONENT: EXP ('+'|'-')? ('0'..'9')+ ;
+EXP 	: ('e'|'E');
+Pi 	: 'Pi' | 'PI' |'pi';
 
-NEWLINE : '\r'? '\n'
-	;
+SIN 	: ('S'|'s') 'in';
+COS 	: ('C'|'c') 'os';
+TG 	: ('T'|'t') 'g';
+CTG 	: ('C'|'c') 'tg';
+LN	: ('L'| 'l') 'n';
+LOG	: ('L'| 'l') 'og';
+
+NEWLINE : '\r'? '\n';
 

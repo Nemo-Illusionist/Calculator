@@ -11,10 +11,41 @@ options
 	using System.Collections;
 }
 
-@members{
-	Hashtable memory = new Hashtable();
-}
+public calc returns[double value]	
+	: expr NEWLINE { $value = $expr.value; }
+	;
 
+expr returns[double value]	
+	: me1=multExpression {$value = me1;}
+	('+' me2=multExpression {$value += $me2.value;}
+	|'-' me2=multExpression {$value -= $me2.value;})*
+	;
+
+multExpression returns[double value]
+	: a1=fanc {$value = $a1.value;}
+	('*' a2=fanc {$value *= $a2.value;}
+	|'/' a2=fanc {$value /= $a2.value;})*
+	;
+
+fanc 	returns[double value]
+	: exponentiationFanc {$value = $exponentiationFanc.value;}
+	;
+
+
+bracket returns[double value]
+	: FLOAT {$value = double.Parse($FLOAT.text);}
+	| '(' expr ')' {$value = $expr.value;}
+	| '[' expr ']' {$value = Math.Abs($expr.value);}
+	;
+	
+exponentiationFanc returns[double value]
+	: EXP {$value = Math.E;}
+	| a1 = bracket '^' a2 = bracket {$value = Math.Pow($a1.value, $a2.value);} 
+	| LOG '(' a1 = expr ', ' a2 = expr ')' {$value = Math.Log($a1.value, $a2.value);}
+	| LN '(' expr ')' {$value = Math.Log($addition.value);}
+	;
+	
+/*
 public calc returns[double value]	
 	: addition NEWLINE { $value = $expr.value; }
 	;
@@ -64,7 +95,7 @@ trigonometryFanc returns[double value]
 	| TG '(' addition ')' {$value = Math.Tan($addition.value);}
 	| CTG '(' addition ')' {$value = 1.0/Math.Tan($addition.value);}
 	;
-
+*/
 
 FLOAT
     :	('0'..'9')+ EXPONENT?

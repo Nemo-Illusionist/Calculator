@@ -12,7 +12,6 @@ options
 }
 @members{
 	Hashtable memory = new Hashtable();
-	
 }
 
 
@@ -32,8 +31,7 @@ multExpression returns[double value]
 	|'/' a2=fanc {$value /= $a2.value;})*
 	;
 	
-
-fanc 	returns[double value]
+fanc returns[double value]
 	: exponentiationFanc {$value = $exponentiationFanc.value;}
 	| trigonometryFanc {$value = $trigonometryFanc.value;}
 	| bracket {$value = $bracket.value;}
@@ -47,20 +45,42 @@ bracket returns[double value]
 	;
 	
 exponentiationFanc returns[double value]
-	: EXP {$value = Math.E;}
-	//| a1 = bracket '^' a2 = bracket {$value = Math.Pow($a1.value, $a2.value);} 
+	: EXP'(' expr ')' {$value = Math.Exp($expr.value);}
+	| EXP {$value = Math.E;}
+	//| a1 = expr '^' a2 = expr {$value = Math.Pow($a1.value, $a2.value);} 
 	| LOG '(' a1 = expr ', ' a2 = expr ')' {$value = Math.Log($a1.value, $a2.value);}
-	| LN '(' expr ')' {$value = Math.Log($addition.value);}
+	| LN '(' expr ')' {$value = Math.Log($expr.value);}
 	;
 	
 	
 trigonometryFanc returns[double value]
-	: Pi  {$value = Math.Pi;}
-	| SIN '(' a1 = expr ')' {$value = Math.Sin($a1.value);}
-	| COS '(' a1 = expr ')' {$value = Math.Cos($a1.value);}
+	: Pi  {$value = Math.PI;}
+	| standardTrigonometryFanc {$value = $standardTrigonometryFanc.value;}
+	| hyperbolicTrigonometryFanc {$value = $hyperbolicTrigonometryFanc.value;}
+	| arcTrigonometryFanc {$value = $arcTrigonometryFanc.value;}
+	;
+
+standardTrigonometryFanc returns[double value]
+	: SIN '(' a1 = expr ')' {$value = Math.Sin($a1.value);}
+	| COS '(' a1 = expr ')' {$value = Math.Cos($a1.value+);}
 	| TG '(' a1 = expr ')' {$value = Math.Tan($a1.value);}
 	| CTG '(' a1 = expr ')' {$value = 1.0/Math.Tan($a1.value);}
 	;
+
+hyperbolicTrigonometryFanc returns[double value]
+	: SINH '(' a1 = expr ')' {$value = Math.Sinh($a1.value);}
+	| COSH '(' a1 = expr ')' {$value = Math.Cosh($a1.value);}
+	| TGH '(' a1 = expr ')' {$value = Math.Tanh($a1.value);}
+	| CTGH '(' a1 = expr ')' {$value = 1.0/Math.Tanh($a1.value);}
+	;
+	
+arcTrigonometryFanc returns[double value]
+	: ASIN '(' a1 = expr ')' {$value = Math.Asin($a1.value);}
+	| ACOS '(' a1 = expr ')' {$value = Math.Acos($a1.value);}
+	| ATG '(' a1 = expr ')' {$value = Math.Atan($a1.value);}
+	| ACTG '(' a1 = expr ')' {$value = 1.0/Math.Atan($a1.value);}
+	;
+
 	
 /*
 public calc returns[double value]	
@@ -134,5 +154,16 @@ COS 	: ('C'|'c') 'os';
 TG 	: ('T'|'t') 'g';
 CTG 	: ('C'|'c') 'tg';
 
-NEWLINE : '\r'? '\n';
+SINH 	: SIN 'h';
+COSH 	: COS 'h';
+TGH 	: TG 'h';
+CTGH 	: CTG 'h';
+
+ARC 	: ('Arc'| 'arc'| 'A' | 'a');
+ASIN 	: ARC SIN;
+ACOS 	: ARC COS;
+ATG 	: ARC TG;
+ACTG 	: ARC CTG;
+
+NEWLINE : '\n' '\r'? ;
 

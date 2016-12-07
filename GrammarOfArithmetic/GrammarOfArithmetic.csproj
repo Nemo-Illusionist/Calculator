@@ -44,8 +44,6 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="calcLexer.cs" />
-    <Compile Include="calcParser.cs" />
     <Compile Include="GrammarOfArithmeticLexer.cs" />
     <Compile Include="GrammarOfArithmeticParser.cs" />
     <Compile Include="Parser.cs" />
@@ -58,7 +56,6 @@
     </AntlrTokens>
   </ItemGroup>
   <ItemGroup>
-    <None Include="calc.tokens" />
     <None Include="packages.config" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

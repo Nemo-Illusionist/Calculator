@@ -1,7 +1,5 @@
 ﻿using System;
-using System.Collections;
 using System.IO;
-using System.Text;
 using Antlr.Runtime;
 using Generated;
 
@@ -9,28 +7,13 @@ namespace GrammarOfArithmetic
 {
     public class Parser
     {
-        public Parser()
+        public string SolveEngineer(string s)
         {
-            try
-            {
-                Hashtable memory = new Hashtable();
-
-                // В качестве входного потока символов устанавливаем консольный ввод
-                ANTLRReaderStream input = new ANTLRReaderStream(Console.In);
-                // Настраиваем лексер на этот поток
-                GrammarOfArithmeticLexer lexer = new GrammarOfArithmeticLexer(input);
-                // Создаем поток токенов на основе лексера
-                CommonTokenStream tokens = new CommonTokenStream(lexer);
-                // Создаем парсер
-                GrammarOfArithmeticParser parser = new GrammarOfArithmeticParser(tokens);
-                // И запускаем первое правило грамматики!!!
-                parser.calc();
-            }
-            catch (Exception e)
-            {
-                Console.WriteLine(e.Message);
-            }
-            Console.ReadKey();
+            ANTLRReaderStream input = new ANTLRReaderStream(new StringReader(s));
+            GrammarOfArithmeticLexer lexer = new GrammarOfArithmeticLexer(input);
+            CommonTokenStream tokens = new CommonTokenStream(lexer);
+            GrammarOfArithmeticParser parser = new GrammarOfArithmeticParser(tokens);
+            return parser.calc();
         }
 
     }

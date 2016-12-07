@@ -26,7 +26,7 @@ options
         private double DoubleFactorial(double n)
         {
             double f = 1;
-            for (int i = (int)n/2==0?2:1; i <= (int)n; i+=2)
+            for (int i = (int)n \% 2==0?2:1; i <= (int)n; i+=2)
             {
                 f *= i;
             }
@@ -34,52 +34,65 @@ options
         }
 }
 
-public calc	
-	: statement+
+public calc returns[string value]
+	:  statement {$value = $statement.value;}
 	;
 
-statement
-	: expr NEWLINE { Console.WriteLine($expr.value); }
-	| ID '=' expr NEWLINE { memory.Add($ID.text, $expr.value); }
+statement returns[string value]
+	: expr {$value = " = ";}('='{$value = " ";})? NEWLINE { $value += $expr.value; }
+	| ID '=' (FLOAT {$value = "";}| a1 = expr {$value = '=' + $a1.value.ToString();}) NEWLINE { memory.Add($ID.text, $expr.value); }
 	| NEWLINE
 	;
 
 
 expr returns[double value]	
-	: me1=multExpression {$value = me1;}
+	: ('-'me1=multExpression {$value = -me1;} 
+		| me1=multExpression {$value = me1;})
 	('+' me2=multExpression {$value += $me2.value;}
 	|'-' me2=multExpression {$value -= $me2.value;})*
 	;
 
 multExpression returns[double value]
 	: a1=fanc {$value = $a1.value;}
-	('*' a2=fanc {$value *= $a2.value;}
-	|'/' a2=fanc {$value /= $a2.value;})*
+	('^' a2=fanc {$value = Math.Pow($value, $a2.value);}
+		|'*' a2=fanc {$value *= $a2.value;}
+		|('/'|':') a2=fanc {$value /= $a2.value;}
+		| 'div' a2 = fanc {$value = (int)$a1.value/(int)$a2.value;}
+		| 'mod' a2 = fanc {$value = (int)$a1.value\%(int)$a2.value;}
+		| '>' a2 = fanc {$value = Math.Max($a1.value, $a2.value);}
+		| '<' a2 = fanc {$value = Math.Min($a1.value, $a2.value);}
+	)*
 	;
 
 fanc returns[double value]
-	: exponentiationFanc {$value = $exponentiationFanc.value;}
+	: (exponentiationFanc {$value = $exponentiationFanc.value;}
 	| trigonometryFanc {$value = $trigonometryFanc.value;}
-	| bracket {$value = $bracket.value;}
+	| bracket {$value = $bracket.value;})
+	| 'g' {$value = 9.8;} 
+	('!!' {$value = DoubleFactorial($value);}
+		|'!'  {$value = Factorial($value);})?
 	;
 
 bracket returns[double value]
 	: ID {$value = (double)memory[$ID.text];}
-	|FLOAT ( '!!' {$value = DoubleFactorial(double.Parse($FLOAT.text));}
-		| '!' {$value = Factorial(double.Parse($FLOAT.text));}
-		| {$value = double.Parse($FLOAT.text);})
-	| '(' expr (')!!' {$value = DoubleFactorial($expr.value);}
-		|')!' {$value = Factorial($expr.value);}
-		|')' {$value = $expr.value;})
+	| FLOAT {$value = double.Parse($FLOAT.text);}
+	|('(' a1 = expr ')'|'{' a1 = expr '}') {$value = $a1.value;}
 	| '[' expr ']' {$value = Math.Abs($expr.value);}
 	| 'abs(' expr ')' {$value = Math.Abs($expr.value);}
+	| 'max('a1 = expr (SEPARATOR a2 = expr {a1 = Math.Max(a1, a2);})+ ')' {$value = a1;}
+	| 'min('a1 = expr (SEPARATOR a2 = expr {a1 = Math.Min(a1, a2);})+ ')' {$value = a1;}
+	| 'div(' a1 = expr SEPARATOR a2 = expr ')' {$value = (int)$a1.value/(int)$a2.value;}
+	| 'mod(' a1 = expr SEPARATOR a2 = expr ')' {$value = (int)$a1.value\%(int)$a2.value;}
 	;
 	
 exponentiationFanc returns[double value]
 	: 'exp(' expr ')' {$value = Math.Exp($expr.value);}
 	| 'e' {$value = Math.E;}
-	| 'pow(' a1 = expr ',' a2 = expr ')' {$value = Math.Pow($a1.value, $a2.value);}
-	| 'log(' a1 = expr ',' a2 = expr ')' {$value = Math.Log($a1.value, $a2.value);}
+	| 'pow(' a1 = expr SEPARATOR a2 = expr ')' {$value = Math.Pow($a1.value, $a2.value);}
+	| 'root(' a1 = expr SEPARATOR a2 = expr ')' {$value = Math.Pow($a1.value, 1.0/$a2.value);}
+	| 'sqrt(' a1 = expr ')' {$value = Math.Pow($a1.value, 1.0/2.0);}
+	| 'sqr(' a1 = expr ')' {$value = Math.Pow($a1.value, 2.0);}
+	| 'log(' a1 = expr SEPARATOR a2 = expr ')'{$value = Math.Log($a1.value, $a2.value);}
 	| 'lg(' a1 = expr ')' {$value = Math.Log10($a1.value);}
 	| 'ln(' expr ')' {$value = Math.Log($expr.value);}
 	;	
@@ -112,21 +125,23 @@ hyperbolicTrigonometryFanc returns[double value]
 arcTrigonometryFanc returns[double value]
 	: 'asin(' a1 = expr ')' {$value = Math.Asin($a1.value);}
 	| 'acos(' a1 = expr ')' {$value = Math.Acos($a1.value);}
+	| 'atg2('  a1 = expr SEPARATOR a2 = expr  ')' {$value = Math.Atan2($a1.value, $a2.value);}
 	| 'atg(' a1 = expr ')' {$value = Math.Atan($a1.value);}
 	| 'actg(' a1 = expr ')' {$value = 1.0/Math.Atan($a1.value);}
 	;
 
-ID  :	('a'..'z'|'à'..'ÿ'|'_') ('a'..'z'|'à'..'ÿ'|'0'..'9'|'_')*
-    ;
+ID  :	('a'..'z'|'à'..'ÿ'|'_') ('a'..'z'|'à'..'ÿ'|'0'..'9'|'_')*;
 
 FLOAT
     :	('0'..'9')+ EXPONENT?
-    |   ('0'..'9')+ SEPARATOR ('0'..'9')* EXPONENT?
-    |   SEPARATOR ('0'..'9')+ EXPONENT?
+    |   ('0'..'9')+ FLOATSEPARATOR ('0'..'9')* EXPONENT?
+    |   FLOATSEPARATOR ('0'..'9')+ EXPONENT?
     ;
 
 fragment
-SEPARATOR :('.'| ',');
+FLOATSEPARATOR :'.'| ',';
+
+SEPARATOR :';';
 fragment
 EXPONENT: 'e' ('+'|'-')? ('0'..'9')+ ;
 

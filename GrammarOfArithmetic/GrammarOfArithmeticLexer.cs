@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.5.1 C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g 2016-12-06 11:36:12
+// $ANTLR 3.5.1 D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g 2016-12-06 23:43:55
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 168, 219
@@ -30,33 +30,49 @@ namespace  Generated
 public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
 {
 	public const int EOF=-1;
+	public const int T__9=9;
+	public const int T__10=10;
+	public const int T__11=11;
+	public const int T__12=12;
+	public const int T__13=13;
+	public const int T__14=14;
+	public const int T__15=15;
+	public const int T__16=16;
+	public const int T__17=17;
+	public const int T__18=18;
+	public const int T__19=19;
+	public const int T__20=20;
+	public const int T__21=21;
+	public const int T__22=22;
+	public const int T__23=23;
+	public const int T__24=24;
 	public const int T__25=25;
 	public const int T__26=26;
 	public const int T__27=27;
 	public const int T__28=28;
 	public const int T__29=29;
 	public const int T__30=30;
-	public const int ACOS=4;
-	public const int ACTG=5;
-	public const int ARC=6;
-	public const int ASIN=7;
-	public const int ATG=8;
-	public const int COS=9;
-	public const int COSH=10;
-	public const int CTG=11;
-	public const int CTGH=12;
-	public const int EXP=13;
-	public const int EXPONENT=14;
-	public const int FLOAT=15;
-	public const int LN=16;
-	public const int LOG=17;
-	public const int NEWLINE=18;
-	public const int Pi=19;
-	public const int SEPARATOR=20;
-	public const int SIN=21;
-	public const int SINH=22;
-	public const int TG=23;
-	public const int TGH=24;
+	public const int T__31=31;
+	public const int T__32=32;
+	public const int T__33=33;
+	public const int T__34=34;
+	public const int T__35=35;
+	public const int T__36=36;
+	public const int T__37=37;
+	public const int T__38=38;
+	public const int T__39=39;
+	public const int T__40=40;
+	public const int T__41=41;
+	public const int T__42=42;
+	public const int T__43=43;
+	public const int T__44=44;
+	public const int T__45=45;
+	public const int T__46=46;
+	public const int EXPONENT=4;
+	public const int FLOAT=5;
+	public const int ID=6;
+	public const int NEWLINE=7;
+	public const int SEPARATOR=8;
 
     // delegates
     // delegators
@@ -77,7 +93,7 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
 
 		OnCreated();
 	}
-	public override string GrammarFileName { get { return "C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g"; } }
+	public override string GrammarFileName { get { return "D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g"; } }
 
 	private static readonly bool[] decisionCanBacktrack = new bool[0];
 
@@ -89,26 +105,101 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
 	protected virtual void LeaveRule(string ruleName, int ruleIndex) {}
 
     [Conditional("ANTLR_TRACE")]
-    protected virtual void EnterRule_T__25() {}
+    protected virtual void EnterRule_T__9() {}
     [Conditional("ANTLR_TRACE")]
-    protected virtual void LeaveRule_T__25() {}
+    protected virtual void LeaveRule_T__9() {}
 
-    // $ANTLR start "T__25"
-    [GrammarRule("T__25")]
-    private void mT__25()
+    // $ANTLR start "T__9"
+    [GrammarRule("T__9")]
+    private void mT__9()
     {
-    	EnterRule_T__25();
-    	EnterRule("T__25", 1);
-    	TraceIn("T__25", 1);
+    	EnterRule_T__9();
+    	EnterRule("T__9", 1);
+    	TraceIn("T__9", 1);
     		try
     		{
-    		int _type = T__25;
+    		int _type = T__9;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:9:7: ( '(' )
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:9:6: ( '!!' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:9:9: '('
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:9:8: '!!'
     		{
-    		DebugLocation(9, 9);
+    		DebugLocation(9, 8);
+    		Match("!!"); 
+
+
+    		}
+
+    		state.type = _type;
+    		state.channel = _channel;
+    	}
+    	finally
+    	{
+    		TraceOut("T__9", 1);
+    		LeaveRule("T__9", 1);
+    		LeaveRule_T__9();
+        }
+    }
+    // $ANTLR end "T__9"
+
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void EnterRule_T__10() {}
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void LeaveRule_T__10() {}
+
+    // $ANTLR start "T__10"
+    [GrammarRule("T__10")]
+    private void mT__10()
+    {
+    	EnterRule_T__10();
+    	EnterRule("T__10", 2);
+    	TraceIn("T__10", 2);
+    		try
+    		{
+    		int _type = T__10;
+    		int _channel = DefaultTokenChannel;
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:10:7: ( '!' )
+    		DebugEnterAlt(1);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:10:9: '!'
+    		{
+    		DebugLocation(10, 9);
+    		Match('!'); 
+
+    		}
+
+    		state.type = _type;
+    		state.channel = _channel;
+    	}
+    	finally
+    	{
+    		TraceOut("T__10", 2);
+    		LeaveRule("T__10", 2);
+    		LeaveRule_T__10();
+        }
+    }
+    // $ANTLR end "T__10"
+
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void EnterRule_T__11() {}
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void LeaveRule_T__11() {}
+
+    // $ANTLR start "T__11"
+    [GrammarRule("T__11")]
+    private void mT__11()
+    {
+    	EnterRule_T__11();
+    	EnterRule("T__11", 3);
+    	TraceIn("T__11", 3);
+    		try
+    		{
+    		int _type = T__11;
+    		int _channel = DefaultTokenChannel;
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:11:7: ( '(' )
+    		DebugEnterAlt(1);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:11:9: '('
+    		{
+    		DebugLocation(11, 9);
     		Match('('); 
 
     		}
@@ -118,8 +209,531 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
     	}
     	finally
     	{
-    		TraceOut("T__25", 1);
-    		LeaveRule("T__25", 1);
+    		TraceOut("T__11", 3);
+    		LeaveRule("T__11", 3);
+    		LeaveRule_T__11();
+        }
+    }
+    // $ANTLR end "T__11"
+
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void EnterRule_T__12() {}
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void LeaveRule_T__12() {}
+
+    // $ANTLR start "T__12"
+    [GrammarRule("T__12")]
+    private void mT__12()
+    {
+    	EnterRule_T__12();
+    	EnterRule("T__12", 4);
+    	TraceIn("T__12", 4);
+    		try
+    		{
+    		int _type = T__12;
+    		int _channel = DefaultTokenChannel;
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:12:7: ( ')!!' )
+    		DebugEnterAlt(1);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:12:9: ')!!'
+    		{
+    		DebugLocation(12, 9);
+    		Match(")!!"); 
+
+
+    		}
+
+    		state.type = _type;
+    		state.channel = _channel;
+    	}
+    	finally
+    	{
+    		TraceOut("T__12", 4);
+    		LeaveRule("T__12", 4);
+    		LeaveRule_T__12();
+        }
+    }
+    // $ANTLR end "T__12"
+
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void EnterRule_T__13() {}
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void LeaveRule_T__13() {}
+
+    // $ANTLR start "T__13"
+    [GrammarRule("T__13")]
+    private void mT__13()
+    {
+    	EnterRule_T__13();
+    	EnterRule("T__13", 5);
+    	TraceIn("T__13", 5);
+    		try
+    		{
+    		int _type = T__13;
+    		int _channel = DefaultTokenChannel;
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:13:7: ( ')!' )
+    		DebugEnterAlt(1);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:13:9: ')!'
+    		{
+    		DebugLocation(13, 9);
+    		Match(")!"); 
+
+
+    		}
+
+    		state.type = _type;
+    		state.channel = _channel;
+    	}
+    	finally
+    	{
+    		TraceOut("T__13", 5);
+    		LeaveRule("T__13", 5);
+    		LeaveRule_T__13();
+        }
+    }
+    // $ANTLR end "T__13"
+
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void EnterRule_T__14() {}
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void LeaveRule_T__14() {}
+
+    // $ANTLR start "T__14"
+    [GrammarRule("T__14")]
+    private void mT__14()
+    {
+    	EnterRule_T__14();
+    	EnterRule("T__14", 6);
+    	TraceIn("T__14", 6);
+    		try
+    		{
+    		int _type = T__14;
+    		int _channel = DefaultTokenChannel;
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:14:7: ( ')' )
+    		DebugEnterAlt(1);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:14:9: ')'
+    		{
+    		DebugLocation(14, 9);
+    		Match(')'); 
+
+    		}
+
+    		state.type = _type;
+    		state.channel = _channel;
+    	}
+    	finally
+    	{
+    		TraceOut("T__14", 6);
+    		LeaveRule("T__14", 6);
+    		LeaveRule_T__14();
+        }
+    }
+    // $ANTLR end "T__14"
+
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void EnterRule_T__15() {}
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void LeaveRule_T__15() {}
+
+    // $ANTLR start "T__15"
+    [GrammarRule("T__15")]
+    private void mT__15()
+    {
+    	EnterRule_T__15();
+    	EnterRule("T__15", 7);
+    	TraceIn("T__15", 7);
+    		try
+    		{
+    		int _type = T__15;
+    		int _channel = DefaultTokenChannel;
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:15:7: ( '*' )
+    		DebugEnterAlt(1);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:15:9: '*'
+    		{
+    		DebugLocation(15, 9);
+    		Match('*'); 
+
+    		}
+
+    		state.type = _type;
+    		state.channel = _channel;
+    	}
+    	finally
+    	{
+    		TraceOut("T__15", 7);
+    		LeaveRule("T__15", 7);
+    		LeaveRule_T__15();
+        }
+    }
+    // $ANTLR end "T__15"
+
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void EnterRule_T__16() {}
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void LeaveRule_T__16() {}
+
+    // $ANTLR start "T__16"
+    [GrammarRule("T__16")]
+    private void mT__16()
+    {
+    	EnterRule_T__16();
+    	EnterRule("T__16", 8);
+    	TraceIn("T__16", 8);
+    		try
+    		{
+    		int _type = T__16;
+    		int _channel = DefaultTokenChannel;
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:16:7: ( '+' )
+    		DebugEnterAlt(1);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:16:9: '+'
+    		{
+    		DebugLocation(16, 9);
+    		Match('+'); 
+
+    		}
+
+    		state.type = _type;
+    		state.channel = _channel;
+    	}
+    	finally
+    	{
+    		TraceOut("T__16", 8);
+    		LeaveRule("T__16", 8);
+    		LeaveRule_T__16();
+        }
+    }
+    // $ANTLR end "T__16"
+
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void EnterRule_T__17() {}
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void LeaveRule_T__17() {}
+
+    // $ANTLR start "T__17"
+    [GrammarRule("T__17")]
+    private void mT__17()
+    {
+    	EnterRule_T__17();
+    	EnterRule("T__17", 9);
+    	TraceIn("T__17", 9);
+    		try
+    		{
+    		int _type = T__17;
+    		int _channel = DefaultTokenChannel;
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:17:7: ( ',' )
+    		DebugEnterAlt(1);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:17:9: ','
+    		{
+    		DebugLocation(17, 9);
+    		Match(','); 
+
+    		}
+
+    		state.type = _type;
+    		state.channel = _channel;
+    	}
+    	finally
+    	{
+    		TraceOut("T__17", 9);
+    		LeaveRule("T__17", 9);
+    		LeaveRule_T__17();
+        }
+    }
+    // $ANTLR end "T__17"
+
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void EnterRule_T__18() {}
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void LeaveRule_T__18() {}
+
+    // $ANTLR start "T__18"
+    [GrammarRule("T__18")]
+    private void mT__18()
+    {
+    	EnterRule_T__18();
+    	EnterRule("T__18", 10);
+    	TraceIn("T__18", 10);
+    		try
+    		{
+    		int _type = T__18;
+    		int _channel = DefaultTokenChannel;
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:18:7: ( '-' )
+    		DebugEnterAlt(1);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:18:9: '-'
+    		{
+    		DebugLocation(18, 9);
+    		Match('-'); 
+
+    		}
+
+    		state.type = _type;
+    		state.channel = _channel;
+    	}
+    	finally
+    	{
+    		TraceOut("T__18", 10);
+    		LeaveRule("T__18", 10);
+    		LeaveRule_T__18();
+        }
+    }
+    // $ANTLR end "T__18"
+
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void EnterRule_T__19() {}
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void LeaveRule_T__19() {}
+
+    // $ANTLR start "T__19"
+    [GrammarRule("T__19")]
+    private void mT__19()
+    {
+    	EnterRule_T__19();
+    	EnterRule("T__19", 11);
+    	TraceIn("T__19", 11);
+    		try
+    		{
+    		int _type = T__19;
+    		int _channel = DefaultTokenChannel;
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:19:7: ( '/' )
+    		DebugEnterAlt(1);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:19:9: '/'
+    		{
+    		DebugLocation(19, 9);
+    		Match('/'); 
+
+    		}
+
+    		state.type = _type;
+    		state.channel = _channel;
+    	}
+    	finally
+    	{
+    		TraceOut("T__19", 11);
+    		LeaveRule("T__19", 11);
+    		LeaveRule_T__19();
+        }
+    }
+    // $ANTLR end "T__19"
+
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void EnterRule_T__20() {}
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void LeaveRule_T__20() {}
+
+    // $ANTLR start "T__20"
+    [GrammarRule("T__20")]
+    private void mT__20()
+    {
+    	EnterRule_T__20();
+    	EnterRule("T__20", 12);
+    	TraceIn("T__20", 12);
+    		try
+    		{
+    		int _type = T__20;
+    		int _channel = DefaultTokenChannel;
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:20:7: ( '=' )
+    		DebugEnterAlt(1);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:20:9: '='
+    		{
+    		DebugLocation(20, 9);
+    		Match('='); 
+
+    		}
+
+    		state.type = _type;
+    		state.channel = _channel;
+    	}
+    	finally
+    	{
+    		TraceOut("T__20", 12);
+    		LeaveRule("T__20", 12);
+    		LeaveRule_T__20();
+        }
+    }
+    // $ANTLR end "T__20"
+
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void EnterRule_T__21() {}
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void LeaveRule_T__21() {}
+
+    // $ANTLR start "T__21"
+    [GrammarRule("T__21")]
+    private void mT__21()
+    {
+    	EnterRule_T__21();
+    	EnterRule("T__21", 13);
+    	TraceIn("T__21", 13);
+    		try
+    		{
+    		int _type = T__21;
+    		int _channel = DefaultTokenChannel;
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:21:7: ( '[' )
+    		DebugEnterAlt(1);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:21:9: '['
+    		{
+    		DebugLocation(21, 9);
+    		Match('['); 
+
+    		}
+
+    		state.type = _type;
+    		state.channel = _channel;
+    	}
+    	finally
+    	{
+    		TraceOut("T__21", 13);
+    		LeaveRule("T__21", 13);
+    		LeaveRule_T__21();
+        }
+    }
+    // $ANTLR end "T__21"
+
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void EnterRule_T__22() {}
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void LeaveRule_T__22() {}
+
+    // $ANTLR start "T__22"
+    [GrammarRule("T__22")]
+    private void mT__22()
+    {
+    	EnterRule_T__22();
+    	EnterRule("T__22", 14);
+    	TraceIn("T__22", 14);
+    		try
+    		{
+    		int _type = T__22;
+    		int _channel = DefaultTokenChannel;
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:22:7: ( ']' )
+    		DebugEnterAlt(1);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:22:9: ']'
+    		{
+    		DebugLocation(22, 9);
+    		Match(']'); 
+
+    		}
+
+    		state.type = _type;
+    		state.channel = _channel;
+    	}
+    	finally
+    	{
+    		TraceOut("T__22", 14);
+    		LeaveRule("T__22", 14);
+    		LeaveRule_T__22();
+        }
+    }
+    // $ANTLR end "T__22"
+
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void EnterRule_T__23() {}
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void LeaveRule_T__23() {}
+
+    // $ANTLR start "T__23"
+    [GrammarRule("T__23")]
+    private void mT__23()
+    {
+    	EnterRule_T__23();
+    	EnterRule("T__23", 15);
+    	TraceIn("T__23", 15);
+    		try
+    		{
+    		int _type = T__23;
+    		int _channel = DefaultTokenChannel;
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:23:7: ( 'abs(' )
+    		DebugEnterAlt(1);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:23:9: 'abs('
+    		{
+    		DebugLocation(23, 9);
+    		Match("abs("); 
+
+
+    		}
+
+    		state.type = _type;
+    		state.channel = _channel;
+    	}
+    	finally
+    	{
+    		TraceOut("T__23", 15);
+    		LeaveRule("T__23", 15);
+    		LeaveRule_T__23();
+        }
+    }
+    // $ANTLR end "T__23"
+
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void EnterRule_T__24() {}
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void LeaveRule_T__24() {}
+
+    // $ANTLR start "T__24"
+    [GrammarRule("T__24")]
+    private void mT__24()
+    {
+    	EnterRule_T__24();
+    	EnterRule("T__24", 16);
+    	TraceIn("T__24", 16);
+    		try
+    		{
+    		int _type = T__24;
+    		int _channel = DefaultTokenChannel;
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:24:7: ( 'acos(' )
+    		DebugEnterAlt(1);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:24:9: 'acos('
+    		{
+    		DebugLocation(24, 9);
+    		Match("acos("); 
+
+
+    		}
+
+    		state.type = _type;
+    		state.channel = _channel;
+    	}
+    	finally
+    	{
+    		TraceOut("T__24", 16);
+    		LeaveRule("T__24", 16);
+    		LeaveRule_T__24();
+        }
+    }
+    // $ANTLR end "T__24"
+
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void EnterRule_T__25() {}
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void LeaveRule_T__25() {}
+
+    // $ANTLR start "T__25"
+    [GrammarRule("T__25")]
+    private void mT__25()
+    {
+    	EnterRule_T__25();
+    	EnterRule("T__25", 17);
+    	TraceIn("T__25", 17);
+    		try
+    		{
+    		int _type = T__25;
+    		int _channel = DefaultTokenChannel;
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:25:7: ( 'actg(' )
+    		DebugEnterAlt(1);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:25:9: 'actg('
+    		{
+    		DebugLocation(25, 9);
+    		Match("actg("); 
+
+
+    		}
+
+    		state.type = _type;
+    		state.channel = _channel;
+    	}
+    	finally
+    	{
+    		TraceOut("T__25", 17);
+    		LeaveRule("T__25", 17);
     		LeaveRule_T__25();
         }
     }
@@ -135,18 +749,19 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
     private void mT__26()
     {
     	EnterRule_T__26();
-    	EnterRule("T__26", 2);
-    	TraceIn("T__26", 2);
+    	EnterRule("T__26", 18);
+    	TraceIn("T__26", 18);
     		try
     		{
     		int _type = T__26;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:10:7: ( ')' )
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:26:7: ( 'asin(' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:10:9: ')'
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:26:9: 'asin('
     		{
-    		DebugLocation(10, 9);
-    		Match(')'); 
+    		DebugLocation(26, 9);
+    		Match("asin("); 
+
 
     		}
 
@@ -155,8 +770,8 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
     	}
     	finally
     	{
-    		TraceOut("T__26", 2);
-    		LeaveRule("T__26", 2);
+    		TraceOut("T__26", 18);
+    		LeaveRule("T__26", 18);
     		LeaveRule_T__26();
         }
     }
@@ -172,18 +787,19 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
     private void mT__27()
     {
     	EnterRule_T__27();
-    	EnterRule("T__27", 3);
-    	TraceIn("T__27", 3);
+    	EnterRule("T__27", 19);
+    	TraceIn("T__27", 19);
     		try
     		{
     		int _type = T__27;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:11:7: ( '*' )
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:27:7: ( 'atg(' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:11:9: '*'
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:27:9: 'atg('
     		{
-    		DebugLocation(11, 9);
-    		Match('*'); 
+    		DebugLocation(27, 9);
+    		Match("atg("); 
+
 
     		}
 
@@ -192,8 +808,8 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
     	}
     	finally
     	{
-    		TraceOut("T__27", 3);
-    		LeaveRule("T__27", 3);
+    		TraceOut("T__27", 19);
+    		LeaveRule("T__27", 19);
     		LeaveRule_T__27();
         }
     }
@@ -209,18 +825,19 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
     private void mT__28()
     {
     	EnterRule_T__28();
-    	EnterRule("T__28", 4);
-    	TraceIn("T__28", 4);
+    	EnterRule("T__28", 20);
+    	TraceIn("T__28", 20);
     		try
     		{
     		int _type = T__28;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:12:7: ( '+' )
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:28:7: ( 'ch(' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:12:9: '+'
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:28:9: 'ch('
     		{
-    		DebugLocation(12, 9);
-    		Match('+'); 
+    		DebugLocation(28, 9);
+    		Match("ch("); 
+
 
     		}
 
@@ -229,8 +846,8 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
     	}
     	finally
     	{
-    		TraceOut("T__28", 4);
-    		LeaveRule("T__28", 4);
+    		TraceOut("T__28", 20);
+    		LeaveRule("T__28", 20);
     		LeaveRule_T__28();
         }
     }
@@ -246,18 +863,19 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
     private void mT__29()
     {
     	EnterRule_T__29();
-    	EnterRule("T__29", 5);
-    	TraceIn("T__29", 5);
+    	EnterRule("T__29", 21);
+    	TraceIn("T__29", 21);
     		try
     		{
     		int _type = T__29;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:13:7: ( '-' )
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:29:7: ( 'cos(' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:13:9: '-'
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:29:9: 'cos('
     		{
-    		DebugLocation(13, 9);
-    		Match('-'); 
+    		DebugLocation(29, 9);
+    		Match("cos("); 
+
 
     		}
 
@@ -266,8 +884,8 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
     	}
     	finally
     	{
-    		TraceOut("T__29", 5);
-    		LeaveRule("T__29", 5);
+    		TraceOut("T__29", 21);
+    		LeaveRule("T__29", 21);
     		LeaveRule_T__29();
         }
     }
@@ -283,18 +901,19 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
     private void mT__30()
     {
     	EnterRule_T__30();
-    	EnterRule("T__30", 6);
-    	TraceIn("T__30", 6);
+    	EnterRule("T__30", 22);
+    	TraceIn("T__30", 22);
     		try
     		{
     		int _type = T__30;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:14:7: ( '/' )
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:30:7: ( 'cosec(' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:14:9: '/'
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:30:9: 'cosec('
     		{
-    		DebugLocation(14, 9);
-    		Match('/'); 
+    		DebugLocation(30, 9);
+    		Match("cosec("); 
+
 
     		}
 
@@ -303,12 +922,706 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
     	}
     	finally
     	{
-    		TraceOut("T__30", 6);
-    		LeaveRule("T__30", 6);
+    		TraceOut("T__30", 22);
+    		LeaveRule("T__30", 22);
     		LeaveRule_T__30();
         }
     }
     // $ANTLR end "T__30"
+
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void EnterRule_T__31() {}
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void LeaveRule_T__31() {}
+
+    // $ANTLR start "T__31"
+    [GrammarRule("T__31")]
+    private void mT__31()
+    {
+    	EnterRule_T__31();
+    	EnterRule("T__31", 23);
+    	TraceIn("T__31", 23);
+    		try
+    		{
+    		int _type = T__31;
+    		int _channel = DefaultTokenChannel;
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:31:7: ( 'csch(' )
+    		DebugEnterAlt(1);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:31:9: 'csch('
+    		{
+    		DebugLocation(31, 9);
+    		Match("csch("); 
+
+
+    		}
+
+    		state.type = _type;
+    		state.channel = _channel;
+    	}
+    	finally
+    	{
+    		TraceOut("T__31", 23);
+    		LeaveRule("T__31", 23);
+    		LeaveRule_T__31();
+        }
+    }
+    // $ANTLR end "T__31"
+
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void EnterRule_T__32() {}
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void LeaveRule_T__32() {}
+
+    // $ANTLR start "T__32"
+    [GrammarRule("T__32")]
+    private void mT__32()
+    {
+    	EnterRule_T__32();
+    	EnterRule("T__32", 24);
+    	TraceIn("T__32", 24);
+    		try
+    		{
+    		int _type = T__32;
+    		int _channel = DefaultTokenChannel;
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:32:7: ( 'ctg(' )
+    		DebugEnterAlt(1);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:32:9: 'ctg('
+    		{
+    		DebugLocation(32, 9);
+    		Match("ctg("); 
+
+
+    		}
+
+    		state.type = _type;
+    		state.channel = _channel;
+    	}
+    	finally
+    	{
+    		TraceOut("T__32", 24);
+    		LeaveRule("T__32", 24);
+    		LeaveRule_T__32();
+        }
+    }
+    // $ANTLR end "T__32"
+
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void EnterRule_T__33() {}
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void LeaveRule_T__33() {}
+
+    // $ANTLR start "T__33"
+    [GrammarRule("T__33")]
+    private void mT__33()
+    {
+    	EnterRule_T__33();
+    	EnterRule("T__33", 25);
+    	TraceIn("T__33", 25);
+    		try
+    		{
+    		int _type = T__33;
+    		int _channel = DefaultTokenChannel;
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:33:7: ( 'cth(' )
+    		DebugEnterAlt(1);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:33:9: 'cth('
+    		{
+    		DebugLocation(33, 9);
+    		Match("cth("); 
+
+
+    		}
+
+    		state.type = _type;
+    		state.channel = _channel;
+    	}
+    	finally
+    	{
+    		TraceOut("T__33", 25);
+    		LeaveRule("T__33", 25);
+    		LeaveRule_T__33();
+        }
+    }
+    // $ANTLR end "T__33"
+
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void EnterRule_T__34() {}
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void LeaveRule_T__34() {}
+
+    // $ANTLR start "T__34"
+    [GrammarRule("T__34")]
+    private void mT__34()
+    {
+    	EnterRule_T__34();
+    	EnterRule("T__34", 26);
+    	TraceIn("T__34", 26);
+    		try
+    		{
+    		int _type = T__34;
+    		int _channel = DefaultTokenChannel;
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:34:7: ( 'e' )
+    		DebugEnterAlt(1);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:34:9: 'e'
+    		{
+    		DebugLocation(34, 9);
+    		Match('e'); 
+
+    		}
+
+    		state.type = _type;
+    		state.channel = _channel;
+    	}
+    	finally
+    	{
+    		TraceOut("T__34", 26);
+    		LeaveRule("T__34", 26);
+    		LeaveRule_T__34();
+        }
+    }
+    // $ANTLR end "T__34"
+
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void EnterRule_T__35() {}
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void LeaveRule_T__35() {}
+
+    // $ANTLR start "T__35"
+    [GrammarRule("T__35")]
+    private void mT__35()
+    {
+    	EnterRule_T__35();
+    	EnterRule("T__35", 27);
+    	TraceIn("T__35", 27);
+    		try
+    		{
+    		int _type = T__35;
+    		int _channel = DefaultTokenChannel;
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:35:7: ( 'exp(' )
+    		DebugEnterAlt(1);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:35:9: 'exp('
+    		{
+    		DebugLocation(35, 9);
+    		Match("exp("); 
+
+
+    		}
+
+    		state.type = _type;
+    		state.channel = _channel;
+    	}
+    	finally
+    	{
+    		TraceOut("T__35", 27);
+    		LeaveRule("T__35", 27);
+    		LeaveRule_T__35();
+        }
+    }
+    // $ANTLR end "T__35"
+
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void EnterRule_T__36() {}
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void LeaveRule_T__36() {}
+
+    // $ANTLR start "T__36"
+    [GrammarRule("T__36")]
+    private void mT__36()
+    {
+    	EnterRule_T__36();
+    	EnterRule("T__36", 28);
+    	TraceIn("T__36", 28);
+    		try
+    		{
+    		int _type = T__36;
+    		int _channel = DefaultTokenChannel;
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:36:7: ( 'lg(' )
+    		DebugEnterAlt(1);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:36:9: 'lg('
+    		{
+    		DebugLocation(36, 9);
+    		Match("lg("); 
+
+
+    		}
+
+    		state.type = _type;
+    		state.channel = _channel;
+    	}
+    	finally
+    	{
+    		TraceOut("T__36", 28);
+    		LeaveRule("T__36", 28);
+    		LeaveRule_T__36();
+        }
+    }
+    // $ANTLR end "T__36"
+
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void EnterRule_T__37() {}
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void LeaveRule_T__37() {}
+
+    // $ANTLR start "T__37"
+    [GrammarRule("T__37")]
+    private void mT__37()
+    {
+    	EnterRule_T__37();
+    	EnterRule("T__37", 29);
+    	TraceIn("T__37", 29);
+    		try
+    		{
+    		int _type = T__37;
+    		int _channel = DefaultTokenChannel;
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:37:7: ( 'ln(' )
+    		DebugEnterAlt(1);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:37:9: 'ln('
+    		{
+    		DebugLocation(37, 9);
+    		Match("ln("); 
+
+
+    		}
+
+    		state.type = _type;
+    		state.channel = _channel;
+    	}
+    	finally
+    	{
+    		TraceOut("T__37", 29);
+    		LeaveRule("T__37", 29);
+    		LeaveRule_T__37();
+        }
+    }
+    // $ANTLR end "T__37"
+
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void EnterRule_T__38() {}
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void LeaveRule_T__38() {}
+
+    // $ANTLR start "T__38"
+    [GrammarRule("T__38")]
+    private void mT__38()
+    {
+    	EnterRule_T__38();
+    	EnterRule("T__38", 30);
+    	TraceIn("T__38", 30);
+    		try
+    		{
+    		int _type = T__38;
+    		int _channel = DefaultTokenChannel;
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:38:7: ( 'log(' )
+    		DebugEnterAlt(1);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:38:9: 'log('
+    		{
+    		DebugLocation(38, 9);
+    		Match("log("); 
+
+
+    		}
+
+    		state.type = _type;
+    		state.channel = _channel;
+    	}
+    	finally
+    	{
+    		TraceOut("T__38", 30);
+    		LeaveRule("T__38", 30);
+    		LeaveRule_T__38();
+        }
+    }
+    // $ANTLR end "T__38"
+
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void EnterRule_T__39() {}
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void LeaveRule_T__39() {}
+
+    // $ANTLR start "T__39"
+    [GrammarRule("T__39")]
+    private void mT__39()
+    {
+    	EnterRule_T__39();
+    	EnterRule("T__39", 31);
+    	TraceIn("T__39", 31);
+    		try
+    		{
+    		int _type = T__39;
+    		int _channel = DefaultTokenChannel;
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:39:7: ( 'pi' )
+    		DebugEnterAlt(1);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:39:9: 'pi'
+    		{
+    		DebugLocation(39, 9);
+    		Match("pi"); 
+
+
+    		}
+
+    		state.type = _type;
+    		state.channel = _channel;
+    	}
+    	finally
+    	{
+    		TraceOut("T__39", 31);
+    		LeaveRule("T__39", 31);
+    		LeaveRule_T__39();
+        }
+    }
+    // $ANTLR end "T__39"
+
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void EnterRule_T__40() {}
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void LeaveRule_T__40() {}
+
+    // $ANTLR start "T__40"
+    [GrammarRule("T__40")]
+    private void mT__40()
+    {
+    	EnterRule_T__40();
+    	EnterRule("T__40", 32);
+    	TraceIn("T__40", 32);
+    		try
+    		{
+    		int _type = T__40;
+    		int _channel = DefaultTokenChannel;
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:40:7: ( 'pow(' )
+    		DebugEnterAlt(1);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:40:9: 'pow('
+    		{
+    		DebugLocation(40, 9);
+    		Match("pow("); 
+
+
+    		}
+
+    		state.type = _type;
+    		state.channel = _channel;
+    	}
+    	finally
+    	{
+    		TraceOut("T__40", 32);
+    		LeaveRule("T__40", 32);
+    		LeaveRule_T__40();
+        }
+    }
+    // $ANTLR end "T__40"
+
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void EnterRule_T__41() {}
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void LeaveRule_T__41() {}
+
+    // $ANTLR start "T__41"
+    [GrammarRule("T__41")]
+    private void mT__41()
+    {
+    	EnterRule_T__41();
+    	EnterRule("T__41", 33);
+    	TraceIn("T__41", 33);
+    		try
+    		{
+    		int _type = T__41;
+    		int _channel = DefaultTokenChannel;
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:41:7: ( 'sec(' )
+    		DebugEnterAlt(1);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:41:9: 'sec('
+    		{
+    		DebugLocation(41, 9);
+    		Match("sec("); 
+
+
+    		}
+
+    		state.type = _type;
+    		state.channel = _channel;
+    	}
+    	finally
+    	{
+    		TraceOut("T__41", 33);
+    		LeaveRule("T__41", 33);
+    		LeaveRule_T__41();
+        }
+    }
+    // $ANTLR end "T__41"
+
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void EnterRule_T__42() {}
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void LeaveRule_T__42() {}
+
+    // $ANTLR start "T__42"
+    [GrammarRule("T__42")]
+    private void mT__42()
+    {
+    	EnterRule_T__42();
+    	EnterRule("T__42", 34);
+    	TraceIn("T__42", 34);
+    		try
+    		{
+    		int _type = T__42;
+    		int _channel = DefaultTokenChannel;
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:42:7: ( 'sech(' )
+    		DebugEnterAlt(1);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:42:9: 'sech('
+    		{
+    		DebugLocation(42, 9);
+    		Match("sech("); 
+
+
+    		}
+
+    		state.type = _type;
+    		state.channel = _channel;
+    	}
+    	finally
+    	{
+    		TraceOut("T__42", 34);
+    		LeaveRule("T__42", 34);
+    		LeaveRule_T__42();
+        }
+    }
+    // $ANTLR end "T__42"
+
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void EnterRule_T__43() {}
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void LeaveRule_T__43() {}
+
+    // $ANTLR start "T__43"
+    [GrammarRule("T__43")]
+    private void mT__43()
+    {
+    	EnterRule_T__43();
+    	EnterRule("T__43", 35);
+    	TraceIn("T__43", 35);
+    		try
+    		{
+    		int _type = T__43;
+    		int _channel = DefaultTokenChannel;
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:43:7: ( 'sh(' )
+    		DebugEnterAlt(1);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:43:9: 'sh('
+    		{
+    		DebugLocation(43, 9);
+    		Match("sh("); 
+
+
+    		}
+
+    		state.type = _type;
+    		state.channel = _channel;
+    	}
+    	finally
+    	{
+    		TraceOut("T__43", 35);
+    		LeaveRule("T__43", 35);
+    		LeaveRule_T__43();
+        }
+    }
+    // $ANTLR end "T__43"
+
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void EnterRule_T__44() {}
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void LeaveRule_T__44() {}
+
+    // $ANTLR start "T__44"
+    [GrammarRule("T__44")]
+    private void mT__44()
+    {
+    	EnterRule_T__44();
+    	EnterRule("T__44", 36);
+    	TraceIn("T__44", 36);
+    		try
+    		{
+    		int _type = T__44;
+    		int _channel = DefaultTokenChannel;
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:44:7: ( 'sin(' )
+    		DebugEnterAlt(1);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:44:9: 'sin('
+    		{
+    		DebugLocation(44, 9);
+    		Match("sin("); 
+
+
+    		}
+
+    		state.type = _type;
+    		state.channel = _channel;
+    	}
+    	finally
+    	{
+    		TraceOut("T__44", 36);
+    		LeaveRule("T__44", 36);
+    		LeaveRule_T__44();
+        }
+    }
+    // $ANTLR end "T__44"
+
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void EnterRule_T__45() {}
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void LeaveRule_T__45() {}
+
+    // $ANTLR start "T__45"
+    [GrammarRule("T__45")]
+    private void mT__45()
+    {
+    	EnterRule_T__45();
+    	EnterRule("T__45", 37);
+    	TraceIn("T__45", 37);
+    		try
+    		{
+    		int _type = T__45;
+    		int _channel = DefaultTokenChannel;
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:45:7: ( 'tg(' )
+    		DebugEnterAlt(1);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:45:9: 'tg('
+    		{
+    		DebugLocation(45, 9);
+    		Match("tg("); 
+
+
+    		}
+
+    		state.type = _type;
+    		state.channel = _channel;
+    	}
+    	finally
+    	{
+    		TraceOut("T__45", 37);
+    		LeaveRule("T__45", 37);
+    		LeaveRule_T__45();
+        }
+    }
+    // $ANTLR end "T__45"
+
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void EnterRule_T__46() {}
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void LeaveRule_T__46() {}
+
+    // $ANTLR start "T__46"
+    [GrammarRule("T__46")]
+    private void mT__46()
+    {
+    	EnterRule_T__46();
+    	EnterRule("T__46", 38);
+    	TraceIn("T__46", 38);
+    		try
+    		{
+    		int _type = T__46;
+    		int _channel = DefaultTokenChannel;
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:46:7: ( 'th(' )
+    		DebugEnterAlt(1);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:46:9: 'th('
+    		{
+    		DebugLocation(46, 9);
+    		Match("th("); 
+
+
+    		}
+
+    		state.type = _type;
+    		state.channel = _channel;
+    	}
+    	finally
+    	{
+    		TraceOut("T__46", 38);
+    		LeaveRule("T__46", 38);
+    		LeaveRule_T__46();
+        }
+    }
+    // $ANTLR end "T__46"
+
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void EnterRule_ID() {}
+    [Conditional("ANTLR_TRACE")]
+    protected virtual void LeaveRule_ID() {}
+
+    // $ANTLR start "ID"
+    [GrammarRule("ID")]
+    private void mID()
+    {
+    	EnterRule_ID();
+    	EnterRule("ID", 39);
+    	TraceIn("ID", 39);
+    		try
+    		{
+    		int _type = ID;
+    		int _channel = DefaultTokenChannel;
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:119:5: ( ( 'a' .. 'z' | 'а' .. 'я' | '_' ) ( 'a' .. 'z' | 'а' .. 'я' | '0' .. '9' | '_' )* )
+    		DebugEnterAlt(1);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:119:7: ( 'a' .. 'z' | 'а' .. 'я' | '_' ) ( 'a' .. 'z' | 'а' .. 'я' | '0' .. '9' | '_' )*
+    		{
+    		DebugLocation(119, 7);
+    		if (input.LA(1)=='_'||(input.LA(1)>='a' && input.LA(1)<='z')||(input.LA(1)>='\u0430' && input.LA(1)<='\u044F'))
+    		{
+    			input.Consume();
+    		}
+    		else
+    		{
+    			MismatchedSetException mse = new MismatchedSetException(null,input);
+    			DebugRecognitionException(mse);
+    			Recover(mse);
+    			throw mse;
+    		}
+
+    		DebugLocation(119, 31);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:119:31: ( 'a' .. 'z' | 'а' .. 'я' | '0' .. '9' | '_' )*
+    		try { DebugEnterSubRule(1);
+    		while (true)
+    		{
+    			int alt1=2;
+    			try { DebugEnterDecision(1, decisionCanBacktrack[1]);
+    			int LA1_1 = input.LA(1);
+
+    			if (((LA1_1>='0' && LA1_1<='9')||LA1_1=='_'||(LA1_1>='a' && LA1_1<='z')||(LA1_1>='\u0430' && LA1_1<='\u044F')))
+    			{
+    				alt1 = 1;
+    			}
+
+
+    			} finally { DebugExitDecision(1); }
+    			switch ( alt1 )
+    			{
+    			case 1:
+    				DebugEnterAlt(1);
+    				// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:
+    				{
+    				DebugLocation(119, 31);
+    				input.Consume();
+
+
+    				}
+    				break;
+
+    			default:
+    				goto loop1;
+    			}
+    		}
+
+    		loop1:
+    			;
+
+    		} finally { DebugExitSubRule(1); }
+
+
+    		}
+
+    		state.type = _type;
+    		state.channel = _channel;
+    	}
+    	finally
+    	{
+    		TraceOut("ID", 39);
+    		LeaveRule("ID", 39);
+    		LeaveRule_ID();
+        }
+    }
+    // $ANTLR end "ID"
 
     [Conditional("ANTLR_TRACE")]
     protected virtual void EnterRule_FLOAT() {}
@@ -320,55 +1633,55 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
     private void mFLOAT()
     {
     	EnterRule_FLOAT();
-    	EnterRule("FLOAT", 7);
-    	TraceIn("FLOAT", 7);
+    	EnterRule("FLOAT", 40);
+    	TraceIn("FLOAT", 40);
     		try
     		{
     		int _type = FLOAT;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:165:5: ( ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ SEPARATOR ( '0' .. '9' )* ( EXPONENT )? | SEPARATOR ( '0' .. '9' )+ ( EXPONENT )? )
-    		int alt8=3;
-    		try { DebugEnterDecision(8, decisionCanBacktrack[8]);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:123:5: ( ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ SEPARATOR ( '0' .. '9' )* ( EXPONENT )? | SEPARATOR ( '0' .. '9' )+ ( EXPONENT )? )
+    		int alt9=3;
+    		try { DebugEnterDecision(9, decisionCanBacktrack[9]);
     		try
     		{
-    			alt8 = dfa8.Predict(input);
+    			alt9 = dfa9.Predict(input);
     		}
     		catch (NoViableAltException nvae)
     		{
     			DebugRecognitionException(nvae);
     			throw;
     		}
-    		} finally { DebugExitDecision(8); }
-    		switch (alt8)
+    		} finally { DebugExitDecision(9); }
+    		switch (alt9)
     		{
     		case 1:
     			DebugEnterAlt(1);
-    			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:165:7: ( '0' .. '9' )+ ( EXPONENT )?
+    			// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:123:7: ( '0' .. '9' )+ ( EXPONENT )?
     			{
-    			DebugLocation(165, 7);
-    			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:165:7: ( '0' .. '9' )+
-    			int cnt1=0;
-    			try { DebugEnterSubRule(1);
+    			DebugLocation(123, 7);
+    			// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:123:7: ( '0' .. '9' )+
+    			int cnt2=0;
+    			try { DebugEnterSubRule(2);
     			while (true)
     			{
-    				int alt1=2;
-    				try { DebugEnterDecision(1, decisionCanBacktrack[1]);
-    				int LA1_1 = input.LA(1);
+    				int alt2=2;
+    				try { DebugEnterDecision(2, decisionCanBacktrack[2]);
+    				int LA2_1 = input.LA(1);
 
-    				if (((LA1_1>='0' && LA1_1<='9')))
+    				if (((LA2_1>='0' && LA2_1<='9')))
     				{
-    					alt1 = 1;
+    					alt2 = 1;
     				}
 
 
-    				} finally { DebugExitDecision(1); }
-    				switch (alt1)
+    				} finally { DebugExitDecision(2); }
+    				switch (alt2)
     				{
     				case 1:
     					DebugEnterAlt(1);
-    					// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:
+    					// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:
     					{
-    					DebugLocation(165, 7);
+    					DebugLocation(123, 7);
     					input.Consume();
 
 
@@ -376,103 +1689,57 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
     					break;
 
     				default:
-    					if (cnt1 >= 1)
-    						goto loop1;
+    					if (cnt2 >= 1)
+    						goto loop2;
 
-    					EarlyExitException eee1 = new EarlyExitException( 1, input );
-    					DebugRecognitionException(eee1);
-    					throw eee1;
+    					EarlyExitException eee2 = new EarlyExitException( 2, input );
+    					DebugRecognitionException(eee2);
+    					throw eee2;
     				}
-    				cnt1++;
+    				cnt2++;
     			}
-    			loop1:
+    			loop2:
     				;
 
-    			} finally { DebugExitSubRule(1); }
+    			} finally { DebugExitSubRule(2); }
 
-    			DebugLocation(165, 19);
-    			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:165:19: ( EXPONENT )?
-    			int alt2=2;
-    			try { DebugEnterSubRule(2);
-    			try { DebugEnterDecision(2, decisionCanBacktrack[2]);
-    			int LA2_1 = input.LA(1);
+    			DebugLocation(123, 19);
+    			// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:123:19: ( EXPONENT )?
+    			int alt3=2;
+    			try { DebugEnterSubRule(3);
+    			try { DebugEnterDecision(3, decisionCanBacktrack[3]);
+    			int LA3_1 = input.LA(1);
 
-    			if ((LA2_1=='E'||LA2_1=='e'))
+    			if ((LA3_1=='e'))
     			{
-    				alt2 = 1;
+    				alt3 = 1;
     			}
-    			} finally { DebugExitDecision(2); }
-    			switch (alt2)
+    			} finally { DebugExitDecision(3); }
+    			switch (alt3)
     			{
     			case 1:
     				DebugEnterAlt(1);
-    				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:165:19: EXPONENT
+    				// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:123:19: EXPONENT
     				{
-    				DebugLocation(165, 19);
+    				DebugLocation(123, 19);
     				mEXPONENT(); 
 
     				}
     				break;
 
     			}
-    			} finally { DebugExitSubRule(2); }
+    			} finally { DebugExitSubRule(3); }
 
 
     			}
     			break;
     		case 2:
     			DebugEnterAlt(2);
-    			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:166:9: ( '0' .. '9' )+ SEPARATOR ( '0' .. '9' )* ( EXPONENT )?
+    			// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:124:9: ( '0' .. '9' )+ SEPARATOR ( '0' .. '9' )* ( EXPONENT )?
     			{
-    			DebugLocation(166, 9);
-    			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:166:9: ( '0' .. '9' )+
-    			int cnt3=0;
-    			try { DebugEnterSubRule(3);
-    			while (true)
-    			{
-    				int alt3=2;
-    				try { DebugEnterDecision(3, decisionCanBacktrack[3]);
-    				int LA3_1 = input.LA(1);
-
-    				if (((LA3_1>='0' && LA3_1<='9')))
-    				{
-    					alt3 = 1;
-    				}
-
-
-    				} finally { DebugExitDecision(3); }
-    				switch (alt3)
-    				{
-    				case 1:
-    					DebugEnterAlt(1);
-    					// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:
-    					{
-    					DebugLocation(166, 9);
-    					input.Consume();
-
-
-    					}
-    					break;
-
-    				default:
-    					if (cnt3 >= 1)
-    						goto loop3;
-
-    					EarlyExitException eee3 = new EarlyExitException( 3, input );
-    					DebugRecognitionException(eee3);
-    					throw eee3;
-    				}
-    				cnt3++;
-    			}
-    			loop3:
-    				;
-
-    			} finally { DebugExitSubRule(3); }
-
-    			DebugLocation(166, 21);
-    			mSEPARATOR(); 
-    			DebugLocation(166, 31);
-    			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:166:31: ( '0' .. '9' )*
+    			DebugLocation(124, 9);
+    			// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:124:9: ( '0' .. '9' )+
+    			int cnt4=0;
     			try { DebugEnterSubRule(4);
     			while (true)
     			{
@@ -487,13 +1754,13 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
 
 
     				} finally { DebugExitDecision(4); }
-    				switch ( alt4 )
+    				switch (alt4)
     				{
     				case 1:
     					DebugEnterAlt(1);
-    					// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:
+    					// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:
     					{
-    					DebugLocation(166, 31);
+    					DebugLocation(124, 9);
     					input.Consume();
 
 
@@ -501,75 +1768,121 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
     					break;
 
     				default:
-    					goto loop4;
-    				}
-    			}
+    					if (cnt4 >= 1)
+    						goto loop4;
 
+    					EarlyExitException eee4 = new EarlyExitException( 4, input );
+    					DebugRecognitionException(eee4);
+    					throw eee4;
+    				}
+    				cnt4++;
+    			}
     			loop4:
     				;
 
     			} finally { DebugExitSubRule(4); }
 
-    			DebugLocation(166, 43);
-    			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:166:43: ( EXPONENT )?
-    			int alt5=2;
+    			DebugLocation(124, 21);
+    			mSEPARATOR(); 
+    			DebugLocation(124, 31);
+    			// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:124:31: ( '0' .. '9' )*
     			try { DebugEnterSubRule(5);
-    			try { DebugEnterDecision(5, decisionCanBacktrack[5]);
-    			int LA5_1 = input.LA(1);
-
-    			if ((LA5_1=='E'||LA5_1=='e'))
+    			while (true)
     			{
-    				alt5 = 1;
+    				int alt5=2;
+    				try { DebugEnterDecision(5, decisionCanBacktrack[5]);
+    				int LA5_1 = input.LA(1);
+
+    				if (((LA5_1>='0' && LA5_1<='9')))
+    				{
+    					alt5 = 1;
+    				}
+
+
+    				} finally { DebugExitDecision(5); }
+    				switch ( alt5 )
+    				{
+    				case 1:
+    					DebugEnterAlt(1);
+    					// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:
+    					{
+    					DebugLocation(124, 31);
+    					input.Consume();
+
+
+    					}
+    					break;
+
+    				default:
+    					goto loop5;
+    				}
     			}
-    			} finally { DebugExitDecision(5); }
-    			switch (alt5)
+
+    			loop5:
+    				;
+
+    			} finally { DebugExitSubRule(5); }
+
+    			DebugLocation(124, 43);
+    			// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:124:43: ( EXPONENT )?
+    			int alt6=2;
+    			try { DebugEnterSubRule(6);
+    			try { DebugEnterDecision(6, decisionCanBacktrack[6]);
+    			int LA6_1 = input.LA(1);
+
+    			if ((LA6_1=='e'))
+    			{
+    				alt6 = 1;
+    			}
+    			} finally { DebugExitDecision(6); }
+    			switch (alt6)
     			{
     			case 1:
     				DebugEnterAlt(1);
-    				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:166:43: EXPONENT
+    				// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:124:43: EXPONENT
     				{
-    				DebugLocation(166, 43);
+    				DebugLocation(124, 43);
     				mEXPONENT(); 
 
     				}
     				break;
 
     			}
-    			} finally { DebugExitSubRule(5); }
+    			} finally { DebugExitSubRule(6); }
 
 
     			}
     			break;
     		case 3:
     			DebugEnterAlt(3);
-    			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:167:9: SEPARATOR ( '0' .. '9' )+ ( EXPONENT )?
+    			// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:125:9: SEPARATOR ( '0' .. '9' )+ ( EXPONENT )?
     			{
-    			DebugLocation(167, 9);
+    			DebugLocation(125, 9);
     			mSEPARATOR(); 
-    			DebugLocation(167, 19);
-    			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:167:19: ( '0' .. '9' )+
-    			int cnt6=0;
-    			try { DebugEnterSubRule(6);
+    			DebugLocation(125, 19);
+    			// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:125:19: ( '0' .. '9' )+
+    			int cnt7=0;
+    			try { DebugEnterSubRule(7);
     			while (true)
     			{
-    				int alt6=2;
-    				try { DebugEnterDecision(6, decisionCanBacktrack[6]);
-    				int LA6_1 = input.LA(1);
+    				int alt7=2;
+    				try { DebugEnterDecision(7, decisionCanBacktrack[7]);
+    				int LA7_1 = input.LA(1);
 
-    				if (((LA6_1>='0' && LA6_1<='9')))
+    				if (((LA7_1>='0' && LA7_1<='9')))
     				{
-    					alt6 = 1;
+    					alt7 = 1;
     				}
 
 
-    				} finally { DebugExitDecision(6); }
-    				switch (alt6)
+    				} finally { DebugExitDecision(7); }
+    				switch (alt7)
     				{
     				case 1:
     					DebugEnterAlt(1);
-    					// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:
+    					// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:
     					{
-    					DebugLocation(167, 19);
+    					DebugLocation(125, 19);
     					input.Consume();
 
 
@@ -577,46 +1890,46 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
     					break;
 
     				default:
-    					if (cnt6 >= 1)
-    						goto loop6;
+    					if (cnt7 >= 1)
+    						goto loop7;
 
-    					EarlyExitException eee6 = new EarlyExitException( 6, input );
-    					DebugRecognitionException(eee6);
-    					throw eee6;
+    					EarlyExitException eee7 = new EarlyExitException( 7, input );
+    					DebugRecognitionException(eee7);
+    					throw eee7;
     				}
-    				cnt6++;
+    				cnt7++;
     			}
-    			loop6:
+    			loop7:
     				;
 
-    			} finally { DebugExitSubRule(6); }
+    			} finally { DebugExitSubRule(7); }
 
-    			DebugLocation(167, 31);
-    			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:167:31: ( EXPONENT )?
-    			int alt7=2;
-    			try { DebugEnterSubRule(7);
-    			try { DebugEnterDecision(7, decisionCanBacktrack[7]);
-    			int LA7_1 = input.LA(1);
+    			DebugLocation(125, 31);
+    			// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:125:31: ( EXPONENT )?
+    			int alt8=2;
+    			try { DebugEnterSubRule(8);
+    			try { DebugEnterDecision(8, decisionCanBacktrack[8]);
+    			int LA8_1 = input.LA(1);
 
-    			if ((LA7_1=='E'||LA7_1=='e'))
+    			if ((LA8_1=='e'))
     			{
-    				alt7 = 1;
+    				alt8 = 1;
     			}
-    			} finally { DebugExitDecision(7); }
-    			switch (alt7)
+    			} finally { DebugExitDecision(8); }
+    			switch (alt8)
     			{
     			case 1:
     				DebugEnterAlt(1);
-    				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:167:31: EXPONENT
+    				// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:125:31: EXPONENT
     				{
-    				DebugLocation(167, 31);
+    				DebugLocation(125, 31);
     				mEXPONENT(); 
 
     				}
     				break;
 
     			}
-    			} finally { DebugExitSubRule(7); }
+    			} finally { DebugExitSubRule(8); }
 
 
     			}
@@ -628,8 +1941,8 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
     	}
     	finally
     	{
-    		TraceOut("FLOAT", 7);
-    		LeaveRule("FLOAT", 7);
+    		TraceOut("FLOAT", 40);
+    		LeaveRule("FLOAT", 40);
     		LeaveRule_FLOAT();
         }
     }
@@ -645,15 +1958,15 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
     private void mSEPARATOR()
     {
     	EnterRule_SEPARATOR();
-    	EnterRule("SEPARATOR", 8);
-    	TraceIn("SEPARATOR", 8);
+    	EnterRule("SEPARATOR", 41);
+    	TraceIn("SEPARATOR", 41);
     		try
     		{
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:172:11: ( ( '.' | ',' ) )
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:130:11: ( ( '.' | ',' ) )
     		DebugEnterAlt(1);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:
     		{
-    		DebugLocation(172, 11);
+    		DebugLocation(130, 11);
     		if (input.LA(1)==','||input.LA(1)=='.')
     		{
     			input.Consume();
@@ -672,8 +1985,8 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
     	}
     	finally
     	{
-    		TraceOut("SEPARATOR", 8);
-    		LeaveRule("SEPARATOR", 8);
+    		TraceOut("SEPARATOR", 41);
+    		LeaveRule("SEPARATOR", 41);
     		LeaveRule_SEPARATOR();
         }
     }
@@ -689,35 +2002,35 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
     private void mEXPONENT()
     {
     	EnterRule_EXPONENT();
-    	EnterRule("EXPONENT", 9);
-    	TraceIn("EXPONENT", 9);
+    	EnterRule("EXPONENT", 42);
+    	TraceIn("EXPONENT", 42);
     		try
     		{
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:174:9: ( EXP ( '+' | '-' )? ( '0' .. '9' )+ )
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:132:9: ( 'e' ( '+' | '-' )? ( '0' .. '9' )+ )
     		DebugEnterAlt(1);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:174:11: EXP ( '+' | '-' )? ( '0' .. '9' )+
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:132:11: 'e' ( '+' | '-' )? ( '0' .. '9' )+
     		{
-    		DebugLocation(174, 11);
-    		mEXP(); 
-    		DebugLocation(174, 15);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:174:15: ( '+' | '-' )?
-    		int alt9=2;
-    		try { DebugEnterSubRule(9);
-    		try { DebugEnterDecision(9, decisionCanBacktrack[9]);
-    		int LA9_1 = input.LA(1);
+    		DebugLocation(132, 11);
+    		Match('e'); 
+    		DebugLocation(132, 15);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:132:15: ( '+' | '-' )?
+    		int alt10=2;
+    		try { DebugEnterSubRule(10);
+    		try { DebugEnterDecision(10, decisionCanBacktrack[10]);
+    		int LA10_1 = input.LA(1);
 
-    		if ((LA9_1=='+'||LA9_1=='-'))
+    		if ((LA10_1=='+'||LA10_1=='-'))
     		{
-    			alt9 = 1;
+    			alt10 = 1;
     		}
-    		} finally { DebugExitDecision(9); }
-    		switch (alt9)
+    		} finally { DebugExitDecision(10); }
+    		switch (alt10)
     		{
     		case 1:
     			DebugEnterAlt(1);
-    			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:
+    			// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:
     			{
-    			DebugLocation(174, 15);
+    			DebugLocation(132, 15);
     			input.Consume();
 
 
@@ -725,32 +2038,32 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
     			break;
 
     		}
-    		} finally { DebugExitSubRule(9); }
+    		} finally { DebugExitSubRule(10); }
 
-    		DebugLocation(174, 26);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:174:26: ( '0' .. '9' )+
-    		int cnt10=0;
-    		try { DebugEnterSubRule(10);
+    		DebugLocation(132, 26);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:132:26: ( '0' .. '9' )+
+    		int cnt11=0;
+    		try { DebugEnterSubRule(11);
     		while (true)
     		{
-    			int alt10=2;
-    			try { DebugEnterDecision(10, decisionCanBacktrack[10]);
-    			int LA10_1 = input.LA(1);
+    			int alt11=2;
+    			try { DebugEnterDecision(11, decisionCanBacktrack[11]);
+    			int LA11_1 = input.LA(1);
 
-    			if (((LA10_1>='0' && LA10_1<='9')))
+    			if (((LA11_1>='0' && LA11_1<='9')))
     			{
-    				alt10 = 1;
+    				alt11 = 1;
     			}
 
 
-    			} finally { DebugExitDecision(10); }
-    			switch (alt10)
+    			} finally { DebugExitDecision(11); }
+    			switch (alt11)
     			{
     			case 1:
     				DebugEnterAlt(1);
-    				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:
+    				// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:
     				{
-    				DebugLocation(174, 26);
+    				DebugLocation(132, 26);
     				input.Consume();
 
 
@@ -758,19 +2071,19 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
     				break;
 
     			default:
-    				if (cnt10 >= 1)
-    					goto loop10;
+    				if (cnt11 >= 1)
+    					goto loop11;
 
-    				EarlyExitException eee10 = new EarlyExitException( 10, input );
-    				DebugRecognitionException(eee10);
-    				throw eee10;
+    				EarlyExitException eee11 = new EarlyExitException( 11, input );
+    				DebugRecognitionException(eee11);
+    				throw eee11;
     			}
-    			cnt10++;
+    			cnt11++;
     		}
-    		loop10:
+    		loop11:
     			;
 
-    		} finally { DebugExitSubRule(10); }
+    		} finally { DebugExitSubRule(11); }
 
 
     		}
@@ -778,902 +2091,12 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
     	}
     	finally
     	{
-    		TraceOut("EXPONENT", 9);
-    		LeaveRule("EXPONENT", 9);
+    		TraceOut("EXPONENT", 42);
+    		LeaveRule("EXPONENT", 42);
     		LeaveRule_EXPONENT();
         }
     }
     // $ANTLR end "EXPONENT"
-
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void EnterRule_EXP() {}
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void LeaveRule_EXP() {}
-
-    // $ANTLR start "EXP"
-    [GrammarRule("EXP")]
-    private void mEXP()
-    {
-    	EnterRule_EXP();
-    	EnterRule("EXP", 10);
-    	TraceIn("EXP", 10);
-    		try
-    		{
-    		int _type = EXP;
-    		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:174:6: ( ( 'e' | 'E' ) )
-    		DebugEnterAlt(1);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:
-    		{
-    		DebugLocation(174, 6);
-    		if (input.LA(1)=='E'||input.LA(1)=='e')
-    		{
-    			input.Consume();
-    		}
-    		else
-    		{
-    			MismatchedSetException mse = new MismatchedSetException(null,input);
-    			DebugRecognitionException(mse);
-    			Recover(mse);
-    			throw mse;
-    		}
-
-
-    		}
-
-    		state.type = _type;
-    		state.channel = _channel;
-    	}
-    	finally
-    	{
-    		TraceOut("EXP", 10);
-    		LeaveRule("EXP", 10);
-    		LeaveRule_EXP();
-        }
-    }
-    // $ANTLR end "EXP"
-
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void EnterRule_LOG() {}
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void LeaveRule_LOG() {}
-
-    // $ANTLR start "LOG"
-    [GrammarRule("LOG")]
-    private void mLOG()
-    {
-    	EnterRule_LOG();
-    	EnterRule("LOG", 11);
-    	TraceIn("LOG", 11);
-    		try
-    		{
-    		int _type = LOG;
-    		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:175:5: ( ( 'L' | 'l' ) 'og' )
-    		DebugEnterAlt(1);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:175:7: ( 'L' | 'l' ) 'og'
-    		{
-    		DebugLocation(175, 7);
-    		if (input.LA(1)=='L'||input.LA(1)=='l')
-    		{
-    			input.Consume();
-    		}
-    		else
-    		{
-    			MismatchedSetException mse = new MismatchedSetException(null,input);
-    			DebugRecognitionException(mse);
-    			Recover(mse);
-    			throw mse;
-    		}
-
-    		DebugLocation(175, 18);
-    		Match("og"); 
-
-
-    		}
-
-    		state.type = _type;
-    		state.channel = _channel;
-    	}
-    	finally
-    	{
-    		TraceOut("LOG", 11);
-    		LeaveRule("LOG", 11);
-    		LeaveRule_LOG();
-        }
-    }
-    // $ANTLR end "LOG"
-
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void EnterRule_LN() {}
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void LeaveRule_LN() {}
-
-    // $ANTLR start "LN"
-    [GrammarRule("LN")]
-    private void mLN()
-    {
-    	EnterRule_LN();
-    	EnterRule("LN", 12);
-    	TraceIn("LN", 12);
-    		try
-    		{
-    		int _type = LN;
-    		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:176:4: ( ( 'L' | 'l' ) 'n' )
-    		DebugEnterAlt(1);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:176:6: ( 'L' | 'l' ) 'n'
-    		{
-    		DebugLocation(176, 6);
-    		if (input.LA(1)=='L'||input.LA(1)=='l')
-    		{
-    			input.Consume();
-    		}
-    		else
-    		{
-    			MismatchedSetException mse = new MismatchedSetException(null,input);
-    			DebugRecognitionException(mse);
-    			Recover(mse);
-    			throw mse;
-    		}
-
-    		DebugLocation(176, 17);
-    		Match('n'); 
-
-    		}
-
-    		state.type = _type;
-    		state.channel = _channel;
-    	}
-    	finally
-    	{
-    		TraceOut("LN", 12);
-    		LeaveRule("LN", 12);
-    		LeaveRule_LN();
-        }
-    }
-    // $ANTLR end "LN"
-
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void EnterRule_Pi() {}
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void LeaveRule_Pi() {}
-
-    // $ANTLR start "Pi"
-    [GrammarRule("Pi")]
-    private void mPi()
-    {
-    	EnterRule_Pi();
-    	EnterRule("Pi", 13);
-    	TraceIn("Pi", 13);
-    		try
-    		{
-    		int _type = Pi;
-    		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:178:5: ( 'Pi' | 'PI' | 'pi' )
-    		int alt11=3;
-    		try { DebugEnterDecision(11, decisionCanBacktrack[11]);
-    		int LA11_1 = input.LA(1);
-
-    		if ((LA11_1=='P'))
-    		{
-    			int LA11_2 = input.LA(2);
-
-    			if ((LA11_2=='i'))
-    			{
-    				alt11 = 1;
-    			}
-    			else if ((LA11_2=='I'))
-    			{
-    				alt11 = 2;
-    			}
-
-    			else
-    			{
-    				NoViableAltException nvae = new NoViableAltException("", 11, 1, input, 2);
-    				DebugRecognitionException(nvae);
-    				throw nvae;
-    			}
-
-    		}
-    		else if ((LA11_1=='p'))
-    		{
-    			alt11 = 3;
-    		}
-
-    		else
-    		{
-    			NoViableAltException nvae = new NoViableAltException("", 11, 0, input, 1);
-    			DebugRecognitionException(nvae);
-    			throw nvae;
-    		}
-
-    		} finally { DebugExitDecision(11); }
-    		switch (alt11)
-    		{
-    		case 1:
-    			DebugEnterAlt(1);
-    			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:178:7: 'Pi'
-    			{
-    			DebugLocation(178, 7);
-    			Match("Pi"); 
-
-
-    			}
-    			break;
-    		case 2:
-    			DebugEnterAlt(2);
-    			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:178:14: 'PI'
-    			{
-    			DebugLocation(178, 14);
-    			Match("PI"); 
-
-
-    			}
-    			break;
-    		case 3:
-    			DebugEnterAlt(3);
-    			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:178:20: 'pi'
-    			{
-    			DebugLocation(178, 20);
-    			Match("pi"); 
-
-
-    			}
-    			break;
-
-    		}
-    		state.type = _type;
-    		state.channel = _channel;
-    	}
-    	finally
-    	{
-    		TraceOut("Pi", 13);
-    		LeaveRule("Pi", 13);
-    		LeaveRule_Pi();
-        }
-    }
-    // $ANTLR end "Pi"
-
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void EnterRule_SIN() {}
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void LeaveRule_SIN() {}
-
-    // $ANTLR start "SIN"
-    [GrammarRule("SIN")]
-    private void mSIN()
-    {
-    	EnterRule_SIN();
-    	EnterRule("SIN", 14);
-    	TraceIn("SIN", 14);
-    		try
-    		{
-    		int _type = SIN;
-    		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:179:6: ( ( 'S' | 's' ) 'in' )
-    		DebugEnterAlt(1);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:179:8: ( 'S' | 's' ) 'in'
-    		{
-    		DebugLocation(179, 8);
-    		if (input.LA(1)=='S'||input.LA(1)=='s')
-    		{
-    			input.Consume();
-    		}
-    		else
-    		{
-    			MismatchedSetException mse = new MismatchedSetException(null,input);
-    			DebugRecognitionException(mse);
-    			Recover(mse);
-    			throw mse;
-    		}
-
-    		DebugLocation(179, 18);
-    		Match("in"); 
-
-
-    		}
-
-    		state.type = _type;
-    		state.channel = _channel;
-    	}
-    	finally
-    	{
-    		TraceOut("SIN", 14);
-    		LeaveRule("SIN", 14);
-    		LeaveRule_SIN();
-        }
-    }
-    // $ANTLR end "SIN"
-
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void EnterRule_COS() {}
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void LeaveRule_COS() {}
-
-    // $ANTLR start "COS"
-    [GrammarRule("COS")]
-    private void mCOS()
-    {
-    	EnterRule_COS();
-    	EnterRule("COS", 15);
-    	TraceIn("COS", 15);
-    		try
-    		{
-    		int _type = COS;
-    		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:180:6: ( ( 'C' | 'c' ) 'os' )
-    		DebugEnterAlt(1);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:180:8: ( 'C' | 'c' ) 'os'
-    		{
-    		DebugLocation(180, 8);
-    		if (input.LA(1)=='C'||input.LA(1)=='c')
-    		{
-    			input.Consume();
-    		}
-    		else
-    		{
-    			MismatchedSetException mse = new MismatchedSetException(null,input);
-    			DebugRecognitionException(mse);
-    			Recover(mse);
-    			throw mse;
-    		}
-
-    		DebugLocation(180, 18);
-    		Match("os"); 
-
-
-    		}
-
-    		state.type = _type;
-    		state.channel = _channel;
-    	}
-    	finally
-    	{
-    		TraceOut("COS", 15);
-    		LeaveRule("COS", 15);
-    		LeaveRule_COS();
-        }
-    }
-    // $ANTLR end "COS"
-
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void EnterRule_TG() {}
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void LeaveRule_TG() {}
-
-    // $ANTLR start "TG"
-    [GrammarRule("TG")]
-    private void mTG()
-    {
-    	EnterRule_TG();
-    	EnterRule("TG", 16);
-    	TraceIn("TG", 16);
-    		try
-    		{
-    		int _type = TG;
-    		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:181:5: ( ( 'T' | 't' ) 'g' )
-    		DebugEnterAlt(1);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:181:7: ( 'T' | 't' ) 'g'
-    		{
-    		DebugLocation(181, 7);
-    		if (input.LA(1)=='T'||input.LA(1)=='t')
-    		{
-    			input.Consume();
-    		}
-    		else
-    		{
-    			MismatchedSetException mse = new MismatchedSetException(null,input);
-    			DebugRecognitionException(mse);
-    			Recover(mse);
-    			throw mse;
-    		}
-
-    		DebugLocation(181, 17);
-    		Match('g'); 
-
-    		}
-
-    		state.type = _type;
-    		state.channel = _channel;
-    	}
-    	finally
-    	{
-    		TraceOut("TG", 16);
-    		LeaveRule("TG", 16);
-    		LeaveRule_TG();
-        }
-    }
-    // $ANTLR end "TG"
-
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void EnterRule_CTG() {}
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void LeaveRule_CTG() {}
-
-    // $ANTLR start "CTG"
-    [GrammarRule("CTG")]
-    private void mCTG()
-    {
-    	EnterRule_CTG();
-    	EnterRule("CTG", 17);
-    	TraceIn("CTG", 17);
-    		try
-    		{
-    		int _type = CTG;
-    		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:182:6: ( ( 'C' | 'c' ) 'tg' )
-    		DebugEnterAlt(1);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:182:8: ( 'C' | 'c' ) 'tg'
-    		{
-    		DebugLocation(182, 8);
-    		if (input.LA(1)=='C'||input.LA(1)=='c')
-    		{
-    			input.Consume();
-    		}
-    		else
-    		{
-    			MismatchedSetException mse = new MismatchedSetException(null,input);
-    			DebugRecognitionException(mse);
-    			Recover(mse);
-    			throw mse;
-    		}
-
-    		DebugLocation(182, 18);
-    		Match("tg"); 
-
-
-    		}
-
-    		state.type = _type;
-    		state.channel = _channel;
-    	}
-    	finally
-    	{
-    		TraceOut("CTG", 17);
-    		LeaveRule("CTG", 17);
-    		LeaveRule_CTG();
-        }
-    }
-    // $ANTLR end "CTG"
-
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void EnterRule_SINH() {}
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void LeaveRule_SINH() {}
-
-    // $ANTLR start "SINH"
-    [GrammarRule("SINH")]
-    private void mSINH()
-    {
-    	EnterRule_SINH();
-    	EnterRule("SINH", 18);
-    	TraceIn("SINH", 18);
-    		try
-    		{
-    		int _type = SINH;
-    		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:184:7: ( SIN 'h' )
-    		DebugEnterAlt(1);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:184:9: SIN 'h'
-    		{
-    		DebugLocation(184, 9);
-    		mSIN(); 
-    		DebugLocation(184, 13);
-    		Match('h'); 
-
-    		}
-
-    		state.type = _type;
-    		state.channel = _channel;
-    	}
-    	finally
-    	{
-    		TraceOut("SINH", 18);
-    		LeaveRule("SINH", 18);
-    		LeaveRule_SINH();
-        }
-    }
-    // $ANTLR end "SINH"
-
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void EnterRule_COSH() {}
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void LeaveRule_COSH() {}
-
-    // $ANTLR start "COSH"
-    [GrammarRule("COSH")]
-    private void mCOSH()
-    {
-    	EnterRule_COSH();
-    	EnterRule("COSH", 19);
-    	TraceIn("COSH", 19);
-    		try
-    		{
-    		int _type = COSH;
-    		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:185:7: ( COS 'h' )
-    		DebugEnterAlt(1);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:185:9: COS 'h'
-    		{
-    		DebugLocation(185, 9);
-    		mCOS(); 
-    		DebugLocation(185, 13);
-    		Match('h'); 
-
-    		}
-
-    		state.type = _type;
-    		state.channel = _channel;
-    	}
-    	finally
-    	{
-    		TraceOut("COSH", 19);
-    		LeaveRule("COSH", 19);
-    		LeaveRule_COSH();
-        }
-    }
-    // $ANTLR end "COSH"
-
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void EnterRule_TGH() {}
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void LeaveRule_TGH() {}
-
-    // $ANTLR start "TGH"
-    [GrammarRule("TGH")]
-    private void mTGH()
-    {
-    	EnterRule_TGH();
-    	EnterRule("TGH", 20);
-    	TraceIn("TGH", 20);
-    		try
-    		{
-    		int _type = TGH;
-    		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:186:6: ( TG 'h' )
-    		DebugEnterAlt(1);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:186:8: TG 'h'
-    		{
-    		DebugLocation(186, 8);
-    		mTG(); 
-    		DebugLocation(186, 11);
-    		Match('h'); 
-
-    		}
-
-    		state.type = _type;
-    		state.channel = _channel;
-    	}
-    	finally
-    	{
-    		TraceOut("TGH", 20);
-    		LeaveRule("TGH", 20);
-    		LeaveRule_TGH();
-        }
-    }
-    // $ANTLR end "TGH"
-
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void EnterRule_CTGH() {}
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void LeaveRule_CTGH() {}
-
-    // $ANTLR start "CTGH"
-    [GrammarRule("CTGH")]
-    private void mCTGH()
-    {
-    	EnterRule_CTGH();
-    	EnterRule("CTGH", 21);
-    	TraceIn("CTGH", 21);
-    		try
-    		{
-    		int _type = CTGH;
-    		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:187:7: ( CTG 'h' )
-    		DebugEnterAlt(1);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:187:9: CTG 'h'
-    		{
-    		DebugLocation(187, 9);
-    		mCTG(); 
-    		DebugLocation(187, 13);
-    		Match('h'); 
-
-    		}
-
-    		state.type = _type;
-    		state.channel = _channel;
-    	}
-    	finally
-    	{
-    		TraceOut("CTGH", 21);
-    		LeaveRule("CTGH", 21);
-    		LeaveRule_CTGH();
-        }
-    }
-    // $ANTLR end "CTGH"
-
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void EnterRule_ARC() {}
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void LeaveRule_ARC() {}
-
-    // $ANTLR start "ARC"
-    [GrammarRule("ARC")]
-    private void mARC()
-    {
-    	EnterRule_ARC();
-    	EnterRule("ARC", 22);
-    	TraceIn("ARC", 22);
-    		try
-    		{
-    		int _type = ARC;
-    		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:189:6: ( ( 'Arc' | 'arc' | 'A' | 'a' ) )
-    		DebugEnterAlt(1);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:189:8: ( 'Arc' | 'arc' | 'A' | 'a' )
-    		{
-    		DebugLocation(189, 8);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:189:8: ( 'Arc' | 'arc' | 'A' | 'a' )
-    		int alt12=4;
-    		try { DebugEnterSubRule(12);
-    		try { DebugEnterDecision(12, decisionCanBacktrack[12]);
-    		int LA12_1 = input.LA(1);
-
-    		if ((LA12_1=='A'))
-    		{
-    			int LA12_2 = input.LA(2);
-
-    			if ((LA12_2=='r'))
-    			{
-    				alt12 = 1;
-    			}
-
-    			else
-    			{
-    				alt12 = 3;
-    			}
-
-    		}
-    		else if ((LA12_1=='a'))
-    		{
-    			int LA12_2 = input.LA(2);
-
-    			if ((LA12_2=='r'))
-    			{
-    				alt12 = 2;
-    			}
-
-    			else
-    			{
-    				alt12 = 4;
-    			}
-
-    		}
-
-    		else
-    		{
-    			NoViableAltException nvae = new NoViableAltException("", 12, 0, input, 1);
-    			DebugRecognitionException(nvae);
-    			throw nvae;
-    		}
-
-    		} finally { DebugExitDecision(12); }
-    		switch (alt12)
-    		{
-    		case 1:
-    			DebugEnterAlt(1);
-    			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:189:9: 'Arc'
-    			{
-    			DebugLocation(189, 9);
-    			Match("Arc"); 
-
-
-    			}
-    			break;
-    		case 2:
-    			DebugEnterAlt(2);
-    			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:189:16: 'arc'
-    			{
-    			DebugLocation(189, 16);
-    			Match("arc"); 
-
-
-    			}
-    			break;
-    		case 3:
-    			DebugEnterAlt(3);
-    			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:189:23: 'A'
-    			{
-    			DebugLocation(189, 23);
-    			Match('A'); 
-
-    			}
-    			break;
-    		case 4:
-    			DebugEnterAlt(4);
-    			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:189:29: 'a'
-    			{
-    			DebugLocation(189, 29);
-    			Match('a'); 
-
-    			}
-    			break;
-
-    		}
-    		} finally { DebugExitSubRule(12); }
-
-
-    		}
-
-    		state.type = _type;
-    		state.channel = _channel;
-    	}
-    	finally
-    	{
-    		TraceOut("ARC", 22);
-    		LeaveRule("ARC", 22);
-    		LeaveRule_ARC();
-        }
-    }
-    // $ANTLR end "ARC"
-
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void EnterRule_ASIN() {}
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void LeaveRule_ASIN() {}
-
-    // $ANTLR start "ASIN"
-    [GrammarRule("ASIN")]
-    private void mASIN()
-    {
-    	EnterRule_ASIN();
-    	EnterRule("ASIN", 23);
-    	TraceIn("ASIN", 23);
-    		try
-    		{
-    		int _type = ASIN;
-    		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:190:7: ( ARC SIN )
-    		DebugEnterAlt(1);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:190:9: ARC SIN
-    		{
-    		DebugLocation(190, 9);
-    		mARC(); 
-    		DebugLocation(190, 13);
-    		mSIN(); 
-
-    		}
-
-    		state.type = _type;
-    		state.channel = _channel;
-    	}
-    	finally
-    	{
-    		TraceOut("ASIN", 23);
-    		LeaveRule("ASIN", 23);
-    		LeaveRule_ASIN();
-        }
-    }
-    // $ANTLR end "ASIN"
-
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void EnterRule_ACOS() {}
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void LeaveRule_ACOS() {}
-
-    // $ANTLR start "ACOS"
-    [GrammarRule("ACOS")]
-    private void mACOS()
-    {
-    	EnterRule_ACOS();
-    	EnterRule("ACOS", 24);
-    	TraceIn("ACOS", 24);
-    		try
-    		{
-    		int _type = ACOS;
-    		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:191:7: ( ARC COS )
-    		DebugEnterAlt(1);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:191:9: ARC COS
-    		{
-    		DebugLocation(191, 9);
-    		mARC(); 
-    		DebugLocation(191, 13);
-    		mCOS(); 
-
-    		}
-
-    		state.type = _type;
-    		state.channel = _channel;
-    	}
-    	finally
-    	{
-    		TraceOut("ACOS", 24);
-    		LeaveRule("ACOS", 24);
-    		LeaveRule_ACOS();
-        }
-    }
-    // $ANTLR end "ACOS"
-
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void EnterRule_ATG() {}
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void LeaveRule_ATG() {}
-
-    // $ANTLR start "ATG"
-    [GrammarRule("ATG")]
-    private void mATG()
-    {
-    	EnterRule_ATG();
-    	EnterRule("ATG", 25);
-    	TraceIn("ATG", 25);
-    		try
-    		{
-    		int _type = ATG;
-    		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:192:6: ( ARC TG )
-    		DebugEnterAlt(1);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:192:8: ARC TG
-    		{
-    		DebugLocation(192, 8);
-    		mARC(); 
-    		DebugLocation(192, 12);
-    		mTG(); 
-
-    		}
-
-    		state.type = _type;
-    		state.channel = _channel;
-    	}
-    	finally
-    	{
-    		TraceOut("ATG", 25);
-    		LeaveRule("ATG", 25);
-    		LeaveRule_ATG();
-        }
-    }
-    // $ANTLR end "ATG"
-
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void EnterRule_ACTG() {}
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void LeaveRule_ACTG() {}
-
-    // $ANTLR start "ACTG"
-    [GrammarRule("ACTG")]
-    private void mACTG()
-    {
-    	EnterRule_ACTG();
-    	EnterRule("ACTG", 26);
-    	TraceIn("ACTG", 26);
-    		try
-    		{
-    		int _type = ACTG;
-    		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:193:7: ( ARC CTG )
-    		DebugEnterAlt(1);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:193:9: ARC CTG
-    		{
-    		DebugLocation(193, 9);
-    		mARC(); 
-    		DebugLocation(193, 13);
-    		mCTG(); 
-
-    		}
-
-    		state.type = _type;
-    		state.channel = _channel;
-    	}
-    	finally
-    	{
-    		TraceOut("ACTG", 26);
-    		LeaveRule("ACTG", 26);
-    		LeaveRule_ACTG();
-        }
-    }
-    // $ANTLR end "ACTG"
 
     [Conditional("ANTLR_TRACE")]
     protected virtual void EnterRule_NEWLINE() {}
@@ -1685,45 +2108,45 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
     private void mNEWLINE()
     {
     	EnterRule_NEWLINE();
-    	EnterRule("NEWLINE", 27);
-    	TraceIn("NEWLINE", 27);
+    	EnterRule("NEWLINE", 43);
+    	TraceIn("NEWLINE", 43);
     		try
     		{
     		int _type = NEWLINE;
     		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:195:9: ( '\\n' ( '\\r' )? )
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:133:9: ( ( '\\r' )? '\\n' )
     		DebugEnterAlt(1);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:195:11: '\\n' ( '\\r' )?
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:133:11: ( '\\r' )? '\\n'
     		{
-    		DebugLocation(195, 11);
-    		Match('\n'); 
-    		DebugLocation(195, 16);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:195:16: ( '\\r' )?
-    		int alt13=2;
-    		try { DebugEnterSubRule(13);
-    		try { DebugEnterDecision(13, decisionCanBacktrack[13]);
-    		int LA13_1 = input.LA(1);
+    		DebugLocation(133, 11);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:133:11: ( '\\r' )?
+    		int alt12=2;
+    		try { DebugEnterSubRule(12);
+    		try { DebugEnterDecision(12, decisionCanBacktrack[12]);
+    		int LA12_1 = input.LA(1);
 
-    		if ((LA13_1=='\r'))
+    		if ((LA12_1=='\r'))
     		{
-    			alt13 = 1;
+    			alt12 = 1;
     		}
-    		} finally { DebugExitDecision(13); }
-    		switch (alt13)
+    		} finally { DebugExitDecision(12); }
+    		switch (alt12)
     		{
     		case 1:
     			DebugEnterAlt(1);
-    			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:195:16: '\\r'
+    			// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:133:11: '\\r'
     			{
-    			DebugLocation(195, 16);
+    			DebugLocation(133, 11);
     			Match('\r'); 
 
     			}
     			break;
 
     		}
-    		} finally { DebugExitSubRule(13); }
+    		} finally { DebugExitSubRule(12); }
 
+    		DebugLocation(133, 17);
+    		Match('\n'); 
 
     		}
 
@@ -1732,8 +2155,8 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
     	}
     	finally
     	{
-    		TraceOut("NEWLINE", 27);
-    		LeaveRule("NEWLINE", 27);
+    		TraceOut("NEWLINE", 43);
+    		LeaveRule("NEWLINE", 43);
     		LeaveRule_NEWLINE();
         }
     }
@@ -1741,687 +2164,386 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
 
     public override void mTokens()
     {
-    	// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:1:8: ( T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | FLOAT | EXP | LOG | LN | Pi | SIN | COS | TG | CTG | SINH | COSH | TGH | CTGH | ARC | ASIN | ACOS | ATG | ACTG | NEWLINE )
-    	int alt14=25;
-    	try { DebugEnterDecision(14, decisionCanBacktrack[14]);
-    	switch (input.LA(1))
+    	// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:1:8: ( T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | ID | FLOAT | NEWLINE )
+    	int alt13=41;
+    	try { DebugEnterDecision(13, decisionCanBacktrack[13]);
+    	try
     	{
-    	case '(':
-    		{
-    		alt14 = 1;
-    		}
-    		break;
-    	case ')':
-    		{
-    		alt14 = 2;
-    		}
-    		break;
-    	case '*':
-    		{
-    		alt14 = 3;
-    		}
-    		break;
-    	case '+':
-    		{
-    		alt14 = 4;
-    		}
-    		break;
-    	case '-':
-    		{
-    		alt14 = 5;
-    		}
-    		break;
-    	case '/':
-    		{
-    		alt14 = 6;
-    		}
-    		break;
-    	case ',':
-    	case '.':
-    	case '0':
-    	case '1':
-    	case '2':
-    	case '3':
-    	case '4':
-    	case '5':
-    	case '6':
-    	case '7':
-    	case '8':
-    	case '9':
-    		{
-    		alt14 = 7;
-    		}
-    		break;
-    	case 'E':
-    	case 'e':
-    		{
-    		alt14 = 8;
-    		}
-    		break;
-    	case 'L':
-    	case 'l':
-    		{
-    		int LA14_2 = input.LA(2);
-
-    		if ((LA14_2=='o'))
-    		{
-    			alt14 = 9;
-    		}
-    		else if ((LA14_2=='n'))
-    		{
-    			alt14 = 10;
-    		}
-
-    		else
-    		{
-    			NoViableAltException nvae = new NoViableAltException("", 14, 9, input, 2);
-    			DebugRecognitionException(nvae);
-    			throw nvae;
-    		}
-
-    		}
-    		break;
-    	case 'P':
-    	case 'p':
-    		{
-    		alt14 = 11;
-    		}
-    		break;
-    	case 'S':
-    	case 's':
-    		{
-    		int LA14_2 = input.LA(2);
-
-    		if ((LA14_2=='i'))
-    		{
-    			int LA14_3 = input.LA(3);
-
-    			if ((LA14_3=='n'))
-    			{
-    				int LA14_4 = input.LA(4);
-
-    				if ((LA14_4=='h'))
-    				{
-    					alt14 = 16;
-    				}
-
-    				else
-    				{
-    					alt14 = 12;
-    				}
-
-    			}
-
-    			else
-    			{
-    				NoViableAltException nvae = new NoViableAltException("", 14, 19, input, 3);
-    				DebugRecognitionException(nvae);
-    				throw nvae;
-    			}
-
-    		}
-
-    		else
-    		{
-    			NoViableAltException nvae = new NoViableAltException("", 14, 11, input, 2);
-    			DebugRecognitionException(nvae);
-    			throw nvae;
-    		}
-
-    		}
-    		break;
-    	case 'C':
-    	case 'c':
-    		{
-    		int LA14_2 = input.LA(2);
-
-    		if ((LA14_2=='o'))
-    		{
-    			int LA14_3 = input.LA(3);
-
-    			if ((LA14_3=='s'))
-    			{
-    				int LA14_4 = input.LA(4);
-
-    				if ((LA14_4=='h'))
-    				{
-    					alt14 = 17;
-    				}
-
-    				else
-    				{
-    					alt14 = 13;
-    				}
-
-    			}
-
-    			else
-    			{
-    				NoViableAltException nvae = new NoViableAltException("", 14, 20, input, 3);
-    				DebugRecognitionException(nvae);
-    				throw nvae;
-    			}
-
-    		}
-    		else if ((LA14_2=='t'))
-    		{
-    			int LA14_3 = input.LA(3);
-
-    			if ((LA14_3=='g'))
-    			{
-    				int LA14_4 = input.LA(4);
-
-    				if ((LA14_4=='h'))
-    				{
-    					alt14 = 19;
-    				}
-
-    				else
-    				{
-    					alt14 = 15;
-    				}
-
-    			}
-
-    			else
-    			{
-    				NoViableAltException nvae = new NoViableAltException("", 14, 21, input, 3);
-    				DebugRecognitionException(nvae);
-    				throw nvae;
-    			}
-
-    		}
-
-    		else
-    		{
-    			NoViableAltException nvae = new NoViableAltException("", 14, 12, input, 2);
-    			DebugRecognitionException(nvae);
-    			throw nvae;
-    		}
-
-    		}
-    		break;
-    	case 'T':
-    	case 't':
-    		{
-    		int LA14_2 = input.LA(2);
-
-    		if ((LA14_2=='g'))
-    		{
-    			int LA14_3 = input.LA(3);
-
-    			if ((LA14_3=='h'))
-    			{
-    				alt14 = 18;
-    			}
-
-    			else
-    			{
-    				alt14 = 14;
-    			}
-
-    		}
-
-    		else
-    		{
-    			NoViableAltException nvae = new NoViableAltException("", 14, 13, input, 2);
-    			DebugRecognitionException(nvae);
-    			throw nvae;
-    		}
-
-    		}
-    		break;
-    	case 'A':
-    		{
-    		switch (input.LA(2))
-    		{
-    		case 'r':
-    			{
-    			int LA14_3 = input.LA(3);
-
-    			if ((LA14_3=='c'))
-    			{
-    				switch (input.LA(4))
-    				{
-    				case 'S':
-    				case 's':
-    					{
-    					alt14 = 21;
-    					}
-    					break;
-    				case 'C':
-    				case 'c':
-    					{
-    					int LA14_5 = input.LA(5);
-
-    					if ((LA14_5=='o'))
-    					{
-    						alt14 = 22;
-    					}
-    					else if ((LA14_5=='t'))
-    					{
-    						alt14 = 24;
-    					}
-
-    					else
-    					{
-    						NoViableAltException nvae = new NoViableAltException("", 14, 26, input, 5);
-    						DebugRecognitionException(nvae);
-    						throw nvae;
-    					}
-
-    					}
-    					break;
-    				case 'T':
-    				case 't':
-    					{
-    					alt14 = 23;
-    					}
-    					break;
-    				default:
-    					alt14=20;
-    					break;
-
-    				}
-
-    			}
-
-    			else
-    			{
-    				NoViableAltException nvae = new NoViableAltException("", 14, 23, input, 3);
-    				DebugRecognitionException(nvae);
-    				throw nvae;
-    			}
-
-    			}
-    			break;
-    		case 'S':
-    		case 's':
-    			{
-    			alt14 = 21;
-    			}
-    			break;
-    		case 'C':
-    		case 'c':
-    			{
-    			int LA14_3 = input.LA(3);
-
-    			if ((LA14_3=='o'))
-    			{
-    				alt14 = 22;
-    			}
-    			else if ((LA14_3=='t'))
-    			{
-    				alt14 = 24;
-    			}
-
-    			else
-    			{
-    				NoViableAltException nvae = new NoViableAltException("", 14, 26, input, 3);
-    				DebugRecognitionException(nvae);
-    				throw nvae;
-    			}
-
-    			}
-    			break;
-    		case 'T':
-    		case 't':
-    			{
-    			alt14 = 23;
-    			}
-    			break;
-    		default:
-    			alt14=20;
-    			break;
-
-    		}
-
-    		}
-    		break;
-    	case 'a':
-    		{
-    		switch (input.LA(2))
-    		{
-    		case 'r':
-    			{
-    			int LA14_3 = input.LA(3);
-
-    			if ((LA14_3=='c'))
-    			{
-    				switch (input.LA(4))
-    				{
-    				case 'S':
-    				case 's':
-    					{
-    					alt14 = 21;
-    					}
-    					break;
-    				case 'C':
-    				case 'c':
-    					{
-    					int LA14_5 = input.LA(5);
-
-    					if ((LA14_5=='o'))
-    					{
-    						alt14 = 22;
-    					}
-    					else if ((LA14_5=='t'))
-    					{
-    						alt14 = 24;
-    					}
-
-    					else
-    					{
-    						NoViableAltException nvae = new NoViableAltException("", 14, 26, input, 5);
-    						DebugRecognitionException(nvae);
-    						throw nvae;
-    					}
-
-    					}
-    					break;
-    				case 'T':
-    				case 't':
-    					{
-    					alt14 = 23;
-    					}
-    					break;
-    				default:
-    					alt14=20;
-    					break;
-
-    				}
-
-    			}
-
-    			else
-    			{
-    				NoViableAltException nvae = new NoViableAltException("", 14, 28, input, 3);
-    				DebugRecognitionException(nvae);
-    				throw nvae;
-    			}
-
-    			}
-    			break;
-    		case 'S':
-    		case 's':
-    			{
-    			alt14 = 21;
-    			}
-    			break;
-    		case 'C':
-    		case 'c':
-    			{
-    			int LA14_3 = input.LA(3);
-
-    			if ((LA14_3=='o'))
-    			{
-    				alt14 = 22;
-    			}
-    			else if ((LA14_3=='t'))
-    			{
-    				alt14 = 24;
-    			}
-
-    			else
-    			{
-    				NoViableAltException nvae = new NoViableAltException("", 14, 26, input, 3);
-    				DebugRecognitionException(nvae);
-    				throw nvae;
-    			}
-
-    			}
-    			break;
-    		case 'T':
-    		case 't':
-    			{
-    			alt14 = 23;
-    			}
-    			break;
-    		default:
-    			alt14=20;
-    			break;
-
-    		}
-
-    		}
-    		break;
-    	case '\n':
-    		{
-    		alt14 = 25;
-    		}
-    		break;
-    	default:
-    		{
-    			NoViableAltException nvae = new NoViableAltException("", 14, 0, input, 1);
-    			DebugRecognitionException(nvae);
-    			throw nvae;
-    		}
+    		alt13 = dfa13.Predict(input);
     	}
-
-    	} finally { DebugExitDecision(14); }
-    	switch (alt14)
+    	catch (NoViableAltException nvae)
+    	{
+    		DebugRecognitionException(nvae);
+    		throw;
+    	}
+    	} finally { DebugExitDecision(13); }
+    	switch (alt13)
     	{
     	case 1:
     		DebugEnterAlt(1);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:1:10: T__25
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:1:10: T__9
     		{
     		DebugLocation(1, 10);
-    		mT__25(); 
+    		mT__9(); 
 
     		}
     		break;
     	case 2:
     		DebugEnterAlt(2);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:1:16: T__26
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:1:15: T__10
     		{
-    		DebugLocation(1, 16);
-    		mT__26(); 
+    		DebugLocation(1, 15);
+    		mT__10(); 
 
     		}
     		break;
     	case 3:
     		DebugEnterAlt(3);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:1:22: T__27
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:1:21: T__11
     		{
-    		DebugLocation(1, 22);
-    		mT__27(); 
+    		DebugLocation(1, 21);
+    		mT__11(); 
 
     		}
     		break;
     	case 4:
     		DebugEnterAlt(4);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:1:28: T__28
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:1:27: T__12
     		{
-    		DebugLocation(1, 28);
-    		mT__28(); 
+    		DebugLocation(1, 27);
+    		mT__12(); 
 
     		}
     		break;
     	case 5:
     		DebugEnterAlt(5);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:1:34: T__29
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:1:33: T__13
     		{
-    		DebugLocation(1, 34);
-    		mT__29(); 
+    		DebugLocation(1, 33);
+    		mT__13(); 
 
     		}
     		break;
     	case 6:
     		DebugEnterAlt(6);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:1:40: T__30
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:1:39: T__14
     		{
-    		DebugLocation(1, 40);
-    		mT__30(); 
+    		DebugLocation(1, 39);
+    		mT__14(); 
 
     		}
     		break;
     	case 7:
     		DebugEnterAlt(7);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:1:46: FLOAT
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:1:45: T__15
     		{
-    		DebugLocation(1, 46);
-    		mFLOAT(); 
+    		DebugLocation(1, 45);
+    		mT__15(); 
 
     		}
     		break;
     	case 8:
     		DebugEnterAlt(8);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:1:52: EXP
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:1:51: T__16
     		{
-    		DebugLocation(1, 52);
-    		mEXP(); 
+    		DebugLocation(1, 51);
+    		mT__16(); 
 
     		}
     		break;
     	case 9:
     		DebugEnterAlt(9);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:1:56: LOG
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:1:57: T__17
     		{
-    		DebugLocation(1, 56);
-    		mLOG(); 
+    		DebugLocation(1, 57);
+    		mT__17(); 
 
     		}
     		break;
     	case 10:
     		DebugEnterAlt(10);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:1:60: LN
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:1:63: T__18
     		{
-    		DebugLocation(1, 60);
-    		mLN(); 
+    		DebugLocation(1, 63);
+    		mT__18(); 
 
     		}
     		break;
     	case 11:
     		DebugEnterAlt(11);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:1:63: Pi
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:1:69: T__19
     		{
-    		DebugLocation(1, 63);
-    		mPi(); 
+    		DebugLocation(1, 69);
+    		mT__19(); 
 
     		}
     		break;
     	case 12:
     		DebugEnterAlt(12);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:1:66: SIN
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:1:75: T__20
     		{
-    		DebugLocation(1, 66);
-    		mSIN(); 
+    		DebugLocation(1, 75);
+    		mT__20(); 
 
     		}
     		break;
     	case 13:
     		DebugEnterAlt(13);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:1:70: COS
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:1:81: T__21
     		{
-    		DebugLocation(1, 70);
-    		mCOS(); 
+    		DebugLocation(1, 81);
+    		mT__21(); 
 
     		}
     		break;
     	case 14:
     		DebugEnterAlt(14);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:1:74: TG
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:1:87: T__22
     		{
-    		DebugLocation(1, 74);
-    		mTG(); 
+    		DebugLocation(1, 87);
+    		mT__22(); 
 
     		}
     		break;
     	case 15:
     		DebugEnterAlt(15);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:1:77: CTG
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:1:93: T__23
     		{
-    		DebugLocation(1, 77);
-    		mCTG(); 
+    		DebugLocation(1, 93);
+    		mT__23(); 
 
     		}
     		break;
     	case 16:
     		DebugEnterAlt(16);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:1:81: SINH
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:1:99: T__24
     		{
-    		DebugLocation(1, 81);
-    		mSINH(); 
+    		DebugLocation(1, 99);
+    		mT__24(); 
 
     		}
     		break;
     	case 17:
     		DebugEnterAlt(17);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:1:86: COSH
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:1:105: T__25
     		{
-    		DebugLocation(1, 86);
-    		mCOSH(); 
+    		DebugLocation(1, 105);
+    		mT__25(); 
 
     		}
     		break;
     	case 18:
     		DebugEnterAlt(18);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:1:91: TGH
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:1:111: T__26
     		{
-    		DebugLocation(1, 91);
-    		mTGH(); 
+    		DebugLocation(1, 111);
+    		mT__26(); 
 
     		}
     		break;
     	case 19:
     		DebugEnterAlt(19);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:1:95: CTGH
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:1:117: T__27
     		{
-    		DebugLocation(1, 95);
-    		mCTGH(); 
+    		DebugLocation(1, 117);
+    		mT__27(); 
 
     		}
     		break;
     	case 20:
     		DebugEnterAlt(20);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:1:100: ARC
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:1:123: T__28
     		{
-    		DebugLocation(1, 100);
-    		mARC(); 
+    		DebugLocation(1, 123);
+    		mT__28(); 
 
     		}
     		break;
     	case 21:
     		DebugEnterAlt(21);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:1:104: ASIN
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:1:129: T__29
     		{
-    		DebugLocation(1, 104);
-    		mASIN(); 
+    		DebugLocation(1, 129);
+    		mT__29(); 
 
     		}
     		break;
     	case 22:
     		DebugEnterAlt(22);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:1:109: ACOS
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:1:135: T__30
     		{
-    		DebugLocation(1, 109);
-    		mACOS(); 
+    		DebugLocation(1, 135);
+    		mT__30(); 
 
     		}
     		break;
     	case 23:
     		DebugEnterAlt(23);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:1:114: ATG
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:1:141: T__31
     		{
-    		DebugLocation(1, 114);
-    		mATG(); 
+    		DebugLocation(1, 141);
+    		mT__31(); 
 
     		}
     		break;
     	case 24:
     		DebugEnterAlt(24);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:1:118: ACTG
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:1:147: T__32
     		{
-    		DebugLocation(1, 118);
-    		mACTG(); 
+    		DebugLocation(1, 147);
+    		mT__32(); 
 
     		}
     		break;
     	case 25:
     		DebugEnterAlt(25);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:1:123: NEWLINE
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:1:153: T__33
     		{
-    		DebugLocation(1, 123);
+    		DebugLocation(1, 153);
+    		mT__33(); 
+
+    		}
+    		break;
+    	case 26:
+    		DebugEnterAlt(26);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:1:159: T__34
+    		{
+    		DebugLocation(1, 159);
+    		mT__34(); 
+
+    		}
+    		break;
+    	case 27:
+    		DebugEnterAlt(27);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:1:165: T__35
+    		{
+    		DebugLocation(1, 165);
+    		mT__35(); 
+
+    		}
+    		break;
+    	case 28:
+    		DebugEnterAlt(28);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:1:171: T__36
+    		{
+    		DebugLocation(1, 171);
+    		mT__36(); 
+
+    		}
+    		break;
+    	case 29:
+    		DebugEnterAlt(29);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:1:177: T__37
+    		{
+    		DebugLocation(1, 177);
+    		mT__37(); 
+
+    		}
+    		break;
+    	case 30:
+    		DebugEnterAlt(30);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:1:183: T__38
+    		{
+    		DebugLocation(1, 183);
+    		mT__38(); 
+
+    		}
+    		break;
+    	case 31:
+    		DebugEnterAlt(31);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:1:189: T__39
+    		{
+    		DebugLocation(1, 189);
+    		mT__39(); 
+
+    		}
+    		break;
+    	case 32:
+    		DebugEnterAlt(32);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:1:195: T__40
+    		{
+    		DebugLocation(1, 195);
+    		mT__40(); 
+
+    		}
+    		break;
+    	case 33:
+    		DebugEnterAlt(33);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:1:201: T__41
+    		{
+    		DebugLocation(1, 201);
+    		mT__41(); 
+
+    		}
+    		break;
+    	case 34:
+    		DebugEnterAlt(34);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:1:207: T__42
+    		{
+    		DebugLocation(1, 207);
+    		mT__42(); 
+
+    		}
+    		break;
+    	case 35:
+    		DebugEnterAlt(35);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:1:213: T__43
+    		{
+    		DebugLocation(1, 213);
+    		mT__43(); 
+
+    		}
+    		break;
+    	case 36:
+    		DebugEnterAlt(36);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:1:219: T__44
+    		{
+    		DebugLocation(1, 219);
+    		mT__44(); 
+
+    		}
+    		break;
+    	case 37:
+    		DebugEnterAlt(37);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:1:225: T__45
+    		{
+    		DebugLocation(1, 225);
+    		mT__45(); 
+
+    		}
+    		break;
+    	case 38:
+    		DebugEnterAlt(38);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:1:231: T__46
+    		{
+    		DebugLocation(1, 231);
+    		mT__46(); 
+
+    		}
+    		break;
+    	case 39:
+    		DebugEnterAlt(39);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:1:237: ID
+    		{
+    		DebugLocation(1, 237);
+    		mID(); 
+
+    		}
+    		break;
+    	case 40:
+    		DebugEnterAlt(40);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:1:240: FLOAT
+    		{
+    		DebugLocation(1, 240);
+    		mFLOAT(); 
+
+    		}
+    		break;
+    	case 41:
+    		DebugEnterAlt(41);
+    		// D:\\project\\C#\\Calculator\\GrammarOfArithmetic.g:1:246: NEWLINE
+    		{
+    		DebugLocation(1, 246);
     		mNEWLINE(); 
 
     		}
@@ -2433,29 +2555,31 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
 
 
 	#region DFA
-	DFA8 dfa8;
+	DFA9 dfa9;
+	DFA13 dfa13;
 
 	protected override void InitDFAs()
 	{
 		base.InitDFAs();
-		dfa8 = new DFA8(this);
+		dfa9 = new DFA9(this);
+		dfa13 = new DFA13(this);
 	}
 
-	private class DFA8 : DFA
+	private class DFA9 : DFA
 	{
-		private const string DFA8_eotS =
+		private const string DFA9_eotS =
 			"\x1\xFFFF\x1\x3\x3\xFFFF";
-		private const string DFA8_eofS =
+		private const string DFA9_eofS =
 			"\x5\xFFFF";
-		private const string DFA8_minS =
+		private const string DFA9_minS =
 			"\x2\x2C\x3\xFFFF";
-		private const string DFA8_maxS =
+		private const string DFA9_maxS =
 			"\x2\x39\x3\xFFFF";
-		private const string DFA8_acceptS =
+		private const string DFA9_acceptS =
 			"\x2\xFFFF\x1\x3\x1\x1\x1\x2";
-		private const string DFA8_specialS =
+		private const string DFA9_specialS =
 			"\x5\xFFFF}>";
-		private static readonly string[] DFA8_transitionS =
+		private static readonly string[] DFA9_transitionS =
 			{
 				"\x1\x2\x1\xFFFF\x1\x2\x1\xFFFF\xA\x1",
 				"\x1\x4\x1\xFFFF\x1\x4\x1\xFFFF\xA\x1",
@@ -2464,38 +2588,214 @@ public partial class GrammarOfArithmeticLexer : Antlr.Runtime.Lexer
 				""
 			};
 
-		private static readonly short[] DFA8_eot = DFA.UnpackEncodedString(DFA8_eotS);
-		private static readonly short[] DFA8_eof = DFA.UnpackEncodedString(DFA8_eofS);
-		private static readonly char[] DFA8_min = DFA.UnpackEncodedStringToUnsignedChars(DFA8_minS);
-		private static readonly char[] DFA8_max = DFA.UnpackEncodedStringToUnsignedChars(DFA8_maxS);
-		private static readonly short[] DFA8_accept = DFA.UnpackEncodedString(DFA8_acceptS);
-		private static readonly short[] DFA8_special = DFA.UnpackEncodedString(DFA8_specialS);
-		private static readonly short[][] DFA8_transition;
+		private static readonly short[] DFA9_eot = DFA.UnpackEncodedString(DFA9_eotS);
+		private static readonly short[] DFA9_eof = DFA.UnpackEncodedString(DFA9_eofS);
+		private static readonly char[] DFA9_min = DFA.UnpackEncodedStringToUnsignedChars(DFA9_minS);
+		private static readonly char[] DFA9_max = DFA.UnpackEncodedStringToUnsignedChars(DFA9_maxS);
+		private static readonly short[] DFA9_accept = DFA.UnpackEncodedString(DFA9_acceptS);
+		private static readonly short[] DFA9_special = DFA.UnpackEncodedString(DFA9_specialS);
+		private static readonly short[][] DFA9_transition;
 
-		static DFA8()
+		static DFA9()
 		{
-			int numStates = DFA8_transitionS.Length;
-			DFA8_transition = new short[numStates][];
+			int numStates = DFA9_transitionS.Length;
+			DFA9_transition = new short[numStates][];
 			for ( int i=0; i < numStates; i++ )
 			{
-				DFA8_transition[i] = DFA.UnpackEncodedString(DFA8_transitionS[i]);
+				DFA9_transition[i] = DFA.UnpackEncodedString(DFA9_transitionS[i]);
 			}
 		}
 
-		public DFA8( BaseRecognizer recognizer )
+		public DFA9( BaseRecognizer recognizer )
 		{
 			this.recognizer = recognizer;
-			this.decisionNumber = 8;
-			this.eot = DFA8_eot;
-			this.eof = DFA8_eof;
-			this.min = DFA8_min;
-			this.max = DFA8_max;
-			this.accept = DFA8_accept;
-			this.special = DFA8_special;
-			this.transition = DFA8_transition;
+			this.decisionNumber = 9;
+			this.eot = DFA9_eot;
+			this.eof = DFA9_eof;
+			this.min = DFA9_min;
+			this.max = DFA9_max;
+			this.accept = DFA9_accept;
+			this.special = DFA9_special;
+			this.transition = DFA9_transition;
 		}
 
-		public override string Description { get { return "164:1: FLOAT : ( ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ SEPARATOR ( '0' .. '9' )* ( EXPONENT )? | SEPARATOR ( '0' .. '9' )+ ( EXPONENT )? );"; } }
+		public override string Description { get { return "122:1: FLOAT : ( ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ SEPARATOR ( '0' .. '9' )* ( EXPONENT )? | SEPARATOR ( '0' .. '9' )+ ( EXPONENT )? );"; } }
+
+		public override void Error(NoViableAltException nvae)
+		{
+			DebugRecognitionException(nvae);
+		}
+	}
+
+	private class DFA13 : DFA
+	{
+		private const string DFA13_eotS =
+			"\x1\xFFFF\x1\x17\x1\xFFFF\x1\x19\x2\xFFFF\x1\x1A\x5\xFFFF\x2\x13\x1\x24"+
+			"\x4\x13\x5\xFFFF\x1\x30\x2\xFFFF\x9\x13\x1\xFFFF\x3\x13\x1\x3F\x6\x13"+
+			"\x2\xFFFF\x5\x13\x1\xFFFF\x5\x13\x2\xFFFF\x1\x13\x1\xFFFF\x2\x13\x1\xFFFF"+
+			"\x1\x13\x3\xFFFF\x3\x13\x2\xFFFF\x2\x13\x6\xFFFF\x1\x13\x4\xFFFF\x1\x13"+
+			"\x3\xFFFF";
+		private const string DFA13_eofS =
+			"\x5D\xFFFF";
+		private const string DFA13_minS =
+			"\x1\xA\x1\x21\x1\xFFFF\x1\x21\x2\xFFFF\x1\x30\x5\xFFFF\x1\x62\x1\x68"+
+			"\x1\x30\x1\x67\x1\x69\x1\x65\x1\x67\x5\xFFFF\x1\x21\x2\xFFFF\x1\x73\x1"+
+			"\x6F\x1\x69\x1\x67\x1\x28\x1\x73\x1\x63\x1\x67\x1\x70\x1\xFFFF\x2\x28"+
+			"\x1\x67\x1\x30\x1\x77\x1\x63\x1\x28\x1\x6E\x2\x28\x2\xFFFF\x1\x28\x1"+
+			"\x73\x1\x67\x1\x6E\x1\x28\x1\xFFFF\x1\x28\x1\x68\x3\x28\x2\xFFFF\x1\x28"+
+			"\x1\xFFFF\x2\x28\x1\xFFFF\x1\x28\x3\xFFFF\x3\x28\x2\xFFFF\x1\x63\x1\x28"+
+			"\x6\xFFFF\x1\x28\x4\xFFFF\x1\x28\x3\xFFFF";
+		private const string DFA13_maxS =
+			"\x1\x44F\x1\x21\x1\xFFFF\x1\x21\x2\xFFFF\x1\x39\x5\xFFFF\x2\x74\x1\x44F"+
+			"\x2\x6F\x1\x69\x1\x68\x5\xFFFF\x1\x21\x2\xFFFF\x1\x73\x1\x74\x1\x69\x1"+
+			"\x67\x1\x28\x1\x73\x1\x63\x1\x68\x1\x70\x1\xFFFF\x2\x28\x1\x67\x1\x44F"+
+			"\x1\x77\x1\x63\x1\x28\x1\x6E\x2\x28\x2\xFFFF\x1\x28\x1\x73\x1\x67\x1"+
+			"\x6E\x1\x28\x1\xFFFF\x1\x65\x1\x68\x3\x28\x2\xFFFF\x1\x28\x1\xFFFF\x1"+
+			"\x28\x1\x68\x1\xFFFF\x1\x28\x3\xFFFF\x3\x28\x2\xFFFF\x1\x63\x1\x28\x6"+
+			"\xFFFF\x1\x28\x4\xFFFF\x1\x28\x3\xFFFF";
+		private const string DFA13_acceptS =
+			"\x2\xFFFF\x1\x3\x1\xFFFF\x1\x7\x1\x8\x1\xFFFF\x1\xA\x1\xB\x1\xC\x1\xD"+
+			"\x1\xE\x7\xFFFF\x1\x27\x1\x28\x1\x29\x1\x1\x1\x2\x1\xFFFF\x1\x6\x1\x9"+
+			"\x9\xFFFF\x1\x1A\xA\xFFFF\x1\x4\x1\x5\x5\xFFFF\x1\x14\x5\xFFFF\x1\x1C"+
+			"\x1\x1D\x1\xFFFF\x1\x1F\x2\xFFFF\x1\x23\x1\xFFFF\x1\x25\x1\x26\x1\xF"+
+			"\x3\xFFFF\x1\x13\x1\x15\x2\xFFFF\x1\x18\x1\x19\x1\x1B\x1\x1E\x1\x20\x1"+
+			"\x21\x1\xFFFF\x1\x24\x1\x10\x1\x11\x1\x12\x1\xFFFF\x1\x17\x1\x22\x1\x16";
+		private const string DFA13_specialS =
+			"\x5D\xFFFF}>";
+		private static readonly string[] DFA13_transitionS =
+			{
+				"\x1\x15\x2\xFFFF\x1\x15\x13\xFFFF\x1\x1\x6\xFFFF\x1\x2\x1\x3\x1\x4\x1"+
+				"\x5\x1\x6\x1\x7\x1\x14\x1\x8\xA\x14\x3\xFFFF\x1\x9\x1D\xFFFF\x1\xA\x1"+
+				"\xFFFF\x1\xB\x1\xFFFF\x1\x13\x1\xFFFF\x1\xC\x1\x13\x1\xD\x1\x13\x1\xE"+
+				"\x6\x13\x1\xF\x3\x13\x1\x10\x2\x13\x1\x11\x1\x12\x6\x13\x3B5\xFFFF\x20"+
+				"\x13",
+				"\x1\x16",
+				"",
+				"\x1\x18",
+				"",
+				"",
+				"\xA\x14",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"\x1\x1B\x1\x1C\xF\xFFFF\x1\x1D\x1\x1E",
+				"\x1\x1F\x6\xFFFF\x1\x20\x3\xFFFF\x1\x21\x1\x22",
+				"\xA\x13\x25\xFFFF\x1\x13\x1\xFFFF\x17\x13\x1\x23\x2\x13\x3B5\xFFFF"+
+				"\x20\x13",
+				"\x1\x25\x6\xFFFF\x1\x26\x1\x27",
+				"\x1\x28\x5\xFFFF\x1\x29",
+				"\x1\x2A\x2\xFFFF\x1\x2B\x1\x2C",
+				"\x1\x2D\x1\x2E",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"\x1\x2F",
+				"",
+				"",
+				"\x1\x31",
+				"\x1\x32\x4\xFFFF\x1\x33",
+				"\x1\x34",
+				"\x1\x35",
+				"\x1\x36",
+				"\x1\x37",
+				"\x1\x38",
+				"\x1\x39\x1\x3A",
+				"\x1\x3B",
+				"",
+				"\x1\x3C",
+				"\x1\x3D",
+				"\x1\x3E",
+				"\xA\x13\x25\xFFFF\x1\x13\x1\xFFFF\x1A\x13\x3B5\xFFFF\x20\x13",
+				"\x1\x40",
+				"\x1\x41",
+				"\x1\x42",
+				"\x1\x43",
+				"\x1\x44",
+				"\x1\x45",
+				"",
+				"",
+				"\x1\x46",
+				"\x1\x47",
+				"\x1\x48",
+				"\x1\x49",
+				"\x1\x4A",
+				"",
+				"\x1\x4B\x3C\xFFFF\x1\x4C",
+				"\x1\x4D",
+				"\x1\x4E",
+				"\x1\x4F",
+				"\x1\x50",
+				"",
+				"",
+				"\x1\x51",
+				"",
+				"\x1\x52",
+				"\x1\x53\x3F\xFFFF\x1\x54",
+				"",
+				"\x1\x55",
+				"",
+				"",
+				"",
+				"\x1\x56",
+				"\x1\x57",
+				"\x1\x58",
+				"",
+				"",
+				"\x1\x59",
+				"\x1\x5A",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"",
+				"\x1\x5B",
+				"",
+				"",
+				"",
+				"",
+				"\x1\x5C",
+				"",
+				"",
+				""
+			};
+
+		private static readonly short[] DFA13_eot = DFA.UnpackEncodedString(DFA13_eotS);
+		private static readonly short[] DFA13_eof = DFA.UnpackEncodedString(DFA13_eofS);
+		private static readonly char[] DFA13_min = DFA.UnpackEncodedStringToUnsignedChars(DFA13_minS);
+		private static readonly char[] DFA13_max = DFA.UnpackEncodedStringToUnsignedChars(DFA13_maxS);
+		private static readonly short[] DFA13_accept = DFA.UnpackEncodedString(DFA13_acceptS);
+		private static readonly short[] DFA13_special = DFA.UnpackEncodedString(DFA13_specialS);
+		private static readonly short[][] DFA13_transition;
+
+		static DFA13()
+		{
+			int numStates = DFA13_transitionS.Length;
+			DFA13_transition = new short[numStates][];
+			for ( int i=0; i < numStates; i++ )
+			{
+				DFA13_transition[i] = DFA.UnpackEncodedString(DFA13_transitionS[i]);
+			}
+		}
+
+		public DFA13( BaseRecognizer recognizer )
+		{
+			this.recognizer = recognizer;
+			this.decisionNumber = 13;
+			this.eot = DFA13_eot;
+			this.eof = DFA13_eof;
+			this.min = DFA13_min;
+			this.max = DFA13_max;
+			this.accept = DFA13_accept;
+			this.special = DFA13_special;
+			this.transition = DFA13_transition;
+		}
+
+		public override string Description { get { return "1:1: Tokens : ( T__9 | T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | T__20 | T__21 | T__22 | T__23 | T__24 | T__25 | T__26 | T__27 | T__28 | T__29 | T__30 | T__31 | T__32 | T__33 | T__34 | T__35 | T__36 | T__37 | T__38 | T__39 | T__40 | T__41 | T__42 | T__43 | T__44 | T__45 | T__46 | ID | FLOAT | NEWLINE );"; } }
 
 		public override void Error(NoViableAltException nvae)
 		{

@@ -30,6 +30,7 @@ namespace GrammarOfArithmetic
         {
             try
             {
+                
                 s = s.ToLower().Replace(" ", "").Replace(".", ",") + "\r\n";
                 ANTLRStringStream input = new ANTLRStringStream(s);
                 //ANTLRReaderStream input = new ANTLRReaderStream(Console.In);

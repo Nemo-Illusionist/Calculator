@@ -9,6 +9,7 @@ options
 @header{
 	using System;
 	using System.Collections;
+	using Currencies;
 }
 
 
@@ -17,9 +18,9 @@ public calc returns[string value]
 	;
 
 statement returns[string value]
-	: expr 
-	('=' ID {$value = $expr.value.Convert($ID.text);} 
-	| ('=' {$value = " = ";})? {$value = $expr.value;}
+	: a1 = expr 
+	('=' ID {$a1.value.Convert($ID.text); $value = $a1.value.ToString();} 
+	| ('=' {$value = " = ";})? {$value += $a1.value.ToString();}
 	) NEWLINE 
 	| NEWLINE
 	;

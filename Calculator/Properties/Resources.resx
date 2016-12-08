@@ -121,7 +121,4 @@
   <data name="currencies" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Resources\currencies.txt;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;utf-8</value>
   </data>
-  <data name="doc_engineer" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Resources\doc_engineer.rtf;System.String, mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089;windows-1251</value>
-  </data>
 </root>

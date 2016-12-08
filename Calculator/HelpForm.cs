@@ -12,7 +12,7 @@ namespace Calculator
 
         private void engTab_Layout(object sender, LayoutEventArgs e)
         {
-            engHelpRTB.Text = ""; //.LoadFile(RichTextBoxStreamType.RichText);
+            engHelpRTB.LoadFile("doc_engineer.rtf");
         }
 
         private void matTab_Layout(object sender, LayoutEventArgs e)

@@ -106,7 +106,6 @@
       <DependentUpon>Settings.settings</DependentUpon>
       <DesignTimeSharedInput>True</DesignTimeSharedInput>
     </Compile>
-    <None Include="Resources\doc_engineer.rtf" />
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
@@ -123,6 +122,10 @@
     <ProjectReference Include="..\GrammarOfArithmetic\GrammarOfArithmetic.csproj">
       <Project>{15792fd1-9ae4-4c69-b8bc-83088f3986ec}</Project>
       <Name>GrammarOfArithmetic</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\GraphManager\GraphManager.csproj">
+      <Project>{a6794603-7967-4808-bcbc-6712216d5e1f}</Project>
+      <Name>GraphManager</Name>
     </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />

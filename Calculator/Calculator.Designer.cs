@@ -29,11 +29,6 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
-            System.Windows.Forms.ListViewItem listViewItem16 = new System.Windows.Forms.ListViewItem("123");
-            System.Windows.Forms.ListViewItem listViewItem17 = new System.Windows.Forms.ListViewItem("456");
-            System.Windows.Forms.ListViewItem listViewItem18 = new System.Windows.Forms.ListViewItem("789");
-            System.Windows.Forms.ListViewItem listViewItem19 = new System.Windows.Forms.ListViewItem("012");
-            System.Windows.Forms.ListViewItem listViewItem20 = new System.Windows.Forms.ListViewItem("345");
             this.tabControl = new System.Windows.Forms.TabControl();
             this.engTabPage = new System.Windows.Forms.TabPage();
             this.engineerTLP = new System.Windows.Forms.TableLayoutPanel();
@@ -73,6 +68,13 @@
             this.calculationsRTB = new System.Windows.Forms.RichTextBox();
             this.matTabPage = new System.Windows.Forms.TabPage();
             this.graTabPage = new System.Windows.Forms.TabPage();
+            this.groupBox6 = new System.Windows.Forms.GroupBox();
+            this.graphicsList = new System.Windows.Forms.ListView();
+            this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.columnHeader4 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
+            this.contextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.deleteLineTSMI = new System.Windows.Forms.ToolStripMenuItem();
+            this.deleteAllLinesTSMI = new System.Windows.Forms.ToolStripMenuItem();
             this.buildGraphBtn = new System.Windows.Forms.Button();
             this.xTB = new System.Windows.Forms.TextBox();
             this.label8 = new System.Windows.Forms.Label();
@@ -98,13 +100,16 @@
             this.label1 = new System.Windows.Forms.Label();
             this.updateER_Btn = new System.Windows.Forms.Button();
             this.datTabPage = new System.Windows.Forms.TabPage();
+            this.groupBox9 = new System.Windows.Forms.GroupBox();
+            this.groupBox8 = new System.Windows.Forms.GroupBox();
+            this.lastDateMC = new System.Windows.Forms.MonthCalendar();
+            this.lastDate = new System.Windows.Forms.DateTimePicker();
+            this.groupBox7 = new System.Windows.Forms.GroupBox();
+            this.firstDateMC = new System.Windows.Forms.MonthCalendar();
+            this.firstDate = new System.Windows.Forms.DateTimePicker();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.dateResultList = new System.Windows.Forms.ListView();
             this.calcDateBtn = new System.Windows.Forms.Button();
-            this.label5 = new System.Windows.Forms.Label();
-            this.label4 = new System.Windows.Forms.Label();
-            this.lastDate = new System.Windows.Forms.DateTimePicker();
-            this.firstDate = new System.Windows.Forms.DateTimePicker();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.engSaveTSMI = new System.Windows.Forms.ToolStripMenuItem();
@@ -115,17 +120,23 @@
             this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpTSMI = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutTSMI = new System.Windows.Forms.ToolStripMenuItem();
+            this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabControl.SuspendLayout();
             this.engTabPage.SuspendLayout();
             this.engineerTLP.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.graTabPage.SuspendLayout();
+            this.groupBox6.SuspendLayout();
+            this.contextMenu.SuspendLayout();
             this.curTabPage.SuspendLayout();
             this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.datTabPage.SuspendLayout();
+            this.groupBox8.SuspendLayout();
+            this.groupBox7.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.menuStrip1.SuspendLayout();
             this.SuspendLayout();
@@ -594,6 +605,7 @@
             // 
             // graTabPage
             // 
+            this.graTabPage.Controls.Add(this.groupBox6);
             this.graTabPage.Controls.Add(this.buildGraphBtn);
             this.graTabPage.Controls.Add(this.xTB);
             this.graTabPage.Controls.Add(this.label8);
@@ -606,6 +618,61 @@
             this.graTabPage.TabIndex = 3;
             this.graTabPage.Text = "Графики";
             this.graTabPage.UseVisualStyleBackColor = true;
+            // 
+            // groupBox6
+            // 
+            this.groupBox6.Controls.Add(this.graphicsList);
+            this.groupBox6.Location = new System.Drawing.Point(4, 30);
+            this.groupBox6.Name = "groupBox6";
+            this.groupBox6.Size = new System.Drawing.Size(235, 429);
+            this.groupBox6.TabIndex = 9;
+            this.groupBox6.TabStop = false;
+            this.groupBox6.Text = "Список построенных графиков";
+            // 
+            // graphicsList
+            // 
+            this.graphicsList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader3,
+            this.columnHeader4});
+            this.graphicsList.ContextMenuStrip = this.contextMenu;
+            this.graphicsList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.graphicsList.FullRowSelect = true;
+            this.graphicsList.GridLines = true;
+            this.graphicsList.Location = new System.Drawing.Point(3, 16);
+            this.graphicsList.Name = "graphicsList";
+            this.graphicsList.Size = new System.Drawing.Size(229, 410);
+            this.graphicsList.TabIndex = 0;
+            this.graphicsList.UseCompatibleStateImageBehavior = false;
+            this.graphicsList.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader3
+            // 
+            this.columnHeader3.Text = "Функция";
+            this.columnHeader3.Width = 143;
+            // 
+            // columnHeader4
+            // 
+            this.columnHeader4.Text = "Область";
+            // 
+            // contextMenu
+            // 
+            this.contextMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.deleteLineTSMI,
+            this.deleteAllLinesTSMI});
+            this.contextMenu.Name = "contextMenu";
+            this.contextMenu.Size = new System.Drawing.Size(140, 48);
+            // 
+            // deleteLineTSMI
+            // 
+            this.deleteLineTSMI.Name = "deleteLineTSMI";
+            this.deleteLineTSMI.Size = new System.Drawing.Size(139, 22);
+            this.deleteLineTSMI.Text = "Удалить";
+            // 
+            // deleteAllLinesTSMI
+            // 
+            this.deleteAllLinesTSMI.Name = "deleteAllLinesTSMI";
+            this.deleteAllLinesTSMI.Size = new System.Drawing.Size(139, 22);
+            this.deleteAllLinesTSMI.Text = "Удалить все";
             // 
             // buildGraphBtn
             // 
@@ -660,7 +727,7 @@
             this.zedGraph.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.zedGraph.Location = new System.Drawing.Point(6, 39);
+            this.zedGraph.Location = new System.Drawing.Point(245, 39);
             this.zedGraph.Name = "zedGraph";
             this.zedGraph.ScrollGrace = 0D;
             this.zedGraph.ScrollMaxX = 0D;
@@ -669,7 +736,7 @@
             this.zedGraph.ScrollMinX = 0D;
             this.zedGraph.ScrollMinY = 0D;
             this.zedGraph.ScrollMinY2 = 0D;
-            this.zedGraph.Size = new System.Drawing.Size(763, 420);
+            this.zedGraph.Size = new System.Drawing.Size(524, 420);
             this.zedGraph.TabIndex = 3;
             this.zedGraph.UseExtendedPrintDialog = true;
             // 
@@ -859,12 +926,11 @@
             // 
             // datTabPage
             // 
+            this.datTabPage.Controls.Add(this.groupBox9);
+            this.datTabPage.Controls.Add(this.groupBox8);
+            this.datTabPage.Controls.Add(this.groupBox7);
             this.datTabPage.Controls.Add(this.groupBox5);
             this.datTabPage.Controls.Add(this.calcDateBtn);
-            this.datTabPage.Controls.Add(this.label5);
-            this.datTabPage.Controls.Add(this.label4);
-            this.datTabPage.Controls.Add(this.lastDate);
-            this.datTabPage.Controls.Add(this.firstDate);
             this.datTabPage.Location = new System.Drawing.Point(4, 22);
             this.datTabPage.Name = "datTabPage";
             this.datTabPage.Size = new System.Drawing.Size(769, 462);
@@ -872,12 +938,86 @@
             this.datTabPage.Text = "Даты";
             this.datTabPage.UseVisualStyleBackColor = true;
             // 
+            // groupBox9
+            // 
+            this.groupBox9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox9.Location = new System.Drawing.Point(441, 6);
+            this.groupBox9.Name = "groupBox9";
+            this.groupBox9.Size = new System.Drawing.Size(319, 178);
+            this.groupBox9.TabIndex = 12;
+            this.groupBox9.TabStop = false;
+            // 
+            // groupBox8
+            // 
+            this.groupBox8.Controls.Add(this.lastDateMC);
+            this.groupBox8.Controls.Add(this.lastDate);
+            this.groupBox8.Location = new System.Drawing.Point(225, 6);
+            this.groupBox8.Name = "groupBox8";
+            this.groupBox8.Size = new System.Drawing.Size(210, 210);
+            this.groupBox8.TabIndex = 11;
+            this.groupBox8.TabStop = false;
+            this.groupBox8.Text = "Конечная дата";
+            // 
+            // lastDateMC
+            // 
+            this.lastDateMC.Location = new System.Drawing.Point(12, 16);
+            this.lastDateMC.Margin = new System.Windows.Forms.Padding(29, 9, 9, 9);
+            this.lastDateMC.Name = "lastDateMC";
+            this.lastDateMC.ShowWeekNumbers = true;
+            this.lastDateMC.TabIndex = 9;
+            this.lastDateMC.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.lastDateMC_DateChanged);
+            // 
+            // lastDate
+            // 
+            this.lastDate.CustomFormat = "dd MMMM yyyy г. HH:mm:ss";
+            this.lastDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.lastDate.Location = new System.Drawing.Point(6, 184);
+            this.lastDate.Name = "lastDate";
+            this.lastDate.Size = new System.Drawing.Size(200, 20);
+            this.lastDate.TabIndex = 1;
+            this.lastDate.ValueChanged += new System.EventHandler(this.lastDate_ValueChanged);
+            // 
+            // groupBox7
+            // 
+            this.groupBox7.Controls.Add(this.firstDateMC);
+            this.groupBox7.Controls.Add(this.firstDate);
+            this.groupBox7.Location = new System.Drawing.Point(9, 6);
+            this.groupBox7.Name = "groupBox7";
+            this.groupBox7.Size = new System.Drawing.Size(210, 210);
+            this.groupBox7.TabIndex = 10;
+            this.groupBox7.TabStop = false;
+            this.groupBox7.Text = "Начальная дата";
+            // 
+            // firstDateMC
+            // 
+            this.firstDateMC.Location = new System.Drawing.Point(12, 16);
+            this.firstDateMC.Margin = new System.Windows.Forms.Padding(29, 9, 9, 9);
+            this.firstDateMC.Name = "firstDateMC";
+            this.firstDateMC.ShowWeekNumbers = true;
+            this.firstDateMC.TabIndex = 8;
+            this.firstDateMC.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.firstDateMC_DateChanged);
+            // 
+            // firstDate
+            // 
+            this.firstDate.CustomFormat = "dd MMMM yyyy г. HH:mm:ss";
+            this.firstDate.Format = System.Windows.Forms.DateTimePickerFormat.Custom;
+            this.firstDate.Location = new System.Drawing.Point(4, 184);
+            this.firstDate.Name = "firstDate";
+            this.firstDate.Size = new System.Drawing.Size(200, 20);
+            this.firstDate.TabIndex = 0;
+            this.firstDate.ValueChanged += new System.EventHandler(this.firstDate_ValueChanged);
+            // 
             // groupBox5
             // 
+            this.groupBox5.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
             this.groupBox5.Controls.Add(this.dateResultList);
-            this.groupBox5.Location = new System.Drawing.Point(306, 7);
+            this.groupBox5.Font = new System.Drawing.Font("Microsoft Sans Serif", 11.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.groupBox5.Location = new System.Drawing.Point(6, 216);
             this.groupBox5.Name = "groupBox5";
-            this.groupBox5.Size = new System.Drawing.Size(375, 246);
+            this.groupBox5.Size = new System.Drawing.Size(757, 237);
             this.groupBox5.TabIndex = 7;
             this.groupBox5.TabStop = false;
             this.groupBox5.Text = "Разница между датами составляет:";
@@ -885,62 +1025,29 @@
             // dateResultList
             // 
             this.dateResultList.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.dateResultList.Columns.AddRange(new System.Windows.Forms.ColumnHeader[] {
+            this.columnHeader5});
             this.dateResultList.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.dateResultList.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.dateResultList.FullRowSelect = true;
             this.dateResultList.GridLines = true;
-            this.dateResultList.Items.AddRange(new System.Windows.Forms.ListViewItem[] {
-            listViewItem16,
-            listViewItem17,
-            listViewItem18,
-            listViewItem19,
-            listViewItem20});
-            this.dateResultList.Location = new System.Drawing.Point(3, 16);
+            this.dateResultList.HeaderStyle = System.Windows.Forms.ColumnHeaderStyle.None;
+            this.dateResultList.Location = new System.Drawing.Point(3, 20);
             this.dateResultList.Name = "dateResultList";
-            this.dateResultList.Size = new System.Drawing.Size(369, 227);
+            this.dateResultList.Size = new System.Drawing.Size(751, 214);
             this.dateResultList.TabIndex = 6;
             this.dateResultList.UseCompatibleStateImageBehavior = false;
-            this.dateResultList.View = System.Windows.Forms.View.List;
+            this.dateResultList.View = System.Windows.Forms.View.Details;
             // 
             // calcDateBtn
             // 
-            this.calcDateBtn.Location = new System.Drawing.Point(6, 59);
+            this.calcDateBtn.Location = new System.Drawing.Point(441, 190);
             this.calcDateBtn.Name = "calcDateBtn";
-            this.calcDateBtn.Size = new System.Drawing.Size(294, 23);
+            this.calcDateBtn.Size = new System.Drawing.Size(322, 23);
             this.calcDateBtn.TabIndex = 4;
             this.calcDateBtn.Text = "Посчитать разницу";
             this.calcDateBtn.UseVisualStyleBackColor = true;
             this.calcDateBtn.Click += new System.EventHandler(this.calcDateBtn_Click);
-            // 
-            // label5
-            // 
-            this.label5.AutoSize = true;
-            this.label5.Location = new System.Drawing.Point(3, 39);
-            this.label5.Name = "label5";
-            this.label5.Size = new System.Drawing.Size(84, 13);
-            this.label5.TabIndex = 3;
-            this.label5.Text = "Конечная дата:";
-            // 
-            // label4
-            // 
-            this.label4.AutoSize = true;
-            this.label4.Location = new System.Drawing.Point(3, 13);
-            this.label4.Name = "label4";
-            this.label4.Size = new System.Drawing.Size(91, 13);
-            this.label4.TabIndex = 2;
-            this.label4.Text = "Начальная дата:";
-            // 
-            // lastDate
-            // 
-            this.lastDate.Location = new System.Drawing.Point(100, 33);
-            this.lastDate.Name = "lastDate";
-            this.lastDate.Size = new System.Drawing.Size(200, 20);
-            this.lastDate.TabIndex = 1;
-            // 
-            // firstDate
-            // 
-            this.firstDate.Location = new System.Drawing.Point(100, 7);
-            this.firstDate.Name = "firstDate";
-            this.firstDate.Size = new System.Drawing.Size(200, 20);
-            this.firstDate.TabIndex = 0;
             // 
             // menuStrip1
             // 
@@ -1026,6 +1133,15 @@
             this.aboutTSMI.Text = "О программе";
             this.aboutTSMI.Click += new System.EventHandler(this.aboutTSMI_Click);
             // 
+            // contextMenuStrip1
+            // 
+            this.contextMenuStrip1.Name = "contextMenuStrip1";
+            this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Width = 777;
+            // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1045,6 +1161,8 @@
             this.flowLayoutPanel1.ResumeLayout(false);
             this.graTabPage.ResumeLayout(false);
             this.graTabPage.PerformLayout();
+            this.groupBox6.ResumeLayout(false);
+            this.contextMenu.ResumeLayout(false);
             this.curTabPage.ResumeLayout(false);
             this.groupBox2.ResumeLayout(false);
             this.groupBox2.PerformLayout();
@@ -1054,7 +1172,8 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.datTabPage.ResumeLayout(false);
-            this.datTabPage.PerformLayout();
+            this.groupBox8.ResumeLayout(false);
+            this.groupBox7.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
@@ -1112,8 +1231,6 @@
         private System.Windows.Forms.GroupBox groupBox5;
         private System.Windows.Forms.ListView dateResultList;
         private System.Windows.Forms.Button calcDateBtn;
-        private System.Windows.Forms.Label label5;
-        private System.Windows.Forms.Label label4;
         private System.Windows.Forms.DateTimePicker lastDate;
         private System.Windows.Forms.DateTimePicker firstDate;
         private ZedGraph.ZedGraphControl zedGraph;
@@ -1146,6 +1263,20 @@
         private System.Windows.Forms.Label label6;
         private System.Windows.Forms.Label label3;
         private System.Windows.Forms.TextBox RUP_Value;
+        private System.Windows.Forms.GroupBox groupBox6;
+        private System.Windows.Forms.ContextMenuStrip contextMenu;
+        private System.Windows.Forms.ToolStripMenuItem deleteLineTSMI;
+        private System.Windows.Forms.ToolStripMenuItem deleteAllLinesTSMI;
+        private System.Windows.Forms.ListView graphicsList;
+        private System.Windows.Forms.ContextMenuStrip contextMenuStrip1;
+        private System.Windows.Forms.ColumnHeader columnHeader3;
+        private System.Windows.Forms.ColumnHeader columnHeader4;
+        private System.Windows.Forms.MonthCalendar firstDateMC;
+        private System.Windows.Forms.GroupBox groupBox8;
+        private System.Windows.Forms.MonthCalendar lastDateMC;
+        private System.Windows.Forms.GroupBox groupBox7;
+        private System.Windows.Forms.GroupBox groupBox9;
+        private System.Windows.Forms.ColumnHeader columnHeader5;
     }
 }
 

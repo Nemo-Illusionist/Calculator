@@ -11,7 +11,7 @@ options
 	using System.Collections;
 }
 @members{
-	Hashtable memory = new Hashtable();
+	private Hashtable memory = new Hashtable();
 	
 	private double Factorial(double n)
         {
@@ -35,12 +35,19 @@ options
 }
 
 public calc returns[string value]
-	:  statement {$value = $statement.value;}
+	:  {$value = "";} (statement {$value += $statement.value;})+
 	;
 
 statement returns[string value]
 	: expr {$value = " = ";}('='{$value = " ";})? NEWLINE { $value += $expr.value; }
-	| ID '=' (FLOAT {$value = "";}| a1 = expr {$value = '=' + $a1.value.ToString();}) NEWLINE { memory.Add($ID.text, $expr.value); }
+	| ID '=' 
+		(FLOAT {$value = ""; a1 = double.Parse($FLOAT.text);}
+		| a1 = expr {$value = '=' + $a1.value.ToString();}
+		) NEWLINE 
+		{ if(!memory.ContainsKey($ID.text))
+			memory.Add($ID.text, $a1.value);
+		  else
+			memory[$ID.text] = $a1.value;}
 	| NEWLINE
 	;
 
@@ -68,7 +75,6 @@ fanc returns[double value]
 	: (exponentiationFanc {$value = $exponentiationFanc.value;}
 	| trigonometryFanc {$value = $trigonometryFanc.value;}
 	| bracket {$value = $bracket.value;})
-	| 'g' {$value = 9.8;} 
 	('!!' {$value = DoubleFactorial($value);}
 		|'!'  {$value = Factorial($value);})?
 	;
@@ -137,10 +143,9 @@ FLOAT
     |   ('0'..'9')+ FLOATSEPARATOR ('0'..'9')* EXPONENT?
     |   FLOATSEPARATOR ('0'..'9')+ EXPONENT?
     ;
-
+    
 fragment
 FLOATSEPARATOR :'.'| ',';
-
 SEPARATOR :';';
 fragment
 EXPONENT: 'e' ('+'|'-')? ('0'..'9')+ ;

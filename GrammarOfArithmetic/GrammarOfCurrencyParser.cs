@@ -20,6 +20,7 @@
 
 	using System;
 	using System.Collections;
+    using Currencies;
 
 
 using System.Collections.Generic;
@@ -287,7 +288,7 @@ public partial class GrammarOfCurrencyParser : Antlr.Runtime.Parser
 					} finally { DebugExitSubRule(1); }
 
 					DebugLocation(22, 28);
-					value = expr2;
+					value = expr2.ToString();
 
 					}
 					break;
@@ -395,7 +396,7 @@ public partial class GrammarOfCurrencyParser : Antlr.Runtime.Parser
 				PopFollow();
 
 				DebugLocation(28, 27);
-				value = -me1;
+				value -= me1;
 
 				}
 				break;

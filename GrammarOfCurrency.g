@@ -19,7 +19,7 @@ public calc returns[string value]
 statement returns[string value]
 	: expr 
 	('=' ID {$value = $expr.value.Convert($ID.text);} 
-	| ('=' {$value = ' = '})? {$value = $expr.value;}
+	| ('=' {$value = " = ";})? {$value = $expr.value;}
 	) NEWLINE 
 	| NEWLINE
 	;

@@ -1,4 +1,5 @@
-﻿using System.Windows.Forms;
+﻿using System.IO;
+using System.Windows.Forms;
 
 namespace Calculator
 {
@@ -11,7 +12,7 @@ namespace Calculator
 
         private void engTab_Layout(object sender, LayoutEventArgs e)
         {
-            engHelpRTB.LoadFile("Инженерный.rtf");
+            engHelpRTB.Text = ""; //.LoadFile(RichTextBoxStreamType.RichText);
         }
 
         private void matTab_Layout(object sender, LayoutEventArgs e)

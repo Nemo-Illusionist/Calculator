@@ -80,6 +80,11 @@
             this.label7 = new System.Windows.Forms.Label();
             this.zedGraph = new ZedGraph.ZedGraphControl();
             this.curTabPage = new System.Windows.Forms.TabPage();
+            this.groupBox2 = new System.Windows.Forms.GroupBox();
+            this.label9 = new System.Windows.Forms.Label();
+            this.label6 = new System.Windows.Forms.Label();
+            this.label3 = new System.Windows.Forms.Label();
+            this.RUP_Value = new System.Windows.Forms.TextBox();
             this.currenciesRTB = new System.Windows.Forms.RichTextBox();
             this.groupBox1 = new System.Windows.Forms.GroupBox();
             this.currenciesList = new System.Windows.Forms.ListView();
@@ -110,24 +115,19 @@
             this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpTSMI = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutTSMI = new System.Windows.Forms.ToolStripMenuItem();
-            this.groupBox2 = new System.Windows.Forms.GroupBox();
-            this.RUP_Value = new System.Windows.Forms.TextBox();
-            this.label3 = new System.Windows.Forms.Label();
-            this.label6 = new System.Windows.Forms.Label();
-            this.label9 = new System.Windows.Forms.Label();
             this.tabControl.SuspendLayout();
             this.engTabPage.SuspendLayout();
             this.engineerTLP.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.graTabPage.SuspendLayout();
             this.curTabPage.SuspendLayout();
+            this.groupBox2.SuspendLayout();
             this.groupBox1.SuspendLayout();
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.datTabPage.SuspendLayout();
             this.groupBox5.SuspendLayout();
             this.menuStrip1.SuspendLayout();
-            this.groupBox2.SuspendLayout();
             this.SuspendLayout();
             // 
             // tabControl
@@ -688,6 +688,55 @@
             this.curTabPage.UseVisualStyleBackColor = true;
             this.curTabPage.Layout += new System.Windows.Forms.LayoutEventHandler(this.curTabPage_Layout);
             // 
+            // groupBox2
+            // 
+            this.groupBox2.Controls.Add(this.label9);
+            this.groupBox2.Controls.Add(this.label6);
+            this.groupBox2.Controls.Add(this.label3);
+            this.groupBox2.Controls.Add(this.RUP_Value);
+            this.groupBox2.Location = new System.Drawing.Point(6, 121);
+            this.groupBox2.Name = "groupBox2";
+            this.groupBox2.Size = new System.Drawing.Size(265, 64);
+            this.groupBox2.TabIndex = 9;
+            this.groupBox2.TabStop = false;
+            this.groupBox2.Text = "Установить свою валюту";
+            // 
+            // label9
+            // 
+            this.label9.AutoSize = true;
+            this.label9.Location = new System.Drawing.Point(175, 16);
+            this.label9.Name = "label9";
+            this.label9.Size = new System.Drawing.Size(30, 13);
+            this.label9.TabIndex = 3;
+            this.label9.Text = "RUP";
+            // 
+            // label6
+            // 
+            this.label6.AutoSize = true;
+            this.label6.Location = new System.Drawing.Point(6, 38);
+            this.label6.Name = "label6";
+            this.label6.Size = new System.Drawing.Size(172, 13);
+            this.label6.TabIndex = 2;
+            this.label6.Text = "Значение (относительно 1 USD):";
+            // 
+            // label3
+            // 
+            this.label3.AutoSize = true;
+            this.label3.Location = new System.Drawing.Point(7, 16);
+            this.label3.Name = "label3";
+            this.label3.Size = new System.Drawing.Size(74, 13);
+            this.label3.TabIndex = 1;
+            this.label3.Text = "Имя валюты:";
+            // 
+            // RUP_Value
+            // 
+            this.RUP_Value.Location = new System.Drawing.Point(178, 35);
+            this.RUP_Value.Name = "RUP_Value";
+            this.RUP_Value.Size = new System.Drawing.Size(80, 20);
+            this.RUP_Value.TabIndex = 0;
+            this.RUP_Value.Text = "11,35";
+            this.RUP_Value.TextChanged += new System.EventHandler(this.RUP_Value_TextChanged);
+            // 
             // currenciesRTB
             // 
             this.currenciesRTB.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
@@ -700,6 +749,8 @@
             this.currenciesRTB.Size = new System.Drawing.Size(489, 459);
             this.currenciesRTB.TabIndex = 8;
             this.currenciesRTB.Text = "";
+            this.currenciesRTB.TextChanged += new System.EventHandler(this.currenciesRTB_TextChanged);
+            this.currenciesRTB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.currenciesRTB_KeyDown);
             // 
             // groupBox1
             // 
@@ -975,55 +1026,6 @@
             this.aboutTSMI.Text = "О программе";
             this.aboutTSMI.Click += new System.EventHandler(this.aboutTSMI_Click);
             // 
-            // groupBox2
-            // 
-            this.groupBox2.Controls.Add(this.label9);
-            this.groupBox2.Controls.Add(this.label6);
-            this.groupBox2.Controls.Add(this.label3);
-            this.groupBox2.Controls.Add(this.RUP_Value);
-            this.groupBox2.Location = new System.Drawing.Point(6, 121);
-            this.groupBox2.Name = "groupBox2";
-            this.groupBox2.Size = new System.Drawing.Size(265, 64);
-            this.groupBox2.TabIndex = 9;
-            this.groupBox2.TabStop = false;
-            this.groupBox2.Text = "Установить свою валюту";
-            // 
-            // RUP_Value
-            // 
-            this.RUP_Value.Location = new System.Drawing.Point(178, 35);
-            this.RUP_Value.Name = "RUP_Value";
-            this.RUP_Value.Size = new System.Drawing.Size(80, 20);
-            this.RUP_Value.TabIndex = 0;
-            this.RUP_Value.Text = "11,35";
-            this.RUP_Value.TextChanged += new System.EventHandler(this.RUP_Value_TextChanged);
-            // 
-            // label3
-            // 
-            this.label3.AutoSize = true;
-            this.label3.Location = new System.Drawing.Point(7, 16);
-            this.label3.Name = "label3";
-            this.label3.Size = new System.Drawing.Size(74, 13);
-            this.label3.TabIndex = 1;
-            this.label3.Text = "Имя валюты:";
-            // 
-            // label6
-            // 
-            this.label6.AutoSize = true;
-            this.label6.Location = new System.Drawing.Point(6, 38);
-            this.label6.Name = "label6";
-            this.label6.Size = new System.Drawing.Size(172, 13);
-            this.label6.TabIndex = 2;
-            this.label6.Text = "Значение (относительно 1 USD):";
-            // 
-            // label9
-            // 
-            this.label9.AutoSize = true;
-            this.label9.Location = new System.Drawing.Point(175, 16);
-            this.label9.Name = "label9";
-            this.label9.Size = new System.Drawing.Size(30, 13);
-            this.label9.TabIndex = 3;
-            this.label9.Text = "RUP";
-            // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1044,6 +1046,8 @@
             this.graTabPage.ResumeLayout(false);
             this.graTabPage.PerformLayout();
             this.curTabPage.ResumeLayout(false);
+            this.groupBox2.ResumeLayout(false);
+            this.groupBox2.PerformLayout();
             this.groupBox1.ResumeLayout(false);
             this.groupBox4.ResumeLayout(false);
             this.groupBox4.PerformLayout();
@@ -1054,8 +1058,6 @@
             this.groupBox5.ResumeLayout(false);
             this.menuStrip1.ResumeLayout(false);
             this.menuStrip1.PerformLayout();
-            this.groupBox2.ResumeLayout(false);
-            this.groupBox2.PerformLayout();
             this.ResumeLayout(false);
             this.PerformLayout();
 

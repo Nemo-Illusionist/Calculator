@@ -7,17 +7,19 @@ using System.Text.RegularExpressions;
 using System.Windows.Forms;
 using Newtonsoft.Json.Linq;
 using Currencies;
+using GrammarOfArithmetic;
 
 namespace Calculator
 {
     public partial class Calculator : Form
     {
-        public Calculator()
+        public Calculator(Parser parser)
         {
             InitializeComponent();
+            _parser = parser;
         }
-
-        readonly Hashtable highlight = new Hashtable()
+        private readonly Parser _parser;
+        readonly Hashtable _highlight = new Hashtable()
         {
             {"symbols", @"(\(|\)|\[|\]|\<|\>|\{|\}|\+|\-|\*|\/|\:|\^|\!|\!\!|mod|div|\=)"},
             {"functions", @"(sin\(|cos\(|tg\(|ctg\(|asin\(|acos\(|atg\(|actg\(|sh\(|ch\(|th\(|cth\(" +
@@ -35,9 +37,9 @@ namespace Calculator
             calculationsRTB.SelectAll();
             calculationsRTB.ForeColor = SystemColors.WindowText;
 
-            foreach (var key in highlight.Keys)
+            foreach (var key in _highlight.Keys)
             {
-                var symbols = Regex.Matches(calculationsRTB.Text, highlight[key].ToString());
+                var symbols = Regex.Matches(calculationsRTB.Text, _highlight[key].ToString());
                 foreach (var match in symbols.Cast<Match>())
                 {
                     if (key.ToString() == "functions")
@@ -86,7 +88,10 @@ namespace Calculator
             switch (e.KeyCode)
             {
                 case Keys.Enter:
-                    //MessageBox.Show("Хуйня какая-то"); 
+                    var line = calculationsRTB.GetLineFromCharIndex(calculationsRTB.SelectionStart);
+                    var s = calculationsRTB.GetFirstCharIndexOfCurrentLine() + calculationsRTB.Lines[line].Length;
+                    calculationsRTB.SelectionStart = s;
+                    calculationsRTB.SelectedText = _parser.SolveEngineer(calculationsRTB.Lines[line]);
                     break;
                 case Keys.Z:
                     if (e.Control) calculationsRTB.Undo();
@@ -179,6 +184,29 @@ namespace Calculator
                 actualDateLabel.Text = actual.ToString("dd.MM.yyyy");
             }
         }
+        private void currenciesRTB_TextChanged(object sender, EventArgs e)
+        {
+            this.Focus();
+            currenciesRTB.Focus();
+        }
+        private void currenciesRTB_KeyDown(object sender, KeyEventArgs e)
+        {
+            switch (e.KeyCode)
+            {
+                case Keys.Enter:
+                    var line = currenciesRTB.GetLineFromCharIndex(currenciesRTB.SelectionStart);
+                    var s = currenciesRTB.GetFirstCharIndexOfCurrentLine() + currenciesRTB.Lines[line].Length;
+                    currenciesRTB.SelectionStart = s;
+                    currenciesRTB.SelectedText = _parser.SolveCurrency(currenciesRTB.Lines[line]);
+                    break;
+                case Keys.Z:
+                    if (e.Control) currenciesRTB.Undo();
+                    break;
+                case Keys.Y:
+                    if (e.Control) currenciesRTB.Redo();
+                    break;
+            }
+        }
         #endregion
 
         #region Misc
@@ -203,10 +231,6 @@ namespace Calculator
         {
             CurrenciesAPI.RupValue = Double.Parse(RUP_Value.Text);
         }
-
-
-
-
 
 
 

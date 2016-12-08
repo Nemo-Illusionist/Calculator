@@ -85,5 +85,16 @@ namespace Calculator.Properties {
                 return ResourceManager.GetString("currencies", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to {\rtf1\ansi\ansicpg1251\deff0\deflang1049\deflangfe1049{\fonttbl{\f0\fnil\fcharset204 Tahoma;}{\f1\fnil\fcharset0 Tahoma;}{\f2\fnil\fcharset0 Segoe Print;}}
+        ///{\colortbl ;\red0\green176\blue80;\red0\green0\blue0;\red255\green140\blue0;\red0\green0\blue255;}
+        ///{\*\generator Msftedit 5.41.21.2510;}\viewkind4\uc1\pard\nowidctlpar\sa200\sl276\slmult1\qc\f0\fs20\&apos;d0\&apos;f3\&apos;ea\&apos;ee\&apos;e2\&apos;ee\&apos;e4\&apos;f1\&apos;f2\&apos;e2\&apos;ee \&apos;ef\&apos;ee\&apos;eb\&apos;fc\&apos;e7\&apos;ee\&apos;e2\&apos;e0\&apos;f2\&apos;e5\&apos;eb\&apos;ff \&apos;e2\&apos;fb\&apos;f7\&apos;e8\&apos;f1\&apos;eb\&apos;e8\&apos;f2\&apos;e5\&apos;eb\&apos;fc\&apos;ed\&apos;ee\&apos;e3\&apos;ee  [rest of string was truncated]&quot;;.
+        /// </summary>
+        internal static string doc_engineer {
+            get {
+                return ResourceManager.GetString("doc_engineer", resourceCulture);
+            }
+        }
     }
 }

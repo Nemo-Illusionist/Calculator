@@ -1,11 +1,12 @@
-﻿using System.Collections.Generic;
+﻿using System;
+using System.Collections.Generic;
 using System.Drawing;
 using ZedGraph;
 
 namespace GraphManager {
-    public class Graph : IGraph {
+    public class Graph : IGraph
+    {
         private readonly ZedGraphControl _graph;
-        public List<PointPairList> Points;
 
         public Graph(ZedGraphControl graph) {
             _graph = graph;
@@ -13,7 +14,6 @@ namespace GraphManager {
         }
 
         private void DrawGraph() {
-            Points = new List<PointPairList>();
             // Получим панель для рисования
             GraphPane pane = _graph.GraphPane;
             // Очистим список кривых на тот случай, если до этого сигналы уже были нарисованы
@@ -27,8 +27,8 @@ namespace GraphManager {
             Grid(pane);
 
             // Подпись осей
-            pane.XAxis.Title.Text = "Значения X";
-            pane.YAxis.Title.Text = "Значения Y";
+            pane.XAxis.Title.Text = "Значения x";
+            pane.YAxis.Title.Text = "Значения y";
             pane.XAxis.Title.FontSpec.Size = pane.YAxis.Title.FontSpec.Size = 10;
             Legend(pane);
 
@@ -64,8 +64,12 @@ namespace GraphManager {
             pane.Legend.FontSpec.Size = 8;
         }
 
-        public void Add(PointPairList ppList, double X, double Y) {
-            ppList.Add(X, Y);
+        public void AddLine(List<double> x, List<double> y) {
+            Random randomGen = new Random();
+            KnownColor[] names = (KnownColor[])Enum.GetValues(typeof(KnownColor));
+            KnownColor randomColorName = names[randomGen.Next(names.Length)];
+            Color randomColor = Color.FromKnownColor(randomColorName);
+            _graph.GraphPane.AddCurve("", new PointPairList(x.ToArray(), y.ToArray()), randomColor);
             Update();
         }
 
@@ -74,6 +78,9 @@ namespace GraphManager {
             _graph.Invalidate();
         }
 
-
+        public void Clear()
+        {
+            _graph.GraphPane.CurveList.Clear();
+        }
     }
 }

@@ -1,6 +1,11 @@
-﻿namespace GraphManager {
-    public interface IGraph {
-        void Add(ZedGraph.PointPairList ppList, double x, double y);
+﻿using System.Collections.Generic;
+
+namespace GraphManager
+{
+    public interface IGraph
+    {
+        void AddLine(List<double> x, List<double> y);
+        void Clear();
         void Update();
     }
 }

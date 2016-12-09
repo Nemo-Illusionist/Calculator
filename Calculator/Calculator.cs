@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections;
+using System.Collections.Generic;
 using System.Drawing;
 using System.IO;
 using System.Linq;
@@ -22,9 +23,9 @@ namespace Calculator
             _graph = new Graph(zedGraph);
         }
 
-        private Graph _graph;
+        private readonly IGraph _graph;
         private readonly Parser _parser;
-        readonly Hashtable _highlight = new Hashtable()
+        private readonly Hashtable _highlight = new Hashtable()
         {
             {"symbols", @"(\(|\)|\[|\]|\<|\>|\{|\}|\+|\-|\*|\/|\:|\^|\!|\!\!|mod|div|\=)"},
             {"functions", @"(sin\(|cos\(|tg\(|ctg\(|asin\(|acos\(|atg\(|actg\(|sh\(|ch\(|th\(|cth\(" +
@@ -155,7 +156,18 @@ namespace Calculator
             if (funcTB.Text == "" || xTB.Text == "")
                 MessageBox.Show("Введите выражение и задайте область определения!", "STOP!",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
-            else;
+            else
+            {
+                double a = double.Parse(xTB.Text);
+                double b = double.Parse(textBox1.Text);
+                double h = double.Parse(textBox2.Text);
+                List<double> x = new List<double>();
+                for (double i = a < b ? a : b; i < (a > b ? a : b); i += h)
+                    x.Add(i);
+                List<double> y = _parser.SolveGraph(funcTB.Text, a, b, h);
+                _graph.AddLine(x,y);
+            }
+
         }
         private void xTB_KeyPress(object sender, KeyPressEventArgs e)
         {

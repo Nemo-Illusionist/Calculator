@@ -30,10 +30,10 @@ namespace GrammarOfArithmetic
             }
         }
 
-        public List<double> SolveGraph(string s, int a, int b, int h)
+        public List<double> SolveGraph(string s, double a, double b, double h)
         {
             List<double> y = new List<double>();
-            for (int i = a<b?a:b; i < (a > b ? a : b); i +=h)
+            for (double i = a<b?a:b; i < (a > b ? a : b); i +=h)
             {
                 GrammarOfArithmeticLexer lexer = new GrammarOfArithmeticLexer(input(s.Replace("x", i.ToString())));
                 CommonTokenStream tokens = new CommonTokenStream(lexer);

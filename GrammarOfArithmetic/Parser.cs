@@ -1,4 +1,5 @@
 ﻿using System;
+using System.Collections.Generic;
 using Antlr.Runtime;
 using Generated;
 using MathNet.Numerics.LinearAlgebra;
@@ -27,6 +28,22 @@ namespace GrammarOfArithmetic
             {
                 return " = " + e.Message;
             }
+        }
+
+        public List<double> SolveGraph(string s, int a, int b, int h)
+        {
+            List<double> y = new List<double>();
+            for (int i = a<b?a:b; i < (a > b ? a : b); i +=h)
+            {
+                GrammarOfArithmeticLexer lexer = new GrammarOfArithmeticLexer(input(s.Replace("x", i.ToString())));
+                CommonTokenStream tokens = new CommonTokenStream(lexer);
+                GrammarOfArithmeticParser parser = new GrammarOfArithmeticParser(tokens);
+                y.Add(parser.graph());
+
+            }
+            
+            
+            return y;
         }
 
         public string SolveCurrency(string s)

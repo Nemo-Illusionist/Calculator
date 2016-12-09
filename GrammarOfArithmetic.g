@@ -34,6 +34,12 @@ options
         }
 }
 
+
+public graph returns[double value]
+	: expr  NEWLINE { $value = $expr.value; }
+	| NEWLINE
+	;
+
 public calc returns[string value]
 	:  {$value = "";} (statement {$value += $statement.value;})+
 	;

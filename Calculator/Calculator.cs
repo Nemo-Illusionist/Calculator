@@ -234,6 +234,7 @@ namespace Calculator
             currencyDate.MaxDate = DateTime.Now;
             DateTime actual = new DateTime(1999, 01, 01);
             CurrenciesAPI.SelectedDate = currencyDate.Value;
+            CurrenciesAPI.RupValue = Double.Parse(RUP_Value.Text);
             var json = Properties.Resources.currencies;
             JObject o = JObject.Parse(json);
             foreach (var token in o)
@@ -257,25 +258,51 @@ namespace Calculator
         }
         private void currenciesRTB_KeyDown(object sender, KeyEventArgs e)
         {
-            switch (e.KeyCode)
+            try
             {
-                case Keys.Enter:
-                    var line = currenciesRTB.GetLineFromCharIndex(currenciesRTB.SelectionStart);
-                    var s = currenciesRTB.GetFirstCharIndexOfCurrentLine() + currenciesRTB.Lines[line].Length;
-                    currenciesRTB.SelectionStart = s;
-                    string str = currenciesRTB.Lines[line];
-                    currenciesRTB.SelectedText = _parser.SolveCurrency(str);
-                    break;
-                case Keys.Z:
-                    if (e.Control) currenciesRTB.Undo();
-                    break;
-                case Keys.Y:
-                    if (e.Control) currenciesRTB.Redo();
-                    break;
+                switch (e.KeyCode)
+                {
+                    case Keys.Enter:
+                        var line = currenciesRTB.GetLineFromCharIndex(currenciesRTB.SelectionStart);
+                        var s = currenciesRTB.GetFirstCharIndexOfCurrentLine() + currenciesRTB.Lines[line].Length;
+                        currenciesRTB.SelectionStart = s;
+                        string str = currenciesRTB.Lines[line];
+                        currenciesRTB.SelectedText = _parser.SolveCurrency(str);
+                        break;
+                    case Keys.Z:
+                        if (e.Control) currenciesRTB.Undo();
+                        break;
+                    case Keys.Y:
+                        if (e.Control) currenciesRTB.Redo();
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Произошла ошибка, да, у нас их много", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
         private void RUP_Value_TextChanged(object sender, EventArgs e)
         {
+        }
+
+        private void RUP_Value_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            {
+                if ((e.KeyChar == '.' || e.KeyChar == ','))
+                {
+                    if (RUP_Value.Text.Contains(',')) e.Handled = true;
+                    else
+                    {
+                        e.KeyChar = ',';
+                    }
+                }
+                else
+                {
+                    if (Char.IsDigit(e.KeyChar) || e.KeyChar == 8) return;
+                    else e.Handled = true;
+                }
+            }
             CurrenciesAPI.RupValue = Double.Parse(RUP_Value.Text);
         }
         #endregion
@@ -292,6 +319,7 @@ namespace Calculator
             aboutForm.ShowDialog();
         }
         #endregion
+
 
 
 

@@ -40,8 +40,8 @@ namespace Currencies
                 return new Cur
                 {
                     CurName = "USD",
-                    Count = f1(a1.Count * CurrenciesAPI.Coefficient(a1.CurName),
-                                a2.Count * CurrenciesAPI.Coefficient(a2.CurName))
+                    Count = f1(a1.Count/CurrenciesAPI.Coefficient(a1.CurName),
+                        a2.Count/CurrenciesAPI.Coefficient(a2.CurName))
                 };
             }
 

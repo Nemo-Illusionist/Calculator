@@ -804,6 +804,7 @@
             this.RUP_Value.TabIndex = 0;
             this.RUP_Value.Text = "11,35";
             this.RUP_Value.TextChanged += new System.EventHandler(this.RUP_Value_TextChanged);
+            this.RUP_Value.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RUP_Value_KeyPress);
             // 
             // currenciesRTB
             // 

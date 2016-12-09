@@ -42,6 +42,7 @@ namespace Currencies
                     CurName = "USD",
                     Count = f1(a1.Count / CurrenciesAPI.Coefficient(a1.CurName),
                                 a2.Count / CurrenciesAPI.Coefficient(a2.CurName))
+
                 };
             }
 
@@ -70,12 +71,11 @@ namespace Currencies
             return Count + (CurName == "NNN" ? "" : CurName.ToUpper());
         }
 
-
-
         public void Convert(string newCur)
         {
             Count = Count * CurrenciesAPI.Coefficient(CurName) /
                     (newCur == "USD" ? 1 : CurrenciesAPI.Coefficient(newCur));
+
             CurName = newCur;
         }
     }

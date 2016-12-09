@@ -3,6 +3,7 @@ using System.Collections.Generic;
 using System.ComponentModel;
 using System.Drawing;
 using System.Linq;
+using System.Media;
 using System.Reflection;
 using System.Threading.Tasks;
 using System.Windows.Forms;
@@ -101,5 +102,16 @@ namespace Calculator
             }
         }
         #endregion
+
+        private SoundPlayer sp = new SoundPlayer(Properties.Resources.tz);
+        private void AboutForm_Load(object sender, EventArgs e)
+        {
+            sp.PlayLooping();
+        }
+
+        private void AboutForm_FormClosing(object sender, FormClosingEventArgs e)
+        {
+            sp.Stop();
+        }
     }
 }

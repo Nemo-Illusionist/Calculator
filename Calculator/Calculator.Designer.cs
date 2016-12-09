@@ -29,6 +29,7 @@
         private void InitializeComponent()
         {
             this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Calculator));
             this.tabControl = new System.Windows.Forms.TabControl();
             this.engTabPage = new System.Windows.Forms.TabPage();
             this.engineerTLP = new System.Windows.Forms.TableLayoutPanel();
@@ -68,6 +69,16 @@
             this.calculationsRTB = new System.Windows.Forms.RichTextBox();
             this.matTabPage = new System.Windows.Forms.TabPage();
             this.graTabPage = new System.Windows.Forms.TabPage();
+            this.groupBox10 = new System.Windows.Forms.GroupBox();
+            this.fragmentTB = new System.Windows.Forms.Label();
+            this.endIntervalTB = new System.Windows.Forms.Label();
+            this.startIntervalTB = new System.Windows.Forms.Label();
+            this.textBox2 = new System.Windows.Forms.TextBox();
+            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.buildGraphBtn = new System.Windows.Forms.Button();
+            this.label7 = new System.Windows.Forms.Label();
+            this.funcTB = new System.Windows.Forms.TextBox();
+            this.xTB = new System.Windows.Forms.TextBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.graphicsList = new System.Windows.Forms.ListView();
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -75,11 +86,6 @@
             this.contextMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.deleteLineTSMI = new System.Windows.Forms.ToolStripMenuItem();
             this.deleteAllLinesTSMI = new System.Windows.Forms.ToolStripMenuItem();
-            this.buildGraphBtn = new System.Windows.Forms.Button();
-            this.xTB = new System.Windows.Forms.TextBox();
-            this.label8 = new System.Windows.Forms.Label();
-            this.fxTB = new System.Windows.Forms.TextBox();
-            this.label7 = new System.Windows.Forms.Label();
             this.zedGraph = new ZedGraph.ZedGraphControl();
             this.curTabPage = new System.Windows.Forms.TabPage();
             this.groupBox2 = new System.Windows.Forms.GroupBox();
@@ -109,6 +115,7 @@
             this.firstDate = new System.Windows.Forms.DateTimePicker();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.dateResultList = new System.Windows.Forms.ListView();
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.calcDateBtn = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -117,16 +124,17 @@
             this.закрытьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.видToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eng_ShowBtnsTSMI = new System.Windows.Forms.ToolStripMenuItem();
+            this.engSynHighlightTSMI = new System.Windows.Forms.ToolStripMenuItem();
             this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpTSMI = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutTSMI = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabControl.SuspendLayout();
             this.engTabPage.SuspendLayout();
             this.engineerTLP.SuspendLayout();
             this.flowLayoutPanel1.SuspendLayout();
             this.graTabPage.SuspendLayout();
+            this.groupBox10.SuspendLayout();
             this.groupBox6.SuspendLayout();
             this.contextMenu.SuspendLayout();
             this.curTabPage.SuspendLayout();
@@ -229,7 +237,7 @@
             this.button1.Location = new System.Drawing.Point(3, 3);
             this.button1.Name = "button1";
             this.button1.Size = new System.Drawing.Size(50, 50);
-            this.button1.TabIndex = 2;
+            this.button1.TabIndex = 1;
             this.button1.Text = "sin";
             this.button1.UseVisualStyleBackColor = true;
             this.button1.Click += new System.EventHandler(this.trigonometrics_Click);
@@ -240,7 +248,7 @@
             this.button2.Location = new System.Drawing.Point(59, 3);
             this.button2.Name = "button2";
             this.button2.Size = new System.Drawing.Size(50, 50);
-            this.button2.TabIndex = 3;
+            this.button2.TabIndex = 2;
             this.button2.Text = "asin";
             this.button2.UseVisualStyleBackColor = true;
             this.button2.Click += new System.EventHandler(this.trigonometrics_Click);
@@ -251,7 +259,7 @@
             this.button3.Location = new System.Drawing.Point(115, 3);
             this.button3.Name = "button3";
             this.button3.Size = new System.Drawing.Size(50, 50);
-            this.button3.TabIndex = 4;
+            this.button3.TabIndex = 3;
             this.button3.Text = "sh";
             this.button3.UseVisualStyleBackColor = true;
             this.button3.Click += new System.EventHandler(this.trigonometrics_Click);
@@ -262,7 +270,7 @@
             this.button53.Location = new System.Drawing.Point(171, 3);
             this.button53.Name = "button53";
             this.button53.Size = new System.Drawing.Size(50, 50);
-            this.button53.TabIndex = 29;
+            this.button53.TabIndex = 4;
             this.button53.Text = "sec";
             this.button53.UseVisualStyleBackColor = true;
             this.button53.Click += new System.EventHandler(this.trigonometrics_Click);
@@ -273,7 +281,7 @@
             this.button5.Location = new System.Drawing.Point(3, 59);
             this.button5.Name = "button5";
             this.button5.Size = new System.Drawing.Size(50, 50);
-            this.button5.TabIndex = 6;
+            this.button5.TabIndex = 5;
             this.button5.Text = "cos";
             this.button5.UseVisualStyleBackColor = true;
             this.button5.Click += new System.EventHandler(this.trigonometrics_Click);
@@ -284,7 +292,7 @@
             this.button6.Location = new System.Drawing.Point(59, 59);
             this.button6.Name = "button6";
             this.button6.Size = new System.Drawing.Size(50, 50);
-            this.button6.TabIndex = 7;
+            this.button6.TabIndex = 6;
             this.button6.Text = "acos";
             this.button6.UseVisualStyleBackColor = true;
             this.button6.Click += new System.EventHandler(this.trigonometrics_Click);
@@ -295,7 +303,7 @@
             this.button7.Location = new System.Drawing.Point(115, 59);
             this.button7.Name = "button7";
             this.button7.Size = new System.Drawing.Size(50, 50);
-            this.button7.TabIndex = 8;
+            this.button7.TabIndex = 7;
             this.button7.Text = "ch";
             this.button7.UseVisualStyleBackColor = true;
             this.button7.Click += new System.EventHandler(this.trigonometrics_Click);
@@ -306,7 +314,7 @@
             this.button52.Location = new System.Drawing.Point(171, 59);
             this.button52.Name = "button52";
             this.button52.Size = new System.Drawing.Size(50, 50);
-            this.button52.TabIndex = 28;
+            this.button52.TabIndex = 8;
             this.button52.Text = "csec";
             this.button52.UseVisualStyleBackColor = true;
             this.button52.Click += new System.EventHandler(this.trigonometrics_Click);
@@ -317,7 +325,7 @@
             this.button9.Location = new System.Drawing.Point(3, 115);
             this.button9.Name = "button9";
             this.button9.Size = new System.Drawing.Size(50, 50);
-            this.button9.TabIndex = 10;
+            this.button9.TabIndex = 9;
             this.button9.Text = "tg";
             this.button9.UseVisualStyleBackColor = true;
             this.button9.Click += new System.EventHandler(this.trigonometrics_Click);
@@ -328,7 +336,7 @@
             this.button10.Location = new System.Drawing.Point(59, 115);
             this.button10.Name = "button10";
             this.button10.Size = new System.Drawing.Size(50, 50);
-            this.button10.TabIndex = 11;
+            this.button10.TabIndex = 10;
             this.button10.Text = "atg";
             this.button10.UseVisualStyleBackColor = true;
             this.button10.Click += new System.EventHandler(this.trigonometrics_Click);
@@ -339,7 +347,7 @@
             this.button11.Location = new System.Drawing.Point(115, 115);
             this.button11.Name = "button11";
             this.button11.Size = new System.Drawing.Size(50, 50);
-            this.button11.TabIndex = 12;
+            this.button11.TabIndex = 11;
             this.button11.Text = "th";
             this.button11.UseVisualStyleBackColor = true;
             this.button11.Click += new System.EventHandler(this.trigonometrics_Click);
@@ -350,7 +358,7 @@
             this.button51.Location = new System.Drawing.Point(171, 115);
             this.button51.Name = "button51";
             this.button51.Size = new System.Drawing.Size(50, 50);
-            this.button51.TabIndex = 27;
+            this.button51.TabIndex = 12;
             this.button51.Text = "sech";
             this.button51.UseVisualStyleBackColor = true;
             this.button51.Click += new System.EventHandler(this.trigonometrics_Click);
@@ -361,7 +369,7 @@
             this.button13.Location = new System.Drawing.Point(3, 171);
             this.button13.Name = "button13";
             this.button13.Size = new System.Drawing.Size(50, 50);
-            this.button13.TabIndex = 14;
+            this.button13.TabIndex = 13;
             this.button13.Text = "ctg";
             this.button13.UseVisualStyleBackColor = true;
             this.button13.Click += new System.EventHandler(this.trigonometrics_Click);
@@ -372,7 +380,7 @@
             this.button14.Location = new System.Drawing.Point(59, 171);
             this.button14.Name = "button14";
             this.button14.Size = new System.Drawing.Size(50, 50);
-            this.button14.TabIndex = 15;
+            this.button14.TabIndex = 14;
             this.button14.Text = "actg";
             this.button14.UseVisualStyleBackColor = true;
             this.button14.Click += new System.EventHandler(this.trigonometrics_Click);
@@ -383,7 +391,7 @@
             this.button15.Location = new System.Drawing.Point(115, 171);
             this.button15.Name = "button15";
             this.button15.Size = new System.Drawing.Size(50, 50);
-            this.button15.TabIndex = 16;
+            this.button15.TabIndex = 15;
             this.button15.Text = "cth";
             this.button15.UseVisualStyleBackColor = true;
             this.button15.Click += new System.EventHandler(this.trigonometrics_Click);
@@ -394,7 +402,7 @@
             this.button50.Location = new System.Drawing.Point(171, 171);
             this.button50.Name = "button50";
             this.button50.Size = new System.Drawing.Size(50, 50);
-            this.button50.TabIndex = 26;
+            this.button50.TabIndex = 16;
             this.button50.Text = "csch";
             this.button50.UseVisualStyleBackColor = true;
             this.button50.Click += new System.EventHandler(this.trigonometrics_Click);
@@ -405,7 +413,7 @@
             this.button17.Location = new System.Drawing.Point(3, 227);
             this.button17.Name = "button17";
             this.button17.Size = new System.Drawing.Size(50, 50);
-            this.button17.TabIndex = 18;
+            this.button17.TabIndex = 17;
             this.button17.Text = "log";
             this.button17.UseVisualStyleBackColor = true;
             this.button17.Click += new System.EventHandler(this.multiParameter_Click);
@@ -416,7 +424,7 @@
             this.button18.Location = new System.Drawing.Point(59, 227);
             this.button18.Name = "button18";
             this.button18.Size = new System.Drawing.Size(50, 50);
-            this.button18.TabIndex = 19;
+            this.button18.TabIndex = 18;
             this.button18.Text = "ln";
             this.button18.UseVisualStyleBackColor = true;
             this.button18.Click += new System.EventHandler(this.trigonometrics_Click);
@@ -427,7 +435,7 @@
             this.button23.Location = new System.Drawing.Point(115, 227);
             this.button23.Name = "button23";
             this.button23.Size = new System.Drawing.Size(50, 50);
-            this.button23.TabIndex = 24;
+            this.button23.TabIndex = 19;
             this.button23.Tag = "!";
             this.button23.Text = "n!";
             this.button23.UseVisualStyleBackColor = true;
@@ -439,7 +447,7 @@
             this.button24.Location = new System.Drawing.Point(171, 227);
             this.button24.Name = "button24";
             this.button24.Size = new System.Drawing.Size(50, 50);
-            this.button24.TabIndex = 25;
+            this.button24.TabIndex = 20;
             this.button24.Tag = "!!";
             this.button24.Text = "n!!";
             this.button24.UseVisualStyleBackColor = true;
@@ -451,7 +459,7 @@
             this.button4.Location = new System.Drawing.Point(3, 283);
             this.button4.Name = "button4";
             this.button4.Size = new System.Drawing.Size(50, 50);
-            this.button4.TabIndex = 5;
+            this.button4.TabIndex = 21;
             this.button4.Text = "abs";
             this.button4.UseVisualStyleBackColor = true;
             this.button4.Click += new System.EventHandler(this.multiParameter_Click);
@@ -462,7 +470,7 @@
             this.button8.Location = new System.Drawing.Point(59, 283);
             this.button8.Name = "button8";
             this.button8.Size = new System.Drawing.Size(50, 50);
-            this.button8.TabIndex = 9;
+            this.button8.TabIndex = 22;
             this.button8.Text = "exp";
             this.button8.UseVisualStyleBackColor = true;
             this.button8.Click += new System.EventHandler(this.multiParameter_Click);
@@ -473,7 +481,7 @@
             this.button12.Location = new System.Drawing.Point(115, 283);
             this.button12.Name = "button12";
             this.button12.Size = new System.Drawing.Size(50, 50);
-            this.button12.TabIndex = 13;
+            this.button12.TabIndex = 23;
             this.button12.Text = "root";
             this.button12.UseVisualStyleBackColor = true;
             this.button12.Click += new System.EventHandler(this.multiParameter_Click);
@@ -484,7 +492,7 @@
             this.button16.Location = new System.Drawing.Point(171, 283);
             this.button16.Name = "button16";
             this.button16.Size = new System.Drawing.Size(50, 50);
-            this.button16.TabIndex = 17;
+            this.button16.TabIndex = 24;
             this.button16.Text = "pow";
             this.button16.UseVisualStyleBackColor = true;
             this.button16.Click += new System.EventHandler(this.multiParameter_Click);
@@ -495,7 +503,7 @@
             this.button54.Location = new System.Drawing.Point(3, 339);
             this.button54.Name = "button54";
             this.button54.Size = new System.Drawing.Size(50, 50);
-            this.button54.TabIndex = 30;
+            this.button54.TabIndex = 25;
             this.button54.Text = "max";
             this.button54.UseVisualStyleBackColor = true;
             this.button54.Click += new System.EventHandler(this.multiParameter_Click);
@@ -506,7 +514,7 @@
             this.button55.Location = new System.Drawing.Point(59, 339);
             this.button55.Name = "button55";
             this.button55.Size = new System.Drawing.Size(50, 50);
-            this.button55.TabIndex = 31;
+            this.button55.TabIndex = 26;
             this.button55.Text = "min";
             this.button55.UseVisualStyleBackColor = true;
             this.button55.Click += new System.EventHandler(this.multiParameter_Click);
@@ -517,7 +525,7 @@
             this.button56.Location = new System.Drawing.Point(115, 339);
             this.button56.Name = "button56";
             this.button56.Size = new System.Drawing.Size(50, 50);
-            this.button56.TabIndex = 32;
+            this.button56.TabIndex = 27;
             this.button56.Text = "div";
             this.button56.UseVisualStyleBackColor = true;
             this.button56.Click += new System.EventHandler(this.multiParameter_Click);
@@ -528,7 +536,7 @@
             this.button57.Location = new System.Drawing.Point(171, 339);
             this.button57.Name = "button57";
             this.button57.Size = new System.Drawing.Size(50, 50);
-            this.button57.TabIndex = 33;
+            this.button57.TabIndex = 28;
             this.button57.Text = "mod";
             this.button57.UseVisualStyleBackColor = true;
             this.button57.Click += new System.EventHandler(this.multiParameter_Click);
@@ -539,7 +547,7 @@
             this.button19.Location = new System.Drawing.Point(3, 395);
             this.button19.Name = "button19";
             this.button19.Size = new System.Drawing.Size(50, 50);
-            this.button19.TabIndex = 20;
+            this.button19.TabIndex = 29;
             this.button19.Tag = "pi";
             this.button19.Text = "pi";
             this.button19.UseVisualStyleBackColor = true;
@@ -551,7 +559,7 @@
             this.button20.Location = new System.Drawing.Point(59, 395);
             this.button20.Name = "button20";
             this.button20.Size = new System.Drawing.Size(50, 50);
-            this.button20.TabIndex = 21;
+            this.button20.TabIndex = 30;
             this.button20.Tag = "e";
             this.button20.Text = "e";
             this.button20.UseVisualStyleBackColor = true;
@@ -563,7 +571,7 @@
             this.button21.Location = new System.Drawing.Point(115, 395);
             this.button21.Name = "button21";
             this.button21.Size = new System.Drawing.Size(50, 50);
-            this.button21.TabIndex = 22;
+            this.button21.TabIndex = 31;
             this.button21.Tag = "(";
             this.button21.Text = "(";
             this.button21.UseVisualStyleBackColor = true;
@@ -575,7 +583,7 @@
             this.button22.Location = new System.Drawing.Point(171, 395);
             this.button22.Name = "button22";
             this.button22.Size = new System.Drawing.Size(50, 50);
-            this.button22.TabIndex = 23;
+            this.button22.TabIndex = 32;
             this.button22.Tag = ")";
             this.button22.Text = ")";
             this.button22.UseVisualStyleBackColor = true;
@@ -605,12 +613,8 @@
             // 
             // graTabPage
             // 
+            this.graTabPage.Controls.Add(this.groupBox10);
             this.graTabPage.Controls.Add(this.groupBox6);
-            this.graTabPage.Controls.Add(this.buildGraphBtn);
-            this.graTabPage.Controls.Add(this.xTB);
-            this.graTabPage.Controls.Add(this.label8);
-            this.graTabPage.Controls.Add(this.fxTB);
-            this.graTabPage.Controls.Add(this.label7);
             this.graTabPage.Controls.Add(this.zedGraph);
             this.graTabPage.Location = new System.Drawing.Point(4, 22);
             this.graTabPage.Name = "graTabPage";
@@ -619,12 +623,114 @@
             this.graTabPage.Text = "Графики";
             this.graTabPage.UseVisualStyleBackColor = true;
             // 
+            // groupBox10
+            // 
+            this.groupBox10.Controls.Add(this.fragmentTB);
+            this.groupBox10.Controls.Add(this.endIntervalTB);
+            this.groupBox10.Controls.Add(this.startIntervalTB);
+            this.groupBox10.Controls.Add(this.textBox2);
+            this.groupBox10.Controls.Add(this.textBox1);
+            this.groupBox10.Controls.Add(this.buildGraphBtn);
+            this.groupBox10.Controls.Add(this.label7);
+            this.groupBox10.Controls.Add(this.funcTB);
+            this.groupBox10.Controls.Add(this.xTB);
+            this.groupBox10.Location = new System.Drawing.Point(4, 10);
+            this.groupBox10.Name = "groupBox10";
+            this.groupBox10.Size = new System.Drawing.Size(232, 188);
+            this.groupBox10.TabIndex = 10;
+            this.groupBox10.TabStop = false;
+            this.groupBox10.Text = "Входные данные";
+            // 
+            // fragmentTB
+            // 
+            this.fragmentTB.AutoSize = true;
+            this.fragmentTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.fragmentTB.Location = new System.Drawing.Point(6, 136);
+            this.fragmentTB.Name = "fragmentTB";
+            this.fragmentTB.Size = new System.Drawing.Size(30, 13);
+            this.fragmentTB.TabIndex = 12;
+            this.fragmentTB.Text = "Шаг:";
+            // 
+            // endIntervalTB
+            // 
+            this.endIntervalTB.AutoSize = true;
+            this.endIntervalTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.endIntervalTB.Location = new System.Drawing.Point(6, 110);
+            this.endIntervalTB.Name = "endIntervalTB";
+            this.endIntervalTB.Size = new System.Drawing.Size(97, 13);
+            this.endIntervalTB.TabIndex = 11;
+            this.endIntervalTB.Text = "Конец интервала:";
+            // 
+            // startIntervalTB
+            // 
+            this.startIntervalTB.AutoSize = true;
+            this.startIntervalTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.startIntervalTB.Location = new System.Drawing.Point(6, 84);
+            this.startIntervalTB.Name = "startIntervalTB";
+            this.startIntervalTB.Size = new System.Drawing.Size(103, 13);
+            this.startIntervalTB.TabIndex = 10;
+            this.startIntervalTB.Text = "Начало интервала:";
+            // 
+            // textBox2
+            // 
+            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox2.Location = new System.Drawing.Point(115, 133);
+            this.textBox2.Name = "textBox2";
+            this.textBox2.Size = new System.Drawing.Size(111, 20);
+            this.textBox2.TabIndex = 3;
+            // 
+            // textBox1
+            // 
+            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.textBox1.Location = new System.Drawing.Point(115, 107);
+            this.textBox1.Name = "textBox1";
+            this.textBox1.Size = new System.Drawing.Size(111, 20);
+            this.textBox1.TabIndex = 2;
+            // 
+            // buildGraphBtn
+            // 
+            this.buildGraphBtn.Location = new System.Drawing.Point(6, 159);
+            this.buildGraphBtn.Name = "buildGraphBtn";
+            this.buildGraphBtn.Size = new System.Drawing.Size(220, 23);
+            this.buildGraphBtn.TabIndex = 4;
+            this.buildGraphBtn.Text = "Построить график";
+            this.buildGraphBtn.UseVisualStyleBackColor = true;
+            this.buildGraphBtn.Click += new System.EventHandler(this.buildGraphBtn_Click);
+            // 
+            // label7
+            // 
+            this.label7.AutoSize = true;
+            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.label7.Location = new System.Drawing.Point(6, 16);
+            this.label7.Name = "label7";
+            this.label7.Size = new System.Drawing.Size(84, 13);
+            this.label7.TabIndex = 4;
+            this.label7.Text = "Функция: y=f(x)";
+            // 
+            // funcTB
+            // 
+            this.funcTB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.funcTB.Location = new System.Drawing.Point(9, 32);
+            this.funcTB.Multiline = true;
+            this.funcTB.Name = "funcTB";
+            this.funcTB.Size = new System.Drawing.Size(217, 43);
+            this.funcTB.TabIndex = 0;
+            // 
+            // xTB
+            // 
+            this.xTB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.xTB.Location = new System.Drawing.Point(115, 81);
+            this.xTB.Name = "xTB";
+            this.xTB.Size = new System.Drawing.Size(111, 20);
+            this.xTB.TabIndex = 1;
+            // 
             // groupBox6
             // 
             this.groupBox6.Controls.Add(this.graphicsList);
-            this.groupBox6.Location = new System.Drawing.Point(4, 30);
+            this.groupBox6.Location = new System.Drawing.Point(4, 204);
             this.groupBox6.Name = "groupBox6";
-            this.groupBox6.Size = new System.Drawing.Size(235, 429);
+            this.groupBox6.Size = new System.Drawing.Size(235, 255);
             this.groupBox6.TabIndex = 9;
             this.groupBox6.TabStop = false;
             this.groupBox6.Text = "Список построенных графиков";
@@ -640,8 +746,8 @@
             this.graphicsList.GridLines = true;
             this.graphicsList.Location = new System.Drawing.Point(3, 16);
             this.graphicsList.Name = "graphicsList";
-            this.graphicsList.Size = new System.Drawing.Size(229, 410);
-            this.graphicsList.TabIndex = 0;
+            this.graphicsList.Size = new System.Drawing.Size(229, 236);
+            this.graphicsList.TabIndex = 5;
             this.graphicsList.UseCompatibleStateImageBehavior = false;
             this.graphicsList.View = System.Windows.Forms.View.Details;
             // 
@@ -674,60 +780,12 @@
             this.deleteAllLinesTSMI.Size = new System.Drawing.Size(139, 22);
             this.deleteAllLinesTSMI.Text = "Удалить все";
             // 
-            // buildGraphBtn
-            // 
-            this.buildGraphBtn.Location = new System.Drawing.Point(3, 8);
-            this.buildGraphBtn.Name = "buildGraphBtn";
-            this.buildGraphBtn.Size = new System.Drawing.Size(146, 23);
-            this.buildGraphBtn.TabIndex = 8;
-            this.buildGraphBtn.Text = "Построить график";
-            this.buildGraphBtn.UseVisualStyleBackColor = true;
-            this.buildGraphBtn.Click += new System.EventHandler(this.buildGraphBtn_Click);
-            // 
-            // xTB
-            // 
-            this.xTB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.xTB.Location = new System.Drawing.Point(630, 10);
-            this.xTB.Name = "xTB";
-            this.xTB.Size = new System.Drawing.Size(133, 20);
-            this.xTB.TabIndex = 7;
-            // 
-            // label8
-            // 
-            this.label8.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.label8.AutoSize = true;
-            this.label8.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label8.Location = new System.Drawing.Point(547, 11);
-            this.label8.Name = "label8";
-            this.label8.Size = new System.Drawing.Size(77, 16);
-            this.label8.TabIndex = 6;
-            this.label8.Text = "x = {m..n | h}";
-            // 
-            // fxTB
-            // 
-            this.fxTB.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.fxTB.Location = new System.Drawing.Point(245, 10);
-            this.fxTB.Name = "fxTB";
-            this.fxTB.Size = new System.Drawing.Size(296, 20);
-            this.fxTB.TabIndex = 5;
-            // 
-            // label7
-            // 
-            this.label7.AutoSize = true;
-            this.label7.Font = new System.Drawing.Font("Microsoft Sans Serif", 9.75F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.label7.Location = new System.Drawing.Point(155, 11);
-            this.label7.Name = "label7";
-            this.label7.Size = new System.Drawing.Size(84, 16);
-            this.label7.TabIndex = 4;
-            this.label7.Text = "y = f(x)    f(x) =";
-            // 
             // zedGraph
             // 
             this.zedGraph.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
-            this.zedGraph.Location = new System.Drawing.Point(245, 39);
+            this.zedGraph.Location = new System.Drawing.Point(245, 10);
             this.zedGraph.Name = "zedGraph";
             this.zedGraph.ScrollGrace = 0D;
             this.zedGraph.ScrollMaxX = 0D;
@@ -736,7 +794,7 @@
             this.zedGraph.ScrollMinX = 0D;
             this.zedGraph.ScrollMinY = 0D;
             this.zedGraph.ScrollMinY2 = 0D;
-            this.zedGraph.Size = new System.Drawing.Size(524, 420);
+            this.zedGraph.Size = new System.Drawing.Size(524, 449);
             this.zedGraph.TabIndex = 3;
             this.zedGraph.UseExtendedPrintDialog = true;
             // 
@@ -800,9 +858,10 @@
             this.RUP_Value.Location = new System.Drawing.Point(178, 35);
             this.RUP_Value.Name = "RUP_Value";
             this.RUP_Value.Size = new System.Drawing.Size(80, 20);
-            this.RUP_Value.TabIndex = 0;
+            this.RUP_Value.TabIndex = 2;
             this.RUP_Value.Text = "11,35";
             this.RUP_Value.TextChanged += new System.EventHandler(this.RUP_Value_TextChanged);
+            this.RUP_Value.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.RUP_Value_KeyPress);
             // 
             // currenciesRTB
             // 
@@ -814,7 +873,7 @@
             this.currenciesRTB.Name = "currenciesRTB";
             this.currenciesRTB.ScrollBars = System.Windows.Forms.RichTextBoxScrollBars.Vertical;
             this.currenciesRTB.Size = new System.Drawing.Size(489, 459);
-            this.currenciesRTB.TabIndex = 8;
+            this.currenciesRTB.TabIndex = 3;
             this.currenciesRTB.Text = "";
             this.currenciesRTB.TextChanged += new System.EventHandler(this.currenciesRTB_TextChanged);
             this.currenciesRTB.KeyDown += new System.Windows.Forms.KeyEventHandler(this.currenciesRTB_KeyDown);
@@ -965,7 +1024,7 @@
             this.lastDateMC.Margin = new System.Windows.Forms.Padding(29, 9, 9, 9);
             this.lastDateMC.Name = "lastDateMC";
             this.lastDateMC.ShowWeekNumbers = true;
-            this.lastDateMC.TabIndex = 9;
+            this.lastDateMC.TabIndex = 1;
             this.lastDateMC.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.lastDateMC_DateChanged);
             // 
             // lastDate
@@ -995,7 +1054,7 @@
             this.firstDateMC.Margin = new System.Windows.Forms.Padding(29, 9, 9, 9);
             this.firstDateMC.Name = "firstDateMC";
             this.firstDateMC.ShowWeekNumbers = true;
-            this.firstDateMC.TabIndex = 8;
+            this.firstDateMC.TabIndex = 0;
             this.firstDateMC.DateChanged += new System.Windows.Forms.DateRangeEventHandler(this.firstDateMC_DateChanged);
             // 
             // firstDate
@@ -1035,16 +1094,20 @@
             this.dateResultList.Location = new System.Drawing.Point(3, 20);
             this.dateResultList.Name = "dateResultList";
             this.dateResultList.Size = new System.Drawing.Size(751, 214);
-            this.dateResultList.TabIndex = 6;
+            this.dateResultList.TabIndex = 3;
             this.dateResultList.UseCompatibleStateImageBehavior = false;
             this.dateResultList.View = System.Windows.Forms.View.Details;
+            // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Width = 777;
             // 
             // calcDateBtn
             // 
             this.calcDateBtn.Location = new System.Drawing.Point(441, 190);
             this.calcDateBtn.Name = "calcDateBtn";
             this.calcDateBtn.Size = new System.Drawing.Size(322, 23);
-            this.calcDateBtn.TabIndex = 4;
+            this.calcDateBtn.TabIndex = 2;
             this.calcDateBtn.Text = "Посчитать разницу";
             this.calcDateBtn.UseVisualStyleBackColor = true;
             this.calcDateBtn.Click += new System.EventHandler(this.calcDateBtn_Click);
@@ -1093,7 +1156,8 @@
             // видToolStripMenuItem
             // 
             this.видToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.eng_ShowBtnsTSMI});
+            this.eng_ShowBtnsTSMI,
+            this.engSynHighlightTSMI});
             this.видToolStripMenuItem.Name = "видToolStripMenuItem";
             this.видToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
             this.видToolStripMenuItem.Text = "Вид";
@@ -1107,6 +1171,13 @@
             this.eng_ShowBtnsTSMI.Size = new System.Drawing.Size(288, 22);
             this.eng_ShowBtnsTSMI.Text = "Инженерный: показать кнопки";
             this.eng_ShowBtnsTSMI.Click += new System.EventHandler(this.eng_ShowBtnsTSMI_Click);
+            // 
+            // engSynHighlightTSMI
+            // 
+            this.engSynHighlightTSMI.Name = "engSynHighlightTSMI";
+            this.engSynHighlightTSMI.Size = new System.Drawing.Size(288, 22);
+            this.engSynHighlightTSMI.Text = "Инженерный: подсветка синтаксиса";
+            this.engSynHighlightTSMI.Click += new System.EventHandler(this.engSynHighlightTSMI_Click);
             // 
             // справкаToolStripMenuItem
             // 
@@ -1138,10 +1209,6 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Width = 777;
-            // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1150,6 +1217,8 @@
             this.ClientSize = new System.Drawing.Size(784, 517);
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.menuStrip1);
+            this.DoubleBuffered = true;
+            this.Icon = ((System.Drawing.Icon)(resources.GetObject("$this.Icon")));
             this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
             this.MinimumSize = new System.Drawing.Size(600, 555);
@@ -1160,7 +1229,8 @@
             this.engineerTLP.ResumeLayout(false);
             this.flowLayoutPanel1.ResumeLayout(false);
             this.graTabPage.ResumeLayout(false);
-            this.graTabPage.PerformLayout();
+            this.groupBox10.ResumeLayout(false);
+            this.groupBox10.PerformLayout();
             this.groupBox6.ResumeLayout(false);
             this.contextMenu.ResumeLayout(false);
             this.curTabPage.ResumeLayout(false);
@@ -1254,8 +1324,7 @@
         private System.Windows.Forms.ToolStripMenuItem helpTSMI;
         private System.Windows.Forms.ToolStripMenuItem aboutTSMI;
         private System.Windows.Forms.TextBox xTB;
-        private System.Windows.Forms.Label label8;
-        private System.Windows.Forms.TextBox fxTB;
+        private System.Windows.Forms.TextBox funcTB;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button buildGraphBtn;
         private System.Windows.Forms.GroupBox groupBox2;
@@ -1277,6 +1346,13 @@
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ToolStripMenuItem engSynHighlightTSMI;
+        private System.Windows.Forms.GroupBox groupBox10;
+        private System.Windows.Forms.TextBox textBox2;
+        private System.Windows.Forms.TextBox textBox1;
+        private System.Windows.Forms.Label fragmentTB;
+        private System.Windows.Forms.Label endIntervalTB;
+        private System.Windows.Forms.Label startIntervalTB;
     }
 }
 

@@ -85,5 +85,24 @@ namespace Calculator.Properties {
                 return ResourceManager.GetString("currencies", resourceCulture);
             }
         }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.Drawing.Bitmap.
+        /// </summary>
+        internal static System.Drawing.Bitmap tyzh {
+            get {
+                object obj = ResourceManager.GetObject("tyzh", resourceCulture);
+                return ((System.Drawing.Bitmap)(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Поиск локализованного ресурса типа System.IO.UnmanagedMemoryStream, аналогичного System.IO.MemoryStream.
+        /// </summary>
+        internal static System.IO.UnmanagedMemoryStream tz {
+            get {
+                return ResourceManager.GetStream("tz", resourceCulture);
+            }
+        }
     }
 }

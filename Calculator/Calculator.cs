@@ -85,7 +85,7 @@ namespace Calculator
 
         private void calculationsRTB_TextChanged(object sender, EventArgs e)
         {
-            HighlightText();
+            if(engSynHighlightTSMI.Checked) HighlightText();
             Focus();
             calculationsRTB.Focus();
         }
@@ -120,6 +120,20 @@ namespace Calculator
             {
                 engineerTLP.ColumnStyles[0].Width = 230;
                 eng_ShowBtnsTSMI.Checked = true;
+            }
+        }
+        private void engSynHighlightTSMI_Click(object sender, EventArgs e)
+        {
+            if (engSynHighlightTSMI.Checked)
+            {
+                engSynHighlightTSMI.Checked = false;
+                calculationsRTB_TextChanged(calculationsRTB, null);
+            }
+            else
+            {
+                engSynHighlightTSMI.Checked = true;
+                calculationsRTB.SelectAll();
+                calculationsRTB.SelectionColor = SystemColors.ControlText;
             }
         }
 
@@ -169,7 +183,6 @@ namespace Calculator
             TimeSpan ts;
             if (firstDate.Value > lastDate.Value) ts = firstDate.Value - lastDate.Value;
             else ts = lastDate.Value - firstDate.Value;
-            //MessageBox.Show(new DateTime(ts.Ticks).ToString(), ts.ToString());
             dateResultList.Items.Add(new ListViewItem(String.Format("{0:00} секунд", ts.TotalSeconds)));
             if (ts.TotalSeconds > 60) dateResultList.Items.Add(new ListViewItem(
                 String.Format("{0:00} минут {1:00} секунд", ts.TotalMinutes, ts.Seconds)));
@@ -178,13 +191,13 @@ namespace Calculator
             if (ts.TotalHours > 24) dateResultList.Items.Add(new ListViewItem(
                 String.Format("{0:00} дней, {1:00} часов {2:00} минут {3:00} секунд",
                 ts.TotalDays, ts.Hours, ts.Minutes, ts.Seconds)));
-            if (ts.TotalDays > 28) dateResultList.Items.Add(new ListViewItem(
+            /*if (ts.TotalDays > 28) dateResultList.Items.Add(new ListViewItem(
                 String.Format("{0:00} месяцев {1:00} дней, {2:00} часов {3:00} минут {4:00} секунд",
-                new DateTime(ts.Ticks), new DateTime(ts.Ticks).Day, ts.Hours, ts.Minutes, ts.Seconds)));
+                new DateTime(ts.Ticks).Year * 12 + new DateTime(ts.Ticks).Month, new DateTime(ts.Ticks).Day, ts.Hours, ts.Minutes, ts.Seconds)));
             if (ts.TotalDays > 364) dateResultList.Items.Add(new ListViewItem(
                 String.Format("{0:00} лет {1:00} месяцев {2:00} дней, {3:00} часов {4:00} минут {5:00} секунд",
-                new DateTime(ts.Ticks).Year, new DateTime(ts.Ticks).Month, new DateTime(ts.Ticks).Day,
-                ts.Hours, ts.Minutes, ts.Seconds)));
+                new DateTime(ts.Ticks).Year, new DateTime(ts.Ticks).Month%12, new DateTime(ts.Ticks).Day,
+                ts.Hours, ts.Minutes, ts.Seconds)));*/
         }
 
 
@@ -209,6 +222,7 @@ namespace Calculator
             try
             {
                 CurrenciesAPI.DownloadJson(currencyDate.Value);
+                CurrenciesAPI.SelectedDate = currencyDate.Value;
             }
             catch (Exception ex)
             {
@@ -219,6 +233,7 @@ namespace Calculator
         {
             currencyDate.MaxDate = DateTime.Now;
             DateTime actual = new DateTime(1999, 01, 01);
+            CurrenciesAPI.SelectedDate = currencyDate.Value;
             var json = Properties.Resources.currencies;
             JObject o = JObject.Parse(json);
             foreach (var token in o)
@@ -259,6 +274,10 @@ namespace Calculator
                     break;
             }
         }
+        private void RUP_Value_TextChanged(object sender, EventArgs e)
+        {
+            CurrenciesAPI.RupValue = Double.Parse(RUP_Value.Text);
+        }
         #endregion
 
         #region Misc
@@ -275,10 +294,7 @@ namespace Calculator
         #endregion
 
 
-        private void RUP_Value_TextChanged(object sender, EventArgs e)
-        {
-            CurrenciesAPI.RupValue = Double.Parse(RUP_Value.Text);
-        }
+
 
 
 

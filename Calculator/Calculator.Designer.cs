@@ -109,6 +109,7 @@
             this.firstDate = new System.Windows.Forms.DateTimePicker();
             this.groupBox5 = new System.Windows.Forms.GroupBox();
             this.dateResultList = new System.Windows.Forms.ListView();
+            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.calcDateBtn = new System.Windows.Forms.Button();
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -117,11 +118,11 @@
             this.закрытьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.видToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.eng_ShowBtnsTSMI = new System.Windows.Forms.ToolStripMenuItem();
+            this.engSynHighlightTSMI = new System.Windows.Forms.ToolStripMenuItem();
             this.справкаToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.helpTSMI = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutTSMI = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.columnHeader5 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
             this.tabControl.SuspendLayout();
             this.engTabPage.SuspendLayout();
             this.engineerTLP.SuspendLayout();
@@ -1039,6 +1040,10 @@
             this.dateResultList.UseCompatibleStateImageBehavior = false;
             this.dateResultList.View = System.Windows.Forms.View.Details;
             // 
+            // columnHeader5
+            // 
+            this.columnHeader5.Width = 777;
+            // 
             // calcDateBtn
             // 
             this.calcDateBtn.Location = new System.Drawing.Point(441, 190);
@@ -1093,7 +1098,8 @@
             // видToolStripMenuItem
             // 
             this.видToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.eng_ShowBtnsTSMI});
+            this.eng_ShowBtnsTSMI,
+            this.engSynHighlightTSMI});
             this.видToolStripMenuItem.Name = "видToolStripMenuItem";
             this.видToolStripMenuItem.Size = new System.Drawing.Size(39, 20);
             this.видToolStripMenuItem.Text = "Вид";
@@ -1107,6 +1113,13 @@
             this.eng_ShowBtnsTSMI.Size = new System.Drawing.Size(288, 22);
             this.eng_ShowBtnsTSMI.Text = "Инженерный: показать кнопки";
             this.eng_ShowBtnsTSMI.Click += new System.EventHandler(this.eng_ShowBtnsTSMI_Click);
+            // 
+            // engSynHighlightTSMI
+            // 
+            this.engSynHighlightTSMI.Name = "engSynHighlightTSMI";
+            this.engSynHighlightTSMI.Size = new System.Drawing.Size(288, 22);
+            this.engSynHighlightTSMI.Text = "Инженерный: подсветка синтаксиса";
+            this.engSynHighlightTSMI.Click += new System.EventHandler(this.engSynHighlightTSMI_Click);
             // 
             // справкаToolStripMenuItem
             // 
@@ -1138,10 +1151,6 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // columnHeader5
-            // 
-            this.columnHeader5.Width = 777;
-            // 
             // Calculator
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 13F);
@@ -1150,6 +1159,7 @@
             this.ClientSize = new System.Drawing.Size(784, 517);
             this.Controls.Add(this.tabControl);
             this.Controls.Add(this.menuStrip1);
+            this.DoubleBuffered = true;
             this.KeyPreview = true;
             this.MainMenuStrip = this.menuStrip1;
             this.MinimumSize = new System.Drawing.Size(600, 555);
@@ -1277,6 +1287,7 @@
         private System.Windows.Forms.GroupBox groupBox7;
         private System.Windows.Forms.GroupBox groupBox9;
         private System.Windows.Forms.ColumnHeader columnHeader5;
+        private System.Windows.Forms.ToolStripMenuItem engSynHighlightTSMI;
     }
 }
 

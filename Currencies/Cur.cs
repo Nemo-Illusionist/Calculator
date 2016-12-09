@@ -65,7 +65,10 @@ namespace Currencies
             Count = d;
         }
 
-        public override string ToString() => Count + (CurName == "NNN" ? "" : CurName.ToUpper());
+        public override string ToString()
+        {
+            return Count + (CurName == "NNN" ? "" : CurName.ToUpper());
+        }
 
         public Cur Convert(string newCur)
         {

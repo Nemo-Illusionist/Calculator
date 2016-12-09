@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.5.1 C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g 2016-12-09 11:42:27
+// $ANTLR 3.5.1 D:\\project\\C#\\Calculator\\GrammarOfCurrency.g 2016-12-09 17:07:32
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 219
@@ -37,6 +37,9 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 	public const int T__13=13;
 	public const int T__14=14;
 	public const int T__15=15;
+	public const int T__16=16;
+	public const int T__17=17;
+	public const int T__18=18;
 	public const int CURRENCY=4;
 	public const int EXPONENT=5;
 	public const int FLOAT=6;
@@ -63,7 +66,7 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 
 		OnCreated();
 	}
-	public override string GrammarFileName { get { return "C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g"; } }
+	public override string GrammarFileName { get { return "D:\\project\\C#\\Calculator\\GrammarOfCurrency.g"; } }
 
 
 	partial void OnCreated();
@@ -84,12 +87,12 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__10;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:9:7: ( '*' )
+			// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:9:7: ( '(' )
 			DebugEnterAlt(1);
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:9:9: '*'
+			// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:9:9: '('
 			{
 			DebugLocation(9, 9);
-			Match('*'); 
+			Match('('); 
 
 			}
 
@@ -119,12 +122,12 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__11;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:10:7: ( '+' )
+			// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:10:7: ( ')' )
 			DebugEnterAlt(1);
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:10:9: '+'
+			// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:10:9: ')'
 			{
 			DebugLocation(10, 9);
-			Match('+'); 
+			Match(')'); 
 
 			}
 
@@ -154,12 +157,12 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__12;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:11:7: ( '-' )
+			// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:11:7: ( '*' )
 			DebugEnterAlt(1);
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:11:9: '-'
+			// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:11:9: '*'
 			{
 			DebugLocation(11, 9);
-			Match('-'); 
+			Match('*'); 
 
 			}
 
@@ -189,12 +192,12 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__13;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:12:7: ( '/' )
+			// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:12:7: ( '+' )
 			DebugEnterAlt(1);
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:12:9: '/'
+			// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:12:9: '+'
 			{
 			DebugLocation(12, 9);
-			Match('/'); 
+			Match('+'); 
 
 			}
 
@@ -224,12 +227,12 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__14;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:13:7: ( ':' )
+			// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:13:7: ( '-' )
 			DebugEnterAlt(1);
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:13:9: ':'
+			// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:13:9: '-'
 			{
 			DebugLocation(13, 9);
-			Match(':'); 
+			Match('-'); 
 
 			}
 
@@ -259,12 +262,12 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 		{
 			int _type = T__15;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:14:7: ( '=' )
+			// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:14:7: ( '/' )
 			DebugEnterAlt(1);
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:14:9: '='
+			// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:14:9: '/'
 			{
 			DebugLocation(14, 9);
-			Match('='); 
+			Match('/'); 
 
 			}
 
@@ -280,6 +283,111 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 	}
 	// $ANTLR end "T__15"
 
+	partial void EnterRule_T__16();
+	partial void LeaveRule_T__16();
+
+	// $ANTLR start "T__16"
+	[GrammarRule("T__16")]
+	private void mT__16()
+	{
+		EnterRule_T__16();
+		EnterRule("T__16", 7);
+		TraceIn("T__16", 7);
+		try
+		{
+			int _type = T__16;
+			int _channel = DefaultTokenChannel;
+			// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:15:7: ( '=' )
+			DebugEnterAlt(1);
+			// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:15:9: '='
+			{
+			DebugLocation(15, 9);
+			Match('='); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("T__16", 7);
+			LeaveRule("T__16", 7);
+			LeaveRule_T__16();
+		}
+	}
+	// $ANTLR end "T__16"
+
+	partial void EnterRule_T__17();
+	partial void LeaveRule_T__17();
+
+	// $ANTLR start "T__17"
+	[GrammarRule("T__17")]
+	private void mT__17()
+	{
+		EnterRule_T__17();
+		EnterRule("T__17", 8);
+		TraceIn("T__17", 8);
+		try
+		{
+			int _type = T__17;
+			int _channel = DefaultTokenChannel;
+			// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:16:7: ( '{' )
+			DebugEnterAlt(1);
+			// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:16:9: '{'
+			{
+			DebugLocation(16, 9);
+			Match('{'); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("T__17", 8);
+			LeaveRule("T__17", 8);
+			LeaveRule_T__17();
+		}
+	}
+	// $ANTLR end "T__17"
+
+	partial void EnterRule_T__18();
+	partial void LeaveRule_T__18();
+
+	// $ANTLR start "T__18"
+	[GrammarRule("T__18")]
+	private void mT__18()
+	{
+		EnterRule_T__18();
+		EnterRule("T__18", 9);
+		TraceIn("T__18", 9);
+		try
+		{
+			int _type = T__18;
+			int _channel = DefaultTokenChannel;
+			// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:17:7: ( '}' )
+			DebugEnterAlt(1);
+			// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:17:9: '}'
+			{
+			DebugLocation(17, 9);
+			Match('}'); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("T__18", 9);
+			LeaveRule("T__18", 9);
+			LeaveRule_T__18();
+		}
+	}
+	// $ANTLR end "T__18"
+
 	partial void EnterRule_ID();
 	partial void LeaveRule_ID();
 
@@ -288,15 +396,15 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 	private void mID()
 	{
 		EnterRule_ID();
-		EnterRule("ID", 7);
-		TraceIn("ID", 7);
+		EnterRule("ID", 10);
+		TraceIn("ID", 10);
 		try
 		{
 			int _type = ID;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:48:5: ( 'a' .. 'z' 'a' .. 'z' 'a' .. 'z' )
+			// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:48:5: ( 'a' .. 'z' 'a' .. 'z' 'a' .. 'z' )
 			DebugEnterAlt(1);
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:48:7: 'a' .. 'z' 'a' .. 'z' 'a' .. 'z'
+			// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:48:7: 'a' .. 'z' 'a' .. 'z' 'a' .. 'z'
 			{
 			DebugLocation(48, 7);
 			MatchRange('a','z'); 
@@ -312,8 +420,8 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("ID", 7);
-			LeaveRule("ID", 7);
+			TraceOut("ID", 10);
+			LeaveRule("ID", 10);
 			LeaveRule_ID();
 		}
 	}
@@ -327,15 +435,15 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 	private void mCURRENCY()
 	{
 		EnterRule_CURRENCY();
-		EnterRule("CURRENCY", 8);
-		TraceIn("CURRENCY", 8);
+		EnterRule("CURRENCY", 11);
+		TraceIn("CURRENCY", 11);
 		try
 		{
 			int _type = CURRENCY;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:51:9: ( FLOAT ID )
+			// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:51:9: ( FLOAT ID )
 			DebugEnterAlt(1);
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:51:11: FLOAT ID
+			// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:51:11: FLOAT ID
 			{
 			DebugLocation(51, 11);
 			mFLOAT(); 
@@ -349,8 +457,8 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("CURRENCY", 8);
-			LeaveRule("CURRENCY", 8);
+			TraceOut("CURRENCY", 11);
+			LeaveRule("CURRENCY", 11);
 			LeaveRule_CURRENCY();
 		}
 	}
@@ -364,13 +472,13 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 	private void mFLOAT()
 	{
 		EnterRule_FLOAT();
-		EnterRule("FLOAT", 9);
-		TraceIn("FLOAT", 9);
+		EnterRule("FLOAT", 12);
+		TraceIn("FLOAT", 12);
 		try
 		{
 			int _type = FLOAT;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:54:5: ( ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ SEPARATOR ( '0' .. '9' )* ( EXPONENT )? | SEPARATOR ( '0' .. '9' )+ ( EXPONENT )? )
+			// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:54:5: ( ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ SEPARATOR ( '0' .. '9' )* ( EXPONENT )? | SEPARATOR ( '0' .. '9' )+ ( EXPONENT )? )
 			int alt8=3;
 			try { DebugEnterDecision(8, false);
 			try
@@ -387,10 +495,10 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:54:7: ( '0' .. '9' )+ ( EXPONENT )?
+				// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:54:7: ( '0' .. '9' )+ ( EXPONENT )?
 				{
 				DebugLocation(54, 7);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:54:7: ( '0' .. '9' )+
+				// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:54:7: ( '0' .. '9' )+
 				int cnt1=0;
 				try { DebugEnterSubRule(1);
 				while (true)
@@ -410,7 +518,7 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:
+						// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:
 						{
 						DebugLocation(54, 7);
 						input.Consume();
@@ -435,7 +543,7 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 				} finally { DebugExitSubRule(1); }
 
 				DebugLocation(54, 19);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:54:19: ( EXPONENT )?
+				// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:54:19: ( EXPONENT )?
 				int alt2=2;
 				try { DebugEnterSubRule(2);
 				try { DebugEnterDecision(2, false);
@@ -450,7 +558,7 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:54:19: EXPONENT
+					// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:54:19: EXPONENT
 					{
 					DebugLocation(54, 19);
 					mEXPONENT(); 
@@ -466,10 +574,10 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:55:9: ( '0' .. '9' )+ SEPARATOR ( '0' .. '9' )* ( EXPONENT )?
+				// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:55:9: ( '0' .. '9' )+ SEPARATOR ( '0' .. '9' )* ( EXPONENT )?
 				{
 				DebugLocation(55, 9);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:55:9: ( '0' .. '9' )+
+				// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:55:9: ( '0' .. '9' )+
 				int cnt3=0;
 				try { DebugEnterSubRule(3);
 				while (true)
@@ -489,7 +597,7 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:
+						// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:
 						{
 						DebugLocation(55, 9);
 						input.Consume();
@@ -516,7 +624,7 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 				DebugLocation(55, 21);
 				mSEPARATOR(); 
 				DebugLocation(55, 31);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:55:31: ( '0' .. '9' )*
+				// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:55:31: ( '0' .. '9' )*
 				try { DebugEnterSubRule(4);
 				while (true)
 				{
@@ -535,7 +643,7 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:
+						// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:
 						{
 						DebugLocation(55, 31);
 						input.Consume();
@@ -555,7 +663,7 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 				} finally { DebugExitSubRule(4); }
 
 				DebugLocation(55, 43);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:55:43: ( EXPONENT )?
+				// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:55:43: ( EXPONENT )?
 				int alt5=2;
 				try { DebugEnterSubRule(5);
 				try { DebugEnterDecision(5, false);
@@ -570,7 +678,7 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:55:43: EXPONENT
+					// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:55:43: EXPONENT
 					{
 					DebugLocation(55, 43);
 					mEXPONENT(); 
@@ -586,12 +694,12 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:56:9: SEPARATOR ( '0' .. '9' )+ ( EXPONENT )?
+				// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:56:9: SEPARATOR ( '0' .. '9' )+ ( EXPONENT )?
 				{
 				DebugLocation(56, 9);
 				mSEPARATOR(); 
 				DebugLocation(56, 19);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:56:19: ( '0' .. '9' )+
+				// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:56:19: ( '0' .. '9' )+
 				int cnt6=0;
 				try { DebugEnterSubRule(6);
 				while (true)
@@ -611,7 +719,7 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:
+						// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:
 						{
 						DebugLocation(56, 19);
 						input.Consume();
@@ -636,7 +744,7 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 				} finally { DebugExitSubRule(6); }
 
 				DebugLocation(56, 31);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:56:31: ( EXPONENT )?
+				// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:56:31: ( EXPONENT )?
 				int alt7=2;
 				try { DebugEnterSubRule(7);
 				try { DebugEnterDecision(7, false);
@@ -651,7 +759,7 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:56:31: EXPONENT
+					// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:56:31: EXPONENT
 					{
 					DebugLocation(56, 31);
 					mEXPONENT(); 
@@ -672,8 +780,8 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("FLOAT", 9);
-			LeaveRule("FLOAT", 9);
+			TraceOut("FLOAT", 12);
+			LeaveRule("FLOAT", 12);
 			LeaveRule_FLOAT();
 		}
 	}
@@ -687,13 +795,13 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 	private void mSEPARATOR()
 	{
 		EnterRule_SEPARATOR();
-		EnterRule("SEPARATOR", 10);
-		TraceIn("SEPARATOR", 10);
+		EnterRule("SEPARATOR", 13);
+		TraceIn("SEPARATOR", 13);
 		try
 		{
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:61:11: ( ( '.' | ',' ) )
+			// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:61:11: ( ( '.' | ',' ) )
 			DebugEnterAlt(1);
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:
+			// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:
 			{
 			DebugLocation(61, 11);
 			if (input.LA(1)==','||input.LA(1)=='.')
@@ -714,8 +822,8 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("SEPARATOR", 10);
-			LeaveRule("SEPARATOR", 10);
+			TraceOut("SEPARATOR", 13);
+			LeaveRule("SEPARATOR", 13);
 			LeaveRule_SEPARATOR();
 		}
 	}
@@ -729,18 +837,18 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 	private void mEXPONENT()
 	{
 		EnterRule_EXPONENT();
-		EnterRule("EXPONENT", 11);
-		TraceIn("EXPONENT", 11);
+		EnterRule("EXPONENT", 14);
+		TraceIn("EXPONENT", 14);
 		try
 		{
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:63:9: ( 'e' ( '+' | '-' )? ( '0' .. '9' )+ )
+			// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:63:9: ( 'e' ( '+' | '-' )? ( '0' .. '9' )+ )
 			DebugEnterAlt(1);
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:63:11: 'e' ( '+' | '-' )? ( '0' .. '9' )+
+			// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:63:11: 'e' ( '+' | '-' )? ( '0' .. '9' )+
 			{
 			DebugLocation(63, 11);
 			Match('e'); 
 			DebugLocation(63, 15);
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:63:15: ( '+' | '-' )?
+			// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:63:15: ( '+' | '-' )?
 			int alt9=2;
 			try { DebugEnterSubRule(9);
 			try { DebugEnterDecision(9, false);
@@ -755,7 +863,7 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:
+				// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:
 				{
 				DebugLocation(63, 15);
 				input.Consume();
@@ -768,7 +876,7 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 			} finally { DebugExitSubRule(9); }
 
 			DebugLocation(63, 26);
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:63:26: ( '0' .. '9' )+
+			// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:63:26: ( '0' .. '9' )+
 			int cnt10=0;
 			try { DebugEnterSubRule(10);
 			while (true)
@@ -788,7 +896,7 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:
+					// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:
 					{
 					DebugLocation(63, 26);
 					input.Consume();
@@ -818,8 +926,8 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("EXPONENT", 11);
-			LeaveRule("EXPONENT", 11);
+			TraceOut("EXPONENT", 14);
+			LeaveRule("EXPONENT", 14);
 			LeaveRule_EXPONENT();
 		}
 	}
@@ -833,18 +941,18 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 	private void mNEWLINE()
 	{
 		EnterRule_NEWLINE();
-		EnterRule("NEWLINE", 12);
-		TraceIn("NEWLINE", 12);
+		EnterRule("NEWLINE", 15);
+		TraceIn("NEWLINE", 15);
 		try
 		{
 			int _type = NEWLINE;
 			int _channel = DefaultTokenChannel;
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:64:9: ( ( '\\r' )? '\\n' )
+			// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:64:9: ( ( '\\r' )? '\\n' )
 			DebugEnterAlt(1);
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:64:11: ( '\\r' )? '\\n'
+			// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:64:11: ( '\\r' )? '\\n'
 			{
 			DebugLocation(64, 11);
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:64:11: ( '\\r' )?
+			// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:64:11: ( '\\r' )?
 			int alt11=2;
 			try { DebugEnterSubRule(11);
 			try { DebugEnterDecision(11, false);
@@ -859,7 +967,7 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:64:11: '\\r'
+				// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:64:11: '\\r'
 				{
 				DebugLocation(64, 11);
 				Match('\r'); 
@@ -880,8 +988,8 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 		}
 		finally
 		{
-			TraceOut("NEWLINE", 12);
-			LeaveRule("NEWLINE", 12);
+			TraceOut("NEWLINE", 15);
+			LeaveRule("NEWLINE", 15);
 			LeaveRule_NEWLINE();
 		}
 	}
@@ -889,8 +997,8 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 
 	public override void mTokens()
 	{
-		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:1:8: ( T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | ID | CURRENCY | FLOAT | NEWLINE )
-		int alt12=10;
+		// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:1:8: ( T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | ID | CURRENCY | FLOAT | NEWLINE )
+		int alt12=13;
 		try { DebugEnterDecision(12, false);
 		try
 		{
@@ -906,7 +1014,7 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 		{
 		case 1:
 			DebugEnterAlt(1);
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:1:10: T__10
+			// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:1:10: T__10
 			{
 			DebugLocation(1, 10);
 			mT__10(); 
@@ -915,7 +1023,7 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 			break;
 		case 2:
 			DebugEnterAlt(2);
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:1:16: T__11
+			// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:1:16: T__11
 			{
 			DebugLocation(1, 16);
 			mT__11(); 
@@ -924,7 +1032,7 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 			break;
 		case 3:
 			DebugEnterAlt(3);
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:1:22: T__12
+			// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:1:22: T__12
 			{
 			DebugLocation(1, 22);
 			mT__12(); 
@@ -933,7 +1041,7 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 			break;
 		case 4:
 			DebugEnterAlt(4);
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:1:28: T__13
+			// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:1:28: T__13
 			{
 			DebugLocation(1, 28);
 			mT__13(); 
@@ -942,7 +1050,7 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 			break;
 		case 5:
 			DebugEnterAlt(5);
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:1:34: T__14
+			// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:1:34: T__14
 			{
 			DebugLocation(1, 34);
 			mT__14(); 
@@ -951,7 +1059,7 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 			break;
 		case 6:
 			DebugEnterAlt(6);
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:1:40: T__15
+			// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:1:40: T__15
 			{
 			DebugLocation(1, 40);
 			mT__15(); 
@@ -960,36 +1068,63 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 			break;
 		case 7:
 			DebugEnterAlt(7);
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:1:46: ID
+			// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:1:46: T__16
 			{
 			DebugLocation(1, 46);
-			mID(); 
+			mT__16(); 
 
 			}
 			break;
 		case 8:
 			DebugEnterAlt(8);
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:1:49: CURRENCY
+			// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:1:52: T__17
 			{
-			DebugLocation(1, 49);
-			mCURRENCY(); 
+			DebugLocation(1, 52);
+			mT__17(); 
 
 			}
 			break;
 		case 9:
 			DebugEnterAlt(9);
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:1:58: FLOAT
+			// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:1:58: T__18
 			{
 			DebugLocation(1, 58);
-			mFLOAT(); 
+			mT__18(); 
 
 			}
 			break;
 		case 10:
 			DebugEnterAlt(10);
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:1:64: NEWLINE
+			// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:1:64: ID
 			{
 			DebugLocation(1, 64);
+			mID(); 
+
+			}
+			break;
+		case 11:
+			DebugEnterAlt(11);
+			// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:1:67: CURRENCY
+			{
+			DebugLocation(1, 67);
+			mCURRENCY(); 
+
+			}
+			break;
+		case 12:
+			DebugEnterAlt(12);
+			// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:1:76: FLOAT
+			{
+			DebugLocation(1, 76);
+			mFLOAT(); 
+
+			}
+			break;
+		case 13:
+			DebugEnterAlt(13);
+			// D:\\project\\C#\\Calculator\\GrammarOfCurrency.g:1:82: NEWLINE
+			{
+			DebugLocation(1, 82);
 			mNEWLINE(); 
 
 			}
@@ -1076,25 +1211,26 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 	private class DFA12 : DFA
 	{
 		private const string DFA12_eotS =
-			"\x8\xFFFF\x1\xC\x5\xFFFF\x2\xC\x1\xFFFF\x2\xC\x3\xFFFF\x1\xC\x1\xFFFF"+
-			"\x1\xC";
+			"\xB\xFFFF\x1\xF\x5\xFFFF\x2\xF\x1\xFFFF\x2\xF\x3\xFFFF\x1\xF\x1\xFFFF"+
+			"\x1\xF";
 		private const string DFA12_eofS =
-			"\x19\xFFFF";
+			"\x1C\xFFFF";
 		private const string DFA12_minS =
-			"\x1\xA\x7\xFFFF\x1\x2C\x1\x30\x1\xFFFF\x1\x2B\x2\xFFFF\x5\x30\x2\x2B"+
+			"\x1\xA\xA\xFFFF\x1\x2C\x1\x30\x1\xFFFF\x1\x2B\x2\xFFFF\x5\x30\x2\x2B"+
 			"\x4\x30";
 		private const string DFA12_maxS =
-			"\x1\x7A\x7\xFFFF\x1\x7A\x1\x39\x1\xFFFF\x1\x7A\x2\xFFFF\x2\x7A\x1\x39"+
+			"\x1\x7D\xA\xFFFF\x1\x7A\x1\x39\x1\xFFFF\x1\x7A\x2\xFFFF\x2\x7A\x1\x39"+
 			"\x4\x7A\x1\x39\x1\x7A\x1\x39\x1\x7A";
 		private const string DFA12_acceptS =
-			"\x1\xFFFF\x1\x1\x1\x2\x1\x3\x1\x4\x1\x5\x1\x6\x1\x7\x2\xFFFF\x1\xA\x1"+
-			"\xFFFF\x1\x9\x1\x8\xB\xFFFF";
+			"\x1\xFFFF\x1\x1\x1\x2\x1\x3\x1\x4\x1\x5\x1\x6\x1\x7\x1\x8\x1\x9\x1\xA"+
+			"\x2\xFFFF\x1\xD\x1\xFFFF\x1\xC\x1\xB\xB\xFFFF";
 		private const string DFA12_specialS =
-			"\x19\xFFFF}>";
+			"\x1C\xFFFF}>";
 		private static readonly string[] DFA12_transitionS =
 			{
-				"\x1\xA\x2\xFFFF\x1\xA\x1C\xFFFF\x1\x1\x1\x2\x1\x9\x1\x3\x1\x9\x1\x4"+
-				"\xA\x8\x1\x5\x2\xFFFF\x1\x6\x23\xFFFF\x1A\x7",
+				"\x1\xD\x2\xFFFF\x1\xD\x1A\xFFFF\x1\x1\x1\x2\x1\x3\x1\x4\x1\xC\x1\x5"+
+				"\x1\xC\x1\x6\xA\xB\x3\xFFFF\x1\x7\x23\xFFFF\x1A\xA\x1\x8\x1\xFFFF\x1"+
+				"\x9",
 				"",
 				"",
 				"",
@@ -1102,23 +1238,26 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 				"",
 				"",
 				"",
-				"\x1\xE\x1\xFFFF\x1\xE\x1\xFFFF\xA\x8\x27\xFFFF\x4\xD\x1\xB\x15\xD",
-				"\xA\xF",
-				"",
-				"\x1\x10\x1\xFFFF\x1\x10\x2\xFFFF\xA\x11\x27\xFFFF\x1A\xD",
 				"",
 				"",
-				"\xA\x12\x27\xFFFF\x4\xD\x1\x13\x15\xD",
-				"\xA\xF\x27\xFFFF\x4\xD\x1\x14\x15\xD",
-				"\xA\x11",
-				"\xA\x11\x27\xFFFF\x1A\xD",
-				"\xA\x12\x27\xFFFF\x4\xD\x1\x13\x15\xD",
-				"\x1\x15\x1\xFFFF\x1\x15\x2\xFFFF\xA\x16\x27\xFFFF\x1A\xD",
-				"\x1\x17\x1\xFFFF\x1\x17\x2\xFFFF\xA\x18\x27\xFFFF\x1A\xD",
-				"\xA\x16",
-				"\xA\x16\x27\xFFFF\x1A\xD",
-				"\xA\x18",
-				"\xA\x18\x27\xFFFF\x1A\xD"
+				"",
+				"\x1\x11\x1\xFFFF\x1\x11\x1\xFFFF\xA\xB\x27\xFFFF\x4\x10\x1\xE\x15\x10",
+				"\xA\x12",
+				"",
+				"\x1\x13\x1\xFFFF\x1\x13\x2\xFFFF\xA\x14\x27\xFFFF\x1A\x10",
+				"",
+				"",
+				"\xA\x15\x27\xFFFF\x4\x10\x1\x16\x15\x10",
+				"\xA\x12\x27\xFFFF\x4\x10\x1\x17\x15\x10",
+				"\xA\x14",
+				"\xA\x14\x27\xFFFF\x1A\x10",
+				"\xA\x15\x27\xFFFF\x4\x10\x1\x16\x15\x10",
+				"\x1\x18\x1\xFFFF\x1\x18\x2\xFFFF\xA\x19\x27\xFFFF\x1A\x10",
+				"\x1\x1A\x1\xFFFF\x1\x1A\x2\xFFFF\xA\x1B\x27\xFFFF\x1A\x10",
+				"\xA\x19",
+				"\xA\x19\x27\xFFFF\x1A\x10",
+				"\xA\x1B",
+				"\xA\x1B\x27\xFFFF\x1A\x10"
 			};
 
 		private static readonly short[] DFA12_eot = DFA.UnpackEncodedString(DFA12_eotS);
@@ -1152,7 +1291,7 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 			this.transition = DFA12_transition;
 		}
 
-		public override string Description { get { return "1:1: Tokens : ( T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | ID | CURRENCY | FLOAT | NEWLINE );"; } }
+		public override string Description { get { return "1:1: Tokens : ( T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | ID | CURRENCY | FLOAT | NEWLINE );"; } }
 
 		public override void Error(NoViableAltException nvae)
 		{

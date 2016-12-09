@@ -33,7 +33,7 @@ expr returns[Cur value]
 multExpression returns[Cur value]
 	: a1=atom {$value = $a1.value;}
 	('*' a2=atom {$value *= $a2.value;}
-		|('/'|':') a2=atom {$value /= $a2.value;}
+	|'/' a2=atom {$value /= $a2.value;}
 	)*
 	;
 

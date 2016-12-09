@@ -38,11 +38,11 @@ namespace GrammarOfArithmetic
                 CommonTokenStream tokens = new CommonTokenStream(lexer);
                 GrammarOfCurrencyParser parser = new GrammarOfCurrencyParser(tokens);
 
-                return parser.calc();
+                return " = " + parser.calc();
             }
             catch (Exception e)
             {
-                return e.Message;
+                return " = " + e.Message;
             }
         }
 

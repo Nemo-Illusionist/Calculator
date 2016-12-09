@@ -9,16 +9,16 @@ namespace Currencies
 
         public static Cur operator +(Cur a1, Cur a2)
         {
-            //Argument(a1,a2);
+            Argument(a1, a2);
             return Oper(a1, a2, (x, y) => x + y);
         }
         public static Cur operator -(Cur a1)
         {
-            return new Cur {CurName = a1.CurName, Count = -a1.Count};
+            return new Cur { CurName = a1.CurName, Count = -a1.Count };
         }
         public static Cur operator -(Cur a1, Cur a2)
         {
-            //Argument(a1, a2);
+            Argument(a1, a2);
             return Oper(a1, a2, (x, y) => x - y);
         }
         public static Cur operator *(Cur a1, Cur a2)
@@ -33,7 +33,7 @@ namespace Currencies
         {
             if (a1.CurName == a2.CurName || a1.CurName == "NNN" || a2.CurName == "NNN")
             {
-                return new Cur { Count = f1(a1.Count, a2.Count), CurName = a1.CurName == "NNN" ? a1.CurName : a2.CurName };
+                return new Cur { Count = f1(a1.Count, a2.Count), CurName = a1.CurName == "NNN" ? a2.CurName : a1.CurName };
             }
             else
             {
@@ -49,7 +49,7 @@ namespace Currencies
 
         private static void Argument(Cur a1, Cur a2)
         {
-            if (a1.CurName == "NNN" & a2.CurName != "NNN" | a2.CurName == "NNN" & a1.CurName != "NNN")
+            if (a1.CurName == "NNN" && a2.CurName != "NNN" || a2.CurName == "NNN" && a1.CurName != "NNN")
                 throw new ArgumentException("нельзя произвести \"+/-\" между валютой и числом");
         }
 
@@ -66,10 +66,18 @@ namespace Currencies
         }
 
         public override string ToString() => Count + (CurName == "NNN" ? "" : CurName.ToUpper());
-        
-        public void Convert(string newCur)
+
+        public Cur Convert(string newCur)
         {
-            
+            return
+                new Cur
+                {
+                    Count = Count * CurrenciesAPI.Coefficient(CurName) /
+                        (newCur == "USD" ? 1 : CurrenciesAPI.Coefficient(newCur)),
+                    CurName = newCur
+                };
+
+            ;
         }
     }
 }

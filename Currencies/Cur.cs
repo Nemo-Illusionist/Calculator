@@ -70,17 +70,11 @@ namespace Currencies
             return Count + (CurName == "NNN" ? "" : CurName.ToUpper());
         }
 
-        public Cur Convert(string newCur)
+        public void Convert(string newCur)
         {
-            return
-                new Cur
-                {
-                    Count = Count * CurrenciesAPI.Coefficient(CurName) /
-                        (newCur == "USD" ? 1 : CurrenciesAPI.Coefficient(newCur)),
-                    CurName = newCur
-                };
-
-            ;
+            Count = Count / CurrenciesAPI.Coefficient(CurName) *
+            (newCur == "USD" ? 1 : CurrenciesAPI.Coefficient(newCur));
+            CurName = newCur;
         }
     }
 }

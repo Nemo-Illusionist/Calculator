@@ -1,6 +1,6 @@
 ﻿namespace GraphManager {
     public interface IGraph {
-        void Add(double x, double y);
+        void Add(ZedGraph.PointPairList ppList, double x, double y);
         void Update();
     }
 }

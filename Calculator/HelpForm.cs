@@ -26,12 +26,12 @@ namespace Calculator
 
         private void curTab_Layout(object sender, LayoutEventArgs e)
         {
-            engHelpRTB.LoadFile("doc_currencies.rtf");
+            curHelpRTB.LoadFile("doc_currencies.rtf");
         }
 
         private void datTab_Layout(object sender, LayoutEventArgs e)
         {
-            engHelpRTB.LoadFile("doc_dates.rtf");
+            datHelpRTB.LoadFile("doc_dates.rtf");
         }
     }
 }

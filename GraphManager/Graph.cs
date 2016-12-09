@@ -64,8 +64,8 @@ namespace GraphManager {
             pane.Legend.FontSpec.Size = 8;
         }
 
-        public void Add(double X, double Y) {
-            //_temperature.Add(X, Y);
+        public void Add(PointPairList ppList, double X, double Y) {
+            ppList.Add(X, Y);
             Update();
         }
 

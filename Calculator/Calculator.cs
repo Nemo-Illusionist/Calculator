@@ -152,7 +152,7 @@ namespace Calculator
 
         private void buildGraphBtn_Click(object sender, EventArgs e)
         {
-            if (fxTB.Text == "" || xTB.Text == "")
+            if (funcTB.Text == "" || xTB.Text == "")
                 MessageBox.Show("Введите выражение и задайте область определения!", "STOP!",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             else;

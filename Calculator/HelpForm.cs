@@ -1,5 +1,4 @@
-﻿using System.IO;
-using System.Windows.Forms;
+﻿using System.Windows.Forms;
 
 namespace Calculator
 {
@@ -17,22 +16,22 @@ namespace Calculator
 
         private void matTab_Layout(object sender, LayoutEventArgs e)
         {
-            engHelpRTB.LoadFile("Матрицы.rtf");
+           // engHelpRTB.LoadFile("doc_matrix.rtf");
         }
 
         private void graTab_Layout(object sender, LayoutEventArgs e)
         {
-            engHelpRTB.LoadFile("Графики.rtf");
+           // engHelpRTB.LoadFile("doc_graphics.rtf");
         }
 
         private void curTab_Layout(object sender, LayoutEventArgs e)
         {
-            engHelpRTB.LoadFile("Валюта.rtf");
+            engHelpRTB.LoadFile("doc_currencies.rtf");
         }
 
         private void datTab_Layout(object sender, LayoutEventArgs e)
         {
-            engHelpRTB.LoadFile("Даты.rtf");
+            engHelpRTB.LoadFile("doc_dates.rtf");
         }
     }
 }

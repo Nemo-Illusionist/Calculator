@@ -17,12 +17,12 @@ namespace Calculator
 
         private void matTab_Layout(object sender, LayoutEventArgs e)
         {
-            engHelpRTB.LoadFile("Матрицы.rtf");
+            //engHelpRTB.LoadFile("Матрицы.rtf");
         }
 
         private void graTab_Layout(object sender, LayoutEventArgs e)
         {
-            engHelpRTB.LoadFile("Графики.rtf");
+            //engHelpRTB.LoadFile("Графики.rtf");
         }
 
         private void curTab_Layout(object sender, LayoutEventArgs e)

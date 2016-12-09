@@ -40,8 +40,8 @@ namespace Currencies
                 return new Cur
                 {
                     CurName = "USD",
-                    Count = f1(a1.Count * CurrenciesAPI.Coefficient(a1.CurName),
-                                a2.Count * CurrenciesAPI.Coefficient(a2.CurName))
+                    Count = f1(a1.Count / CurrenciesAPI.Coefficient(a1.CurName),
+                                a2.Count / CurrenciesAPI.Coefficient(a2.CurName))
                 };
             }
 
@@ -65,19 +65,18 @@ namespace Currencies
             Count = d;
         }
 
-        public override string ToString() => Count + (CurName == "NNN" ? "" : CurName.ToUpper());
-
-        public Cur Convert(string newCur)
+        public override string ToString()
         {
-            return
-                new Cur
-                {
-                    Count = Count * CurrenciesAPI.Coefficient(CurName) /
-                        (newCur == "USD" ? 1 : CurrenciesAPI.Coefficient(newCur)),
-                    CurName = newCur
-                };
+            return Count + (CurName == "NNN" ? "" : CurName.ToUpper());
+        }
 
-            ;
+
+
+        public void Convert(string newCur)
+        {
+            Count = Count * CurrenciesAPI.Coefficient(CurName) /
+                    (newCur == "USD" ? 1 : CurrenciesAPI.Coefficient(newCur));
+            CurName = newCur;
         }
     }
 }

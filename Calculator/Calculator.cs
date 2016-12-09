@@ -8,6 +8,8 @@ using System.Windows.Forms;
 using Newtonsoft.Json.Linq;
 using Currencies;
 using GrammarOfArithmetic;
+using GraphManager;
+using ZedGraph;
 
 namespace Calculator
 {
@@ -17,7 +19,10 @@ namespace Calculator
         {
             InitializeComponent();
             _parser = parser;
+            _graph = new Graph(zedGraph);
         }
+
+        private Graph _graph;
         private readonly Parser _parser;
         readonly Hashtable _highlight = new Hashtable()
         {
@@ -81,6 +86,8 @@ namespace Calculator
         private void calculationsRTB_TextChanged(object sender, EventArgs e)
         {
             HighlightText();
+            Focus();
+            calculationsRTB.Focus();
         }
 
         private void calculationsRTB_KeyDown(object sender, KeyEventArgs e)
@@ -95,6 +102,9 @@ namespace Calculator
                     break;
                 case Keys.Z:
                     if (e.Control) calculationsRTB.Undo();
+                    break;
+                case Keys.Y:
+                    if (e.Control) calculationsRTB.Redo();
                     break;
             }
         }
@@ -134,7 +144,48 @@ namespace Calculator
         #endregion
 
         #region Dates
+        private void firstDateMC_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            firstDate.Value = firstDateMC.SelectionEnd;
+        }
 
+        private void lastDateMC_DateChanged(object sender, DateRangeEventArgs e)
+        {
+            lastDate.Value = lastDateMC.SelectionEnd;
+        }
+
+        private void firstDate_ValueChanged(object sender, EventArgs e)
+        {
+            firstDateMC.TodayDate = firstDate.Value;
+        }
+
+        private void lastDate_ValueChanged(object sender, EventArgs e)
+        {
+            lastDateMC.TodayDate = lastDate.Value;
+        }
+        private void calcDateBtn_Click(object sender, EventArgs e)
+        {
+            dateResultList.Items.Clear();
+            TimeSpan ts;
+            if (firstDate.Value > lastDate.Value) ts = firstDate.Value - lastDate.Value;
+            else ts = lastDate.Value - firstDate.Value;
+            //MessageBox.Show(new DateTime(ts.Ticks).ToString(), ts.ToString());
+            dateResultList.Items.Add(new ListViewItem(String.Format("{0:00} секунд", ts.TotalSeconds)));
+            if (ts.TotalSeconds > 60) dateResultList.Items.Add(new ListViewItem(
+                String.Format("{0:00} минут {1:00} секунд", ts.TotalMinutes, ts.Seconds)));
+            if (ts.TotalMinutes > 60) dateResultList.Items.Add(new ListViewItem(
+                String.Format("{0:00} часов {1:00} минут {2:00} секунд", ts.TotalHours, ts.Minutes, ts.Seconds)));
+            if (ts.TotalHours > 24) dateResultList.Items.Add(new ListViewItem(
+                String.Format("{0:00} дней, {1:00} часов {2:00} минут {3:00} секунд",
+                ts.TotalDays, ts.Hours, ts.Minutes, ts.Seconds)));
+            if (ts.TotalDays > 28) dateResultList.Items.Add(new ListViewItem(
+                String.Format("{0:00} месяцев {1:00} дней, {2:00} часов {3:00} минут {4:00} секунд",
+                new DateTime(ts.Ticks), new DateTime(ts.Ticks).Day, ts.Hours, ts.Minutes, ts.Seconds)));
+            if (ts.TotalDays > 364) dateResultList.Items.Add(new ListViewItem(
+                String.Format("{0:00} лет {1:00} месяцев {2:00} дней, {3:00} часов {4:00} минут {5:00} секунд",
+                new DateTime(ts.Ticks).Year, new DateTime(ts.Ticks).Month, new DateTime(ts.Ticks).Day,
+                ts.Hours, ts.Minutes, ts.Seconds)));
+        }
 
 
         #endregion
@@ -223,15 +274,13 @@ namespace Calculator
         }
         #endregion
 
-        private void calcDateBtn_Click(object sender, EventArgs e)
-        {
-
-        }
 
         private void RUP_Value_TextChanged(object sender, EventArgs e)
         {
             CurrenciesAPI.RupValue = Double.Parse(RUP_Value.Text);
         }
+
+
 
 
 

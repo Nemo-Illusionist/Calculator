@@ -8,20 +8,21 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.5.1 C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g 2016-12-08 17:04:56
+// $ANTLR 3.5.1 C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g 2016-12-09 11:42:27
 
 // The variable 'variable' is assigned but its value is never used.
-#pragma warning disable 168, 219
+#pragma warning disable 219
 // Unreachable code detected.
 #pragma warning disable 162
 // Missing XML comment for publicly visible type or member 'Type_or_Member'
 #pragma warning disable 1591
+// CLS compliance checking will not be performed on 'type' because it is not visible from outside this assembly.
+#pragma warning disable 3019
 
 
 using System.Collections.Generic;
 using Antlr.Runtime;
 using Antlr.Runtime.Misc;
-using ConditionalAttribute = System.Diagnostics.ConditionalAttribute;
 
 namespace  Generated 
 {
@@ -36,10 +37,6 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 	public const int T__13=13;
 	public const int T__14=14;
 	public const int T__15=15;
-	public const int T__16=16;
-	public const int T__17=17;
-	public const int T__18=18;
-	public const int T__19=19;
 	public const int CURRENCY=4;
 	public const int EXPONENT=5;
 	public const int FLOAT=6;
@@ -47,8 +44,8 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 	public const int NEWLINE=8;
 	public const int SEPARATOR=9;
 
-    // delegates
-    // delegators
+	// delegates
+	// delegators
 
 	public GrammarOfCurrencyLexer()
 	{
@@ -68,1151 +65,939 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 	}
 	public override string GrammarFileName { get { return "C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g"; } }
 
-	private static readonly bool[] decisionCanBacktrack = new bool[0];
-
-	[Conditional("ANTLR_TRACE")]
-	protected virtual void OnCreated() {}
-	[Conditional("ANTLR_TRACE")]
-	protected virtual void EnterRule(string ruleName, int ruleIndex) {}
-	[Conditional("ANTLR_TRACE")]
-	protected virtual void LeaveRule(string ruleName, int ruleIndex) {}
-
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void EnterRule_T__10() {}
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void LeaveRule_T__10() {}
-
-    // $ANTLR start "T__10"
-    [GrammarRule("T__10")]
-    private void mT__10()
-    {
-    	EnterRule_T__10();
-    	EnterRule("T__10", 1);
-    	TraceIn("T__10", 1);
-    		try
-    		{
-    		int _type = T__10;
-    		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:9:7: ( '(' )
-    		DebugEnterAlt(1);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:9:9: '('
-    		{
-    		DebugLocation(9, 9);
-    		Match('('); 
-
-    		}
-
-    		state.type = _type;
-    		state.channel = _channel;
-    	}
-    	finally
-    	{
-    		TraceOut("T__10", 1);
-    		LeaveRule("T__10", 1);
-    		LeaveRule_T__10();
-        }
-    }
-    // $ANTLR end "T__10"
-
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void EnterRule_T__11() {}
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void LeaveRule_T__11() {}
-
-    // $ANTLR start "T__11"
-    [GrammarRule("T__11")]
-    private void mT__11()
-    {
-    	EnterRule_T__11();
-    	EnterRule("T__11", 2);
-    	TraceIn("T__11", 2);
-    		try
-    		{
-    		int _type = T__11;
-    		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:10:7: ( ')' )
-    		DebugEnterAlt(1);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:10:9: ')'
-    		{
-    		DebugLocation(10, 9);
-    		Match(')'); 
-
-    		}
-
-    		state.type = _type;
-    		state.channel = _channel;
-    	}
-    	finally
-    	{
-    		TraceOut("T__11", 2);
-    		LeaveRule("T__11", 2);
-    		LeaveRule_T__11();
-        }
-    }
-    // $ANTLR end "T__11"
-
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void EnterRule_T__12() {}
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void LeaveRule_T__12() {}
-
-    // $ANTLR start "T__12"
-    [GrammarRule("T__12")]
-    private void mT__12()
-    {
-    	EnterRule_T__12();
-    	EnterRule("T__12", 3);
-    	TraceIn("T__12", 3);
-    		try
-    		{
-    		int _type = T__12;
-    		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:11:7: ( '*' )
-    		DebugEnterAlt(1);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:11:9: '*'
-    		{
-    		DebugLocation(11, 9);
-    		Match('*'); 
-
-    		}
-
-    		state.type = _type;
-    		state.channel = _channel;
-    	}
-    	finally
-    	{
-    		TraceOut("T__12", 3);
-    		LeaveRule("T__12", 3);
-    		LeaveRule_T__12();
-        }
-    }
-    // $ANTLR end "T__12"
-
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void EnterRule_T__13() {}
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void LeaveRule_T__13() {}
-
-    // $ANTLR start "T__13"
-    [GrammarRule("T__13")]
-    private void mT__13()
-    {
-    	EnterRule_T__13();
-    	EnterRule("T__13", 4);
-    	TraceIn("T__13", 4);
-    		try
-    		{
-    		int _type = T__13;
-    		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:12:7: ( '+' )
-    		DebugEnterAlt(1);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:12:9: '+'
-    		{
-    		DebugLocation(12, 9);
-    		Match('+'); 
-
-    		}
-
-    		state.type = _type;
-    		state.channel = _channel;
-    	}
-    	finally
-    	{
-    		TraceOut("T__13", 4);
-    		LeaveRule("T__13", 4);
-    		LeaveRule_T__13();
-        }
-    }
-    // $ANTLR end "T__13"
-
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void EnterRule_T__14() {}
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void LeaveRule_T__14() {}
-
-    // $ANTLR start "T__14"
-    [GrammarRule("T__14")]
-    private void mT__14()
-    {
-    	EnterRule_T__14();
-    	EnterRule("T__14", 5);
-    	TraceIn("T__14", 5);
-    		try
-    		{
-    		int _type = T__14;
-    		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:13:7: ( '-' )
-    		DebugEnterAlt(1);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:13:9: '-'
-    		{
-    		DebugLocation(13, 9);
-    		Match('-'); 
-
-    		}
-
-    		state.type = _type;
-    		state.channel = _channel;
-    	}
-    	finally
-    	{
-    		TraceOut("T__14", 5);
-    		LeaveRule("T__14", 5);
-    		LeaveRule_T__14();
-        }
-    }
-    // $ANTLR end "T__14"
-
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void EnterRule_T__15() {}
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void LeaveRule_T__15() {}
-
-    // $ANTLR start "T__15"
-    [GrammarRule("T__15")]
-    private void mT__15()
-    {
-    	EnterRule_T__15();
-    	EnterRule("T__15", 6);
-    	TraceIn("T__15", 6);
-    		try
-    		{
-    		int _type = T__15;
-    		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:14:7: ( '/' )
-    		DebugEnterAlt(1);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:14:9: '/'
-    		{
-    		DebugLocation(14, 9);
-    		Match('/'); 
-
-    		}
-
-    		state.type = _type;
-    		state.channel = _channel;
-    	}
-    	finally
-    	{
-    		TraceOut("T__15", 6);
-    		LeaveRule("T__15", 6);
-    		LeaveRule_T__15();
-        }
-    }
-    // $ANTLR end "T__15"
-
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void EnterRule_T__16() {}
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void LeaveRule_T__16() {}
-
-    // $ANTLR start "T__16"
-    [GrammarRule("T__16")]
-    private void mT__16()
-    {
-    	EnterRule_T__16();
-    	EnterRule("T__16", 7);
-    	TraceIn("T__16", 7);
-    		try
-    		{
-    		int _type = T__16;
-    		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:15:7: ( ':' )
-    		DebugEnterAlt(1);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:15:9: ':'
-    		{
-    		DebugLocation(15, 9);
-    		Match(':'); 
-
-    		}
-
-    		state.type = _type;
-    		state.channel = _channel;
-    	}
-    	finally
-    	{
-    		TraceOut("T__16", 7);
-    		LeaveRule("T__16", 7);
-    		LeaveRule_T__16();
-        }
-    }
-    // $ANTLR end "T__16"
-
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void EnterRule_T__17() {}
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void LeaveRule_T__17() {}
-
-    // $ANTLR start "T__17"
-    [GrammarRule("T__17")]
-    private void mT__17()
-    {
-    	EnterRule_T__17();
-    	EnterRule("T__17", 8);
-    	TraceIn("T__17", 8);
-    		try
-    		{
-    		int _type = T__17;
-    		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:16:7: ( '=' )
-    		DebugEnterAlt(1);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:16:9: '='
-    		{
-    		DebugLocation(16, 9);
-    		Match('='); 
-
-    		}
-
-    		state.type = _type;
-    		state.channel = _channel;
-    	}
-    	finally
-    	{
-    		TraceOut("T__17", 8);
-    		LeaveRule("T__17", 8);
-    		LeaveRule_T__17();
-        }
-    }
-    // $ANTLR end "T__17"
-
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void EnterRule_T__18() {}
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void LeaveRule_T__18() {}
-
-    // $ANTLR start "T__18"
-    [GrammarRule("T__18")]
-    private void mT__18()
-    {
-    	EnterRule_T__18();
-    	EnterRule("T__18", 9);
-    	TraceIn("T__18", 9);
-    		try
-    		{
-    		int _type = T__18;
-    		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:17:7: ( '{' )
-    		DebugEnterAlt(1);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:17:9: '{'
-    		{
-    		DebugLocation(17, 9);
-    		Match('{'); 
-
-    		}
-
-    		state.type = _type;
-    		state.channel = _channel;
-    	}
-    	finally
-    	{
-    		TraceOut("T__18", 9);
-    		LeaveRule("T__18", 9);
-    		LeaveRule_T__18();
-        }
-    }
-    // $ANTLR end "T__18"
-
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void EnterRule_T__19() {}
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void LeaveRule_T__19() {}
-
-    // $ANTLR start "T__19"
-    [GrammarRule("T__19")]
-    private void mT__19()
-    {
-    	EnterRule_T__19();
-    	EnterRule("T__19", 10);
-    	TraceIn("T__19", 10);
-    		try
-    		{
-    		int _type = T__19;
-    		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:18:7: ( '}' )
-    		DebugEnterAlt(1);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:18:9: '}'
-    		{
-    		DebugLocation(18, 9);
-    		Match('}'); 
-
-    		}
-
-    		state.type = _type;
-    		state.channel = _channel;
-    	}
-    	finally
-    	{
-    		TraceOut("T__19", 10);
-    		LeaveRule("T__19", 10);
-    		LeaveRule_T__19();
-        }
-    }
-    // $ANTLR end "T__19"
-
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void EnterRule_ID() {}
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void LeaveRule_ID() {}
-
-    // $ANTLR start "ID"
-    [GrammarRule("ID")]
-    private void mID()
-    {
-    	EnterRule_ID();
-    	EnterRule("ID", 11);
-    	TraceIn("ID", 11);
-    		try
-    		{
-    		int _type = ID;
-    		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:50:5: ( 'a' .. 'z' 'a' .. 'z' 'a' .. 'z' )
-    		DebugEnterAlt(1);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:50:7: 'a' .. 'z' 'a' .. 'z' 'a' .. 'z'
-    		{
-    		DebugLocation(50, 7);
-    		MatchRange('a','z'); 
-    		DebugLocation(50, 16);
-    		MatchRange('a','z'); 
-    		DebugLocation(50, 25);
-    		MatchRange('a','z'); 
-
-    		}
-
-    		state.type = _type;
-    		state.channel = _channel;
-    	}
-    	finally
-    	{
-    		TraceOut("ID", 11);
-    		LeaveRule("ID", 11);
-    		LeaveRule_ID();
-        }
-    }
-    // $ANTLR end "ID"
-
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void EnterRule_CURRENCY() {}
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void LeaveRule_CURRENCY() {}
-
-    // $ANTLR start "CURRENCY"
-    [GrammarRule("CURRENCY")]
-    private void mCURRENCY()
-    {
-    	EnterRule_CURRENCY();
-    	EnterRule("CURRENCY", 12);
-    	TraceIn("CURRENCY", 12);
-    		try
-    		{
-    		int _type = CURRENCY;
-    		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:53:9: ( FLOAT ID )
-    		DebugEnterAlt(1);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:53:11: FLOAT ID
-    		{
-    		DebugLocation(53, 11);
-    		mFLOAT(); 
-    		DebugLocation(53, 17);
-    		mID(); 
-
-    		}
-
-    		state.type = _type;
-    		state.channel = _channel;
-    	}
-    	finally
-    	{
-    		TraceOut("CURRENCY", 12);
-    		LeaveRule("CURRENCY", 12);
-    		LeaveRule_CURRENCY();
-        }
-    }
-    // $ANTLR end "CURRENCY"
-
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void EnterRule_FLOAT() {}
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void LeaveRule_FLOAT() {}
-
-    // $ANTLR start "FLOAT"
-    [GrammarRule("FLOAT")]
-    private void mFLOAT()
-    {
-    	EnterRule_FLOAT();
-    	EnterRule("FLOAT", 13);
-    	TraceIn("FLOAT", 13);
-    		try
-    		{
-    		int _type = FLOAT;
-    		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:56:5: ( ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ SEPARATOR ( '0' .. '9' )* ( EXPONENT )? | SEPARATOR ( '0' .. '9' )+ ( EXPONENT )? )
-    		int alt8=3;
-    		try { DebugEnterDecision(8, decisionCanBacktrack[8]);
-    		try
-    		{
-    			alt8 = dfa8.Predict(input);
-    		}
-    		catch (NoViableAltException nvae)
-    		{
-    			DebugRecognitionException(nvae);
-    			throw;
-    		}
-    		} finally { DebugExitDecision(8); }
-    		switch (alt8)
-    		{
-    		case 1:
-    			DebugEnterAlt(1);
-    			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:56:7: ( '0' .. '9' )+ ( EXPONENT )?
-    			{
-    			DebugLocation(56, 7);
-    			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:56:7: ( '0' .. '9' )+
-    			int cnt1=0;
-    			try { DebugEnterSubRule(1);
-    			while (true)
-    			{
-    				int alt1=2;
-    				try { DebugEnterDecision(1, decisionCanBacktrack[1]);
-    				int LA1_1 = input.LA(1);
-
-    				if (((LA1_1>='0' && LA1_1<='9')))
-    				{
-    					alt1 = 1;
-    				}
-
-
-    				} finally { DebugExitDecision(1); }
-    				switch (alt1)
-    				{
-    				case 1:
-    					DebugEnterAlt(1);
-    					// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:
-    					{
-    					DebugLocation(56, 7);
-    					input.Consume();
-
-
-    					}
-    					break;
-
-    				default:
-    					if (cnt1 >= 1)
-    						goto loop1;
-
-    					EarlyExitException eee1 = new EarlyExitException( 1, input );
-    					DebugRecognitionException(eee1);
-    					throw eee1;
-    				}
-    				cnt1++;
-    			}
-    			loop1:
-    				;
-
-    			} finally { DebugExitSubRule(1); }
-
-    			DebugLocation(56, 19);
-    			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:56:19: ( EXPONENT )?
-    			int alt2=2;
-    			try { DebugEnterSubRule(2);
-    			try { DebugEnterDecision(2, decisionCanBacktrack[2]);
-    			int LA2_1 = input.LA(1);
-
-    			if ((LA2_1=='e'))
-    			{
-    				alt2 = 1;
-    			}
-    			} finally { DebugExitDecision(2); }
-    			switch (alt2)
-    			{
-    			case 1:
-    				DebugEnterAlt(1);
-    				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:56:19: EXPONENT
-    				{
-    				DebugLocation(56, 19);
-    				mEXPONENT(); 
-
-    				}
-    				break;
-
-    			}
-    			} finally { DebugExitSubRule(2); }
-
-
-    			}
-    			break;
-    		case 2:
-    			DebugEnterAlt(2);
-    			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:57:9: ( '0' .. '9' )+ SEPARATOR ( '0' .. '9' )* ( EXPONENT )?
-    			{
-    			DebugLocation(57, 9);
-    			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:57:9: ( '0' .. '9' )+
-    			int cnt3=0;
-    			try { DebugEnterSubRule(3);
-    			while (true)
-    			{
-    				int alt3=2;
-    				try { DebugEnterDecision(3, decisionCanBacktrack[3]);
-    				int LA3_1 = input.LA(1);
-
-    				if (((LA3_1>='0' && LA3_1<='9')))
-    				{
-    					alt3 = 1;
-    				}
-
-
-    				} finally { DebugExitDecision(3); }
-    				switch (alt3)
-    				{
-    				case 1:
-    					DebugEnterAlt(1);
-    					// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:
-    					{
-    					DebugLocation(57, 9);
-    					input.Consume();
-
-
-    					}
-    					break;
-
-    				default:
-    					if (cnt3 >= 1)
-    						goto loop3;
-
-    					EarlyExitException eee3 = new EarlyExitException( 3, input );
-    					DebugRecognitionException(eee3);
-    					throw eee3;
-    				}
-    				cnt3++;
-    			}
-    			loop3:
-    				;
-
-    			} finally { DebugExitSubRule(3); }
-
-    			DebugLocation(57, 21);
-    			mSEPARATOR(); 
-    			DebugLocation(57, 31);
-    			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:57:31: ( '0' .. '9' )*
-    			try { DebugEnterSubRule(4);
-    			while (true)
-    			{
-    				int alt4=2;
-    				try { DebugEnterDecision(4, decisionCanBacktrack[4]);
-    				int LA4_1 = input.LA(1);
-
-    				if (((LA4_1>='0' && LA4_1<='9')))
-    				{
-    					alt4 = 1;
-    				}
-
-
-    				} finally { DebugExitDecision(4); }
-    				switch ( alt4 )
-    				{
-    				case 1:
-    					DebugEnterAlt(1);
-    					// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:
-    					{
-    					DebugLocation(57, 31);
-    					input.Consume();
-
-
-    					}
-    					break;
-
-    				default:
-    					goto loop4;
-    				}
-    			}
-
-    			loop4:
-    				;
-
-    			} finally { DebugExitSubRule(4); }
-
-    			DebugLocation(57, 43);
-    			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:57:43: ( EXPONENT )?
-    			int alt5=2;
-    			try { DebugEnterSubRule(5);
-    			try { DebugEnterDecision(5, decisionCanBacktrack[5]);
-    			int LA5_1 = input.LA(1);
-
-    			if ((LA5_1=='e'))
-    			{
-    				alt5 = 1;
-    			}
-    			} finally { DebugExitDecision(5); }
-    			switch (alt5)
-    			{
-    			case 1:
-    				DebugEnterAlt(1);
-    				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:57:43: EXPONENT
-    				{
-    				DebugLocation(57, 43);
-    				mEXPONENT(); 
-
-    				}
-    				break;
-
-    			}
-    			} finally { DebugExitSubRule(5); }
-
-
-    			}
-    			break;
-    		case 3:
-    			DebugEnterAlt(3);
-    			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:58:9: SEPARATOR ( '0' .. '9' )+ ( EXPONENT )?
-    			{
-    			DebugLocation(58, 9);
-    			mSEPARATOR(); 
-    			DebugLocation(58, 19);
-    			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:58:19: ( '0' .. '9' )+
-    			int cnt6=0;
-    			try { DebugEnterSubRule(6);
-    			while (true)
-    			{
-    				int alt6=2;
-    				try { DebugEnterDecision(6, decisionCanBacktrack[6]);
-    				int LA6_1 = input.LA(1);
-
-    				if (((LA6_1>='0' && LA6_1<='9')))
-    				{
-    					alt6 = 1;
-    				}
-
-
-    				} finally { DebugExitDecision(6); }
-    				switch (alt6)
-    				{
-    				case 1:
-    					DebugEnterAlt(1);
-    					// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:
-    					{
-    					DebugLocation(58, 19);
-    					input.Consume();
-
-
-    					}
-    					break;
-
-    				default:
-    					if (cnt6 >= 1)
-    						goto loop6;
-
-    					EarlyExitException eee6 = new EarlyExitException( 6, input );
-    					DebugRecognitionException(eee6);
-    					throw eee6;
-    				}
-    				cnt6++;
-    			}
-    			loop6:
-    				;
-
-    			} finally { DebugExitSubRule(6); }
-
-    			DebugLocation(58, 31);
-    			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:58:31: ( EXPONENT )?
-    			int alt7=2;
-    			try { DebugEnterSubRule(7);
-    			try { DebugEnterDecision(7, decisionCanBacktrack[7]);
-    			int LA7_1 = input.LA(1);
-
-    			if ((LA7_1=='e'))
-    			{
-    				alt7 = 1;
-    			}
-    			} finally { DebugExitDecision(7); }
-    			switch (alt7)
-    			{
-    			case 1:
-    				DebugEnterAlt(1);
-    				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:58:31: EXPONENT
-    				{
-    				DebugLocation(58, 31);
-    				mEXPONENT(); 
-
-    				}
-    				break;
-
-    			}
-    			} finally { DebugExitSubRule(7); }
-
-
-    			}
-    			break;
-
-    		}
-    		state.type = _type;
-    		state.channel = _channel;
-    	}
-    	finally
-    	{
-    		TraceOut("FLOAT", 13);
-    		LeaveRule("FLOAT", 13);
-    		LeaveRule_FLOAT();
-        }
-    }
-    // $ANTLR end "FLOAT"
-
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void EnterRule_SEPARATOR() {}
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void LeaveRule_SEPARATOR() {}
-
-    // $ANTLR start "SEPARATOR"
-    [GrammarRule("SEPARATOR")]
-    private void mSEPARATOR()
-    {
-    	EnterRule_SEPARATOR();
-    	EnterRule("SEPARATOR", 14);
-    	TraceIn("SEPARATOR", 14);
-    		try
-    		{
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:63:11: ( ( '.' | ',' ) )
-    		DebugEnterAlt(1);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:
-    		{
-    		DebugLocation(63, 11);
-    		if (input.LA(1)==','||input.LA(1)=='.')
-    		{
-    			input.Consume();
-    		}
-    		else
-    		{
-    			MismatchedSetException mse = new MismatchedSetException(null,input);
-    			DebugRecognitionException(mse);
-    			Recover(mse);
-    			throw mse;
-    		}
-
-
-    		}
-
-    	}
-    	finally
-    	{
-    		TraceOut("SEPARATOR", 14);
-    		LeaveRule("SEPARATOR", 14);
-    		LeaveRule_SEPARATOR();
-        }
-    }
-    // $ANTLR end "SEPARATOR"
-
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void EnterRule_EXPONENT() {}
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void LeaveRule_EXPONENT() {}
-
-    // $ANTLR start "EXPONENT"
-    [GrammarRule("EXPONENT")]
-    private void mEXPONENT()
-    {
-    	EnterRule_EXPONENT();
-    	EnterRule("EXPONENT", 15);
-    	TraceIn("EXPONENT", 15);
-    		try
-    		{
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:65:9: ( 'e' ( '+' | '-' )? ( '0' .. '9' )+ )
-    		DebugEnterAlt(1);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:65:11: 'e' ( '+' | '-' )? ( '0' .. '9' )+
-    		{
-    		DebugLocation(65, 11);
-    		Match('e'); 
-    		DebugLocation(65, 15);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:65:15: ( '+' | '-' )?
-    		int alt9=2;
-    		try { DebugEnterSubRule(9);
-    		try { DebugEnterDecision(9, decisionCanBacktrack[9]);
-    		int LA9_1 = input.LA(1);
-
-    		if ((LA9_1=='+'||LA9_1=='-'))
-    		{
-    			alt9 = 1;
-    		}
-    		} finally { DebugExitDecision(9); }
-    		switch (alt9)
-    		{
-    		case 1:
-    			DebugEnterAlt(1);
-    			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:
-    			{
-    			DebugLocation(65, 15);
-    			input.Consume();
-
-
-    			}
-    			break;
-
-    		}
-    		} finally { DebugExitSubRule(9); }
-
-    		DebugLocation(65, 26);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:65:26: ( '0' .. '9' )+
-    		int cnt10=0;
-    		try { DebugEnterSubRule(10);
-    		while (true)
-    		{
-    			int alt10=2;
-    			try { DebugEnterDecision(10, decisionCanBacktrack[10]);
-    			int LA10_1 = input.LA(1);
-
-    			if (((LA10_1>='0' && LA10_1<='9')))
-    			{
-    				alt10 = 1;
-    			}
-
-
-    			} finally { DebugExitDecision(10); }
-    			switch (alt10)
-    			{
-    			case 1:
-    				DebugEnterAlt(1);
-    				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:
-    				{
-    				DebugLocation(65, 26);
-    				input.Consume();
-
-
-    				}
-    				break;
-
-    			default:
-    				if (cnt10 >= 1)
-    					goto loop10;
-
-    				EarlyExitException eee10 = new EarlyExitException( 10, input );
-    				DebugRecognitionException(eee10);
-    				throw eee10;
-    			}
-    			cnt10++;
-    		}
-    		loop10:
-    			;
-
-    		} finally { DebugExitSubRule(10); }
-
-
-    		}
-
-    	}
-    	finally
-    	{
-    		TraceOut("EXPONENT", 15);
-    		LeaveRule("EXPONENT", 15);
-    		LeaveRule_EXPONENT();
-        }
-    }
-    // $ANTLR end "EXPONENT"
-
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void EnterRule_NEWLINE() {}
-    [Conditional("ANTLR_TRACE")]
-    protected virtual void LeaveRule_NEWLINE() {}
-
-    // $ANTLR start "NEWLINE"
-    [GrammarRule("NEWLINE")]
-    private void mNEWLINE()
-    {
-    	EnterRule_NEWLINE();
-    	EnterRule("NEWLINE", 16);
-    	TraceIn("NEWLINE", 16);
-    		try
-    		{
-    		int _type = NEWLINE;
-    		int _channel = DefaultTokenChannel;
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:66:9: ( ( '\\r' )? '\\n' )
-    		DebugEnterAlt(1);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:66:11: ( '\\r' )? '\\n'
-    		{
-    		DebugLocation(66, 11);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:66:11: ( '\\r' )?
-    		int alt11=2;
-    		try { DebugEnterSubRule(11);
-    		try { DebugEnterDecision(11, decisionCanBacktrack[11]);
-    		int LA11_1 = input.LA(1);
-
-    		if ((LA11_1=='\r'))
-    		{
-    			alt11 = 1;
-    		}
-    		} finally { DebugExitDecision(11); }
-    		switch (alt11)
-    		{
-    		case 1:
-    			DebugEnterAlt(1);
-    			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:66:11: '\\r'
-    			{
-    			DebugLocation(66, 11);
-    			Match('\r'); 
-
-    			}
-    			break;
-
-    		}
-    		} finally { DebugExitSubRule(11); }
-
-    		DebugLocation(66, 17);
-    		Match('\n'); 
-
-    		}
-
-    		state.type = _type;
-    		state.channel = _channel;
-    	}
-    	finally
-    	{
-    		TraceOut("NEWLINE", 16);
-    		LeaveRule("NEWLINE", 16);
-    		LeaveRule_NEWLINE();
-        }
-    }
-    // $ANTLR end "NEWLINE"
-
-    public override void mTokens()
-    {
-    	// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:1:8: ( T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | ID | CURRENCY | FLOAT | NEWLINE )
-    	int alt12=14;
-    	try { DebugEnterDecision(12, decisionCanBacktrack[12]);
-    	try
-    	{
-    		alt12 = dfa12.Predict(input);
-    	}
-    	catch (NoViableAltException nvae)
-    	{
-    		DebugRecognitionException(nvae);
-    		throw;
-    	}
-    	} finally { DebugExitDecision(12); }
-    	switch (alt12)
-    	{
-    	case 1:
-    		DebugEnterAlt(1);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:1:10: T__10
-    		{
-    		DebugLocation(1, 10);
-    		mT__10(); 
-
-    		}
-    		break;
-    	case 2:
-    		DebugEnterAlt(2);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:1:16: T__11
-    		{
-    		DebugLocation(1, 16);
-    		mT__11(); 
-
-    		}
-    		break;
-    	case 3:
-    		DebugEnterAlt(3);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:1:22: T__12
-    		{
-    		DebugLocation(1, 22);
-    		mT__12(); 
-
-    		}
-    		break;
-    	case 4:
-    		DebugEnterAlt(4);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:1:28: T__13
-    		{
-    		DebugLocation(1, 28);
-    		mT__13(); 
-
-    		}
-    		break;
-    	case 5:
-    		DebugEnterAlt(5);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:1:34: T__14
-    		{
-    		DebugLocation(1, 34);
-    		mT__14(); 
-
-    		}
-    		break;
-    	case 6:
-    		DebugEnterAlt(6);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:1:40: T__15
-    		{
-    		DebugLocation(1, 40);
-    		mT__15(); 
-
-    		}
-    		break;
-    	case 7:
-    		DebugEnterAlt(7);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:1:46: T__16
-    		{
-    		DebugLocation(1, 46);
-    		mT__16(); 
-
-    		}
-    		break;
-    	case 8:
-    		DebugEnterAlt(8);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:1:52: T__17
-    		{
-    		DebugLocation(1, 52);
-    		mT__17(); 
-
-    		}
-    		break;
-    	case 9:
-    		DebugEnterAlt(9);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:1:58: T__18
-    		{
-    		DebugLocation(1, 58);
-    		mT__18(); 
-
-    		}
-    		break;
-    	case 10:
-    		DebugEnterAlt(10);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:1:64: T__19
-    		{
-    		DebugLocation(1, 64);
-    		mT__19(); 
-
-    		}
-    		break;
-    	case 11:
-    		DebugEnterAlt(11);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:1:70: ID
-    		{
-    		DebugLocation(1, 70);
-    		mID(); 
-
-    		}
-    		break;
-    	case 12:
-    		DebugEnterAlt(12);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:1:73: CURRENCY
-    		{
-    		DebugLocation(1, 73);
-    		mCURRENCY(); 
-
-    		}
-    		break;
-    	case 13:
-    		DebugEnterAlt(13);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:1:82: FLOAT
-    		{
-    		DebugLocation(1, 82);
-    		mFLOAT(); 
-
-    		}
-    		break;
-    	case 14:
-    		DebugEnterAlt(14);
-    		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:1:88: NEWLINE
-    		{
-    		DebugLocation(1, 88);
-    		mNEWLINE(); 
-
-    		}
-    		break;
-
-    	}
-
-    }
+
+	partial void OnCreated();
+	partial void EnterRule(string ruleName, int ruleIndex);
+	partial void LeaveRule(string ruleName, int ruleIndex);
+
+	partial void EnterRule_T__10();
+	partial void LeaveRule_T__10();
+
+	// $ANTLR start "T__10"
+	[GrammarRule("T__10")]
+	private void mT__10()
+	{
+		EnterRule_T__10();
+		EnterRule("T__10", 1);
+		TraceIn("T__10", 1);
+		try
+		{
+			int _type = T__10;
+			int _channel = DefaultTokenChannel;
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:9:7: ( '*' )
+			DebugEnterAlt(1);
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:9:9: '*'
+			{
+			DebugLocation(9, 9);
+			Match('*'); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("T__10", 1);
+			LeaveRule("T__10", 1);
+			LeaveRule_T__10();
+		}
+	}
+	// $ANTLR end "T__10"
+
+	partial void EnterRule_T__11();
+	partial void LeaveRule_T__11();
+
+	// $ANTLR start "T__11"
+	[GrammarRule("T__11")]
+	private void mT__11()
+	{
+		EnterRule_T__11();
+		EnterRule("T__11", 2);
+		TraceIn("T__11", 2);
+		try
+		{
+			int _type = T__11;
+			int _channel = DefaultTokenChannel;
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:10:7: ( '+' )
+			DebugEnterAlt(1);
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:10:9: '+'
+			{
+			DebugLocation(10, 9);
+			Match('+'); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("T__11", 2);
+			LeaveRule("T__11", 2);
+			LeaveRule_T__11();
+		}
+	}
+	// $ANTLR end "T__11"
+
+	partial void EnterRule_T__12();
+	partial void LeaveRule_T__12();
+
+	// $ANTLR start "T__12"
+	[GrammarRule("T__12")]
+	private void mT__12()
+	{
+		EnterRule_T__12();
+		EnterRule("T__12", 3);
+		TraceIn("T__12", 3);
+		try
+		{
+			int _type = T__12;
+			int _channel = DefaultTokenChannel;
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:11:7: ( '-' )
+			DebugEnterAlt(1);
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:11:9: '-'
+			{
+			DebugLocation(11, 9);
+			Match('-'); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("T__12", 3);
+			LeaveRule("T__12", 3);
+			LeaveRule_T__12();
+		}
+	}
+	// $ANTLR end "T__12"
+
+	partial void EnterRule_T__13();
+	partial void LeaveRule_T__13();
+
+	// $ANTLR start "T__13"
+	[GrammarRule("T__13")]
+	private void mT__13()
+	{
+		EnterRule_T__13();
+		EnterRule("T__13", 4);
+		TraceIn("T__13", 4);
+		try
+		{
+			int _type = T__13;
+			int _channel = DefaultTokenChannel;
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:12:7: ( '/' )
+			DebugEnterAlt(1);
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:12:9: '/'
+			{
+			DebugLocation(12, 9);
+			Match('/'); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("T__13", 4);
+			LeaveRule("T__13", 4);
+			LeaveRule_T__13();
+		}
+	}
+	// $ANTLR end "T__13"
+
+	partial void EnterRule_T__14();
+	partial void LeaveRule_T__14();
+
+	// $ANTLR start "T__14"
+	[GrammarRule("T__14")]
+	private void mT__14()
+	{
+		EnterRule_T__14();
+		EnterRule("T__14", 5);
+		TraceIn("T__14", 5);
+		try
+		{
+			int _type = T__14;
+			int _channel = DefaultTokenChannel;
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:13:7: ( ':' )
+			DebugEnterAlt(1);
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:13:9: ':'
+			{
+			DebugLocation(13, 9);
+			Match(':'); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("T__14", 5);
+			LeaveRule("T__14", 5);
+			LeaveRule_T__14();
+		}
+	}
+	// $ANTLR end "T__14"
+
+	partial void EnterRule_T__15();
+	partial void LeaveRule_T__15();
+
+	// $ANTLR start "T__15"
+	[GrammarRule("T__15")]
+	private void mT__15()
+	{
+		EnterRule_T__15();
+		EnterRule("T__15", 6);
+		TraceIn("T__15", 6);
+		try
+		{
+			int _type = T__15;
+			int _channel = DefaultTokenChannel;
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:14:7: ( '=' )
+			DebugEnterAlt(1);
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:14:9: '='
+			{
+			DebugLocation(14, 9);
+			Match('='); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("T__15", 6);
+			LeaveRule("T__15", 6);
+			LeaveRule_T__15();
+		}
+	}
+	// $ANTLR end "T__15"
+
+	partial void EnterRule_ID();
+	partial void LeaveRule_ID();
+
+	// $ANTLR start "ID"
+	[GrammarRule("ID")]
+	private void mID()
+	{
+		EnterRule_ID();
+		EnterRule("ID", 7);
+		TraceIn("ID", 7);
+		try
+		{
+			int _type = ID;
+			int _channel = DefaultTokenChannel;
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:48:5: ( 'a' .. 'z' 'a' .. 'z' 'a' .. 'z' )
+			DebugEnterAlt(1);
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:48:7: 'a' .. 'z' 'a' .. 'z' 'a' .. 'z'
+			{
+			DebugLocation(48, 7);
+			MatchRange('a','z'); 
+			DebugLocation(48, 16);
+			MatchRange('a','z'); 
+			DebugLocation(48, 25);
+			MatchRange('a','z'); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("ID", 7);
+			LeaveRule("ID", 7);
+			LeaveRule_ID();
+		}
+	}
+	// $ANTLR end "ID"
+
+	partial void EnterRule_CURRENCY();
+	partial void LeaveRule_CURRENCY();
+
+	// $ANTLR start "CURRENCY"
+	[GrammarRule("CURRENCY")]
+	private void mCURRENCY()
+	{
+		EnterRule_CURRENCY();
+		EnterRule("CURRENCY", 8);
+		TraceIn("CURRENCY", 8);
+		try
+		{
+			int _type = CURRENCY;
+			int _channel = DefaultTokenChannel;
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:51:9: ( FLOAT ID )
+			DebugEnterAlt(1);
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:51:11: FLOAT ID
+			{
+			DebugLocation(51, 11);
+			mFLOAT(); 
+			DebugLocation(51, 17);
+			mID(); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("CURRENCY", 8);
+			LeaveRule("CURRENCY", 8);
+			LeaveRule_CURRENCY();
+		}
+	}
+	// $ANTLR end "CURRENCY"
+
+	partial void EnterRule_FLOAT();
+	partial void LeaveRule_FLOAT();
+
+	// $ANTLR start "FLOAT"
+	[GrammarRule("FLOAT")]
+	private void mFLOAT()
+	{
+		EnterRule_FLOAT();
+		EnterRule("FLOAT", 9);
+		TraceIn("FLOAT", 9);
+		try
+		{
+			int _type = FLOAT;
+			int _channel = DefaultTokenChannel;
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:54:5: ( ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ SEPARATOR ( '0' .. '9' )* ( EXPONENT )? | SEPARATOR ( '0' .. '9' )+ ( EXPONENT )? )
+			int alt8=3;
+			try { DebugEnterDecision(8, false);
+			try
+			{
+				alt8 = dfa8.Predict(input);
+			}
+			catch (NoViableAltException nvae)
+			{
+				DebugRecognitionException(nvae);
+				throw;
+			}
+			} finally { DebugExitDecision(8); }
+			switch (alt8)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:54:7: ( '0' .. '9' )+ ( EXPONENT )?
+				{
+				DebugLocation(54, 7);
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:54:7: ( '0' .. '9' )+
+				int cnt1=0;
+				try { DebugEnterSubRule(1);
+				while (true)
+				{
+					int alt1=2;
+					try { DebugEnterDecision(1, false);
+					int LA1_1 = input.LA(1);
+
+					if (((LA1_1>='0' && LA1_1<='9')))
+					{
+						alt1 = 1;
+					}
+
+
+					} finally { DebugExitDecision(1); }
+					switch (alt1)
+					{
+					case 1:
+						DebugEnterAlt(1);
+						// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:
+						{
+						DebugLocation(54, 7);
+						input.Consume();
+
+
+						}
+						break;
+
+					default:
+						if (cnt1 >= 1)
+							goto loop1;
+
+						EarlyExitException eee1 = new EarlyExitException( 1, input );
+						DebugRecognitionException(eee1);
+						throw eee1;
+					}
+					cnt1++;
+				}
+				loop1:
+					;
+
+				} finally { DebugExitSubRule(1); }
+
+				DebugLocation(54, 19);
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:54:19: ( EXPONENT )?
+				int alt2=2;
+				try { DebugEnterSubRule(2);
+				try { DebugEnterDecision(2, false);
+				int LA2_1 = input.LA(1);
+
+				if ((LA2_1=='e'))
+				{
+					alt2 = 1;
+				}
+				} finally { DebugExitDecision(2); }
+				switch (alt2)
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:54:19: EXPONENT
+					{
+					DebugLocation(54, 19);
+					mEXPONENT(); 
+
+					}
+					break;
+
+				}
+				} finally { DebugExitSubRule(2); }
+
+
+				}
+				break;
+			case 2:
+				DebugEnterAlt(2);
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:55:9: ( '0' .. '9' )+ SEPARATOR ( '0' .. '9' )* ( EXPONENT )?
+				{
+				DebugLocation(55, 9);
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:55:9: ( '0' .. '9' )+
+				int cnt3=0;
+				try { DebugEnterSubRule(3);
+				while (true)
+				{
+					int alt3=2;
+					try { DebugEnterDecision(3, false);
+					int LA3_1 = input.LA(1);
+
+					if (((LA3_1>='0' && LA3_1<='9')))
+					{
+						alt3 = 1;
+					}
+
+
+					} finally { DebugExitDecision(3); }
+					switch (alt3)
+					{
+					case 1:
+						DebugEnterAlt(1);
+						// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:
+						{
+						DebugLocation(55, 9);
+						input.Consume();
+
+
+						}
+						break;
+
+					default:
+						if (cnt3 >= 1)
+							goto loop3;
+
+						EarlyExitException eee3 = new EarlyExitException( 3, input );
+						DebugRecognitionException(eee3);
+						throw eee3;
+					}
+					cnt3++;
+				}
+				loop3:
+					;
+
+				} finally { DebugExitSubRule(3); }
+
+				DebugLocation(55, 21);
+				mSEPARATOR(); 
+				DebugLocation(55, 31);
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:55:31: ( '0' .. '9' )*
+				try { DebugEnterSubRule(4);
+				while (true)
+				{
+					int alt4=2;
+					try { DebugEnterDecision(4, false);
+					int LA4_1 = input.LA(1);
+
+					if (((LA4_1>='0' && LA4_1<='9')))
+					{
+						alt4 = 1;
+					}
+
+
+					} finally { DebugExitDecision(4); }
+					switch ( alt4 )
+					{
+					case 1:
+						DebugEnterAlt(1);
+						// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:
+						{
+						DebugLocation(55, 31);
+						input.Consume();
+
+
+						}
+						break;
+
+					default:
+						goto loop4;
+					}
+				}
+
+				loop4:
+					;
+
+				} finally { DebugExitSubRule(4); }
+
+				DebugLocation(55, 43);
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:55:43: ( EXPONENT )?
+				int alt5=2;
+				try { DebugEnterSubRule(5);
+				try { DebugEnterDecision(5, false);
+				int LA5_1 = input.LA(1);
+
+				if ((LA5_1=='e'))
+				{
+					alt5 = 1;
+				}
+				} finally { DebugExitDecision(5); }
+				switch (alt5)
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:55:43: EXPONENT
+					{
+					DebugLocation(55, 43);
+					mEXPONENT(); 
+
+					}
+					break;
+
+				}
+				} finally { DebugExitSubRule(5); }
+
+
+				}
+				break;
+			case 3:
+				DebugEnterAlt(3);
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:56:9: SEPARATOR ( '0' .. '9' )+ ( EXPONENT )?
+				{
+				DebugLocation(56, 9);
+				mSEPARATOR(); 
+				DebugLocation(56, 19);
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:56:19: ( '0' .. '9' )+
+				int cnt6=0;
+				try { DebugEnterSubRule(6);
+				while (true)
+				{
+					int alt6=2;
+					try { DebugEnterDecision(6, false);
+					int LA6_1 = input.LA(1);
+
+					if (((LA6_1>='0' && LA6_1<='9')))
+					{
+						alt6 = 1;
+					}
+
+
+					} finally { DebugExitDecision(6); }
+					switch (alt6)
+					{
+					case 1:
+						DebugEnterAlt(1);
+						// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:
+						{
+						DebugLocation(56, 19);
+						input.Consume();
+
+
+						}
+						break;
+
+					default:
+						if (cnt6 >= 1)
+							goto loop6;
+
+						EarlyExitException eee6 = new EarlyExitException( 6, input );
+						DebugRecognitionException(eee6);
+						throw eee6;
+					}
+					cnt6++;
+				}
+				loop6:
+					;
+
+				} finally { DebugExitSubRule(6); }
+
+				DebugLocation(56, 31);
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:56:31: ( EXPONENT )?
+				int alt7=2;
+				try { DebugEnterSubRule(7);
+				try { DebugEnterDecision(7, false);
+				int LA7_1 = input.LA(1);
+
+				if ((LA7_1=='e'))
+				{
+					alt7 = 1;
+				}
+				} finally { DebugExitDecision(7); }
+				switch (alt7)
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:56:31: EXPONENT
+					{
+					DebugLocation(56, 31);
+					mEXPONENT(); 
+
+					}
+					break;
+
+				}
+				} finally { DebugExitSubRule(7); }
+
+
+				}
+				break;
+
+			}
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("FLOAT", 9);
+			LeaveRule("FLOAT", 9);
+			LeaveRule_FLOAT();
+		}
+	}
+	// $ANTLR end "FLOAT"
+
+	partial void EnterRule_SEPARATOR();
+	partial void LeaveRule_SEPARATOR();
+
+	// $ANTLR start "SEPARATOR"
+	[GrammarRule("SEPARATOR")]
+	private void mSEPARATOR()
+	{
+		EnterRule_SEPARATOR();
+		EnterRule("SEPARATOR", 10);
+		TraceIn("SEPARATOR", 10);
+		try
+		{
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:61:11: ( ( '.' | ',' ) )
+			DebugEnterAlt(1);
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:
+			{
+			DebugLocation(61, 11);
+			if (input.LA(1)==','||input.LA(1)=='.')
+			{
+				input.Consume();
+			}
+			else
+			{
+				MismatchedSetException mse = new MismatchedSetException(null,input);
+				DebugRecognitionException(mse);
+				Recover(mse);
+				throw mse;
+			}
+
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("SEPARATOR", 10);
+			LeaveRule("SEPARATOR", 10);
+			LeaveRule_SEPARATOR();
+		}
+	}
+	// $ANTLR end "SEPARATOR"
+
+	partial void EnterRule_EXPONENT();
+	partial void LeaveRule_EXPONENT();
+
+	// $ANTLR start "EXPONENT"
+	[GrammarRule("EXPONENT")]
+	private void mEXPONENT()
+	{
+		EnterRule_EXPONENT();
+		EnterRule("EXPONENT", 11);
+		TraceIn("EXPONENT", 11);
+		try
+		{
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:63:9: ( 'e' ( '+' | '-' )? ( '0' .. '9' )+ )
+			DebugEnterAlt(1);
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:63:11: 'e' ( '+' | '-' )? ( '0' .. '9' )+
+			{
+			DebugLocation(63, 11);
+			Match('e'); 
+			DebugLocation(63, 15);
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:63:15: ( '+' | '-' )?
+			int alt9=2;
+			try { DebugEnterSubRule(9);
+			try { DebugEnterDecision(9, false);
+			int LA9_1 = input.LA(1);
+
+			if ((LA9_1=='+'||LA9_1=='-'))
+			{
+				alt9 = 1;
+			}
+			} finally { DebugExitDecision(9); }
+			switch (alt9)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:
+				{
+				DebugLocation(63, 15);
+				input.Consume();
+
+
+				}
+				break;
+
+			}
+			} finally { DebugExitSubRule(9); }
+
+			DebugLocation(63, 26);
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:63:26: ( '0' .. '9' )+
+			int cnt10=0;
+			try { DebugEnterSubRule(10);
+			while (true)
+			{
+				int alt10=2;
+				try { DebugEnterDecision(10, false);
+				int LA10_1 = input.LA(1);
+
+				if (((LA10_1>='0' && LA10_1<='9')))
+				{
+					alt10 = 1;
+				}
+
+
+				} finally { DebugExitDecision(10); }
+				switch (alt10)
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:
+					{
+					DebugLocation(63, 26);
+					input.Consume();
+
+
+					}
+					break;
+
+				default:
+					if (cnt10 >= 1)
+						goto loop10;
+
+					EarlyExitException eee10 = new EarlyExitException( 10, input );
+					DebugRecognitionException(eee10);
+					throw eee10;
+				}
+				cnt10++;
+			}
+			loop10:
+				;
+
+			} finally { DebugExitSubRule(10); }
+
+
+			}
+
+		}
+		finally
+		{
+			TraceOut("EXPONENT", 11);
+			LeaveRule("EXPONENT", 11);
+			LeaveRule_EXPONENT();
+		}
+	}
+	// $ANTLR end "EXPONENT"
+
+	partial void EnterRule_NEWLINE();
+	partial void LeaveRule_NEWLINE();
+
+	// $ANTLR start "NEWLINE"
+	[GrammarRule("NEWLINE")]
+	private void mNEWLINE()
+	{
+		EnterRule_NEWLINE();
+		EnterRule("NEWLINE", 12);
+		TraceIn("NEWLINE", 12);
+		try
+		{
+			int _type = NEWLINE;
+			int _channel = DefaultTokenChannel;
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:64:9: ( ( '\\r' )? '\\n' )
+			DebugEnterAlt(1);
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:64:11: ( '\\r' )? '\\n'
+			{
+			DebugLocation(64, 11);
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:64:11: ( '\\r' )?
+			int alt11=2;
+			try { DebugEnterSubRule(11);
+			try { DebugEnterDecision(11, false);
+			int LA11_1 = input.LA(1);
+
+			if ((LA11_1=='\r'))
+			{
+				alt11 = 1;
+			}
+			} finally { DebugExitDecision(11); }
+			switch (alt11)
+			{
+			case 1:
+				DebugEnterAlt(1);
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:64:11: '\\r'
+				{
+				DebugLocation(64, 11);
+				Match('\r'); 
+
+				}
+				break;
+
+			}
+			} finally { DebugExitSubRule(11); }
+
+			DebugLocation(64, 17);
+			Match('\n'); 
+
+			}
+
+			state.type = _type;
+			state.channel = _channel;
+		}
+		finally
+		{
+			TraceOut("NEWLINE", 12);
+			LeaveRule("NEWLINE", 12);
+			LeaveRule_NEWLINE();
+		}
+	}
+	// $ANTLR end "NEWLINE"
+
+	public override void mTokens()
+	{
+		// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:1:8: ( T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | ID | CURRENCY | FLOAT | NEWLINE )
+		int alt12=10;
+		try { DebugEnterDecision(12, false);
+		try
+		{
+			alt12 = dfa12.Predict(input);
+		}
+		catch (NoViableAltException nvae)
+		{
+			DebugRecognitionException(nvae);
+			throw;
+		}
+		} finally { DebugExitDecision(12); }
+		switch (alt12)
+		{
+		case 1:
+			DebugEnterAlt(1);
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:1:10: T__10
+			{
+			DebugLocation(1, 10);
+			mT__10(); 
+
+			}
+			break;
+		case 2:
+			DebugEnterAlt(2);
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:1:16: T__11
+			{
+			DebugLocation(1, 16);
+			mT__11(); 
+
+			}
+			break;
+		case 3:
+			DebugEnterAlt(3);
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:1:22: T__12
+			{
+			DebugLocation(1, 22);
+			mT__12(); 
+
+			}
+			break;
+		case 4:
+			DebugEnterAlt(4);
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:1:28: T__13
+			{
+			DebugLocation(1, 28);
+			mT__13(); 
+
+			}
+			break;
+		case 5:
+			DebugEnterAlt(5);
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:1:34: T__14
+			{
+			DebugLocation(1, 34);
+			mT__14(); 
+
+			}
+			break;
+		case 6:
+			DebugEnterAlt(6);
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:1:40: T__15
+			{
+			DebugLocation(1, 40);
+			mT__15(); 
+
+			}
+			break;
+		case 7:
+			DebugEnterAlt(7);
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:1:46: ID
+			{
+			DebugLocation(1, 46);
+			mID(); 
+
+			}
+			break;
+		case 8:
+			DebugEnterAlt(8);
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:1:49: CURRENCY
+			{
+			DebugLocation(1, 49);
+			mCURRENCY(); 
+
+			}
+			break;
+		case 9:
+			DebugEnterAlt(9);
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:1:58: FLOAT
+			{
+			DebugLocation(1, 58);
+			mFLOAT(); 
+
+			}
+			break;
+		case 10:
+			DebugEnterAlt(10);
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:1:64: NEWLINE
+			{
+			DebugLocation(1, 64);
+			mNEWLINE(); 
+
+			}
+			break;
+
+		}
+
+	}
 
 
 	#region DFA
@@ -1280,7 +1065,7 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 			this.transition = DFA8_transition;
 		}
 
-		public override string Description { get { return "55:1: FLOAT : ( ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ SEPARATOR ( '0' .. '9' )* ( EXPONENT )? | SEPARATOR ( '0' .. '9' )+ ( EXPONENT )? );"; } }
+		public override string Description { get { return "53:1: FLOAT : ( ( '0' .. '9' )+ ( EXPONENT )? | ( '0' .. '9' )+ SEPARATOR ( '0' .. '9' )* ( EXPONENT )? | SEPARATOR ( '0' .. '9' )+ ( EXPONENT )? );"; } }
 
 		public override void Error(NoViableAltException nvae)
 		{
@@ -1291,26 +1076,25 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 	private class DFA12 : DFA
 	{
 		private const string DFA12_eotS =
-			"\xC\xFFFF\x1\x10\x5\xFFFF\x2\x10\x1\xFFFF\x2\x10\x3\xFFFF\x1\x10\x1\xFFFF"+
-			"\x1\x10";
+			"\x8\xFFFF\x1\xC\x5\xFFFF\x2\xC\x1\xFFFF\x2\xC\x3\xFFFF\x1\xC\x1\xFFFF"+
+			"\x1\xC";
 		private const string DFA12_eofS =
-			"\x1D\xFFFF";
+			"\x19\xFFFF";
 		private const string DFA12_minS =
-			"\x1\xA\xB\xFFFF\x1\x2C\x1\x30\x1\xFFFF\x1\x2B\x2\xFFFF\x5\x30\x2\x2B"+
+			"\x1\xA\x7\xFFFF\x1\x2C\x1\x30\x1\xFFFF\x1\x2B\x2\xFFFF\x5\x30\x2\x2B"+
 			"\x4\x30";
 		private const string DFA12_maxS =
-			"\x1\x7D\xB\xFFFF\x1\x7A\x1\x39\x1\xFFFF\x1\x7A\x2\xFFFF\x2\x7A\x1\x39"+
+			"\x1\x7A\x7\xFFFF\x1\x7A\x1\x39\x1\xFFFF\x1\x7A\x2\xFFFF\x2\x7A\x1\x39"+
 			"\x4\x7A\x1\x39\x1\x7A\x1\x39\x1\x7A";
 		private const string DFA12_acceptS =
-			"\x1\xFFFF\x1\x1\x1\x2\x1\x3\x1\x4\x1\x5\x1\x6\x1\x7\x1\x8\x1\x9\x1\xA"+
-			"\x1\xB\x2\xFFFF\x1\xE\x1\xFFFF\x1\xD\x1\xC\xB\xFFFF";
+			"\x1\xFFFF\x1\x1\x1\x2\x1\x3\x1\x4\x1\x5\x1\x6\x1\x7\x2\xFFFF\x1\xA\x1"+
+			"\xFFFF\x1\x9\x1\x8\xB\xFFFF";
 		private const string DFA12_specialS =
-			"\x1D\xFFFF}>";
+			"\x19\xFFFF}>";
 		private static readonly string[] DFA12_transitionS =
 			{
-				"\x1\xE\x2\xFFFF\x1\xE\x1A\xFFFF\x1\x1\x1\x2\x1\x3\x1\x4\x1\xD\x1\x5"+
-				"\x1\xD\x1\x6\xA\xC\x1\x7\x2\xFFFF\x1\x8\x23\xFFFF\x1A\xB\x1\x9\x1\xFFFF"+
-				"\x1\xA",
+				"\x1\xA\x2\xFFFF\x1\xA\x1C\xFFFF\x1\x1\x1\x2\x1\x9\x1\x3\x1\x9\x1\x4"+
+				"\xA\x8\x1\x5\x2\xFFFF\x1\x6\x23\xFFFF\x1A\x7",
 				"",
 				"",
 				"",
@@ -1318,27 +1102,23 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 				"",
 				"",
 				"",
+				"\x1\xE\x1\xFFFF\x1\xE\x1\xFFFF\xA\x8\x27\xFFFF\x4\xD\x1\xB\x15\xD",
+				"\xA\xF",
+				"",
+				"\x1\x10\x1\xFFFF\x1\x10\x2\xFFFF\xA\x11\x27\xFFFF\x1A\xD",
 				"",
 				"",
-				"",
-				"",
-				"\x1\x12\x1\xFFFF\x1\x12\x1\xFFFF\xA\xC\x27\xFFFF\x4\x11\x1\xF\x15\x11",
-				"\xA\x13",
-				"",
-				"\x1\x14\x1\xFFFF\x1\x14\x2\xFFFF\xA\x15\x27\xFFFF\x1A\x11",
-				"",
-				"",
-				"\xA\x16\x27\xFFFF\x4\x11\x1\x17\x15\x11",
-				"\xA\x13\x27\xFFFF\x4\x11\x1\x18\x15\x11",
-				"\xA\x15",
-				"\xA\x15\x27\xFFFF\x1A\x11",
-				"\xA\x16\x27\xFFFF\x4\x11\x1\x17\x15\x11",
-				"\x1\x19\x1\xFFFF\x1\x19\x2\xFFFF\xA\x1A\x27\xFFFF\x1A\x11",
-				"\x1\x1B\x1\xFFFF\x1\x1B\x2\xFFFF\xA\x1C\x27\xFFFF\x1A\x11",
-				"\xA\x1A",
-				"\xA\x1A\x27\xFFFF\x1A\x11",
-				"\xA\x1C",
-				"\xA\x1C\x27\xFFFF\x1A\x11"
+				"\xA\x12\x27\xFFFF\x4\xD\x1\x13\x15\xD",
+				"\xA\xF\x27\xFFFF\x4\xD\x1\x14\x15\xD",
+				"\xA\x11",
+				"\xA\x11\x27\xFFFF\x1A\xD",
+				"\xA\x12\x27\xFFFF\x4\xD\x1\x13\x15\xD",
+				"\x1\x15\x1\xFFFF\x1\x15\x2\xFFFF\xA\x16\x27\xFFFF\x1A\xD",
+				"\x1\x17\x1\xFFFF\x1\x17\x2\xFFFF\xA\x18\x27\xFFFF\x1A\xD",
+				"\xA\x16",
+				"\xA\x16\x27\xFFFF\x1A\xD",
+				"\xA\x18",
+				"\xA\x18\x27\xFFFF\x1A\xD"
 			};
 
 		private static readonly short[] DFA12_eot = DFA.UnpackEncodedString(DFA12_eotS);
@@ -1372,7 +1152,7 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 			this.transition = DFA12_transition;
 		}
 
-		public override string Description { get { return "1:1: Tokens : ( T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | T__16 | T__17 | T__18 | T__19 | ID | CURRENCY | FLOAT | NEWLINE );"; } }
+		public override string Description { get { return "1:1: Tokens : ( T__10 | T__11 | T__12 | T__13 | T__14 | T__15 | ID | CURRENCY | FLOAT | NEWLINE );"; } }
 
 		public override void Error(NoViableAltException nvae)
 		{
@@ -1380,7 +1160,7 @@ public partial class GrammarOfCurrencyLexer : Antlr.Runtime.Lexer
 		}
 	}
 
- 
+
 	#endregion
 
 }

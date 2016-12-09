@@ -1,28 +1,31 @@
 ﻿using System;
 using Antlr.Runtime;
 using Generated;
+using MathNet.Numerics.LinearAlgebra;
+using MathNet.Numerics.LinearAlgebra.Double;
 
 namespace GrammarOfArithmetic
 {
     public class Parser
     {
-
+        private ANTLRStringStream input(string s)
+        {
+            s = s.ToLower().Replace(" ", "").Replace(".", ",") + "\r\n";
+            return new ANTLRStringStream(s);
+        }
 
         public string SolveEngineer(string s)
         {
             try
             {
-                s = s.ToLower().Replace(" ", "").Replace(".",",") + "\r\n";
-                ANTLRStringStream input = new ANTLRStringStream(s);
-                //ANTLRReaderStream input = new ANTLRReaderStream(Console.In);
-                GrammarOfArithmeticLexer lexer = new GrammarOfArithmeticLexer(input);
+                GrammarOfArithmeticLexer lexer = new GrammarOfArithmeticLexer(input(s));
                 CommonTokenStream tokens = new CommonTokenStream(lexer);
                 GrammarOfArithmeticParser parser = new GrammarOfArithmeticParser(tokens);
                 return parser.calc();
             }
             catch (Exception e)
             {
-                return e.Message;
+                return " = " + e.Message;
             }
         }
 
@@ -31,12 +34,10 @@ namespace GrammarOfArithmetic
             try
             {
                 
-                s = s.ToLower().Replace(" ", "").Replace(".", ",") + "\r\n";
-                ANTLRStringStream input = new ANTLRStringStream(s);
-                //ANTLRReaderStream input = new ANTLRReaderStream(Console.In);
-                GrammarOfCurrencyLexer lexer = new GrammarOfCurrencyLexer(input);
+                GrammarOfCurrencyLexer lexer = new GrammarOfCurrencyLexer(input(s));
                 CommonTokenStream tokens = new CommonTokenStream(lexer);
                 GrammarOfCurrencyParser parser = new GrammarOfCurrencyParser(tokens);
+
                 return parser.calc();
             }
             catch (Exception e)

@@ -4,6 +4,7 @@ using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using GrammarOfArithmetic;
 
 namespace Calculator
 {
@@ -19,7 +20,7 @@ namespace Calculator
             Application.SetCompatibleTextRenderingDefault(false);
             if (!Directory.Exists(Environment.CurrentDirectory + "\\CurrenciesHistory\\"))
                 Directory.CreateDirectory(Environment.CurrentDirectory + "\\CurrenciesHistory\\");
-            Application.Run(new Calculator());
+            Application.Run(new Calculator(new Parser()));
         }
     }
 }

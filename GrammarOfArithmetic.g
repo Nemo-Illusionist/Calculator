@@ -11,7 +11,7 @@ options
 	using System.Collections;
 }
 @members{
-	private Hashtable memory = new Hashtable();
+	private static Hashtable memory = new Hashtable();
 	
 	private double Factorial(double n)
         {
@@ -40,10 +40,7 @@ public calc returns[string value]
 
 statement returns[string value]
 	: expr {$value = " = ";}('='{$value = " ";})? NEWLINE { $value += $expr.value; }
-	| ID '=' 
-		(FLOAT {$value = ""; a1 = double.Parse($FLOAT.text);}
-		| a1 = expr {$value = '=' + $a1.value.ToString();}
-		) NEWLINE 
+	| ID '=' a1 = expr {$value = '=' + $a1.value.ToString();} NEWLINE 
 		{ if(!memory.ContainsKey($ID.text))
 			memory.Add($ID.text, $a1.value);
 		  else

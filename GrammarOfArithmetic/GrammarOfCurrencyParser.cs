@@ -8,25 +8,24 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.5.1 C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g 2016-12-08 17:04:56
+// $ANTLR 3.5.1 C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g 2016-12-09 11:42:27
 
 // The variable 'variable' is assigned but its value is never used.
-#pragma warning disable 168, 219
+#pragma warning disable 219
 // Unreachable code detected.
 #pragma warning disable 162
 // Missing XML comment for publicly visible type or member 'Type_or_Member'
 #pragma warning disable 1591
+// CLS compliance checking will not be performed on 'type' because it is not visible from outside this assembly.
+#pragma warning disable 3019
 
 
-	using System;
-	using System.Collections;
 	using Currencies;
 
 
 using System.Collections.Generic;
 using Antlr.Runtime;
 using Antlr.Runtime.Misc;
-using ConditionalAttribute = System.Diagnostics.ConditionalAttribute;
 
 namespace  Generated 
 {
@@ -35,7 +34,7 @@ namespace  Generated
 public partial class GrammarOfCurrencyParser : Antlr.Runtime.Parser
 {
 	internal static readonly string[] tokenNames = new string[] {
-		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "CURRENCY", "EXPONENT", "FLOAT", "ID", "NEWLINE", "SEPARATOR", "'('", "')'", "'*'", "'+'", "'-'", "'/'", "':'", "'='", "'{'", "'}'"
+		"<invalid>", "<EOR>", "<DOWN>", "<UP>", "CURRENCY", "EXPONENT", "FLOAT", "ID", "NEWLINE", "SEPARATOR", "'*'", "'+'", "'-'", "'/'", "':'", "'='"
 	};
 	public const int EOF=-1;
 	public const int T__10=10;
@@ -44,10 +43,6 @@ public partial class GrammarOfCurrencyParser : Antlr.Runtime.Parser
 	public const int T__13=13;
 	public const int T__14=14;
 	public const int T__15=15;
-	public const int T__16=16;
-	public const int T__17=17;
-	public const int T__18=18;
-	public const int T__19=19;
 	public const int CURRENCY=4;
 	public const int EXPONENT=5;
 	public const int FLOAT=6;
@@ -55,16 +50,6 @@ public partial class GrammarOfCurrencyParser : Antlr.Runtime.Parser
 	public const int NEWLINE=8;
 	public const int SEPARATOR=9;
 
-	#if ANTLR_DEBUG
-	private static readonly bool[] decisionCanBacktrack =
-		new bool[]
-		{
-			false, // invalid decision
-			false, false, false, false, false, false, false, false
-		};
-	#else
-	private static readonly bool[] decisionCanBacktrack = new bool[0];
-	#endif
 	public GrammarOfCurrencyParser(ITokenStream input)
 		: this(input, new RecognizerSharedState())
 	{
@@ -79,46 +64,40 @@ public partial class GrammarOfCurrencyParser : Antlr.Runtime.Parser
 	public override string GrammarFileName { get { return "C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g"; } }
 
 
-	[Conditional("ANTLR_TRACE")]
-	protected virtual void OnCreated() {}
-	[Conditional("ANTLR_TRACE")]
-	protected virtual void EnterRule(string ruleName, int ruleIndex) {}
-	[Conditional("ANTLR_TRACE")]
-	protected virtual void LeaveRule(string ruleName, int ruleIndex) {}
+	partial void OnCreated();
+	partial void EnterRule(string ruleName, int ruleIndex);
+	partial void LeaveRule(string ruleName, int ruleIndex);
 
 	#region Rules
-
-	[Conditional("ANTLR_TRACE")]
-	protected virtual void EnterRule_calc() {}
-	[Conditional("ANTLR_TRACE")]
-	protected virtual void LeaveRule_calc() {}
+	partial void EnterRule_calc();
+	partial void LeaveRule_calc();
 	// $ANTLR start "calc"
-	// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:16:8: public calc returns [string value] : statement ;
+	// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:14:8: public calc returns [string value] : statement ;
 	[GrammarRule("calc")]
 	public string calc()
 	{
 		EnterRule_calc();
 		EnterRule("calc", 1);
 		TraceIn("calc", 1);
-	    string value = default(string);
+		string value = default(string);
 
 
-	    string statement1 = default(string);
+		string statement1 = default(string);
 
 		try { DebugEnterRule(GrammarFileName, "calc");
-		DebugLocation(16, 1);
+		DebugLocation(14, 1);
 		try
 		{
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:17:2: ( statement )
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:15:2: ( statement )
 			DebugEnterAlt(1);
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:17:5: statement
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:15:5: statement
 			{
-			DebugLocation(17, 5);
+			DebugLocation(15, 5);
 			PushFollow(Follow._statement_in_calc52);
 			statement1=statement();
 			PopFollow();
 
-			DebugLocation(17, 15);
+			DebugLocation(15, 15);
 			value = statement1;
 
 			}
@@ -134,43 +113,40 @@ public partial class GrammarOfCurrencyParser : Antlr.Runtime.Parser
 			TraceOut("calc", 1);
 			LeaveRule("calc", 1);
 			LeaveRule_calc();
-	    }
-	 	DebugLocation(18, 1);
+		}
+		DebugLocation(16, 1);
 		} finally { DebugExitRule(GrammarFileName, "calc"); }
 		return value;
 
 	}
 	// $ANTLR end "calc"
 
-
-	[Conditional("ANTLR_TRACE")]
-	protected virtual void EnterRule_statement() {}
-	[Conditional("ANTLR_TRACE")]
-	protected virtual void LeaveRule_statement() {}
+	partial void EnterRule_statement();
+	partial void LeaveRule_statement();
 	// $ANTLR start "statement"
-	// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:20:1: statement returns [string value] : (a1= expr ( '=' ID | ( '=' )? ) NEWLINE | NEWLINE );
+	// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:18:1: statement returns [string value] : (a1= expr ( '=' ID | ( '=' )? ) NEWLINE | NEWLINE );
 	[GrammarRule("statement")]
 	private string statement()
 	{
 		EnterRule_statement();
 		EnterRule("statement", 2);
 		TraceIn("statement", 2);
-	    string value = default(string);
+		string value = default(string);
 
 
-	    IToken ID2 = default(IToken);
-	    Cur a1 = default(Cur);
+		IToken ID2 = default(IToken);
+		Cur a1 = default(Cur);
 
 		try { DebugEnterRule(GrammarFileName, "statement");
-		DebugLocation(20, 1);
+		DebugLocation(18, 1);
 		try
 		{
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:21:2: (a1= expr ( '=' ID | ( '=' )? ) NEWLINE | NEWLINE )
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:19:2: (a1= expr ( '=' ID | ( '=' )? ) NEWLINE | NEWLINE )
 			int alt3=2;
-			try { DebugEnterDecision(3, decisionCanBacktrack[3]);
+			try { DebugEnterDecision(3, false);
 			int LA3_1 = input.LA(1);
 
-			if ((LA3_1==CURRENCY||LA3_1==FLOAT||LA3_1==10||LA3_1==14||LA3_1==18))
+			if ((LA3_1==CURRENCY||LA3_1==FLOAT||LA3_1==12))
 			{
 				alt3 = 1;
 			}
@@ -178,34 +154,32 @@ public partial class GrammarOfCurrencyParser : Antlr.Runtime.Parser
 			{
 				alt3 = 2;
 			}
-
 			else
 			{
 				NoViableAltException nvae = new NoViableAltException("", 3, 0, input, 1);
 				DebugRecognitionException(nvae);
 				throw nvae;
 			}
-
 			} finally { DebugExitDecision(3); }
 			switch (alt3)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:21:4: a1= expr ( '=' ID | ( '=' )? ) NEWLINE
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:19:4: a1= expr ( '=' ID | ( '=' )? ) NEWLINE
 				{
-				DebugLocation(21, 7);
+				DebugLocation(19, 7);
 				PushFollow(Follow._expr_in_statement72);
 				a1=expr();
 				PopFollow();
 
-				DebugLocation(22, 2);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:22:2: ( '=' ID | ( '=' )? )
+				DebugLocation(20, 2);
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:20:2: ( '=' ID | ( '=' )? )
 				int alt2=2;
 				try { DebugEnterSubRule(2);
-				try { DebugEnterDecision(2, decisionCanBacktrack[2]);
+				try { DebugEnterDecision(2, false);
 				int LA2_1 = input.LA(1);
 
-				if ((LA2_1==17))
+				if ((LA2_1==15))
 				{
 					int LA2_2 = input.LA(2);
 
@@ -217,55 +191,51 @@ public partial class GrammarOfCurrencyParser : Antlr.Runtime.Parser
 					{
 						alt2 = 2;
 					}
-
 					else
 					{
 						NoViableAltException nvae = new NoViableAltException("", 2, 1, input, 2);
 						DebugRecognitionException(nvae);
 						throw nvae;
 					}
-
 				}
 				else if ((LA2_1==NEWLINE))
 				{
 					alt2 = 2;
 				}
-
 				else
 				{
 					NoViableAltException nvae = new NoViableAltException("", 2, 0, input, 1);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
-
 				} finally { DebugExitDecision(2); }
 				switch (alt2)
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:22:3: '=' ID
+					// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:20:3: '=' ID
 					{
-					DebugLocation(22, 3);
-					Match(input,17,Follow._17_in_statement77); 
-					DebugLocation(22, 7);
+					DebugLocation(20, 3);
+					Match(input,15,Follow._15_in_statement77); 
+					DebugLocation(20, 7);
 					ID2=(IToken)Match(input,ID,Follow._ID_in_statement79); 
-					DebugLocation(22, 10);
+					DebugLocation(20, 10);
 					a1.Convert((ID2!=null?ID2.Text:default(string))); value = a1.ToString();
 
 					}
 					break;
 				case 2:
 					DebugEnterAlt(2);
-					// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:23:4: ( '=' )?
+					// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:21:4: ( '=' )?
 					{
-					DebugLocation(23, 4);
-					// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:23:4: ( '=' )?
+					DebugLocation(21, 4);
+					// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:21:4: ( '=' )?
 					int alt1=2;
 					try { DebugEnterSubRule(1);
-					try { DebugEnterDecision(1, decisionCanBacktrack[1]);
+					try { DebugEnterDecision(1, false);
 					int LA1_1 = input.LA(1);
 
-					if ((LA1_1==17))
+					if ((LA1_1==15))
 					{
 						alt1 = 1;
 					}
@@ -274,11 +244,11 @@ public partial class GrammarOfCurrencyParser : Antlr.Runtime.Parser
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:23:5: '='
+						// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:21:5: '='
 						{
-						DebugLocation(23, 5);
-						Match(input,17,Follow._17_in_statement88); 
-						DebugLocation(23, 9);
+						DebugLocation(21, 5);
+						Match(input,15,Follow._15_in_statement88); 
+						DebugLocation(21, 9);
 						value = " = ";
 
 						}
@@ -287,8 +257,6 @@ public partial class GrammarOfCurrencyParser : Antlr.Runtime.Parser
 					}
 					} finally { DebugExitSubRule(1); }
 
-					DebugLocation(23, 29);
-					value += a1.ToString();
 
 					}
 					break;
@@ -296,16 +264,18 @@ public partial class GrammarOfCurrencyParser : Antlr.Runtime.Parser
 				}
 				} finally { DebugExitSubRule(2); }
 
-				DebugLocation(24, 4);
-				Match(input,NEWLINE,Follow._NEWLINE_in_statement99); 
+				DebugLocation(22, 3);
+				Match(input,NEWLINE,Follow._NEWLINE_in_statement98); 
+				DebugLocation(22, 11);
+				value = a1.ToString();
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:25:4: NEWLINE
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:23:4: NEWLINE
 				{
-				DebugLocation(25, 4);
+				DebugLocation(23, 4);
 				Match(input,NEWLINE,Follow._NEWLINE_in_statement105); 
 
 				}
@@ -323,93 +293,88 @@ public partial class GrammarOfCurrencyParser : Antlr.Runtime.Parser
 			TraceOut("statement", 2);
 			LeaveRule("statement", 2);
 			LeaveRule_statement();
-	    }
-	 	DebugLocation(26, 1);
+		}
+		DebugLocation(24, 1);
 		} finally { DebugExitRule(GrammarFileName, "statement"); }
 		return value;
 
 	}
 	// $ANTLR end "statement"
 
-
-	[Conditional("ANTLR_TRACE")]
-	protected virtual void EnterRule_expr() {}
-	[Conditional("ANTLR_TRACE")]
-	protected virtual void LeaveRule_expr() {}
+	partial void EnterRule_expr();
+	partial void LeaveRule_expr();
 	// $ANTLR start "expr"
-	// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:28:1: expr returns [Cur value] : ( '-' me1= multExpression |me1= multExpression ) ( '+' me2= multExpression | '-' me2= multExpression )* ;
+	// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:26:1: expr returns [Cur value] : ( '-' me1= atom |me1= atom ) ( '+' me2= atom | '-' me2= atom )* ;
 	[GrammarRule("expr")]
 	private Cur expr()
 	{
 		EnterRule_expr();
 		EnterRule("expr", 3);
 		TraceIn("expr", 3);
-	    Cur value = default(Cur);
+		Cur value = default(Cur);
 
 
-	    Cur me1 = default(Cur);
-	    Cur me2 = default(Cur);
+		Cur me1 = default(Cur);
+		Cur me2 = default(Cur);
 
 		try { DebugEnterRule(GrammarFileName, "expr");
-		DebugLocation(28, 1);
+		DebugLocation(26, 1);
 		try
 		{
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:29:2: ( ( '-' me1= multExpression |me1= multExpression ) ( '+' me2= multExpression | '-' me2= multExpression )* )
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:27:2: ( ( '-' me1= atom |me1= atom ) ( '+' me2= atom | '-' me2= atom )* )
 			DebugEnterAlt(1);
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:29:4: ( '-' me1= multExpression |me1= multExpression ) ( '+' me2= multExpression | '-' me2= multExpression )*
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:27:4: ( '-' me1= atom |me1= atom ) ( '+' me2= atom | '-' me2= atom )*
 			{
-			DebugLocation(29, 4);
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:29:4: ( '-' me1= multExpression |me1= multExpression )
+			DebugLocation(27, 4);
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:27:4: ( '-' me1= atom |me1= atom )
 			int alt4=2;
 			try { DebugEnterSubRule(4);
-			try { DebugEnterDecision(4, decisionCanBacktrack[4]);
+			try { DebugEnterDecision(4, false);
 			int LA4_1 = input.LA(1);
 
-			if ((LA4_1==14))
+			if ((LA4_1==12))
 			{
 				alt4 = 1;
 			}
-			else if ((LA4_1==CURRENCY||LA4_1==FLOAT||LA4_1==10||LA4_1==18))
+			else if ((LA4_1==CURRENCY||LA4_1==FLOAT))
 			{
 				alt4 = 2;
 			}
-
 			else
 			{
 				NoViableAltException nvae = new NoViableAltException("", 4, 0, input, 1);
 				DebugRecognitionException(nvae);
 				throw nvae;
 			}
-
 			} finally { DebugExitDecision(4); }
 			switch (alt4)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:29:5: '-' me1= multExpression
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:27:5: '-' me1= atom
 				{
-				DebugLocation(29, 5);
-				Match(input,14,Follow._14_in_expr122); 
-				DebugLocation(29, 11);
-				PushFollow(Follow._multExpression_in_expr125);
-				me1=multExpression();
+				DebugLocation(27, 5);
+				Match(input,12,Follow._12_in_expr122); 
+				DebugLocation(27, 11);
+				PushFollow(Follow._atom_in_expr125);
+				me1=atom();
 				PopFollow();
 
-				DebugLocation(29, 27);
+				DebugLocation(27, 17);
 				value = -me1;
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:30:5: me1= multExpression
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:28:5: me1= atom
 				{
-				DebugLocation(30, 8);
-				PushFollow(Follow._multExpression_in_expr136);
-				me1=multExpression();
+				DebugLocation(28, 8);
+				PushFollow(Follow._atom_in_expr136);
+				me1=atom();
 				PopFollow();
 
-				DebugLocation(30, 24);
+				DebugLocation(28, 14);
 				value = me1;
 
 				}
@@ -418,20 +383,20 @@ public partial class GrammarOfCurrencyParser : Antlr.Runtime.Parser
 			}
 			} finally { DebugExitSubRule(4); }
 
-			DebugLocation(31, 2);
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:31:2: ( '+' me2= multExpression | '-' me2= multExpression )*
+			DebugLocation(29, 2);
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:29:2: ( '+' me2= atom | '-' me2= atom )*
 			try { DebugEnterSubRule(5);
 			while (true)
 			{
 				int alt5=3;
-				try { DebugEnterDecision(5, decisionCanBacktrack[5]);
+				try { DebugEnterDecision(5, false);
 				int LA5_1 = input.LA(1);
 
-				if ((LA5_1==13))
+				if ((LA5_1==11))
 				{
 					alt5 = 1;
 				}
-				else if ((LA5_1==14))
+				else if ((LA5_1==12))
 				{
 					alt5 = 2;
 				}
@@ -442,32 +407,32 @@ public partial class GrammarOfCurrencyParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:31:3: '+' me2= multExpression
+					// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:29:3: '+' me2= atom
 					{
-					DebugLocation(31, 3);
-					Match(input,13,Follow._13_in_expr143); 
-					DebugLocation(31, 10);
-					PushFollow(Follow._multExpression_in_expr147);
-					me2=multExpression();
+					DebugLocation(29, 3);
+					Match(input,11,Follow._11_in_expr143); 
+					DebugLocation(29, 10);
+					PushFollow(Follow._atom_in_expr147);
+					me2=atom();
 					PopFollow();
 
-					DebugLocation(31, 26);
+					DebugLocation(29, 16);
 					value += me2;
 
 					}
 					break;
 				case 2:
 					DebugEnterAlt(2);
-					// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:32:3: '-' me2= multExpression
+					// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:30:3: '-' me2= atom
 					{
-					DebugLocation(32, 3);
-					Match(input,14,Follow._14_in_expr153); 
-					DebugLocation(32, 10);
-					PushFollow(Follow._multExpression_in_expr157);
-					me2=multExpression();
+					DebugLocation(30, 3);
+					Match(input,12,Follow._12_in_expr153); 
+					DebugLocation(30, 10);
+					PushFollow(Follow._atom_in_expr157);
+					me2=atom();
 					PopFollow();
 
-					DebugLocation(32, 26);
+					DebugLocation(30, 16);
 					value -= me2;
 
 					}
@@ -497,62 +462,59 @@ public partial class GrammarOfCurrencyParser : Antlr.Runtime.Parser
 			TraceOut("expr", 3);
 			LeaveRule("expr", 3);
 			LeaveRule_expr();
-	    }
-	 	DebugLocation(33, 1);
+		}
+		DebugLocation(31, 1);
 		} finally { DebugExitRule(GrammarFileName, "expr"); }
 		return value;
 
 	}
 	// $ANTLR end "expr"
 
-
-	[Conditional("ANTLR_TRACE")]
-	protected virtual void EnterRule_multExpression() {}
-	[Conditional("ANTLR_TRACE")]
-	protected virtual void LeaveRule_multExpression() {}
+	partial void EnterRule_multExpression();
+	partial void LeaveRule_multExpression();
 	// $ANTLR start "multExpression"
-	// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:35:1: multExpression returns [Cur value] : a1= atom ( '*' a2= atom | ( '/' | ':' ) a2= atom )* ;
+	// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:33:1: multExpression returns [Cur value] : a1= atom ( '*' a2= atom | ( '/' | ':' ) a2= atom )* ;
 	[GrammarRule("multExpression")]
 	private Cur multExpression()
 	{
 		EnterRule_multExpression();
 		EnterRule("multExpression", 4);
 		TraceIn("multExpression", 4);
-	    Cur value = default(Cur);
+		Cur value = default(Cur);
 
 
-	    Cur a1 = default(Cur);
-	    Cur a2 = default(Cur);
+		Cur a1 = default(Cur);
+		Cur a2 = default(Cur);
 
 		try { DebugEnterRule(GrammarFileName, "multExpression");
-		DebugLocation(35, 1);
+		DebugLocation(33, 1);
 		try
 		{
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:36:2: (a1= atom ( '*' a2= atom | ( '/' | ':' ) a2= atom )* )
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:34:2: (a1= atom ( '*' a2= atom | ( '/' | ':' ) a2= atom )* )
 			DebugEnterAlt(1);
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:36:4: a1= atom ( '*' a2= atom | ( '/' | ':' ) a2= atom )*
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:34:4: a1= atom ( '*' a2= atom | ( '/' | ':' ) a2= atom )*
 			{
-			DebugLocation(36, 6);
+			DebugLocation(34, 6);
 			PushFollow(Follow._atom_in_multExpression177);
 			a1=atom();
 			PopFollow();
 
-			DebugLocation(36, 12);
+			DebugLocation(34, 12);
 			value = a1;
-			DebugLocation(37, 2);
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:37:2: ( '*' a2= atom | ( '/' | ':' ) a2= atom )*
+			DebugLocation(35, 2);
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:35:2: ( '*' a2= atom | ( '/' | ':' ) a2= atom )*
 			try { DebugEnterSubRule(6);
 			while (true)
 			{
 				int alt6=3;
-				try { DebugEnterDecision(6, decisionCanBacktrack[6]);
+				try { DebugEnterDecision(6, false);
 				int LA6_1 = input.LA(1);
 
-				if ((LA6_1==12))
+				if ((LA6_1==10))
 				{
 					alt6 = 1;
 				}
-				else if (((LA6_1>=15 && LA6_1<=16)))
+				else if (((LA6_1>=13 && LA6_1<=14)))
 				{
 					alt6 = 2;
 				}
@@ -563,26 +525,26 @@ public partial class GrammarOfCurrencyParser : Antlr.Runtime.Parser
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:37:3: '*' a2= atom
+					// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:35:3: '*' a2= atom
 					{
-					DebugLocation(37, 3);
-					Match(input,12,Follow._12_in_multExpression183); 
-					DebugLocation(37, 9);
+					DebugLocation(35, 3);
+					Match(input,10,Follow._10_in_multExpression183); 
+					DebugLocation(35, 9);
 					PushFollow(Follow._atom_in_multExpression187);
 					a2=atom();
 					PopFollow();
 
-					DebugLocation(37, 15);
+					DebugLocation(35, 15);
 					value *= a2;
 
 					}
 					break;
 				case 2:
 					DebugEnterAlt(2);
-					// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:38:4: ( '/' | ':' ) a2= atom
+					// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:36:4: ( '/' | ':' ) a2= atom
 					{
-					DebugLocation(38, 4);
-					if ((input.LA(1)>=15 && input.LA(1)<=16))
+					DebugLocation(36, 4);
+					if ((input.LA(1)>=13 && input.LA(1)<=14))
 					{
 						input.Consume();
 						state.errorRecovery=false;
@@ -594,12 +556,12 @@ public partial class GrammarOfCurrencyParser : Antlr.Runtime.Parser
 						throw mse;
 					}
 
-					DebugLocation(38, 16);
+					DebugLocation(36, 16);
 					PushFollow(Follow._atom_in_multExpression202);
 					a2=atom();
 					PopFollow();
 
-					DebugLocation(38, 22);
+					DebugLocation(36, 22);
 					value /= a2;
 
 					}
@@ -629,160 +591,75 @@ public partial class GrammarOfCurrencyParser : Antlr.Runtime.Parser
 			TraceOut("multExpression", 4);
 			LeaveRule("multExpression", 4);
 			LeaveRule_multExpression();
-	    }
-	 	DebugLocation(40, 1);
+		}
+		DebugLocation(38, 1);
 		} finally { DebugExitRule(GrammarFileName, "multExpression"); }
 		return value;
 
 	}
 	// $ANTLR end "multExpression"
 
-
-	[Conditional("ANTLR_TRACE")]
-	protected virtual void EnterRule_atom() {}
-	[Conditional("ANTLR_TRACE")]
-	protected virtual void LeaveRule_atom() {}
+	partial void EnterRule_atom();
+	partial void LeaveRule_atom();
 	// $ANTLR start "atom"
-	// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:42:1: atom returns [Cur value] : ( CURRENCY | FLOAT | ( '(' a1= expr ')' | '{' a1= expr '}' ) );
+	// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:40:1: atom returns [Cur value] : ( CURRENCY | FLOAT );
 	[GrammarRule("atom")]
 	private Cur atom()
 	{
 		EnterRule_atom();
 		EnterRule("atom", 5);
 		TraceIn("atom", 5);
-	    Cur value = default(Cur);
+		Cur value = default(Cur);
 
 
-	    IToken CURRENCY3 = default(IToken);
-	    IToken FLOAT4 = default(IToken);
-	    Cur a1 = default(Cur);
+		IToken CURRENCY3 = default(IToken);
+		IToken FLOAT4 = default(IToken);
 
 		try { DebugEnterRule(GrammarFileName, "atom");
-		DebugLocation(42, 1);
+		DebugLocation(40, 1);
 		try
 		{
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:43:2: ( CURRENCY | FLOAT | ( '(' a1= expr ')' | '{' a1= expr '}' ) )
-			int alt8=3;
-			try { DebugEnterDecision(8, decisionCanBacktrack[8]);
-			switch (input.LA(1))
-			{
-			case CURRENCY:
-				{
-				alt8 = 1;
-				}
-				break;
-			case FLOAT:
-				{
-				alt8 = 2;
-				}
-				break;
-			case 10:
-			case 18:
-				{
-				alt8 = 3;
-				}
-				break;
-			default:
-				{
-					NoViableAltException nvae = new NoViableAltException("", 8, 0, input, 1);
-					DebugRecognitionException(nvae);
-					throw nvae;
-				}
-			}
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:41:2: ( CURRENCY | FLOAT )
+			int alt7=2;
+			try { DebugEnterDecision(7, false);
+			int LA7_1 = input.LA(1);
 
-			} finally { DebugExitDecision(8); }
-			switch (alt8)
+			if ((LA7_1==CURRENCY))
+			{
+				alt7 = 1;
+			}
+			else if ((LA7_1==FLOAT))
+			{
+				alt7 = 2;
+			}
+			else
+			{
+				NoViableAltException nvae = new NoViableAltException("", 7, 0, input, 1);
+				DebugRecognitionException(nvae);
+				throw nvae;
+			}
+			} finally { DebugExitDecision(7); }
+			switch (alt7)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:43:4: CURRENCY
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:41:4: CURRENCY
 				{
-				DebugLocation(43, 4);
+				DebugLocation(41, 4);
 				CURRENCY3=(IToken)Match(input,CURRENCY,Follow._CURRENCY_in_atom222); 
-				DebugLocation(43, 13);
+				DebugLocation(41, 13);
 				value = new Cur((CURRENCY3!=null?CURRENCY3.Text:default(string)));
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:44:4: FLOAT
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:42:4: FLOAT
 				{
-				DebugLocation(44, 4);
+				DebugLocation(42, 4);
 				FLOAT4=(IToken)Match(input,FLOAT,Follow._FLOAT_in_atom229); 
-				DebugLocation(44, 10);
+				DebugLocation(42, 10);
 				value = new Cur(double.Parse((FLOAT4!=null?FLOAT4.Text:default(string))));
-
-				}
-				break;
-			case 3:
-				DebugEnterAlt(3);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:45:4: ( '(' a1= expr ')' | '{' a1= expr '}' )
-				{
-				DebugLocation(45, 4);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:45:4: ( '(' a1= expr ')' | '{' a1= expr '}' )
-				int alt7=2;
-				try { DebugEnterSubRule(7);
-				try { DebugEnterDecision(7, decisionCanBacktrack[7]);
-				int LA7_1 = input.LA(1);
-
-				if ((LA7_1==10))
-				{
-					alt7 = 1;
-				}
-				else if ((LA7_1==18))
-				{
-					alt7 = 2;
-				}
-
-				else
-				{
-					NoViableAltException nvae = new NoViableAltException("", 7, 0, input, 1);
-					DebugRecognitionException(nvae);
-					throw nvae;
-				}
-
-				} finally { DebugExitDecision(7); }
-				switch (alt7)
-				{
-				case 1:
-					DebugEnterAlt(1);
-					// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:45:5: '(' a1= expr ')'
-					{
-					DebugLocation(45, 5);
-					Match(input,10,Follow._10_in_atom237); 
-					DebugLocation(45, 12);
-					PushFollow(Follow._expr_in_atom243);
-					a1=expr();
-					PopFollow();
-
-					DebugLocation(45, 19);
-					Match(input,11,Follow._11_in_atom245); 
-
-					}
-					break;
-				case 2:
-					DebugEnterAlt(2);
-					// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfCurrency.g:45:24: '{' a1= expr '}'
-					{
-					DebugLocation(45, 24);
-					Match(input,18,Follow._18_in_atom248); 
-					DebugLocation(45, 31);
-					PushFollow(Follow._expr_in_atom254);
-					a1=expr();
-					PopFollow();
-
-					DebugLocation(45, 38);
-					Match(input,19,Follow._19_in_atom256); 
-
-					}
-					break;
-
-				}
-				} finally { DebugExitSubRule(7); }
-
-				DebugLocation(46, 3);
-				value = a1;
 
 				}
 				break;
@@ -799,8 +676,8 @@ public partial class GrammarOfCurrencyParser : Antlr.Runtime.Parser
 			TraceOut("atom", 5);
 			LeaveRule("atom", 5);
 			LeaveRule_atom();
-	    }
-	 	DebugLocation(47, 1);
+		}
+		DebugLocation(45, 1);
 		} finally { DebugExitRule(GrammarFileName, "atom"); }
 		return value;
 
@@ -813,32 +690,26 @@ public partial class GrammarOfCurrencyParser : Antlr.Runtime.Parser
 	private static class Follow
 	{
 		public static readonly BitSet _statement_in_calc52 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _expr_in_statement72 = new BitSet(new ulong[]{0x20100UL});
-		public static readonly BitSet _17_in_statement77 = new BitSet(new ulong[]{0x80UL});
+		public static readonly BitSet _expr_in_statement72 = new BitSet(new ulong[]{0x8100UL});
+		public static readonly BitSet _15_in_statement77 = new BitSet(new ulong[]{0x80UL});
 		public static readonly BitSet _ID_in_statement79 = new BitSet(new ulong[]{0x100UL});
-		public static readonly BitSet _17_in_statement88 = new BitSet(new ulong[]{0x100UL});
-		public static readonly BitSet _NEWLINE_in_statement99 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _15_in_statement88 = new BitSet(new ulong[]{0x100UL});
+		public static readonly BitSet _NEWLINE_in_statement98 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _NEWLINE_in_statement105 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _14_in_expr122 = new BitSet(new ulong[]{0x40450UL});
-		public static readonly BitSet _multExpression_in_expr125 = new BitSet(new ulong[]{0x6002UL});
-		public static readonly BitSet _multExpression_in_expr136 = new BitSet(new ulong[]{0x6002UL});
-		public static readonly BitSet _13_in_expr143 = new BitSet(new ulong[]{0x40450UL});
-		public static readonly BitSet _multExpression_in_expr147 = new BitSet(new ulong[]{0x6002UL});
-		public static readonly BitSet _14_in_expr153 = new BitSet(new ulong[]{0x40450UL});
-		public static readonly BitSet _multExpression_in_expr157 = new BitSet(new ulong[]{0x6002UL});
-		public static readonly BitSet _atom_in_multExpression177 = new BitSet(new ulong[]{0x19002UL});
-		public static readonly BitSet _12_in_multExpression183 = new BitSet(new ulong[]{0x40450UL});
-		public static readonly BitSet _atom_in_multExpression187 = new BitSet(new ulong[]{0x19002UL});
-		public static readonly BitSet _set_in_multExpression194 = new BitSet(new ulong[]{0x40450UL});
-		public static readonly BitSet _atom_in_multExpression202 = new BitSet(new ulong[]{0x19002UL});
+		public static readonly BitSet _12_in_expr122 = new BitSet(new ulong[]{0x50UL});
+		public static readonly BitSet _atom_in_expr125 = new BitSet(new ulong[]{0x1802UL});
+		public static readonly BitSet _atom_in_expr136 = new BitSet(new ulong[]{0x1802UL});
+		public static readonly BitSet _11_in_expr143 = new BitSet(new ulong[]{0x50UL});
+		public static readonly BitSet _atom_in_expr147 = new BitSet(new ulong[]{0x1802UL});
+		public static readonly BitSet _12_in_expr153 = new BitSet(new ulong[]{0x50UL});
+		public static readonly BitSet _atom_in_expr157 = new BitSet(new ulong[]{0x1802UL});
+		public static readonly BitSet _atom_in_multExpression177 = new BitSet(new ulong[]{0x6402UL});
+		public static readonly BitSet _10_in_multExpression183 = new BitSet(new ulong[]{0x50UL});
+		public static readonly BitSet _atom_in_multExpression187 = new BitSet(new ulong[]{0x6402UL});
+		public static readonly BitSet _set_in_multExpression194 = new BitSet(new ulong[]{0x50UL});
+		public static readonly BitSet _atom_in_multExpression202 = new BitSet(new ulong[]{0x6402UL});
 		public static readonly BitSet _CURRENCY_in_atom222 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _FLOAT_in_atom229 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _10_in_atom237 = new BitSet(new ulong[]{0x44450UL});
-		public static readonly BitSet _expr_in_atom243 = new BitSet(new ulong[]{0x800UL});
-		public static readonly BitSet _11_in_atom245 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _18_in_atom248 = new BitSet(new ulong[]{0x44450UL});
-		public static readonly BitSet _expr_in_atom254 = new BitSet(new ulong[]{0x80000UL});
-		public static readonly BitSet _19_in_atom256 = new BitSet(new ulong[]{0x2UL});
 	}
 	#endregion Follow sets
 }

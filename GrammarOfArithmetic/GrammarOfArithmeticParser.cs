@@ -8,7 +8,7 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-// $ANTLR 3.5.1 C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g 2016-12-08 13:20:19
+// $ANTLR 3.5.1 C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g 2016-12-09 10:35:55
 
 // The variable 'variable' is assigned but its value is never used.
 #pragma warning disable 168, 219
@@ -101,7 +101,7 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 		{
 			false, // invalid decision
 			false, false, false, false, false, false, false, false, false, false, 
-			false, false, false, false, false, false, false, false
+			false, false, false, false, false, false, false
 		};
 	#else
 	private static readonly bool[] decisionCanBacktrack = new bool[0];
@@ -120,7 +120,7 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 	public override string GrammarFileName { get { return "C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g"; } }
 
 
-		private Hashtable memory = new Hashtable();
+		private static Hashtable memory = new Hashtable();
 		
 		private double Factorial(double n)
 	        {
@@ -256,7 +256,7 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 	[Conditional("ANTLR_TRACE")]
 	protected virtual void LeaveRule_statement() {}
 	// $ANTLR start "statement"
-	// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:41:1: statement returns [string value] : ( expr ( '=' )? NEWLINE | ID '=' ( FLOAT |a1= expr ) NEWLINE | NEWLINE );
+	// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:41:1: statement returns [string value] : ( expr ( '=' )? NEWLINE | ID '=' a1= expr NEWLINE | NEWLINE );
 	[GrammarRule("statement")]
 	private string statement()
 	{
@@ -266,8 +266,7 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 	    string value = default(string);
 
 
-	    IToken FLOAT3 = default(IToken);
-	    IToken ID4 = default(IToken);
+	    IToken ID3 = default(IToken);
 	    double a1 = default(double);
 	    double expr2 = default(double);
 
@@ -275,9 +274,9 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 		DebugLocation(41, 1);
 		try
 		{
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:42:2: ( expr ( '=' )? NEWLINE | ID '=' ( FLOAT |a1= expr ) NEWLINE | NEWLINE )
-			int alt4=3;
-			try { DebugEnterDecision(4, decisionCanBacktrack[4]);
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:42:2: ( expr ( '=' )? NEWLINE | ID '=' a1= expr NEWLINE | NEWLINE )
+			int alt3=3;
+			try { DebugEnterDecision(3, decisionCanBacktrack[3]);
 			switch (input.LA(1))
 			{
 			case FLOAT:
@@ -318,42 +317,42 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 			case 58:
 			case 59:
 				{
-				alt4 = 1;
+				alt3 = 1;
 				}
 				break;
 			case ID:
 				{
-				int LA4_2 = input.LA(2);
+				int LA3_2 = input.LA(2);
 
-				if ((LA4_2==20))
+				if ((LA3_2==20))
 				{
-					int LA4_3 = input.LA(3);
+					int LA3_3 = input.LA(3);
 
-					if ((LA4_3==FLOAT||LA4_3==ID||LA4_3==12||LA4_3==16||LA4_3==22||(LA4_3>=25 && LA4_3<=36)||(LA4_3>=38 && LA4_3<=45)||(LA4_3>=47 && LA4_3<=59)))
+					if ((LA3_3==FLOAT||LA3_3==ID||LA3_3==12||LA3_3==16||LA3_3==22||(LA3_3>=25 && LA3_3<=36)||(LA3_3>=38 && LA3_3<=45)||(LA3_3>=47 && LA3_3<=59)))
 					{
-						alt4 = 2;
+						alt3 = 2;
 					}
-					else if ((LA4_3==NEWLINE))
+					else if ((LA3_3==NEWLINE))
 					{
-						alt4 = 1;
+						alt3 = 1;
 					}
 
 					else
 					{
-						NoViableAltException nvae = new NoViableAltException("", 4, 4, input, 3);
+						NoViableAltException nvae = new NoViableAltException("", 3, 4, input, 3);
 						DebugRecognitionException(nvae);
 						throw nvae;
 					}
 
 				}
-				else if ((LA4_2==NEWLINE||(LA4_2>=10 && LA4_2<=11)||(LA4_2>=14 && LA4_2<=19)||LA4_2==21||LA4_2==24||LA4_2==37||LA4_2==46))
+				else if ((LA3_2==NEWLINE||(LA3_2>=10 && LA3_2<=11)||(LA3_2>=14 && LA3_2<=19)||LA3_2==21||LA3_2==24||LA3_2==37||LA3_2==46))
 				{
-					alt4 = 1;
+					alt3 = 1;
 				}
 
 				else
 				{
-					NoViableAltException nvae = new NoViableAltException("", 4, 2, input, 2);
+					NoViableAltException nvae = new NoViableAltException("", 3, 2, input, 2);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
@@ -362,19 +361,19 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 				break;
 			case NEWLINE:
 				{
-				alt4 = 3;
+				alt3 = 3;
 				}
 				break;
 			default:
 				{
-					NoViableAltException nvae = new NoViableAltException("", 4, 0, input, 1);
+					NoViableAltException nvae = new NoViableAltException("", 3, 0, input, 1);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
 			}
 
-			} finally { DebugExitDecision(4); }
-			switch (alt4)
+			} finally { DebugExitDecision(3); }
+			switch (alt3)
 			{
 			case 1:
 				DebugEnterAlt(1);
@@ -425,83 +424,35 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:43:4: ID '=' ( FLOAT |a1= expr ) NEWLINE
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:43:4: ID '=' a1= expr NEWLINE
 				{
 				DebugLocation(43, 4);
-				ID4=(IToken)Match(input,ID,Follow._ID_in_statement92); 
+				ID3=(IToken)Match(input,ID,Follow._ID_in_statement92); 
 				DebugLocation(43, 7);
 				Match(input,20,Follow._20_in_statement94); 
+				DebugLocation(43, 14);
+				PushFollow(Follow._expr_in_statement100);
+				a1=expr();
+				PopFollow();
+
+				DebugLocation(43, 21);
+				value = '=' + a1.ToString();
+				DebugLocation(43, 60);
+				Match(input,NEWLINE,Follow._NEWLINE_in_statement104); 
 				DebugLocation(44, 3);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:44:3: ( FLOAT |a1= expr )
-				int alt3=2;
-				try { DebugEnterSubRule(3);
-				try { DebugEnterDecision(3, decisionCanBacktrack[3]);
-				int LA3_1 = input.LA(1);
-
-				if ((LA3_1==FLOAT))
-				{
-					alt3 = 1;
-				}
-				else if ((LA3_1==ID||LA3_1==12||LA3_1==16||LA3_1==22||(LA3_1>=25 && LA3_1<=36)||(LA3_1>=38 && LA3_1<=45)||(LA3_1>=47 && LA3_1<=59)))
-				{
-					alt3 = 2;
-				}
-
-				else
-				{
-					NoViableAltException nvae = new NoViableAltException("", 3, 0, input, 1);
-					DebugRecognitionException(nvae);
-					throw nvae;
-				}
-
-				} finally { DebugExitDecision(3); }
-				switch (alt3)
-				{
-				case 1:
-					DebugEnterAlt(1);
-					// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:44:4: FLOAT
-					{
-					DebugLocation(44, 4);
-					FLOAT3=(IToken)Match(input,FLOAT,Follow._FLOAT_in_statement100); 
-					DebugLocation(44, 10);
-					value = ""; a1 = double.Parse((FLOAT3!=null?FLOAT3.Text:default(string)));
-
-					}
-					break;
-				case 2:
-					DebugEnterAlt(2);
-					// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:45:5: a1= expr
-					{
-					DebugLocation(45, 8);
-					PushFollow(Follow._expr_in_statement112);
-					a1=expr();
-					PopFollow();
-
-					DebugLocation(45, 15);
-					value = '=' + a1.ToString();
-
-					}
-					break;
-
-				}
-				} finally { DebugExitSubRule(3); }
-
-				DebugLocation(46, 5);
-				Match(input,NEWLINE,Follow._NEWLINE_in_statement120); 
-				DebugLocation(47, 3);
-				 if(!memory.ContainsKey((ID4!=null?ID4.Text:default(string))))
-							memory.Add((ID4!=null?ID4.Text:default(string)), a1);
+				 if(!memory.ContainsKey((ID3!=null?ID3.Text:default(string))))
+							memory.Add((ID3!=null?ID3.Text:default(string)), a1);
 						  else
-							memory[(ID4!=null?ID4.Text:default(string))] = a1;
+							memory[(ID3!=null?ID3.Text:default(string))] = a1;
 
 				}
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:51:4: NEWLINE
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:48:4: NEWLINE
 				{
-				DebugLocation(51, 4);
-				Match(input,NEWLINE,Follow._NEWLINE_in_statement130); 
+				DebugLocation(48, 4);
+				Match(input,NEWLINE,Follow._NEWLINE_in_statement114); 
 
 				}
 				break;
@@ -519,7 +470,7 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 			LeaveRule("statement", 2);
 			LeaveRule_statement();
 	    }
-	 	DebugLocation(52, 1);
+	 	DebugLocation(49, 1);
 		} finally { DebugExitRule(GrammarFileName, "statement"); }
 		return value;
 
@@ -532,7 +483,7 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 	[Conditional("ANTLR_TRACE")]
 	protected virtual void LeaveRule_expr() {}
 	// $ANTLR start "expr"
-	// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:55:1: expr returns [double value] : ( '-' me1= multExpression |me1= multExpression ) ( '+' me2= multExpression | '-' me2= multExpression )* ;
+	// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:52:1: expr returns [double value] : ( '-' me1= multExpression |me1= multExpression ) ( '+' me2= multExpression | '-' me2= multExpression )* ;
 	[GrammarRule("expr")]
 	private double expr()
 	{
@@ -546,124 +497,364 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 	    double me2 = default(double);
 
 		try { DebugEnterRule(GrammarFileName, "expr");
-		DebugLocation(55, 1);
+		DebugLocation(52, 1);
 		try
 		{
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:56:2: ( ( '-' me1= multExpression |me1= multExpression ) ( '+' me2= multExpression | '-' me2= multExpression )* )
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:53:2: ( ( '-' me1= multExpression |me1= multExpression ) ( '+' me2= multExpression | '-' me2= multExpression )* )
 			DebugEnterAlt(1);
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:56:4: ( '-' me1= multExpression |me1= multExpression ) ( '+' me2= multExpression | '-' me2= multExpression )*
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:53:4: ( '-' me1= multExpression |me1= multExpression ) ( '+' me2= multExpression | '-' me2= multExpression )*
 			{
-			DebugLocation(56, 4);
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:56:4: ( '-' me1= multExpression |me1= multExpression )
-			int alt5=2;
-			try { DebugEnterSubRule(5);
-			try { DebugEnterDecision(5, decisionCanBacktrack[5]);
-			int LA5_1 = input.LA(1);
+			DebugLocation(53, 4);
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:53:4: ( '-' me1= multExpression |me1= multExpression )
+			int alt4=2;
+			try { DebugEnterSubRule(4);
+			try { DebugEnterDecision(4, decisionCanBacktrack[4]);
+			int LA4_1 = input.LA(1);
 
-			if ((LA5_1==16))
+			if ((LA4_1==16))
 			{
-				alt5 = 1;
+				alt4 = 1;
 			}
-			else if ((LA5_1==FLOAT||LA5_1==ID||LA5_1==12||LA5_1==22||(LA5_1>=25 && LA5_1<=36)||(LA5_1>=38 && LA5_1<=45)||(LA5_1>=47 && LA5_1<=59)))
+			else if ((LA4_1==FLOAT||LA4_1==ID||LA4_1==12||LA4_1==22||(LA4_1>=25 && LA4_1<=36)||(LA4_1>=38 && LA4_1<=45)||(LA4_1>=47 && LA4_1<=59)))
 			{
-				alt5 = 2;
+				alt4 = 2;
 			}
 
 			else
 			{
-				NoViableAltException nvae = new NoViableAltException("", 5, 0, input, 1);
+				NoViableAltException nvae = new NoViableAltException("", 4, 0, input, 1);
 				DebugRecognitionException(nvae);
 				throw nvae;
 			}
 
-			} finally { DebugExitDecision(5); }
-			switch (alt5)
+			} finally { DebugExitDecision(4); }
+			switch (alt4)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:56:5: '-' me1= multExpression
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:53:5: '-' me1= multExpression
 				{
-				DebugLocation(56, 5);
-				Match(input,16,Follow._16_in_expr147); 
-				DebugLocation(56, 11);
-				PushFollow(Follow._multExpression_in_expr150);
+				DebugLocation(53, 5);
+				Match(input,16,Follow._16_in_expr131); 
+				DebugLocation(53, 11);
+				PushFollow(Follow._multExpression_in_expr134);
 				me1=multExpression();
 				PopFollow();
 
-				DebugLocation(56, 27);
+				DebugLocation(53, 27);
 				value = -me1;
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:57:5: me1= multExpression
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:54:5: me1= multExpression
 				{
-				DebugLocation(57, 8);
-				PushFollow(Follow._multExpression_in_expr161);
+				DebugLocation(54, 8);
+				PushFollow(Follow._multExpression_in_expr145);
 				me1=multExpression();
 				PopFollow();
 
-				DebugLocation(57, 24);
+				DebugLocation(54, 24);
 				value = me1;
 
 				}
 				break;
 
 			}
-			} finally { DebugExitSubRule(5); }
+			} finally { DebugExitSubRule(4); }
 
-			DebugLocation(58, 2);
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:58:2: ( '+' me2= multExpression | '-' me2= multExpression )*
-			try { DebugEnterSubRule(6);
+			DebugLocation(55, 2);
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:55:2: ( '+' me2= multExpression | '-' me2= multExpression )*
+			try { DebugEnterSubRule(5);
 			while (true)
 			{
-				int alt6=3;
-				try { DebugEnterDecision(6, decisionCanBacktrack[6]);
-				int LA6_1 = input.LA(1);
+				int alt5=3;
+				try { DebugEnterDecision(5, decisionCanBacktrack[5]);
+				int LA5_1 = input.LA(1);
 
-				if ((LA6_1==15))
+				if ((LA5_1==15))
 				{
-					alt6 = 1;
+					alt5 = 1;
 				}
-				else if ((LA6_1==16))
+				else if ((LA5_1==16))
 				{
-					alt6 = 2;
+					alt5 = 2;
 				}
 
 
-				} finally { DebugExitDecision(6); }
-				switch ( alt6 )
+				} finally { DebugExitDecision(5); }
+				switch ( alt5 )
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:58:3: '+' me2= multExpression
+					// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:55:3: '+' me2= multExpression
 					{
-					DebugLocation(58, 3);
-					Match(input,15,Follow._15_in_expr168); 
-					DebugLocation(58, 10);
-					PushFollow(Follow._multExpression_in_expr172);
+					DebugLocation(55, 3);
+					Match(input,15,Follow._15_in_expr152); 
+					DebugLocation(55, 10);
+					PushFollow(Follow._multExpression_in_expr156);
 					me2=multExpression();
 					PopFollow();
 
-					DebugLocation(58, 26);
+					DebugLocation(55, 26);
 					value += me2;
 
 					}
 					break;
 				case 2:
 					DebugEnterAlt(2);
-					// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:59:3: '-' me2= multExpression
+					// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:56:3: '-' me2= multExpression
 					{
-					DebugLocation(59, 3);
-					Match(input,16,Follow._16_in_expr178); 
-					DebugLocation(59, 10);
-					PushFollow(Follow._multExpression_in_expr182);
+					DebugLocation(56, 3);
+					Match(input,16,Follow._16_in_expr162); 
+					DebugLocation(56, 10);
+					PushFollow(Follow._multExpression_in_expr166);
 					me2=multExpression();
 					PopFollow();
 
-					DebugLocation(59, 26);
+					DebugLocation(56, 26);
 					value -= me2;
+
+					}
+					break;
+
+				default:
+					goto loop5;
+				}
+			}
+
+			loop5:
+				;
+
+			} finally { DebugExitSubRule(5); }
+
+
+			}
+
+		}
+		catch (RecognitionException re)
+		{
+			ReportError(re);
+			Recover(input,re);
+		}
+		finally
+		{
+			TraceOut("expr", 3);
+			LeaveRule("expr", 3);
+			LeaveRule_expr();
+	    }
+	 	DebugLocation(57, 1);
+		} finally { DebugExitRule(GrammarFileName, "expr"); }
+		return value;
+
+	}
+	// $ANTLR end "expr"
+
+
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void EnterRule_multExpression() {}
+	[Conditional("ANTLR_TRACE")]
+	protected virtual void LeaveRule_multExpression() {}
+	// $ANTLR start "multExpression"
+	// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:59:1: multExpression returns [double value] : a1= fanc ( '^' a2= fanc | '*' a2= fanc | ( '/' | ':' ) a2= fanc | 'div' a2= fanc | 'mod' a2= fanc | '>' a2= fanc | '<' a2= fanc )* ;
+	[GrammarRule("multExpression")]
+	private double multExpression()
+	{
+		EnterRule_multExpression();
+		EnterRule("multExpression", 4);
+		TraceIn("multExpression", 4);
+	    double value = default(double);
+
+
+	    double a1 = default(double);
+	    double a2 = default(double);
+
+		try { DebugEnterRule(GrammarFileName, "multExpression");
+		DebugLocation(59, 1);
+		try
+		{
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:60:2: (a1= fanc ( '^' a2= fanc | '*' a2= fanc | ( '/' | ':' ) a2= fanc | 'div' a2= fanc | 'mod' a2= fanc | '>' a2= fanc | '<' a2= fanc )* )
+			DebugEnterAlt(1);
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:60:4: a1= fanc ( '^' a2= fanc | '*' a2= fanc | ( '/' | ':' ) a2= fanc | 'div' a2= fanc | 'mod' a2= fanc | '>' a2= fanc | '<' a2= fanc )*
+			{
+			DebugLocation(60, 6);
+			PushFollow(Follow._fanc_in_multExpression186);
+			a1=fanc();
+			PopFollow();
+
+			DebugLocation(60, 12);
+			value = a1;
+			DebugLocation(61, 2);
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:61:2: ( '^' a2= fanc | '*' a2= fanc | ( '/' | ':' ) a2= fanc | 'div' a2= fanc | 'mod' a2= fanc | '>' a2= fanc | '<' a2= fanc )*
+			try { DebugEnterSubRule(6);
+			while (true)
+			{
+				int alt6=8;
+				try { DebugEnterDecision(6, decisionCanBacktrack[6]);
+				switch (input.LA(1))
+				{
+				case 24:
+					{
+					alt6 = 1;
+					}
+					break;
+				case 14:
+					{
+					alt6 = 2;
+					}
+					break;
+				case 17:
+				case 18:
+					{
+					alt6 = 3;
+					}
+					break;
+				case 37:
+					{
+					alt6 = 4;
+					}
+					break;
+				case 46:
+					{
+					alt6 = 5;
+					}
+					break;
+				case 21:
+					{
+					alt6 = 6;
+					}
+					break;
+				case 19:
+					{
+					alt6 = 7;
+					}
+					break;
+				}
+
+				} finally { DebugExitDecision(6); }
+				switch ( alt6 )
+				{
+				case 1:
+					DebugEnterAlt(1);
+					// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:61:3: '^' a2= fanc
+					{
+					DebugLocation(61, 3);
+					Match(input,24,Follow._24_in_multExpression192); 
+					DebugLocation(61, 9);
+					PushFollow(Follow._fanc_in_multExpression196);
+					a2=fanc();
+					PopFollow();
+
+					DebugLocation(61, 15);
+					value = Math.Pow(value, a2);
+
+					}
+					break;
+				case 2:
+					DebugEnterAlt(2);
+					// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:62:4: '*' a2= fanc
+					{
+					DebugLocation(62, 4);
+					Match(input,14,Follow._14_in_multExpression203); 
+					DebugLocation(62, 10);
+					PushFollow(Follow._fanc_in_multExpression207);
+					a2=fanc();
+					PopFollow();
+
+					DebugLocation(62, 16);
+					value *= a2;
+
+					}
+					break;
+				case 3:
+					DebugEnterAlt(3);
+					// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:63:4: ( '/' | ':' ) a2= fanc
+					{
+					DebugLocation(63, 4);
+					if ((input.LA(1)>=17 && input.LA(1)<=18))
+					{
+						input.Consume();
+						state.errorRecovery=false;
+					}
+					else
+					{
+						MismatchedSetException mse = new MismatchedSetException(null,input);
+						DebugRecognitionException(mse);
+						throw mse;
+					}
+
+					DebugLocation(63, 16);
+					PushFollow(Follow._fanc_in_multExpression222);
+					a2=fanc();
+					PopFollow();
+
+					DebugLocation(63, 22);
+					value /= a2;
+
+					}
+					break;
+				case 4:
+					DebugEnterAlt(4);
+					// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:64:5: 'div' a2= fanc
+					{
+					DebugLocation(64, 5);
+					Match(input,37,Follow._37_in_multExpression230); 
+					DebugLocation(64, 14);
+					PushFollow(Follow._fanc_in_multExpression236);
+					a2=fanc();
+					PopFollow();
+
+					DebugLocation(64, 21);
+					value = (int)a1/(int)a2;
+
+					}
+					break;
+				case 5:
+					DebugEnterAlt(5);
+					// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:65:5: 'mod' a2= fanc
+					{
+					DebugLocation(65, 5);
+					Match(input,46,Follow._46_in_multExpression244); 
+					DebugLocation(65, 14);
+					PushFollow(Follow._fanc_in_multExpression250);
+					a2=fanc();
+					PopFollow();
+
+					DebugLocation(65, 21);
+					value = (int)a1%(int)a2;
+
+					}
+					break;
+				case 6:
+					DebugEnterAlt(6);
+					// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:66:5: '>' a2= fanc
+					{
+					DebugLocation(66, 5);
+					Match(input,21,Follow._21_in_multExpression258); 
+					DebugLocation(66, 12);
+					PushFollow(Follow._fanc_in_multExpression264);
+					a2=fanc();
+					PopFollow();
+
+					DebugLocation(66, 19);
+					value = Math.Max(a1, a2);
+
+					}
+					break;
+				case 7:
+					DebugEnterAlt(7);
+					// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:67:5: '<' a2= fanc
+					{
+					DebugLocation(67, 5);
+					Match(input,19,Follow._19_in_multExpression272); 
+					DebugLocation(67, 12);
+					PushFollow(Follow._fanc_in_multExpression278);
+					a2=fanc();
+					PopFollow();
+
+					DebugLocation(67, 19);
+					value = Math.Min(a1, a2);
 
 					}
 					break;
@@ -689,251 +880,11 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 		}
 		finally
 		{
-			TraceOut("expr", 3);
-			LeaveRule("expr", 3);
-			LeaveRule_expr();
-	    }
-	 	DebugLocation(60, 1);
-		} finally { DebugExitRule(GrammarFileName, "expr"); }
-		return value;
-
-	}
-	// $ANTLR end "expr"
-
-
-	[Conditional("ANTLR_TRACE")]
-	protected virtual void EnterRule_multExpression() {}
-	[Conditional("ANTLR_TRACE")]
-	protected virtual void LeaveRule_multExpression() {}
-	// $ANTLR start "multExpression"
-	// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:62:1: multExpression returns [double value] : a1= fanc ( '^' a2= fanc | '*' a2= fanc | ( '/' | ':' ) a2= fanc | 'div' a2= fanc | 'mod' a2= fanc | '>' a2= fanc | '<' a2= fanc )* ;
-	[GrammarRule("multExpression")]
-	private double multExpression()
-	{
-		EnterRule_multExpression();
-		EnterRule("multExpression", 4);
-		TraceIn("multExpression", 4);
-	    double value = default(double);
-
-
-	    double a1 = default(double);
-	    double a2 = default(double);
-
-		try { DebugEnterRule(GrammarFileName, "multExpression");
-		DebugLocation(62, 1);
-		try
-		{
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:63:2: (a1= fanc ( '^' a2= fanc | '*' a2= fanc | ( '/' | ':' ) a2= fanc | 'div' a2= fanc | 'mod' a2= fanc | '>' a2= fanc | '<' a2= fanc )* )
-			DebugEnterAlt(1);
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:63:4: a1= fanc ( '^' a2= fanc | '*' a2= fanc | ( '/' | ':' ) a2= fanc | 'div' a2= fanc | 'mod' a2= fanc | '>' a2= fanc | '<' a2= fanc )*
-			{
-			DebugLocation(63, 6);
-			PushFollow(Follow._fanc_in_multExpression202);
-			a1=fanc();
-			PopFollow();
-
-			DebugLocation(63, 12);
-			value = a1;
-			DebugLocation(64, 2);
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:64:2: ( '^' a2= fanc | '*' a2= fanc | ( '/' | ':' ) a2= fanc | 'div' a2= fanc | 'mod' a2= fanc | '>' a2= fanc | '<' a2= fanc )*
-			try { DebugEnterSubRule(7);
-			while (true)
-			{
-				int alt7=8;
-				try { DebugEnterDecision(7, decisionCanBacktrack[7]);
-				switch (input.LA(1))
-				{
-				case 24:
-					{
-					alt7 = 1;
-					}
-					break;
-				case 14:
-					{
-					alt7 = 2;
-					}
-					break;
-				case 17:
-				case 18:
-					{
-					alt7 = 3;
-					}
-					break;
-				case 37:
-					{
-					alt7 = 4;
-					}
-					break;
-				case 46:
-					{
-					alt7 = 5;
-					}
-					break;
-				case 21:
-					{
-					alt7 = 6;
-					}
-					break;
-				case 19:
-					{
-					alt7 = 7;
-					}
-					break;
-				}
-
-				} finally { DebugExitDecision(7); }
-				switch ( alt7 )
-				{
-				case 1:
-					DebugEnterAlt(1);
-					// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:64:3: '^' a2= fanc
-					{
-					DebugLocation(64, 3);
-					Match(input,24,Follow._24_in_multExpression208); 
-					DebugLocation(64, 9);
-					PushFollow(Follow._fanc_in_multExpression212);
-					a2=fanc();
-					PopFollow();
-
-					DebugLocation(64, 15);
-					value = Math.Pow(value, a2);
-
-					}
-					break;
-				case 2:
-					DebugEnterAlt(2);
-					// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:65:4: '*' a2= fanc
-					{
-					DebugLocation(65, 4);
-					Match(input,14,Follow._14_in_multExpression219); 
-					DebugLocation(65, 10);
-					PushFollow(Follow._fanc_in_multExpression223);
-					a2=fanc();
-					PopFollow();
-
-					DebugLocation(65, 16);
-					value *= a2;
-
-					}
-					break;
-				case 3:
-					DebugEnterAlt(3);
-					// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:66:4: ( '/' | ':' ) a2= fanc
-					{
-					DebugLocation(66, 4);
-					if ((input.LA(1)>=17 && input.LA(1)<=18))
-					{
-						input.Consume();
-						state.errorRecovery=false;
-					}
-					else
-					{
-						MismatchedSetException mse = new MismatchedSetException(null,input);
-						DebugRecognitionException(mse);
-						throw mse;
-					}
-
-					DebugLocation(66, 16);
-					PushFollow(Follow._fanc_in_multExpression238);
-					a2=fanc();
-					PopFollow();
-
-					DebugLocation(66, 22);
-					value /= a2;
-
-					}
-					break;
-				case 4:
-					DebugEnterAlt(4);
-					// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:67:5: 'div' a2= fanc
-					{
-					DebugLocation(67, 5);
-					Match(input,37,Follow._37_in_multExpression246); 
-					DebugLocation(67, 14);
-					PushFollow(Follow._fanc_in_multExpression252);
-					a2=fanc();
-					PopFollow();
-
-					DebugLocation(67, 21);
-					value = (int)a1/(int)a2;
-
-					}
-					break;
-				case 5:
-					DebugEnterAlt(5);
-					// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:68:5: 'mod' a2= fanc
-					{
-					DebugLocation(68, 5);
-					Match(input,46,Follow._46_in_multExpression260); 
-					DebugLocation(68, 14);
-					PushFollow(Follow._fanc_in_multExpression266);
-					a2=fanc();
-					PopFollow();
-
-					DebugLocation(68, 21);
-					value = (int)a1%(int)a2;
-
-					}
-					break;
-				case 6:
-					DebugEnterAlt(6);
-					// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:69:5: '>' a2= fanc
-					{
-					DebugLocation(69, 5);
-					Match(input,21,Follow._21_in_multExpression274); 
-					DebugLocation(69, 12);
-					PushFollow(Follow._fanc_in_multExpression280);
-					a2=fanc();
-					PopFollow();
-
-					DebugLocation(69, 19);
-					value = Math.Max(a1, a2);
-
-					}
-					break;
-				case 7:
-					DebugEnterAlt(7);
-					// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:70:5: '<' a2= fanc
-					{
-					DebugLocation(70, 5);
-					Match(input,19,Follow._19_in_multExpression288); 
-					DebugLocation(70, 12);
-					PushFollow(Follow._fanc_in_multExpression294);
-					a2=fanc();
-					PopFollow();
-
-					DebugLocation(70, 19);
-					value = Math.Min(a1, a2);
-
-					}
-					break;
-
-				default:
-					goto loop7;
-				}
-			}
-
-			loop7:
-				;
-
-			} finally { DebugExitSubRule(7); }
-
-
-			}
-
-		}
-		catch (RecognitionException re)
-		{
-			ReportError(re);
-			Recover(input,re);
-		}
-		finally
-		{
 			TraceOut("multExpression", 4);
 			LeaveRule("multExpression", 4);
 			LeaveRule_multExpression();
 	    }
-	 	DebugLocation(72, 1);
+	 	DebugLocation(69, 1);
 		} finally { DebugExitRule(GrammarFileName, "multExpression"); }
 		return value;
 
@@ -946,7 +897,7 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 	[Conditional("ANTLR_TRACE")]
 	protected virtual void LeaveRule_fanc() {}
 	// $ANTLR start "fanc"
-	// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:74:1: fanc returns [double value] : ( exponentiationFanc | trigonometryFanc | bracket ) ( '!!' | '!' )? ;
+	// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:71:1: fanc returns [double value] : ( exponentiationFanc | trigonometryFanc | bracket ) ( '!!' | '!' )? ;
 	[GrammarRule("fanc")]
 	private double fanc()
 	{
@@ -956,23 +907,23 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 	    double value = default(double);
 
 
-	    double exponentiationFanc5 = default(double);
-	    double trigonometryFanc6 = default(double);
-	    double bracket7 = default(double);
+	    double exponentiationFanc4 = default(double);
+	    double trigonometryFanc5 = default(double);
+	    double bracket6 = default(double);
 
 		try { DebugEnterRule(GrammarFileName, "fanc");
-		DebugLocation(74, 1);
+		DebugLocation(71, 1);
 		try
 		{
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:75:2: ( ( exponentiationFanc | trigonometryFanc | bracket ) ( '!!' | '!' )? )
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:72:2: ( ( exponentiationFanc | trigonometryFanc | bracket ) ( '!!' | '!' )? )
 			DebugEnterAlt(1);
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:75:4: ( exponentiationFanc | trigonometryFanc | bracket ) ( '!!' | '!' )?
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:72:4: ( exponentiationFanc | trigonometryFanc | bracket ) ( '!!' | '!' )?
 			{
-			DebugLocation(75, 4);
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:75:4: ( exponentiationFanc | trigonometryFanc | bracket )
-			int alt8=3;
-			try { DebugEnterSubRule(8);
-			try { DebugEnterDecision(8, decisionCanBacktrack[8]);
+			DebugLocation(72, 4);
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:72:4: ( exponentiationFanc | trigonometryFanc | bracket )
+			int alt7=3;
+			try { DebugEnterSubRule(7);
+			try { DebugEnterDecision(7, decisionCanBacktrack[7]);
 			switch (input.LA(1))
 			{
 			case 39:
@@ -985,7 +936,7 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 			case 55:
 			case 56:
 				{
-				alt8 = 1;
+				alt7 = 1;
 				}
 				break;
 			case 26:
@@ -1007,7 +958,7 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 			case 57:
 			case 58:
 				{
-				alt8 = 2;
+				alt7 = 2;
 				}
 				break;
 			case FLOAT:
@@ -1021,109 +972,109 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 			case 47:
 			case 59:
 				{
-				alt8 = 3;
+				alt7 = 3;
 				}
 				break;
 			default:
 				{
-					NoViableAltException nvae = new NoViableAltException("", 8, 0, input, 1);
+					NoViableAltException nvae = new NoViableAltException("", 7, 0, input, 1);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
 			}
 
-			} finally { DebugExitDecision(8); }
-			switch (alt8)
+			} finally { DebugExitDecision(7); }
+			switch (alt7)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:75:5: exponentiationFanc
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:72:5: exponentiationFanc
 				{
-				DebugLocation(75, 5);
-				PushFollow(Follow._exponentiationFanc_in_fanc315);
-				exponentiationFanc5=exponentiationFanc();
+				DebugLocation(72, 5);
+				PushFollow(Follow._exponentiationFanc_in_fanc299);
+				exponentiationFanc4=exponentiationFanc();
 				PopFollow();
 
-				DebugLocation(75, 24);
-				value = exponentiationFanc5;
+				DebugLocation(72, 24);
+				value = exponentiationFanc4;
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:76:4: trigonometryFanc
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:73:4: trigonometryFanc
 				{
-				DebugLocation(76, 4);
-				PushFollow(Follow._trigonometryFanc_in_fanc322);
-				trigonometryFanc6=trigonometryFanc();
+				DebugLocation(73, 4);
+				PushFollow(Follow._trigonometryFanc_in_fanc306);
+				trigonometryFanc5=trigonometryFanc();
 				PopFollow();
 
-				DebugLocation(76, 21);
-				value = trigonometryFanc6;
+				DebugLocation(73, 21);
+				value = trigonometryFanc5;
 
 				}
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:77:4: bracket
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:74:4: bracket
 				{
-				DebugLocation(77, 4);
-				PushFollow(Follow._bracket_in_fanc329);
-				bracket7=bracket();
+				DebugLocation(74, 4);
+				PushFollow(Follow._bracket_in_fanc313);
+				bracket6=bracket();
 				PopFollow();
 
-				DebugLocation(77, 12);
-				value = bracket7;
+				DebugLocation(74, 12);
+				value = bracket6;
 
 				}
 				break;
 
 			}
-			} finally { DebugExitSubRule(8); }
+			} finally { DebugExitSubRule(7); }
 
-			DebugLocation(78, 2);
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:78:2: ( '!!' | '!' )?
-			int alt9=3;
-			try { DebugEnterSubRule(9);
-			try { DebugEnterDecision(9, decisionCanBacktrack[9]);
-			int LA9_1 = input.LA(1);
+			DebugLocation(75, 2);
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:75:2: ( '!!' | '!' )?
+			int alt8=3;
+			try { DebugEnterSubRule(8);
+			try { DebugEnterDecision(8, decisionCanBacktrack[8]);
+			int LA8_1 = input.LA(1);
 
-			if ((LA9_1==10))
+			if ((LA8_1==10))
 			{
-				alt9 = 1;
+				alt8 = 1;
 			}
-			else if ((LA9_1==11))
+			else if ((LA8_1==11))
 			{
-				alt9 = 2;
+				alt8 = 2;
 			}
-			} finally { DebugExitDecision(9); }
-			switch (alt9)
+			} finally { DebugExitDecision(8); }
+			switch (alt8)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:78:3: '!!'
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:75:3: '!!'
 				{
-				DebugLocation(78, 3);
-				Match(input,10,Follow._10_in_fanc336); 
-				DebugLocation(78, 8);
+				DebugLocation(75, 3);
+				Match(input,10,Follow._10_in_fanc320); 
+				DebugLocation(75, 8);
 				value = DoubleFactorial(value);
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:79:4: '!'
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:76:4: '!'
 				{
-				DebugLocation(79, 4);
-				Match(input,11,Follow._11_in_fanc343); 
-				DebugLocation(79, 9);
+				DebugLocation(76, 4);
+				Match(input,11,Follow._11_in_fanc327); 
+				DebugLocation(76, 9);
 				value = Factorial(value);
 
 				}
 				break;
 
 			}
-			} finally { DebugExitSubRule(9); }
+			} finally { DebugExitSubRule(8); }
 
 
 			}
@@ -1140,7 +1091,7 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 			LeaveRule("fanc", 5);
 			LeaveRule_fanc();
 	    }
-	 	DebugLocation(80, 1);
+	 	DebugLocation(77, 1);
 		} finally { DebugExitRule(GrammarFileName, "fanc"); }
 		return value;
 
@@ -1153,7 +1104,7 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 	[Conditional("ANTLR_TRACE")]
 	protected virtual void LeaveRule_bracket() {}
 	// $ANTLR start "bracket"
-	// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:82:1: bracket returns [double value] : ( ID | FLOAT | ( '(' a1= expr ')' | '{' a1= expr '}' ) | '[' expr ']' | 'abs(' expr ')' | 'max(' a1= expr ( SEPARATOR a2= expr )+ ')' | 'min(' a1= expr ( SEPARATOR a2= expr )+ ')' | 'div(' a1= expr SEPARATOR a2= expr ')' | 'mod(' a1= expr SEPARATOR a2= expr ')' );
+	// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:79:1: bracket returns [double value] : ( ID | FLOAT | ( '(' a1= expr ')' | '{' a1= expr '}' ) | '[' expr ']' | 'abs(' expr ')' | 'max(' a1= expr ( SEPARATOR a2= expr )+ ')' | 'min(' a1= expr ( SEPARATOR a2= expr )+ ')' | 'div(' a1= expr SEPARATOR a2= expr ')' | 'mod(' a1= expr SEPARATOR a2= expr ')' );
 	[GrammarRule("bracket")]
 	private double bracket()
 	{
@@ -1163,221 +1114,290 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 	    double value = default(double);
 
 
-	    IToken ID8 = default(IToken);
-	    IToken FLOAT9 = default(IToken);
+	    IToken ID7 = default(IToken);
+	    IToken FLOAT8 = default(IToken);
 	    double a1 = default(double);
 	    double a2 = default(double);
+	    double expr9 = default(double);
 	    double expr10 = default(double);
-	    double expr11 = default(double);
 
 		try { DebugEnterRule(GrammarFileName, "bracket");
-		DebugLocation(82, 1);
+		DebugLocation(79, 1);
 		try
 		{
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:83:2: ( ID | FLOAT | ( '(' a1= expr ')' | '{' a1= expr '}' ) | '[' expr ']' | 'abs(' expr ')' | 'max(' a1= expr ( SEPARATOR a2= expr )+ ')' | 'min(' a1= expr ( SEPARATOR a2= expr )+ ')' | 'div(' a1= expr SEPARATOR a2= expr ')' | 'mod(' a1= expr SEPARATOR a2= expr ')' )
-			int alt13=9;
-			try { DebugEnterDecision(13, decisionCanBacktrack[13]);
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:80:2: ( ID | FLOAT | ( '(' a1= expr ')' | '{' a1= expr '}' ) | '[' expr ']' | 'abs(' expr ')' | 'max(' a1= expr ( SEPARATOR a2= expr )+ ')' | 'min(' a1= expr ( SEPARATOR a2= expr )+ ')' | 'div(' a1= expr SEPARATOR a2= expr ')' | 'mod(' a1= expr SEPARATOR a2= expr ')' )
+			int alt12=9;
+			try { DebugEnterDecision(12, decisionCanBacktrack[12]);
 			switch (input.LA(1))
 			{
 			case ID:
 				{
-				alt13 = 1;
+				alt12 = 1;
 				}
 				break;
 			case FLOAT:
 				{
-				alt13 = 2;
+				alt12 = 2;
 				}
 				break;
 			case 12:
 			case 59:
 				{
-				alt13 = 3;
+				alt12 = 3;
 				}
 				break;
 			case 22:
 				{
-				alt13 = 4;
+				alt12 = 4;
 				}
 				break;
 			case 25:
 				{
-				alt13 = 5;
+				alt12 = 5;
 				}
 				break;
 			case 44:
 				{
-				alt13 = 6;
+				alt12 = 6;
 				}
 				break;
 			case 45:
 				{
-				alt13 = 7;
+				alt12 = 7;
 				}
 				break;
 			case 38:
 				{
-				alt13 = 8;
+				alt12 = 8;
 				}
 				break;
 			case 47:
 				{
-				alt13 = 9;
+				alt12 = 9;
 				}
 				break;
 			default:
 				{
-					NoViableAltException nvae = new NoViableAltException("", 13, 0, input, 1);
+					NoViableAltException nvae = new NoViableAltException("", 12, 0, input, 1);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
 			}
 
-			} finally { DebugExitDecision(13); }
-			switch (alt13)
+			} finally { DebugExitDecision(12); }
+			switch (alt12)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:83:4: ID
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:80:4: ID
 				{
-				DebugLocation(83, 4);
-				ID8=(IToken)Match(input,ID,Follow._ID_in_bracket362); 
-				DebugLocation(83, 7);
-				value = (double)memory[(ID8!=null?ID8.Text:default(string))];
+				DebugLocation(80, 4);
+				ID7=(IToken)Match(input,ID,Follow._ID_in_bracket346); 
+				DebugLocation(80, 7);
+				value = (double)memory[(ID7!=null?ID7.Text:default(string))];
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:84:4: FLOAT
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:81:4: FLOAT
 				{
-				DebugLocation(84, 4);
-				FLOAT9=(IToken)Match(input,FLOAT,Follow._FLOAT_in_bracket369); 
-				DebugLocation(84, 10);
-				value = double.Parse((FLOAT9!=null?FLOAT9.Text:default(string)));
+				DebugLocation(81, 4);
+				FLOAT8=(IToken)Match(input,FLOAT,Follow._FLOAT_in_bracket353); 
+				DebugLocation(81, 10);
+				value = double.Parse((FLOAT8!=null?FLOAT8.Text:default(string)));
 
 				}
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:85:3: ( '(' a1= expr ')' | '{' a1= expr '}' )
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:82:3: ( '(' a1= expr ')' | '{' a1= expr '}' )
 				{
-				DebugLocation(85, 3);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:85:3: ( '(' a1= expr ')' | '{' a1= expr '}' )
-				int alt10=2;
-				try { DebugEnterSubRule(10);
-				try { DebugEnterDecision(10, decisionCanBacktrack[10]);
-				int LA10_1 = input.LA(1);
+				DebugLocation(82, 3);
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:82:3: ( '(' a1= expr ')' | '{' a1= expr '}' )
+				int alt9=2;
+				try { DebugEnterSubRule(9);
+				try { DebugEnterDecision(9, decisionCanBacktrack[9]);
+				int LA9_1 = input.LA(1);
 
-				if ((LA10_1==12))
+				if ((LA9_1==12))
 				{
-					alt10 = 1;
+					alt9 = 1;
 				}
-				else if ((LA10_1==59))
+				else if ((LA9_1==59))
 				{
-					alt10 = 2;
+					alt9 = 2;
 				}
 
 				else
 				{
-					NoViableAltException nvae = new NoViableAltException("", 10, 0, input, 1);
+					NoViableAltException nvae = new NoViableAltException("", 9, 0, input, 1);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
 
-				} finally { DebugExitDecision(10); }
-				switch (alt10)
+				} finally { DebugExitDecision(9); }
+				switch (alt9)
 				{
 				case 1:
 					DebugEnterAlt(1);
-					// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:85:4: '(' a1= expr ')'
+					// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:82:4: '(' a1= expr ')'
 					{
-					DebugLocation(85, 4);
-					Match(input,12,Follow._12_in_bracket376); 
-					DebugLocation(85, 11);
-					PushFollow(Follow._expr_in_bracket382);
+					DebugLocation(82, 4);
+					Match(input,12,Follow._12_in_bracket360); 
+					DebugLocation(82, 11);
+					PushFollow(Follow._expr_in_bracket366);
 					a1=expr();
 					PopFollow();
 
-					DebugLocation(85, 18);
-					Match(input,13,Follow._13_in_bracket384); 
+					DebugLocation(82, 18);
+					Match(input,13,Follow._13_in_bracket368); 
 
 					}
 					break;
 				case 2:
 					DebugEnterAlt(2);
-					// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:85:22: '{' a1= expr '}'
+					// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:82:22: '{' a1= expr '}'
 					{
-					DebugLocation(85, 22);
-					Match(input,59,Follow._59_in_bracket386); 
-					DebugLocation(85, 29);
-					PushFollow(Follow._expr_in_bracket392);
+					DebugLocation(82, 22);
+					Match(input,59,Follow._59_in_bracket370); 
+					DebugLocation(82, 29);
+					PushFollow(Follow._expr_in_bracket376);
 					a1=expr();
 					PopFollow();
 
-					DebugLocation(85, 36);
-					Match(input,60,Follow._60_in_bracket394); 
+					DebugLocation(82, 36);
+					Match(input,60,Follow._60_in_bracket378); 
 
 					}
 					break;
 
 				}
-				} finally { DebugExitSubRule(10); }
+				} finally { DebugExitSubRule(9); }
 
-				DebugLocation(85, 41);
+				DebugLocation(82, 41);
 				value = a1;
 
 				}
 				break;
 			case 4:
 				DebugEnterAlt(4);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:86:4: '[' expr ']'
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:83:4: '[' expr ']'
 				{
-				DebugLocation(86, 4);
-				Match(input,22,Follow._22_in_bracket402); 
-				DebugLocation(86, 8);
-				PushFollow(Follow._expr_in_bracket404);
-				expr10=expr();
+				DebugLocation(83, 4);
+				Match(input,22,Follow._22_in_bracket386); 
+				DebugLocation(83, 8);
+				PushFollow(Follow._expr_in_bracket388);
+				expr9=expr();
 				PopFollow();
 
-				DebugLocation(86, 13);
-				Match(input,23,Follow._23_in_bracket406); 
-				DebugLocation(86, 17);
-				value = Math.Abs(expr10);
+				DebugLocation(83, 13);
+				Match(input,23,Follow._23_in_bracket390); 
+				DebugLocation(83, 17);
+				value = Math.Abs(expr9);
 
 				}
 				break;
 			case 5:
 				DebugEnterAlt(5);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:87:4: 'abs(' expr ')'
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:84:4: 'abs(' expr ')'
 				{
-				DebugLocation(87, 4);
-				Match(input,25,Follow._25_in_bracket413); 
-				DebugLocation(87, 11);
-				PushFollow(Follow._expr_in_bracket415);
-				expr11=expr();
+				DebugLocation(84, 4);
+				Match(input,25,Follow._25_in_bracket397); 
+				DebugLocation(84, 11);
+				PushFollow(Follow._expr_in_bracket399);
+				expr10=expr();
 				PopFollow();
 
-				DebugLocation(87, 16);
-				Match(input,13,Follow._13_in_bracket417); 
-				DebugLocation(87, 20);
-				value = Math.Abs(expr11);
+				DebugLocation(84, 16);
+				Match(input,13,Follow._13_in_bracket401); 
+				DebugLocation(84, 20);
+				value = Math.Abs(expr10);
 
 				}
 				break;
 			case 6:
 				DebugEnterAlt(6);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:88:4: 'max(' a1= expr ( SEPARATOR a2= expr )+ ')'
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:85:4: 'max(' a1= expr ( SEPARATOR a2= expr )+ ')'
 				{
-				DebugLocation(88, 4);
-				Match(input,44,Follow._44_in_bracket424); 
-				DebugLocation(88, 13);
-				PushFollow(Follow._expr_in_bracket429);
+				DebugLocation(85, 4);
+				Match(input,44,Follow._44_in_bracket408); 
+				DebugLocation(85, 13);
+				PushFollow(Follow._expr_in_bracket413);
 				a1=expr();
 				PopFollow();
 
-				DebugLocation(88, 20);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:88:20: ( SEPARATOR a2= expr )+
+				DebugLocation(85, 20);
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:85:20: ( SEPARATOR a2= expr )+
+				int cnt10=0;
+				try { DebugEnterSubRule(10);
+				while (true)
+				{
+					int alt10=2;
+					try { DebugEnterDecision(10, decisionCanBacktrack[10]);
+					int LA10_1 = input.LA(1);
+
+					if ((LA10_1==SEPARATOR))
+					{
+						alt10 = 1;
+					}
+
+
+					} finally { DebugExitDecision(10); }
+					switch (alt10)
+					{
+					case 1:
+						DebugEnterAlt(1);
+						// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:85:21: SEPARATOR a2= expr
+						{
+						DebugLocation(85, 21);
+						Match(input,SEPARATOR,Follow._SEPARATOR_in_bracket416); 
+						DebugLocation(85, 34);
+						PushFollow(Follow._expr_in_bracket422);
+						a2=expr();
+						PopFollow();
+
+						DebugLocation(85, 41);
+						a1 = Math.Max(a1, a2);
+
+						}
+						break;
+
+					default:
+						if (cnt10 >= 1)
+							goto loop10;
+
+						EarlyExitException eee10 = new EarlyExitException( 10, input );
+						DebugRecognitionException(eee10);
+						throw eee10;
+					}
+					cnt10++;
+				}
+				loop10:
+					;
+
+				} finally { DebugExitSubRule(10); }
+
+				DebugLocation(85, 68);
+				Match(input,13,Follow._13_in_bracket428); 
+				DebugLocation(85, 72);
+				value = a1;
+
+				}
+				break;
+			case 7:
+				DebugEnterAlt(7);
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:86:4: 'min(' a1= expr ( SEPARATOR a2= expr )+ ')'
+				{
+				DebugLocation(86, 4);
+				Match(input,45,Follow._45_in_bracket435); 
+				DebugLocation(86, 13);
+				PushFollow(Follow._expr_in_bracket440);
+				a1=expr();
+				PopFollow();
+
+				DebugLocation(86, 20);
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:86:20: ( SEPARATOR a2= expr )+
 				int cnt11=0;
 				try { DebugEnterSubRule(11);
 				while (true)
@@ -1397,17 +1417,17 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 					{
 					case 1:
 						DebugEnterAlt(1);
-						// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:88:21: SEPARATOR a2= expr
+						// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:86:21: SEPARATOR a2= expr
 						{
-						DebugLocation(88, 21);
-						Match(input,SEPARATOR,Follow._SEPARATOR_in_bracket432); 
-						DebugLocation(88, 34);
-						PushFollow(Follow._expr_in_bracket438);
+						DebugLocation(86, 21);
+						Match(input,SEPARATOR,Follow._SEPARATOR_in_bracket443); 
+						DebugLocation(86, 34);
+						PushFollow(Follow._expr_in_bracket449);
 						a2=expr();
 						PopFollow();
 
-						DebugLocation(88, 41);
-						a1 = Math.Max(a1, a2);
+						DebugLocation(86, 41);
+						a1 = Math.Min(a1, a2);
 
 						}
 						break;
@@ -1427,128 +1447,59 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 
 				} finally { DebugExitSubRule(11); }
 
-				DebugLocation(88, 68);
-				Match(input,13,Follow._13_in_bracket444); 
-				DebugLocation(88, 72);
-				value = a1;
-
-				}
-				break;
-			case 7:
-				DebugEnterAlt(7);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:89:4: 'min(' a1= expr ( SEPARATOR a2= expr )+ ')'
-				{
-				DebugLocation(89, 4);
-				Match(input,45,Follow._45_in_bracket451); 
-				DebugLocation(89, 13);
-				PushFollow(Follow._expr_in_bracket456);
-				a1=expr();
-				PopFollow();
-
-				DebugLocation(89, 20);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:89:20: ( SEPARATOR a2= expr )+
-				int cnt12=0;
-				try { DebugEnterSubRule(12);
-				while (true)
-				{
-					int alt12=2;
-					try { DebugEnterDecision(12, decisionCanBacktrack[12]);
-					int LA12_1 = input.LA(1);
-
-					if ((LA12_1==SEPARATOR))
-					{
-						alt12 = 1;
-					}
-
-
-					} finally { DebugExitDecision(12); }
-					switch (alt12)
-					{
-					case 1:
-						DebugEnterAlt(1);
-						// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:89:21: SEPARATOR a2= expr
-						{
-						DebugLocation(89, 21);
-						Match(input,SEPARATOR,Follow._SEPARATOR_in_bracket459); 
-						DebugLocation(89, 34);
-						PushFollow(Follow._expr_in_bracket465);
-						a2=expr();
-						PopFollow();
-
-						DebugLocation(89, 41);
-						a1 = Math.Min(a1, a2);
-
-						}
-						break;
-
-					default:
-						if (cnt12 >= 1)
-							goto loop12;
-
-						EarlyExitException eee12 = new EarlyExitException( 12, input );
-						DebugRecognitionException(eee12);
-						throw eee12;
-					}
-					cnt12++;
-				}
-				loop12:
-					;
-
-				} finally { DebugExitSubRule(12); }
-
-				DebugLocation(89, 68);
-				Match(input,13,Follow._13_in_bracket471); 
-				DebugLocation(89, 72);
+				DebugLocation(86, 68);
+				Match(input,13,Follow._13_in_bracket455); 
+				DebugLocation(86, 72);
 				value = a1;
 
 				}
 				break;
 			case 8:
 				DebugEnterAlt(8);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:90:4: 'div(' a1= expr SEPARATOR a2= expr ')'
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:87:4: 'div(' a1= expr SEPARATOR a2= expr ')'
 				{
-				DebugLocation(90, 4);
-				Match(input,38,Follow._38_in_bracket478); 
-				DebugLocation(90, 14);
-				PushFollow(Follow._expr_in_bracket484);
+				DebugLocation(87, 4);
+				Match(input,38,Follow._38_in_bracket462); 
+				DebugLocation(87, 14);
+				PushFollow(Follow._expr_in_bracket468);
 				a1=expr();
 				PopFollow();
 
-				DebugLocation(90, 21);
-				Match(input,SEPARATOR,Follow._SEPARATOR_in_bracket486); 
-				DebugLocation(90, 34);
-				PushFollow(Follow._expr_in_bracket492);
+				DebugLocation(87, 21);
+				Match(input,SEPARATOR,Follow._SEPARATOR_in_bracket470); 
+				DebugLocation(87, 34);
+				PushFollow(Follow._expr_in_bracket476);
 				a2=expr();
 				PopFollow();
 
-				DebugLocation(90, 41);
-				Match(input,13,Follow._13_in_bracket494); 
-				DebugLocation(90, 45);
+				DebugLocation(87, 41);
+				Match(input,13,Follow._13_in_bracket478); 
+				DebugLocation(87, 45);
 				value = (int)a1/(int)a2;
 
 				}
 				break;
 			case 9:
 				DebugEnterAlt(9);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:91:4: 'mod(' a1= expr SEPARATOR a2= expr ')'
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:88:4: 'mod(' a1= expr SEPARATOR a2= expr ')'
 				{
-				DebugLocation(91, 4);
-				Match(input,47,Follow._47_in_bracket501); 
-				DebugLocation(91, 14);
-				PushFollow(Follow._expr_in_bracket507);
+				DebugLocation(88, 4);
+				Match(input,47,Follow._47_in_bracket485); 
+				DebugLocation(88, 14);
+				PushFollow(Follow._expr_in_bracket491);
 				a1=expr();
 				PopFollow();
 
-				DebugLocation(91, 21);
-				Match(input,SEPARATOR,Follow._SEPARATOR_in_bracket509); 
-				DebugLocation(91, 34);
-				PushFollow(Follow._expr_in_bracket515);
+				DebugLocation(88, 21);
+				Match(input,SEPARATOR,Follow._SEPARATOR_in_bracket493); 
+				DebugLocation(88, 34);
+				PushFollow(Follow._expr_in_bracket499);
 				a2=expr();
 				PopFollow();
 
-				DebugLocation(91, 41);
-				Match(input,13,Follow._13_in_bracket517); 
-				DebugLocation(91, 45);
+				DebugLocation(88, 41);
+				Match(input,13,Follow._13_in_bracket501); 
+				DebugLocation(88, 45);
 				value = (int)a1%(int)a2;
 
 				}
@@ -1567,7 +1518,7 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 			LeaveRule("bracket", 6);
 			LeaveRule_bracket();
 	    }
-	 	DebugLocation(92, 1);
+	 	DebugLocation(89, 1);
 		} finally { DebugExitRule(GrammarFileName, "bracket"); }
 		return value;
 
@@ -1580,7 +1531,7 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 	[Conditional("ANTLR_TRACE")]
 	protected virtual void LeaveRule_exponentiationFanc() {}
 	// $ANTLR start "exponentiationFanc"
-	// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:94:1: exponentiationFanc returns [double value] : ( 'exp(' expr ')' | 'e' | 'pow(' a1= expr SEPARATOR a2= expr ')' | 'root(' a1= expr SEPARATOR a2= expr ')' | 'sqrt(' a1= expr ')' | 'sqr(' a1= expr ')' | 'log(' a1= expr SEPARATOR a2= expr ')' | 'lg(' a1= expr ')' | 'ln(' expr ')' );
+	// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:91:1: exponentiationFanc returns [double value] : ( 'exp(' expr ')' | 'e' | 'pow(' a1= expr SEPARATOR a2= expr ')' | 'root(' a1= expr SEPARATOR a2= expr ')' | 'sqrt(' a1= expr ')' | 'sqr(' a1= expr ')' | 'log(' a1= expr SEPARATOR a2= expr ')' | 'lg(' a1= expr ')' | 'ln(' expr ')' );
 	[GrammarRule("exponentiationFanc")]
 	private double exponentiationFanc()
 	{
@@ -1592,247 +1543,247 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 
 	    double a1 = default(double);
 	    double a2 = default(double);
+	    double expr11 = default(double);
 	    double expr12 = default(double);
-	    double expr13 = default(double);
 
 		try { DebugEnterRule(GrammarFileName, "exponentiationFanc");
-		DebugLocation(94, 1);
+		DebugLocation(91, 1);
 		try
 		{
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:95:2: ( 'exp(' expr ')' | 'e' | 'pow(' a1= expr SEPARATOR a2= expr ')' | 'root(' a1= expr SEPARATOR a2= expr ')' | 'sqrt(' a1= expr ')' | 'sqr(' a1= expr ')' | 'log(' a1= expr SEPARATOR a2= expr ')' | 'lg(' a1= expr ')' | 'ln(' expr ')' )
-			int alt14=9;
-			try { DebugEnterDecision(14, decisionCanBacktrack[14]);
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:92:2: ( 'exp(' expr ')' | 'e' | 'pow(' a1= expr SEPARATOR a2= expr ')' | 'root(' a1= expr SEPARATOR a2= expr ')' | 'sqrt(' a1= expr ')' | 'sqr(' a1= expr ')' | 'log(' a1= expr SEPARATOR a2= expr ')' | 'lg(' a1= expr ')' | 'ln(' expr ')' )
+			int alt13=9;
+			try { DebugEnterDecision(13, decisionCanBacktrack[13]);
 			switch (input.LA(1))
 			{
 			case 40:
 				{
-				alt14 = 1;
+				alt13 = 1;
 				}
 				break;
 			case 39:
 				{
-				alt14 = 2;
+				alt13 = 2;
 				}
 				break;
 			case 49:
 				{
-				alt14 = 3;
+				alt13 = 3;
 				}
 				break;
 			case 50:
 				{
-				alt14 = 4;
+				alt13 = 4;
 				}
 				break;
 			case 56:
 				{
-				alt14 = 5;
+				alt13 = 5;
 				}
 				break;
 			case 55:
 				{
-				alt14 = 6;
+				alt13 = 6;
 				}
 				break;
 			case 43:
 				{
-				alt14 = 7;
+				alt13 = 7;
 				}
 				break;
 			case 41:
 				{
-				alt14 = 8;
+				alt13 = 8;
 				}
 				break;
 			case 42:
 				{
-				alt14 = 9;
+				alt13 = 9;
 				}
 				break;
 			default:
 				{
-					NoViableAltException nvae = new NoViableAltException("", 14, 0, input, 1);
+					NoViableAltException nvae = new NoViableAltException("", 13, 0, input, 1);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
 			}
 
-			} finally { DebugExitDecision(14); }
-			switch (alt14)
+			} finally { DebugExitDecision(13); }
+			switch (alt13)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:95:4: 'exp(' expr ')'
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:92:4: 'exp(' expr ')'
 				{
-				DebugLocation(95, 4);
-				Match(input,40,Follow._40_in_exponentiationFanc534); 
-				DebugLocation(95, 11);
-				PushFollow(Follow._expr_in_exponentiationFanc536);
-				expr12=expr();
+				DebugLocation(92, 4);
+				Match(input,40,Follow._40_in_exponentiationFanc518); 
+				DebugLocation(92, 11);
+				PushFollow(Follow._expr_in_exponentiationFanc520);
+				expr11=expr();
 				PopFollow();
 
-				DebugLocation(95, 16);
-				Match(input,13,Follow._13_in_exponentiationFanc538); 
-				DebugLocation(95, 20);
-				value = Math.Exp(expr12);
+				DebugLocation(92, 16);
+				Match(input,13,Follow._13_in_exponentiationFanc522); 
+				DebugLocation(92, 20);
+				value = Math.Exp(expr11);
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:96:4: 'e'
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:93:4: 'e'
 				{
-				DebugLocation(96, 4);
-				Match(input,39,Follow._39_in_exponentiationFanc545); 
-				DebugLocation(96, 8);
+				DebugLocation(93, 4);
+				Match(input,39,Follow._39_in_exponentiationFanc529); 
+				DebugLocation(93, 8);
 				value = Math.E;
 
 				}
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:97:4: 'pow(' a1= expr SEPARATOR a2= expr ')'
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:94:4: 'pow(' a1= expr SEPARATOR a2= expr ')'
 				{
-				DebugLocation(97, 4);
-				Match(input,49,Follow._49_in_exponentiationFanc552); 
-				DebugLocation(97, 14);
-				PushFollow(Follow._expr_in_exponentiationFanc558);
+				DebugLocation(94, 4);
+				Match(input,49,Follow._49_in_exponentiationFanc536); 
+				DebugLocation(94, 14);
+				PushFollow(Follow._expr_in_exponentiationFanc542);
 				a1=expr();
 				PopFollow();
 
-				DebugLocation(97, 21);
-				Match(input,SEPARATOR,Follow._SEPARATOR_in_exponentiationFanc560); 
-				DebugLocation(97, 34);
-				PushFollow(Follow._expr_in_exponentiationFanc566);
+				DebugLocation(94, 21);
+				Match(input,SEPARATOR,Follow._SEPARATOR_in_exponentiationFanc544); 
+				DebugLocation(94, 34);
+				PushFollow(Follow._expr_in_exponentiationFanc550);
 				a2=expr();
 				PopFollow();
 
-				DebugLocation(97, 41);
-				Match(input,13,Follow._13_in_exponentiationFanc568); 
-				DebugLocation(97, 45);
+				DebugLocation(94, 41);
+				Match(input,13,Follow._13_in_exponentiationFanc552); 
+				DebugLocation(94, 45);
 				value = Math.Pow(a1, a2);
 
 				}
 				break;
 			case 4:
 				DebugEnterAlt(4);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:98:4: 'root(' a1= expr SEPARATOR a2= expr ')'
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:95:4: 'root(' a1= expr SEPARATOR a2= expr ')'
 				{
-				DebugLocation(98, 4);
-				Match(input,50,Follow._50_in_exponentiationFanc575); 
-				DebugLocation(98, 15);
-				PushFollow(Follow._expr_in_exponentiationFanc581);
+				DebugLocation(95, 4);
+				Match(input,50,Follow._50_in_exponentiationFanc559); 
+				DebugLocation(95, 15);
+				PushFollow(Follow._expr_in_exponentiationFanc565);
 				a1=expr();
 				PopFollow();
 
-				DebugLocation(98, 22);
-				Match(input,SEPARATOR,Follow._SEPARATOR_in_exponentiationFanc583); 
-				DebugLocation(98, 35);
-				PushFollow(Follow._expr_in_exponentiationFanc589);
+				DebugLocation(95, 22);
+				Match(input,SEPARATOR,Follow._SEPARATOR_in_exponentiationFanc567); 
+				DebugLocation(95, 35);
+				PushFollow(Follow._expr_in_exponentiationFanc573);
 				a2=expr();
 				PopFollow();
 
-				DebugLocation(98, 42);
-				Match(input,13,Follow._13_in_exponentiationFanc591); 
-				DebugLocation(98, 46);
+				DebugLocation(95, 42);
+				Match(input,13,Follow._13_in_exponentiationFanc575); 
+				DebugLocation(95, 46);
 				value = Math.Pow(a1, 1.0/a2);
 
 				}
 				break;
 			case 5:
 				DebugEnterAlt(5);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:99:4: 'sqrt(' a1= expr ')'
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:96:4: 'sqrt(' a1= expr ')'
 				{
-				DebugLocation(99, 4);
-				Match(input,56,Follow._56_in_exponentiationFanc598); 
-				DebugLocation(99, 15);
-				PushFollow(Follow._expr_in_exponentiationFanc604);
+				DebugLocation(96, 4);
+				Match(input,56,Follow._56_in_exponentiationFanc582); 
+				DebugLocation(96, 15);
+				PushFollow(Follow._expr_in_exponentiationFanc588);
 				a1=expr();
 				PopFollow();
 
-				DebugLocation(99, 22);
-				Match(input,13,Follow._13_in_exponentiationFanc606); 
-				DebugLocation(99, 26);
+				DebugLocation(96, 22);
+				Match(input,13,Follow._13_in_exponentiationFanc590); 
+				DebugLocation(96, 26);
 				value = Math.Pow(a1, 1.0/2.0);
 
 				}
 				break;
 			case 6:
 				DebugEnterAlt(6);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:100:4: 'sqr(' a1= expr ')'
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:97:4: 'sqr(' a1= expr ')'
 				{
-				DebugLocation(100, 4);
-				Match(input,55,Follow._55_in_exponentiationFanc613); 
-				DebugLocation(100, 14);
-				PushFollow(Follow._expr_in_exponentiationFanc619);
+				DebugLocation(97, 4);
+				Match(input,55,Follow._55_in_exponentiationFanc597); 
+				DebugLocation(97, 14);
+				PushFollow(Follow._expr_in_exponentiationFanc603);
 				a1=expr();
 				PopFollow();
 
-				DebugLocation(100, 21);
-				Match(input,13,Follow._13_in_exponentiationFanc621); 
-				DebugLocation(100, 25);
+				DebugLocation(97, 21);
+				Match(input,13,Follow._13_in_exponentiationFanc605); 
+				DebugLocation(97, 25);
 				value = Math.Pow(a1, 2.0);
 
 				}
 				break;
 			case 7:
 				DebugEnterAlt(7);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:101:4: 'log(' a1= expr SEPARATOR a2= expr ')'
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:98:4: 'log(' a1= expr SEPARATOR a2= expr ')'
 				{
-				DebugLocation(101, 4);
-				Match(input,43,Follow._43_in_exponentiationFanc628); 
-				DebugLocation(101, 14);
-				PushFollow(Follow._expr_in_exponentiationFanc634);
+				DebugLocation(98, 4);
+				Match(input,43,Follow._43_in_exponentiationFanc612); 
+				DebugLocation(98, 14);
+				PushFollow(Follow._expr_in_exponentiationFanc618);
 				a1=expr();
 				PopFollow();
 
-				DebugLocation(101, 21);
-				Match(input,SEPARATOR,Follow._SEPARATOR_in_exponentiationFanc636); 
-				DebugLocation(101, 34);
-				PushFollow(Follow._expr_in_exponentiationFanc642);
+				DebugLocation(98, 21);
+				Match(input,SEPARATOR,Follow._SEPARATOR_in_exponentiationFanc620); 
+				DebugLocation(98, 34);
+				PushFollow(Follow._expr_in_exponentiationFanc626);
 				a2=expr();
 				PopFollow();
 
-				DebugLocation(101, 41);
-				Match(input,13,Follow._13_in_exponentiationFanc644); 
-				DebugLocation(101, 44);
+				DebugLocation(98, 41);
+				Match(input,13,Follow._13_in_exponentiationFanc628); 
+				DebugLocation(98, 44);
 				value = Math.Log(a1, a2);
 
 				}
 				break;
 			case 8:
 				DebugEnterAlt(8);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:102:4: 'lg(' a1= expr ')'
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:99:4: 'lg(' a1= expr ')'
 				{
-				DebugLocation(102, 4);
-				Match(input,41,Follow._41_in_exponentiationFanc650); 
-				DebugLocation(102, 13);
-				PushFollow(Follow._expr_in_exponentiationFanc656);
+				DebugLocation(99, 4);
+				Match(input,41,Follow._41_in_exponentiationFanc634); 
+				DebugLocation(99, 13);
+				PushFollow(Follow._expr_in_exponentiationFanc640);
 				a1=expr();
 				PopFollow();
 
-				DebugLocation(102, 20);
-				Match(input,13,Follow._13_in_exponentiationFanc658); 
-				DebugLocation(102, 24);
+				DebugLocation(99, 20);
+				Match(input,13,Follow._13_in_exponentiationFanc642); 
+				DebugLocation(99, 24);
 				value = Math.Log10(a1);
 
 				}
 				break;
 			case 9:
 				DebugEnterAlt(9);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:103:4: 'ln(' expr ')'
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:100:4: 'ln(' expr ')'
 				{
-				DebugLocation(103, 4);
-				Match(input,42,Follow._42_in_exponentiationFanc665); 
-				DebugLocation(103, 10);
-				PushFollow(Follow._expr_in_exponentiationFanc667);
-				expr13=expr();
+				DebugLocation(100, 4);
+				Match(input,42,Follow._42_in_exponentiationFanc649); 
+				DebugLocation(100, 10);
+				PushFollow(Follow._expr_in_exponentiationFanc651);
+				expr12=expr();
 				PopFollow();
 
-				DebugLocation(103, 15);
-				Match(input,13,Follow._13_in_exponentiationFanc669); 
-				DebugLocation(103, 19);
-				value = Math.Log(expr13);
+				DebugLocation(100, 15);
+				Match(input,13,Follow._13_in_exponentiationFanc653); 
+				DebugLocation(100, 19);
+				value = Math.Log(expr12);
 
 				}
 				break;
@@ -1850,7 +1801,7 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 			LeaveRule("exponentiationFanc", 7);
 			LeaveRule_exponentiationFanc();
 	    }
-	 	DebugLocation(104, 1);
+	 	DebugLocation(101, 1);
 		} finally { DebugExitRule(GrammarFileName, "exponentiationFanc"); }
 		return value;
 
@@ -1863,7 +1814,7 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 	[Conditional("ANTLR_TRACE")]
 	protected virtual void LeaveRule_trigonometryFanc() {}
 	// $ANTLR start "trigonometryFanc"
-	// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:106:1: trigonometryFanc returns [double value] : ( 'pi' | standardTrigonometryFanc | hyperbolicTrigonometryFanc | arcTrigonometryFanc );
+	// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:103:1: trigonometryFanc returns [double value] : ( 'pi' | standardTrigonometryFanc | hyperbolicTrigonometryFanc | arcTrigonometryFanc );
 	[GrammarRule("trigonometryFanc")]
 	private double trigonometryFanc()
 	{
@@ -1873,22 +1824,22 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 	    double value = default(double);
 
 
-	    double standardTrigonometryFanc14 = default(double);
-	    double hyperbolicTrigonometryFanc15 = default(double);
-	    double arcTrigonometryFanc16 = default(double);
+	    double standardTrigonometryFanc13 = default(double);
+	    double hyperbolicTrigonometryFanc14 = default(double);
+	    double arcTrigonometryFanc15 = default(double);
 
 		try { DebugEnterRule(GrammarFileName, "trigonometryFanc");
-		DebugLocation(106, 1);
+		DebugLocation(103, 1);
 		try
 		{
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:107:2: ( 'pi' | standardTrigonometryFanc | hyperbolicTrigonometryFanc | arcTrigonometryFanc )
-			int alt15=4;
-			try { DebugEnterDecision(15, decisionCanBacktrack[15]);
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:104:2: ( 'pi' | standardTrigonometryFanc | hyperbolicTrigonometryFanc | arcTrigonometryFanc )
+			int alt14=4;
+			try { DebugEnterDecision(14, decisionCanBacktrack[14]);
 			switch (input.LA(1))
 			{
 			case 48:
 				{
-				alt15 = 1;
+				alt14 = 1;
 				}
 				break;
 			case 32:
@@ -1898,7 +1849,7 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 			case 54:
 			case 57:
 				{
-				alt15 = 2;
+				alt14 = 2;
 				}
 				break;
 			case 31:
@@ -1908,7 +1859,7 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 			case 53:
 			case 58:
 				{
-				alt15 = 3;
+				alt14 = 3;
 				}
 				break;
 			case 26:
@@ -1917,70 +1868,70 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 			case 29:
 			case 30:
 				{
-				alt15 = 4;
+				alt14 = 4;
 				}
 				break;
 			default:
 				{
-					NoViableAltException nvae = new NoViableAltException("", 15, 0, input, 1);
+					NoViableAltException nvae = new NoViableAltException("", 14, 0, input, 1);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
 			}
 
-			} finally { DebugExitDecision(15); }
-			switch (alt15)
+			} finally { DebugExitDecision(14); }
+			switch (alt14)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:107:4: 'pi'
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:104:4: 'pi'
 				{
-				DebugLocation(107, 4);
-				Match(input,48,Follow._48_in_trigonometryFanc687); 
-				DebugLocation(107, 10);
+				DebugLocation(104, 4);
+				Match(input,48,Follow._48_in_trigonometryFanc671); 
+				DebugLocation(104, 10);
 				value = Math.PI;
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:108:4: standardTrigonometryFanc
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:105:4: standardTrigonometryFanc
 				{
-				DebugLocation(108, 4);
-				PushFollow(Follow._standardTrigonometryFanc_in_trigonometryFanc695);
-				standardTrigonometryFanc14=standardTrigonometryFanc();
+				DebugLocation(105, 4);
+				PushFollow(Follow._standardTrigonometryFanc_in_trigonometryFanc679);
+				standardTrigonometryFanc13=standardTrigonometryFanc();
 				PopFollow();
 
-				DebugLocation(108, 29);
-				value = standardTrigonometryFanc14;
+				DebugLocation(105, 29);
+				value = standardTrigonometryFanc13;
 
 				}
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:109:4: hyperbolicTrigonometryFanc
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:106:4: hyperbolicTrigonometryFanc
 				{
-				DebugLocation(109, 4);
-				PushFollow(Follow._hyperbolicTrigonometryFanc_in_trigonometryFanc702);
-				hyperbolicTrigonometryFanc15=hyperbolicTrigonometryFanc();
+				DebugLocation(106, 4);
+				PushFollow(Follow._hyperbolicTrigonometryFanc_in_trigonometryFanc686);
+				hyperbolicTrigonometryFanc14=hyperbolicTrigonometryFanc();
 				PopFollow();
 
-				DebugLocation(109, 31);
-				value = hyperbolicTrigonometryFanc15;
+				DebugLocation(106, 31);
+				value = hyperbolicTrigonometryFanc14;
 
 				}
 				break;
 			case 4:
 				DebugEnterAlt(4);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:110:4: arcTrigonometryFanc
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:107:4: arcTrigonometryFanc
 				{
-				DebugLocation(110, 4);
-				PushFollow(Follow._arcTrigonometryFanc_in_trigonometryFanc709);
-				arcTrigonometryFanc16=arcTrigonometryFanc();
+				DebugLocation(107, 4);
+				PushFollow(Follow._arcTrigonometryFanc_in_trigonometryFanc693);
+				arcTrigonometryFanc15=arcTrigonometryFanc();
 				PopFollow();
 
-				DebugLocation(110, 24);
-				value = arcTrigonometryFanc16;
+				DebugLocation(107, 24);
+				value = arcTrigonometryFanc15;
 
 				}
 				break;
@@ -1998,7 +1949,7 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 			LeaveRule("trigonometryFanc", 8);
 			LeaveRule_trigonometryFanc();
 	    }
-	 	DebugLocation(111, 1);
+	 	DebugLocation(108, 1);
 		} finally { DebugExitRule(GrammarFileName, "trigonometryFanc"); }
 		return value;
 
@@ -2011,7 +1962,7 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 	[Conditional("ANTLR_TRACE")]
 	protected virtual void LeaveRule_standardTrigonometryFanc() {}
 	// $ANTLR start "standardTrigonometryFanc"
-	// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:113:1: standardTrigonometryFanc returns [double value] : ( 'sin(' a1= expr ')' | 'cos(' a1= expr ')' | 'tg(' a1= expr ')' | 'ctg(' a1= expr ')' | 'sec(' a1= expr ')' | 'cosec(' a1= expr ')' );
+	// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:110:1: standardTrigonometryFanc returns [double value] : ( 'sin(' a1= expr ')' | 'cos(' a1= expr ')' | 'tg(' a1= expr ')' | 'ctg(' a1= expr ')' | 'sec(' a1= expr ')' | 'cosec(' a1= expr ')' );
 	[GrammarRule("standardTrigonometryFanc")]
 	private double standardTrigonometryFanc()
 	{
@@ -2024,159 +1975,159 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 	    double a1 = default(double);
 
 		try { DebugEnterRule(GrammarFileName, "standardTrigonometryFanc");
-		DebugLocation(113, 1);
+		DebugLocation(110, 1);
 		try
 		{
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:114:2: ( 'sin(' a1= expr ')' | 'cos(' a1= expr ')' | 'tg(' a1= expr ')' | 'ctg(' a1= expr ')' | 'sec(' a1= expr ')' | 'cosec(' a1= expr ')' )
-			int alt16=6;
-			try { DebugEnterDecision(16, decisionCanBacktrack[16]);
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:111:2: ( 'sin(' a1= expr ')' | 'cos(' a1= expr ')' | 'tg(' a1= expr ')' | 'ctg(' a1= expr ')' | 'sec(' a1= expr ')' | 'cosec(' a1= expr ')' )
+			int alt15=6;
+			try { DebugEnterDecision(15, decisionCanBacktrack[15]);
 			switch (input.LA(1))
 			{
 			case 54:
 				{
-				alt16 = 1;
+				alt15 = 1;
 				}
 				break;
 			case 32:
 				{
-				alt16 = 2;
+				alt15 = 2;
 				}
 				break;
 			case 57:
 				{
-				alt16 = 3;
+				alt15 = 3;
 				}
 				break;
 			case 35:
 				{
-				alt16 = 4;
+				alt15 = 4;
 				}
 				break;
 			case 51:
 				{
-				alt16 = 5;
+				alt15 = 5;
 				}
 				break;
 			case 33:
 				{
-				alt16 = 6;
+				alt15 = 6;
 				}
 				break;
 			default:
 				{
-					NoViableAltException nvae = new NoViableAltException("", 16, 0, input, 1);
+					NoViableAltException nvae = new NoViableAltException("", 15, 0, input, 1);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
 			}
 
-			} finally { DebugExitDecision(16); }
-			switch (alt16)
+			} finally { DebugExitDecision(15); }
+			switch (alt15)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:114:4: 'sin(' a1= expr ')'
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:111:4: 'sin(' a1= expr ')'
 				{
-				DebugLocation(114, 4);
-				Match(input,54,Follow._54_in_standardTrigonometryFanc725); 
-				DebugLocation(114, 14);
-				PushFollow(Follow._expr_in_standardTrigonometryFanc731);
+				DebugLocation(111, 4);
+				Match(input,54,Follow._54_in_standardTrigonometryFanc709); 
+				DebugLocation(111, 14);
+				PushFollow(Follow._expr_in_standardTrigonometryFanc715);
 				a1=expr();
 				PopFollow();
 
-				DebugLocation(114, 21);
-				Match(input,13,Follow._13_in_standardTrigonometryFanc733); 
-				DebugLocation(114, 25);
+				DebugLocation(111, 21);
+				Match(input,13,Follow._13_in_standardTrigonometryFanc717); 
+				DebugLocation(111, 25);
 				value = Math.Sin(a1);
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:115:4: 'cos(' a1= expr ')'
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:112:4: 'cos(' a1= expr ')'
 				{
-				DebugLocation(115, 4);
-				Match(input,32,Follow._32_in_standardTrigonometryFanc740); 
-				DebugLocation(115, 14);
-				PushFollow(Follow._expr_in_standardTrigonometryFanc746);
+				DebugLocation(112, 4);
+				Match(input,32,Follow._32_in_standardTrigonometryFanc724); 
+				DebugLocation(112, 14);
+				PushFollow(Follow._expr_in_standardTrigonometryFanc730);
 				a1=expr();
 				PopFollow();
 
-				DebugLocation(115, 21);
-				Match(input,13,Follow._13_in_standardTrigonometryFanc748); 
-				DebugLocation(115, 25);
+				DebugLocation(112, 21);
+				Match(input,13,Follow._13_in_standardTrigonometryFanc732); 
+				DebugLocation(112, 25);
 				value = Math.Cos(a1);
 
 				}
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:116:4: 'tg(' a1= expr ')'
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:113:4: 'tg(' a1= expr ')'
 				{
-				DebugLocation(116, 4);
-				Match(input,57,Follow._57_in_standardTrigonometryFanc755); 
-				DebugLocation(116, 13);
-				PushFollow(Follow._expr_in_standardTrigonometryFanc761);
+				DebugLocation(113, 4);
+				Match(input,57,Follow._57_in_standardTrigonometryFanc739); 
+				DebugLocation(113, 13);
+				PushFollow(Follow._expr_in_standardTrigonometryFanc745);
 				a1=expr();
 				PopFollow();
 
-				DebugLocation(116, 20);
-				Match(input,13,Follow._13_in_standardTrigonometryFanc763); 
-				DebugLocation(116, 24);
+				DebugLocation(113, 20);
+				Match(input,13,Follow._13_in_standardTrigonometryFanc747); 
+				DebugLocation(113, 24);
 				value = Math.Tan(a1);
 
 				}
 				break;
 			case 4:
 				DebugEnterAlt(4);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:117:4: 'ctg(' a1= expr ')'
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:114:4: 'ctg(' a1= expr ')'
 				{
-				DebugLocation(117, 4);
-				Match(input,35,Follow._35_in_standardTrigonometryFanc770); 
-				DebugLocation(117, 14);
-				PushFollow(Follow._expr_in_standardTrigonometryFanc776);
+				DebugLocation(114, 4);
+				Match(input,35,Follow._35_in_standardTrigonometryFanc754); 
+				DebugLocation(114, 14);
+				PushFollow(Follow._expr_in_standardTrigonometryFanc760);
 				a1=expr();
 				PopFollow();
 
-				DebugLocation(117, 21);
-				Match(input,13,Follow._13_in_standardTrigonometryFanc778); 
-				DebugLocation(117, 25);
+				DebugLocation(114, 21);
+				Match(input,13,Follow._13_in_standardTrigonometryFanc762); 
+				DebugLocation(114, 25);
 				value = 1.0/Math.Tan(a1);
 
 				}
 				break;
 			case 5:
 				DebugEnterAlt(5);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:118:4: 'sec(' a1= expr ')'
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:115:4: 'sec(' a1= expr ')'
 				{
-				DebugLocation(118, 4);
-				Match(input,51,Follow._51_in_standardTrigonometryFanc785); 
-				DebugLocation(118, 14);
-				PushFollow(Follow._expr_in_standardTrigonometryFanc791);
+				DebugLocation(115, 4);
+				Match(input,51,Follow._51_in_standardTrigonometryFanc769); 
+				DebugLocation(115, 14);
+				PushFollow(Follow._expr_in_standardTrigonometryFanc775);
 				a1=expr();
 				PopFollow();
 
-				DebugLocation(118, 21);
-				Match(input,13,Follow._13_in_standardTrigonometryFanc793); 
-				DebugLocation(118, 25);
+				DebugLocation(115, 21);
+				Match(input,13,Follow._13_in_standardTrigonometryFanc777); 
+				DebugLocation(115, 25);
 				value = 1.0/Math.Cos(a1);
 
 				}
 				break;
 			case 6:
 				DebugEnterAlt(6);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:119:4: 'cosec(' a1= expr ')'
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:116:4: 'cosec(' a1= expr ')'
 				{
-				DebugLocation(119, 4);
-				Match(input,33,Follow._33_in_standardTrigonometryFanc800); 
-				DebugLocation(119, 16);
-				PushFollow(Follow._expr_in_standardTrigonometryFanc806);
+				DebugLocation(116, 4);
+				Match(input,33,Follow._33_in_standardTrigonometryFanc784); 
+				DebugLocation(116, 16);
+				PushFollow(Follow._expr_in_standardTrigonometryFanc790);
 				a1=expr();
 				PopFollow();
 
-				DebugLocation(119, 23);
-				Match(input,13,Follow._13_in_standardTrigonometryFanc808); 
-				DebugLocation(119, 27);
+				DebugLocation(116, 23);
+				Match(input,13,Follow._13_in_standardTrigonometryFanc792); 
+				DebugLocation(116, 27);
 				value = 1.0/Math.Sin(a1);
 
 				}
@@ -2195,7 +2146,7 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 			LeaveRule("standardTrigonometryFanc", 9);
 			LeaveRule_standardTrigonometryFanc();
 	    }
-	 	DebugLocation(120, 1);
+	 	DebugLocation(117, 1);
 		} finally { DebugExitRule(GrammarFileName, "standardTrigonometryFanc"); }
 		return value;
 
@@ -2208,7 +2159,7 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 	[Conditional("ANTLR_TRACE")]
 	protected virtual void LeaveRule_hyperbolicTrigonometryFanc() {}
 	// $ANTLR start "hyperbolicTrigonometryFanc"
-	// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:122:1: hyperbolicTrigonometryFanc returns [double value] : ( 'sh(' a1= expr ')' | 'ch(' a1= expr ')' | 'th(' a1= expr ')' | 'cth(' a1= expr ')' | 'sech(' a1= expr ')' | 'csch(' a1= expr ')' );
+	// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:119:1: hyperbolicTrigonometryFanc returns [double value] : ( 'sh(' a1= expr ')' | 'ch(' a1= expr ')' | 'th(' a1= expr ')' | 'cth(' a1= expr ')' | 'sech(' a1= expr ')' | 'csch(' a1= expr ')' );
 	[GrammarRule("hyperbolicTrigonometryFanc")]
 	private double hyperbolicTrigonometryFanc()
 	{
@@ -2221,159 +2172,159 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 	    double a1 = default(double);
 
 		try { DebugEnterRule(GrammarFileName, "hyperbolicTrigonometryFanc");
-		DebugLocation(122, 1);
+		DebugLocation(119, 1);
 		try
 		{
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:123:2: ( 'sh(' a1= expr ')' | 'ch(' a1= expr ')' | 'th(' a1= expr ')' | 'cth(' a1= expr ')' | 'sech(' a1= expr ')' | 'csch(' a1= expr ')' )
-			int alt17=6;
-			try { DebugEnterDecision(17, decisionCanBacktrack[17]);
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:120:2: ( 'sh(' a1= expr ')' | 'ch(' a1= expr ')' | 'th(' a1= expr ')' | 'cth(' a1= expr ')' | 'sech(' a1= expr ')' | 'csch(' a1= expr ')' )
+			int alt16=6;
+			try { DebugEnterDecision(16, decisionCanBacktrack[16]);
 			switch (input.LA(1))
 			{
 			case 53:
 				{
-				alt17 = 1;
+				alt16 = 1;
 				}
 				break;
 			case 31:
 				{
-				alt17 = 2;
+				alt16 = 2;
 				}
 				break;
 			case 58:
 				{
-				alt17 = 3;
+				alt16 = 3;
 				}
 				break;
 			case 36:
 				{
-				alt17 = 4;
+				alt16 = 4;
 				}
 				break;
 			case 52:
 				{
-				alt17 = 5;
+				alt16 = 5;
 				}
 				break;
 			case 34:
 				{
-				alt17 = 6;
+				alt16 = 6;
 				}
 				break;
 			default:
 				{
-					NoViableAltException nvae = new NoViableAltException("", 17, 0, input, 1);
+					NoViableAltException nvae = new NoViableAltException("", 16, 0, input, 1);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
 			}
 
-			} finally { DebugExitDecision(17); }
-			switch (alt17)
+			} finally { DebugExitDecision(16); }
+			switch (alt16)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:123:4: 'sh(' a1= expr ')'
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:120:4: 'sh(' a1= expr ')'
 				{
-				DebugLocation(123, 4);
-				Match(input,53,Follow._53_in_hyperbolicTrigonometryFanc824); 
-				DebugLocation(123, 13);
-				PushFollow(Follow._expr_in_hyperbolicTrigonometryFanc830);
+				DebugLocation(120, 4);
+				Match(input,53,Follow._53_in_hyperbolicTrigonometryFanc808); 
+				DebugLocation(120, 13);
+				PushFollow(Follow._expr_in_hyperbolicTrigonometryFanc814);
 				a1=expr();
 				PopFollow();
 
-				DebugLocation(123, 20);
-				Match(input,13,Follow._13_in_hyperbolicTrigonometryFanc832); 
-				DebugLocation(123, 24);
+				DebugLocation(120, 20);
+				Match(input,13,Follow._13_in_hyperbolicTrigonometryFanc816); 
+				DebugLocation(120, 24);
 				value = Math.Sinh(a1);
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:124:4: 'ch(' a1= expr ')'
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:121:4: 'ch(' a1= expr ')'
 				{
-				DebugLocation(124, 4);
-				Match(input,31,Follow._31_in_hyperbolicTrigonometryFanc839); 
-				DebugLocation(124, 13);
-				PushFollow(Follow._expr_in_hyperbolicTrigonometryFanc845);
+				DebugLocation(121, 4);
+				Match(input,31,Follow._31_in_hyperbolicTrigonometryFanc823); 
+				DebugLocation(121, 13);
+				PushFollow(Follow._expr_in_hyperbolicTrigonometryFanc829);
 				a1=expr();
 				PopFollow();
 
-				DebugLocation(124, 20);
-				Match(input,13,Follow._13_in_hyperbolicTrigonometryFanc847); 
-				DebugLocation(124, 24);
+				DebugLocation(121, 20);
+				Match(input,13,Follow._13_in_hyperbolicTrigonometryFanc831); 
+				DebugLocation(121, 24);
 				value = Math.Cosh(a1);
 
 				}
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:125:4: 'th(' a1= expr ')'
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:122:4: 'th(' a1= expr ')'
 				{
-				DebugLocation(125, 4);
-				Match(input,58,Follow._58_in_hyperbolicTrigonometryFanc854); 
-				DebugLocation(125, 13);
-				PushFollow(Follow._expr_in_hyperbolicTrigonometryFanc860);
+				DebugLocation(122, 4);
+				Match(input,58,Follow._58_in_hyperbolicTrigonometryFanc838); 
+				DebugLocation(122, 13);
+				PushFollow(Follow._expr_in_hyperbolicTrigonometryFanc844);
 				a1=expr();
 				PopFollow();
 
-				DebugLocation(125, 20);
-				Match(input,13,Follow._13_in_hyperbolicTrigonometryFanc862); 
-				DebugLocation(125, 24);
+				DebugLocation(122, 20);
+				Match(input,13,Follow._13_in_hyperbolicTrigonometryFanc846); 
+				DebugLocation(122, 24);
 				value = Math.Tanh(a1);
 
 				}
 				break;
 			case 4:
 				DebugEnterAlt(4);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:126:4: 'cth(' a1= expr ')'
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:123:4: 'cth(' a1= expr ')'
 				{
-				DebugLocation(126, 4);
-				Match(input,36,Follow._36_in_hyperbolicTrigonometryFanc869); 
-				DebugLocation(126, 14);
-				PushFollow(Follow._expr_in_hyperbolicTrigonometryFanc875);
+				DebugLocation(123, 4);
+				Match(input,36,Follow._36_in_hyperbolicTrigonometryFanc853); 
+				DebugLocation(123, 14);
+				PushFollow(Follow._expr_in_hyperbolicTrigonometryFanc859);
 				a1=expr();
 				PopFollow();
 
-				DebugLocation(126, 21);
-				Match(input,13,Follow._13_in_hyperbolicTrigonometryFanc877); 
-				DebugLocation(126, 25);
+				DebugLocation(123, 21);
+				Match(input,13,Follow._13_in_hyperbolicTrigonometryFanc861); 
+				DebugLocation(123, 25);
 				value = 1.0/Math.Tanh(a1);
 
 				}
 				break;
 			case 5:
 				DebugEnterAlt(5);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:127:4: 'sech(' a1= expr ')'
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:124:4: 'sech(' a1= expr ')'
 				{
-				DebugLocation(127, 4);
-				Match(input,52,Follow._52_in_hyperbolicTrigonometryFanc884); 
-				DebugLocation(127, 15);
-				PushFollow(Follow._expr_in_hyperbolicTrigonometryFanc890);
+				DebugLocation(124, 4);
+				Match(input,52,Follow._52_in_hyperbolicTrigonometryFanc868); 
+				DebugLocation(124, 15);
+				PushFollow(Follow._expr_in_hyperbolicTrigonometryFanc874);
 				a1=expr();
 				PopFollow();
 
-				DebugLocation(127, 22);
-				Match(input,13,Follow._13_in_hyperbolicTrigonometryFanc892); 
-				DebugLocation(127, 26);
+				DebugLocation(124, 22);
+				Match(input,13,Follow._13_in_hyperbolicTrigonometryFanc876); 
+				DebugLocation(124, 26);
 				value = 1.0/Math.Cosh(a1);
 
 				}
 				break;
 			case 6:
 				DebugEnterAlt(6);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:128:4: 'csch(' a1= expr ')'
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:125:4: 'csch(' a1= expr ')'
 				{
-				DebugLocation(128, 4);
-				Match(input,34,Follow._34_in_hyperbolicTrigonometryFanc899); 
-				DebugLocation(128, 15);
-				PushFollow(Follow._expr_in_hyperbolicTrigonometryFanc905);
+				DebugLocation(125, 4);
+				Match(input,34,Follow._34_in_hyperbolicTrigonometryFanc883); 
+				DebugLocation(125, 15);
+				PushFollow(Follow._expr_in_hyperbolicTrigonometryFanc889);
 				a1=expr();
 				PopFollow();
 
-				DebugLocation(128, 22);
-				Match(input,13,Follow._13_in_hyperbolicTrigonometryFanc907); 
-				DebugLocation(128, 26);
+				DebugLocation(125, 22);
+				Match(input,13,Follow._13_in_hyperbolicTrigonometryFanc891); 
+				DebugLocation(125, 26);
 				value = 1.0/Math.Sinh(a1);
 
 				}
@@ -2392,7 +2343,7 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 			LeaveRule("hyperbolicTrigonometryFanc", 10);
 			LeaveRule_hyperbolicTrigonometryFanc();
 	    }
-	 	DebugLocation(129, 1);
+	 	DebugLocation(126, 1);
 		} finally { DebugExitRule(GrammarFileName, "hyperbolicTrigonometryFanc"); }
 		return value;
 
@@ -2405,7 +2356,7 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 	[Conditional("ANTLR_TRACE")]
 	protected virtual void LeaveRule_arcTrigonometryFanc() {}
 	// $ANTLR start "arcTrigonometryFanc"
-	// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:131:1: arcTrigonometryFanc returns [double value] : ( 'asin(' a1= expr ')' | 'acos(' a1= expr ')' | 'atg2(' a1= expr SEPARATOR a2= expr ')' | 'atg(' a1= expr ')' | 'actg(' a1= expr ')' );
+	// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:128:1: arcTrigonometryFanc returns [double value] : ( 'asin(' a1= expr ')' | 'acos(' a1= expr ')' | 'atg2(' a1= expr SEPARATOR a2= expr ')' | 'atg(' a1= expr ')' | 'actg(' a1= expr ')' );
 	[GrammarRule("arcTrigonometryFanc")]
 	private double arcTrigonometryFanc()
 	{
@@ -2419,143 +2370,143 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 	    double a2 = default(double);
 
 		try { DebugEnterRule(GrammarFileName, "arcTrigonometryFanc");
-		DebugLocation(131, 1);
+		DebugLocation(128, 1);
 		try
 		{
-			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:132:2: ( 'asin(' a1= expr ')' | 'acos(' a1= expr ')' | 'atg2(' a1= expr SEPARATOR a2= expr ')' | 'atg(' a1= expr ')' | 'actg(' a1= expr ')' )
-			int alt18=5;
-			try { DebugEnterDecision(18, decisionCanBacktrack[18]);
+			// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:129:2: ( 'asin(' a1= expr ')' | 'acos(' a1= expr ')' | 'atg2(' a1= expr SEPARATOR a2= expr ')' | 'atg(' a1= expr ')' | 'actg(' a1= expr ')' )
+			int alt17=5;
+			try { DebugEnterDecision(17, decisionCanBacktrack[17]);
 			switch (input.LA(1))
 			{
 			case 28:
 				{
-				alt18 = 1;
+				alt17 = 1;
 				}
 				break;
 			case 26:
 				{
-				alt18 = 2;
+				alt17 = 2;
 				}
 				break;
 			case 30:
 				{
-				alt18 = 3;
+				alt17 = 3;
 				}
 				break;
 			case 29:
 				{
-				alt18 = 4;
+				alt17 = 4;
 				}
 				break;
 			case 27:
 				{
-				alt18 = 5;
+				alt17 = 5;
 				}
 				break;
 			default:
 				{
-					NoViableAltException nvae = new NoViableAltException("", 18, 0, input, 1);
+					NoViableAltException nvae = new NoViableAltException("", 17, 0, input, 1);
 					DebugRecognitionException(nvae);
 					throw nvae;
 				}
 			}
 
-			} finally { DebugExitDecision(18); }
-			switch (alt18)
+			} finally { DebugExitDecision(17); }
+			switch (alt17)
 			{
 			case 1:
 				DebugEnterAlt(1);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:132:4: 'asin(' a1= expr ')'
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:129:4: 'asin(' a1= expr ')'
 				{
-				DebugLocation(132, 4);
-				Match(input,28,Follow._28_in_arcTrigonometryFanc924); 
-				DebugLocation(132, 15);
-				PushFollow(Follow._expr_in_arcTrigonometryFanc930);
+				DebugLocation(129, 4);
+				Match(input,28,Follow._28_in_arcTrigonometryFanc908); 
+				DebugLocation(129, 15);
+				PushFollow(Follow._expr_in_arcTrigonometryFanc914);
 				a1=expr();
 				PopFollow();
 
-				DebugLocation(132, 22);
-				Match(input,13,Follow._13_in_arcTrigonometryFanc932); 
-				DebugLocation(132, 26);
+				DebugLocation(129, 22);
+				Match(input,13,Follow._13_in_arcTrigonometryFanc916); 
+				DebugLocation(129, 26);
 				value = Math.Asin(a1);
 
 				}
 				break;
 			case 2:
 				DebugEnterAlt(2);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:133:4: 'acos(' a1= expr ')'
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:130:4: 'acos(' a1= expr ')'
 				{
-				DebugLocation(133, 4);
-				Match(input,26,Follow._26_in_arcTrigonometryFanc939); 
-				DebugLocation(133, 15);
-				PushFollow(Follow._expr_in_arcTrigonometryFanc945);
+				DebugLocation(130, 4);
+				Match(input,26,Follow._26_in_arcTrigonometryFanc923); 
+				DebugLocation(130, 15);
+				PushFollow(Follow._expr_in_arcTrigonometryFanc929);
 				a1=expr();
 				PopFollow();
 
-				DebugLocation(133, 22);
-				Match(input,13,Follow._13_in_arcTrigonometryFanc947); 
-				DebugLocation(133, 26);
+				DebugLocation(130, 22);
+				Match(input,13,Follow._13_in_arcTrigonometryFanc931); 
+				DebugLocation(130, 26);
 				value = Math.Acos(a1);
 
 				}
 				break;
 			case 3:
 				DebugEnterAlt(3);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:134:4: 'atg2(' a1= expr SEPARATOR a2= expr ')'
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:131:4: 'atg2(' a1= expr SEPARATOR a2= expr ')'
 				{
-				DebugLocation(134, 4);
-				Match(input,30,Follow._30_in_arcTrigonometryFanc954); 
-				DebugLocation(134, 16);
-				PushFollow(Follow._expr_in_arcTrigonometryFanc961);
+				DebugLocation(131, 4);
+				Match(input,30,Follow._30_in_arcTrigonometryFanc938); 
+				DebugLocation(131, 16);
+				PushFollow(Follow._expr_in_arcTrigonometryFanc945);
 				a1=expr();
 				PopFollow();
 
-				DebugLocation(134, 23);
-				Match(input,SEPARATOR,Follow._SEPARATOR_in_arcTrigonometryFanc963); 
-				DebugLocation(134, 36);
-				PushFollow(Follow._expr_in_arcTrigonometryFanc969);
+				DebugLocation(131, 23);
+				Match(input,SEPARATOR,Follow._SEPARATOR_in_arcTrigonometryFanc947); 
+				DebugLocation(131, 36);
+				PushFollow(Follow._expr_in_arcTrigonometryFanc953);
 				a2=expr();
 				PopFollow();
 
-				DebugLocation(134, 44);
-				Match(input,13,Follow._13_in_arcTrigonometryFanc972); 
-				DebugLocation(134, 48);
+				DebugLocation(131, 44);
+				Match(input,13,Follow._13_in_arcTrigonometryFanc956); 
+				DebugLocation(131, 48);
 				value = Math.Atan2(a1, a2);
 
 				}
 				break;
 			case 4:
 				DebugEnterAlt(4);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:135:4: 'atg(' a1= expr ')'
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:132:4: 'atg(' a1= expr ')'
 				{
-				DebugLocation(135, 4);
-				Match(input,29,Follow._29_in_arcTrigonometryFanc979); 
-				DebugLocation(135, 14);
-				PushFollow(Follow._expr_in_arcTrigonometryFanc985);
+				DebugLocation(132, 4);
+				Match(input,29,Follow._29_in_arcTrigonometryFanc963); 
+				DebugLocation(132, 14);
+				PushFollow(Follow._expr_in_arcTrigonometryFanc969);
 				a1=expr();
 				PopFollow();
 
-				DebugLocation(135, 21);
-				Match(input,13,Follow._13_in_arcTrigonometryFanc987); 
-				DebugLocation(135, 25);
+				DebugLocation(132, 21);
+				Match(input,13,Follow._13_in_arcTrigonometryFanc971); 
+				DebugLocation(132, 25);
 				value = Math.Atan(a1);
 
 				}
 				break;
 			case 5:
 				DebugEnterAlt(5);
-				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:136:4: 'actg(' a1= expr ')'
+				// C:\\Users\\illus\\OneDrive\\Документы\\Visual Studio 2015\\Projects\\Calculator\\GrammarOfArithmetic.g:133:4: 'actg(' a1= expr ')'
 				{
-				DebugLocation(136, 4);
-				Match(input,27,Follow._27_in_arcTrigonometryFanc994); 
-				DebugLocation(136, 15);
-				PushFollow(Follow._expr_in_arcTrigonometryFanc1000);
+				DebugLocation(133, 4);
+				Match(input,27,Follow._27_in_arcTrigonometryFanc978); 
+				DebugLocation(133, 15);
+				PushFollow(Follow._expr_in_arcTrigonometryFanc984);
 				a1=expr();
 				PopFollow();
 
-				DebugLocation(136, 22);
-				Match(input,13,Follow._13_in_arcTrigonometryFanc1002); 
-				DebugLocation(136, 26);
+				DebugLocation(133, 22);
+				Match(input,13,Follow._13_in_arcTrigonometryFanc986); 
+				DebugLocation(133, 26);
 				value = 1.0/Math.Atan(a1);
 
 				}
@@ -2574,7 +2525,7 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 			LeaveRule("arcTrigonometryFanc", 11);
 			LeaveRule_arcTrigonometryFanc();
 	    }
-	 	DebugLocation(137, 1);
+	 	DebugLocation(134, 1);
 		} finally { DebugExitRule(GrammarFileName, "arcTrigonometryFanc"); }
 		return value;
 
@@ -2592,159 +2543,158 @@ public partial class GrammarOfArithmeticParser : Antlr.Runtime.Parser
 		public static readonly BitSet _NEWLINE_in_statement85 = new BitSet(new ulong[]{0x2UL});
 		public static readonly BitSet _ID_in_statement92 = new BitSet(new ulong[]{0x100000UL});
 		public static readonly BitSet _20_in_statement94 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
-		public static readonly BitSet _FLOAT_in_statement100 = new BitSet(new ulong[]{0x100UL});
-		public static readonly BitSet _expr_in_statement112 = new BitSet(new ulong[]{0x100UL});
-		public static readonly BitSet _NEWLINE_in_statement120 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _NEWLINE_in_statement130 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _16_in_expr147 = new BitSet(new ulong[]{0xFFFBFDFFE4010A0UL});
-		public static readonly BitSet _multExpression_in_expr150 = new BitSet(new ulong[]{0x18002UL});
-		public static readonly BitSet _multExpression_in_expr161 = new BitSet(new ulong[]{0x18002UL});
-		public static readonly BitSet _15_in_expr168 = new BitSet(new ulong[]{0xFFFBFDFFE4010A0UL});
-		public static readonly BitSet _multExpression_in_expr172 = new BitSet(new ulong[]{0x18002UL});
-		public static readonly BitSet _16_in_expr178 = new BitSet(new ulong[]{0xFFFBFDFFE4010A0UL});
-		public static readonly BitSet _multExpression_in_expr182 = new BitSet(new ulong[]{0x18002UL});
-		public static readonly BitSet _fanc_in_multExpression202 = new BitSet(new ulong[]{0x4020012E4002UL});
-		public static readonly BitSet _24_in_multExpression208 = new BitSet(new ulong[]{0xFFFBFDFFE4010A0UL});
-		public static readonly BitSet _fanc_in_multExpression212 = new BitSet(new ulong[]{0x4020012E4002UL});
-		public static readonly BitSet _14_in_multExpression219 = new BitSet(new ulong[]{0xFFFBFDFFE4010A0UL});
-		public static readonly BitSet _fanc_in_multExpression223 = new BitSet(new ulong[]{0x4020012E4002UL});
-		public static readonly BitSet _set_in_multExpression230 = new BitSet(new ulong[]{0xFFFBFDFFE4010A0UL});
-		public static readonly BitSet _fanc_in_multExpression238 = new BitSet(new ulong[]{0x4020012E4002UL});
-		public static readonly BitSet _37_in_multExpression246 = new BitSet(new ulong[]{0xFFFBFDFFE4010A0UL});
-		public static readonly BitSet _fanc_in_multExpression252 = new BitSet(new ulong[]{0x4020012E4002UL});
-		public static readonly BitSet _46_in_multExpression260 = new BitSet(new ulong[]{0xFFFBFDFFE4010A0UL});
-		public static readonly BitSet _fanc_in_multExpression266 = new BitSet(new ulong[]{0x4020012E4002UL});
-		public static readonly BitSet _21_in_multExpression274 = new BitSet(new ulong[]{0xFFFBFDFFE4010A0UL});
-		public static readonly BitSet _fanc_in_multExpression280 = new BitSet(new ulong[]{0x4020012E4002UL});
-		public static readonly BitSet _19_in_multExpression288 = new BitSet(new ulong[]{0xFFFBFDFFE4010A0UL});
-		public static readonly BitSet _fanc_in_multExpression294 = new BitSet(new ulong[]{0x4020012E4002UL});
-		public static readonly BitSet _exponentiationFanc_in_fanc315 = new BitSet(new ulong[]{0xC02UL});
-		public static readonly BitSet _trigonometryFanc_in_fanc322 = new BitSet(new ulong[]{0xC02UL});
-		public static readonly BitSet _bracket_in_fanc329 = new BitSet(new ulong[]{0xC02UL});
-		public static readonly BitSet _10_in_fanc336 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _11_in_fanc343 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _ID_in_bracket362 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _FLOAT_in_bracket369 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _12_in_bracket376 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
-		public static readonly BitSet _expr_in_bracket382 = new BitSet(new ulong[]{0x2000UL});
-		public static readonly BitSet _13_in_bracket384 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _59_in_bracket386 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
-		public static readonly BitSet _expr_in_bracket392 = new BitSet(new ulong[]{0x1000000000000000UL});
-		public static readonly BitSet _60_in_bracket394 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _22_in_bracket402 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
-		public static readonly BitSet _expr_in_bracket404 = new BitSet(new ulong[]{0x800000UL});
-		public static readonly BitSet _23_in_bracket406 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _25_in_bracket413 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
-		public static readonly BitSet _expr_in_bracket415 = new BitSet(new ulong[]{0x2000UL});
-		public static readonly BitSet _13_in_bracket417 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _44_in_bracket424 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
-		public static readonly BitSet _expr_in_bracket429 = new BitSet(new ulong[]{0x200UL});
-		public static readonly BitSet _SEPARATOR_in_bracket432 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
-		public static readonly BitSet _expr_in_bracket438 = new BitSet(new ulong[]{0x2200UL});
-		public static readonly BitSet _13_in_bracket444 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _45_in_bracket451 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
-		public static readonly BitSet _expr_in_bracket456 = new BitSet(new ulong[]{0x200UL});
-		public static readonly BitSet _SEPARATOR_in_bracket459 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
-		public static readonly BitSet _expr_in_bracket465 = new BitSet(new ulong[]{0x2200UL});
-		public static readonly BitSet _13_in_bracket471 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _38_in_bracket478 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
-		public static readonly BitSet _expr_in_bracket484 = new BitSet(new ulong[]{0x200UL});
-		public static readonly BitSet _SEPARATOR_in_bracket486 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
-		public static readonly BitSet _expr_in_bracket492 = new BitSet(new ulong[]{0x2000UL});
-		public static readonly BitSet _13_in_bracket494 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _47_in_bracket501 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
-		public static readonly BitSet _expr_in_bracket507 = new BitSet(new ulong[]{0x200UL});
-		public static readonly BitSet _SEPARATOR_in_bracket509 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
-		public static readonly BitSet _expr_in_bracket515 = new BitSet(new ulong[]{0x2000UL});
-		public static readonly BitSet _13_in_bracket517 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _40_in_exponentiationFanc534 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
-		public static readonly BitSet _expr_in_exponentiationFanc536 = new BitSet(new ulong[]{0x2000UL});
-		public static readonly BitSet _13_in_exponentiationFanc538 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _39_in_exponentiationFanc545 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _49_in_exponentiationFanc552 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
-		public static readonly BitSet _expr_in_exponentiationFanc558 = new BitSet(new ulong[]{0x200UL});
-		public static readonly BitSet _SEPARATOR_in_exponentiationFanc560 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
-		public static readonly BitSet _expr_in_exponentiationFanc566 = new BitSet(new ulong[]{0x2000UL});
-		public static readonly BitSet _13_in_exponentiationFanc568 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _50_in_exponentiationFanc575 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
-		public static readonly BitSet _expr_in_exponentiationFanc581 = new BitSet(new ulong[]{0x200UL});
-		public static readonly BitSet _SEPARATOR_in_exponentiationFanc583 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
-		public static readonly BitSet _expr_in_exponentiationFanc589 = new BitSet(new ulong[]{0x2000UL});
-		public static readonly BitSet _13_in_exponentiationFanc591 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _56_in_exponentiationFanc598 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
-		public static readonly BitSet _expr_in_exponentiationFanc604 = new BitSet(new ulong[]{0x2000UL});
-		public static readonly BitSet _13_in_exponentiationFanc606 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _55_in_exponentiationFanc613 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
-		public static readonly BitSet _expr_in_exponentiationFanc619 = new BitSet(new ulong[]{0x2000UL});
-		public static readonly BitSet _13_in_exponentiationFanc621 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _43_in_exponentiationFanc628 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
-		public static readonly BitSet _expr_in_exponentiationFanc634 = new BitSet(new ulong[]{0x200UL});
-		public static readonly BitSet _SEPARATOR_in_exponentiationFanc636 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
-		public static readonly BitSet _expr_in_exponentiationFanc642 = new BitSet(new ulong[]{0x2000UL});
-		public static readonly BitSet _13_in_exponentiationFanc644 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _41_in_exponentiationFanc650 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
-		public static readonly BitSet _expr_in_exponentiationFanc656 = new BitSet(new ulong[]{0x2000UL});
-		public static readonly BitSet _13_in_exponentiationFanc658 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _42_in_exponentiationFanc665 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
-		public static readonly BitSet _expr_in_exponentiationFanc667 = new BitSet(new ulong[]{0x2000UL});
-		public static readonly BitSet _13_in_exponentiationFanc669 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _48_in_trigonometryFanc687 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _standardTrigonometryFanc_in_trigonometryFanc695 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _hyperbolicTrigonometryFanc_in_trigonometryFanc702 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _arcTrigonometryFanc_in_trigonometryFanc709 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _54_in_standardTrigonometryFanc725 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
-		public static readonly BitSet _expr_in_standardTrigonometryFanc731 = new BitSet(new ulong[]{0x2000UL});
-		public static readonly BitSet _13_in_standardTrigonometryFanc733 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _32_in_standardTrigonometryFanc740 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
-		public static readonly BitSet _expr_in_standardTrigonometryFanc746 = new BitSet(new ulong[]{0x2000UL});
-		public static readonly BitSet _13_in_standardTrigonometryFanc748 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _57_in_standardTrigonometryFanc755 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
-		public static readonly BitSet _expr_in_standardTrigonometryFanc761 = new BitSet(new ulong[]{0x2000UL});
-		public static readonly BitSet _13_in_standardTrigonometryFanc763 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _35_in_standardTrigonometryFanc770 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
-		public static readonly BitSet _expr_in_standardTrigonometryFanc776 = new BitSet(new ulong[]{0x2000UL});
-		public static readonly BitSet _13_in_standardTrigonometryFanc778 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _51_in_standardTrigonometryFanc785 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
-		public static readonly BitSet _expr_in_standardTrigonometryFanc791 = new BitSet(new ulong[]{0x2000UL});
-		public static readonly BitSet _13_in_standardTrigonometryFanc793 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _33_in_standardTrigonometryFanc800 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
-		public static readonly BitSet _expr_in_standardTrigonometryFanc806 = new BitSet(new ulong[]{0x2000UL});
-		public static readonly BitSet _13_in_standardTrigonometryFanc808 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _53_in_hyperbolicTrigonometryFanc824 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
-		public static readonly BitSet _expr_in_hyperbolicTrigonometryFanc830 = new BitSet(new ulong[]{0x2000UL});
-		public static readonly BitSet _13_in_hyperbolicTrigonometryFanc832 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _31_in_hyperbolicTrigonometryFanc839 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
-		public static readonly BitSet _expr_in_hyperbolicTrigonometryFanc845 = new BitSet(new ulong[]{0x2000UL});
-		public static readonly BitSet _13_in_hyperbolicTrigonometryFanc847 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _58_in_hyperbolicTrigonometryFanc854 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
-		public static readonly BitSet _expr_in_hyperbolicTrigonometryFanc860 = new BitSet(new ulong[]{0x2000UL});
-		public static readonly BitSet _13_in_hyperbolicTrigonometryFanc862 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _36_in_hyperbolicTrigonometryFanc869 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
-		public static readonly BitSet _expr_in_hyperbolicTrigonometryFanc875 = new BitSet(new ulong[]{0x2000UL});
-		public static readonly BitSet _13_in_hyperbolicTrigonometryFanc877 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _52_in_hyperbolicTrigonometryFanc884 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
-		public static readonly BitSet _expr_in_hyperbolicTrigonometryFanc890 = new BitSet(new ulong[]{0x2000UL});
-		public static readonly BitSet _13_in_hyperbolicTrigonometryFanc892 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _34_in_hyperbolicTrigonometryFanc899 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
-		public static readonly BitSet _expr_in_hyperbolicTrigonometryFanc905 = new BitSet(new ulong[]{0x2000UL});
-		public static readonly BitSet _13_in_hyperbolicTrigonometryFanc907 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _28_in_arcTrigonometryFanc924 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
-		public static readonly BitSet _expr_in_arcTrigonometryFanc930 = new BitSet(new ulong[]{0x2000UL});
-		public static readonly BitSet _13_in_arcTrigonometryFanc932 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _26_in_arcTrigonometryFanc939 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
-		public static readonly BitSet _expr_in_arcTrigonometryFanc945 = new BitSet(new ulong[]{0x2000UL});
-		public static readonly BitSet _13_in_arcTrigonometryFanc947 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _30_in_arcTrigonometryFanc954 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
-		public static readonly BitSet _expr_in_arcTrigonometryFanc961 = new BitSet(new ulong[]{0x200UL});
-		public static readonly BitSet _SEPARATOR_in_arcTrigonometryFanc963 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
+		public static readonly BitSet _expr_in_statement100 = new BitSet(new ulong[]{0x100UL});
+		public static readonly BitSet _NEWLINE_in_statement104 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _NEWLINE_in_statement114 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _16_in_expr131 = new BitSet(new ulong[]{0xFFFBFDFFE4010A0UL});
+		public static readonly BitSet _multExpression_in_expr134 = new BitSet(new ulong[]{0x18002UL});
+		public static readonly BitSet _multExpression_in_expr145 = new BitSet(new ulong[]{0x18002UL});
+		public static readonly BitSet _15_in_expr152 = new BitSet(new ulong[]{0xFFFBFDFFE4010A0UL});
+		public static readonly BitSet _multExpression_in_expr156 = new BitSet(new ulong[]{0x18002UL});
+		public static readonly BitSet _16_in_expr162 = new BitSet(new ulong[]{0xFFFBFDFFE4010A0UL});
+		public static readonly BitSet _multExpression_in_expr166 = new BitSet(new ulong[]{0x18002UL});
+		public static readonly BitSet _fanc_in_multExpression186 = new BitSet(new ulong[]{0x4020012E4002UL});
+		public static readonly BitSet _24_in_multExpression192 = new BitSet(new ulong[]{0xFFFBFDFFE4010A0UL});
+		public static readonly BitSet _fanc_in_multExpression196 = new BitSet(new ulong[]{0x4020012E4002UL});
+		public static readonly BitSet _14_in_multExpression203 = new BitSet(new ulong[]{0xFFFBFDFFE4010A0UL});
+		public static readonly BitSet _fanc_in_multExpression207 = new BitSet(new ulong[]{0x4020012E4002UL});
+		public static readonly BitSet _set_in_multExpression214 = new BitSet(new ulong[]{0xFFFBFDFFE4010A0UL});
+		public static readonly BitSet _fanc_in_multExpression222 = new BitSet(new ulong[]{0x4020012E4002UL});
+		public static readonly BitSet _37_in_multExpression230 = new BitSet(new ulong[]{0xFFFBFDFFE4010A0UL});
+		public static readonly BitSet _fanc_in_multExpression236 = new BitSet(new ulong[]{0x4020012E4002UL});
+		public static readonly BitSet _46_in_multExpression244 = new BitSet(new ulong[]{0xFFFBFDFFE4010A0UL});
+		public static readonly BitSet _fanc_in_multExpression250 = new BitSet(new ulong[]{0x4020012E4002UL});
+		public static readonly BitSet _21_in_multExpression258 = new BitSet(new ulong[]{0xFFFBFDFFE4010A0UL});
+		public static readonly BitSet _fanc_in_multExpression264 = new BitSet(new ulong[]{0x4020012E4002UL});
+		public static readonly BitSet _19_in_multExpression272 = new BitSet(new ulong[]{0xFFFBFDFFE4010A0UL});
+		public static readonly BitSet _fanc_in_multExpression278 = new BitSet(new ulong[]{0x4020012E4002UL});
+		public static readonly BitSet _exponentiationFanc_in_fanc299 = new BitSet(new ulong[]{0xC02UL});
+		public static readonly BitSet _trigonometryFanc_in_fanc306 = new BitSet(new ulong[]{0xC02UL});
+		public static readonly BitSet _bracket_in_fanc313 = new BitSet(new ulong[]{0xC02UL});
+		public static readonly BitSet _10_in_fanc320 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _11_in_fanc327 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _ID_in_bracket346 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _FLOAT_in_bracket353 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _12_in_bracket360 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
+		public static readonly BitSet _expr_in_bracket366 = new BitSet(new ulong[]{0x2000UL});
+		public static readonly BitSet _13_in_bracket368 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _59_in_bracket370 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
+		public static readonly BitSet _expr_in_bracket376 = new BitSet(new ulong[]{0x1000000000000000UL});
+		public static readonly BitSet _60_in_bracket378 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _22_in_bracket386 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
+		public static readonly BitSet _expr_in_bracket388 = new BitSet(new ulong[]{0x800000UL});
+		public static readonly BitSet _23_in_bracket390 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _25_in_bracket397 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
+		public static readonly BitSet _expr_in_bracket399 = new BitSet(new ulong[]{0x2000UL});
+		public static readonly BitSet _13_in_bracket401 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _44_in_bracket408 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
+		public static readonly BitSet _expr_in_bracket413 = new BitSet(new ulong[]{0x200UL});
+		public static readonly BitSet _SEPARATOR_in_bracket416 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
+		public static readonly BitSet _expr_in_bracket422 = new BitSet(new ulong[]{0x2200UL});
+		public static readonly BitSet _13_in_bracket428 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _45_in_bracket435 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
+		public static readonly BitSet _expr_in_bracket440 = new BitSet(new ulong[]{0x200UL});
+		public static readonly BitSet _SEPARATOR_in_bracket443 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
+		public static readonly BitSet _expr_in_bracket449 = new BitSet(new ulong[]{0x2200UL});
+		public static readonly BitSet _13_in_bracket455 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _38_in_bracket462 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
+		public static readonly BitSet _expr_in_bracket468 = new BitSet(new ulong[]{0x200UL});
+		public static readonly BitSet _SEPARATOR_in_bracket470 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
+		public static readonly BitSet _expr_in_bracket476 = new BitSet(new ulong[]{0x2000UL});
+		public static readonly BitSet _13_in_bracket478 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _47_in_bracket485 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
+		public static readonly BitSet _expr_in_bracket491 = new BitSet(new ulong[]{0x200UL});
+		public static readonly BitSet _SEPARATOR_in_bracket493 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
+		public static readonly BitSet _expr_in_bracket499 = new BitSet(new ulong[]{0x2000UL});
+		public static readonly BitSet _13_in_bracket501 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _40_in_exponentiationFanc518 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
+		public static readonly BitSet _expr_in_exponentiationFanc520 = new BitSet(new ulong[]{0x2000UL});
+		public static readonly BitSet _13_in_exponentiationFanc522 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _39_in_exponentiationFanc529 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _49_in_exponentiationFanc536 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
+		public static readonly BitSet _expr_in_exponentiationFanc542 = new BitSet(new ulong[]{0x200UL});
+		public static readonly BitSet _SEPARATOR_in_exponentiationFanc544 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
+		public static readonly BitSet _expr_in_exponentiationFanc550 = new BitSet(new ulong[]{0x2000UL});
+		public static readonly BitSet _13_in_exponentiationFanc552 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _50_in_exponentiationFanc559 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
+		public static readonly BitSet _expr_in_exponentiationFanc565 = new BitSet(new ulong[]{0x200UL});
+		public static readonly BitSet _SEPARATOR_in_exponentiationFanc567 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
+		public static readonly BitSet _expr_in_exponentiationFanc573 = new BitSet(new ulong[]{0x2000UL});
+		public static readonly BitSet _13_in_exponentiationFanc575 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _56_in_exponentiationFanc582 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
+		public static readonly BitSet _expr_in_exponentiationFanc588 = new BitSet(new ulong[]{0x2000UL});
+		public static readonly BitSet _13_in_exponentiationFanc590 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _55_in_exponentiationFanc597 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
+		public static readonly BitSet _expr_in_exponentiationFanc603 = new BitSet(new ulong[]{0x2000UL});
+		public static readonly BitSet _13_in_exponentiationFanc605 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _43_in_exponentiationFanc612 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
+		public static readonly BitSet _expr_in_exponentiationFanc618 = new BitSet(new ulong[]{0x200UL});
+		public static readonly BitSet _SEPARATOR_in_exponentiationFanc620 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
+		public static readonly BitSet _expr_in_exponentiationFanc626 = new BitSet(new ulong[]{0x2000UL});
+		public static readonly BitSet _13_in_exponentiationFanc628 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _41_in_exponentiationFanc634 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
+		public static readonly BitSet _expr_in_exponentiationFanc640 = new BitSet(new ulong[]{0x2000UL});
+		public static readonly BitSet _13_in_exponentiationFanc642 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _42_in_exponentiationFanc649 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
+		public static readonly BitSet _expr_in_exponentiationFanc651 = new BitSet(new ulong[]{0x2000UL});
+		public static readonly BitSet _13_in_exponentiationFanc653 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _48_in_trigonometryFanc671 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _standardTrigonometryFanc_in_trigonometryFanc679 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _hyperbolicTrigonometryFanc_in_trigonometryFanc686 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _arcTrigonometryFanc_in_trigonometryFanc693 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _54_in_standardTrigonometryFanc709 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
+		public static readonly BitSet _expr_in_standardTrigonometryFanc715 = new BitSet(new ulong[]{0x2000UL});
+		public static readonly BitSet _13_in_standardTrigonometryFanc717 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _32_in_standardTrigonometryFanc724 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
+		public static readonly BitSet _expr_in_standardTrigonometryFanc730 = new BitSet(new ulong[]{0x2000UL});
+		public static readonly BitSet _13_in_standardTrigonometryFanc732 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _57_in_standardTrigonometryFanc739 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
+		public static readonly BitSet _expr_in_standardTrigonometryFanc745 = new BitSet(new ulong[]{0x2000UL});
+		public static readonly BitSet _13_in_standardTrigonometryFanc747 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _35_in_standardTrigonometryFanc754 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
+		public static readonly BitSet _expr_in_standardTrigonometryFanc760 = new BitSet(new ulong[]{0x2000UL});
+		public static readonly BitSet _13_in_standardTrigonometryFanc762 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _51_in_standardTrigonometryFanc769 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
+		public static readonly BitSet _expr_in_standardTrigonometryFanc775 = new BitSet(new ulong[]{0x2000UL});
+		public static readonly BitSet _13_in_standardTrigonometryFanc777 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _33_in_standardTrigonometryFanc784 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
+		public static readonly BitSet _expr_in_standardTrigonometryFanc790 = new BitSet(new ulong[]{0x2000UL});
+		public static readonly BitSet _13_in_standardTrigonometryFanc792 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _53_in_hyperbolicTrigonometryFanc808 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
+		public static readonly BitSet _expr_in_hyperbolicTrigonometryFanc814 = new BitSet(new ulong[]{0x2000UL});
+		public static readonly BitSet _13_in_hyperbolicTrigonometryFanc816 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _31_in_hyperbolicTrigonometryFanc823 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
+		public static readonly BitSet _expr_in_hyperbolicTrigonometryFanc829 = new BitSet(new ulong[]{0x2000UL});
+		public static readonly BitSet _13_in_hyperbolicTrigonometryFanc831 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _58_in_hyperbolicTrigonometryFanc838 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
+		public static readonly BitSet _expr_in_hyperbolicTrigonometryFanc844 = new BitSet(new ulong[]{0x2000UL});
+		public static readonly BitSet _13_in_hyperbolicTrigonometryFanc846 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _36_in_hyperbolicTrigonometryFanc853 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
+		public static readonly BitSet _expr_in_hyperbolicTrigonometryFanc859 = new BitSet(new ulong[]{0x2000UL});
+		public static readonly BitSet _13_in_hyperbolicTrigonometryFanc861 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _52_in_hyperbolicTrigonometryFanc868 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
+		public static readonly BitSet _expr_in_hyperbolicTrigonometryFanc874 = new BitSet(new ulong[]{0x2000UL});
+		public static readonly BitSet _13_in_hyperbolicTrigonometryFanc876 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _34_in_hyperbolicTrigonometryFanc883 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
+		public static readonly BitSet _expr_in_hyperbolicTrigonometryFanc889 = new BitSet(new ulong[]{0x2000UL});
+		public static readonly BitSet _13_in_hyperbolicTrigonometryFanc891 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _28_in_arcTrigonometryFanc908 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
+		public static readonly BitSet _expr_in_arcTrigonometryFanc914 = new BitSet(new ulong[]{0x2000UL});
+		public static readonly BitSet _13_in_arcTrigonometryFanc916 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _26_in_arcTrigonometryFanc923 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
+		public static readonly BitSet _expr_in_arcTrigonometryFanc929 = new BitSet(new ulong[]{0x2000UL});
+		public static readonly BitSet _13_in_arcTrigonometryFanc931 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _30_in_arcTrigonometryFanc938 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
+		public static readonly BitSet _expr_in_arcTrigonometryFanc945 = new BitSet(new ulong[]{0x200UL});
+		public static readonly BitSet _SEPARATOR_in_arcTrigonometryFanc947 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
+		public static readonly BitSet _expr_in_arcTrigonometryFanc953 = new BitSet(new ulong[]{0x2000UL});
+		public static readonly BitSet _13_in_arcTrigonometryFanc956 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _29_in_arcTrigonometryFanc963 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
 		public static readonly BitSet _expr_in_arcTrigonometryFanc969 = new BitSet(new ulong[]{0x2000UL});
-		public static readonly BitSet _13_in_arcTrigonometryFanc972 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _29_in_arcTrigonometryFanc979 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
-		public static readonly BitSet _expr_in_arcTrigonometryFanc985 = new BitSet(new ulong[]{0x2000UL});
-		public static readonly BitSet _13_in_arcTrigonometryFanc987 = new BitSet(new ulong[]{0x2UL});
-		public static readonly BitSet _27_in_arcTrigonometryFanc994 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
-		public static readonly BitSet _expr_in_arcTrigonometryFanc1000 = new BitSet(new ulong[]{0x2000UL});
-		public static readonly BitSet _13_in_arcTrigonometryFanc1002 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _13_in_arcTrigonometryFanc971 = new BitSet(new ulong[]{0x2UL});
+		public static readonly BitSet _27_in_arcTrigonometryFanc978 = new BitSet(new ulong[]{0xFFFBFDFFE4110A0UL});
+		public static readonly BitSet _expr_in_arcTrigonometryFanc984 = new BitSet(new ulong[]{0x2000UL});
+		public static readonly BitSet _13_in_arcTrigonometryFanc986 = new BitSet(new ulong[]{0x2UL});
 	}
 	#endregion Follow sets
 }

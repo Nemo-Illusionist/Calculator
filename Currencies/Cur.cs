@@ -9,28 +9,27 @@ namespace Currencies
 
         public static Cur operator +(Cur a1, Cur a2)
         {
-            return Oper(a1, a2, (x, y) => x + y, (x, y, hx, hy) => x * hx + y * hy);
+            //Argument(a1,a2);
+            return Oper(a1, a2, (x, y) => x + y);
         }
-
         public static Cur operator -(Cur a1)
         {
             return new Cur {CurName = a1.CurName, Count = -a1.Count};
         }
-
         public static Cur operator -(Cur a1, Cur a2)
         {
-            return Oper(a1, a2, (x, y) => x - y, (x, y, hx, hy) => x * hx - y * hy);
+            //Argument(a1, a2);
+            return Oper(a1, a2, (x, y) => x - y);
         }
         public static Cur operator *(Cur a1, Cur a2)
         {
-            return Oper(a1, a2, (x, y) => x * y, (x, y, hx, hy) => x * hx * y * hy);
+            return Oper(a1, a2, (x, y) => x * y);
         }
         public static Cur operator /(Cur a1, Cur a2)
         {
-            return Oper(a1, a2, (x, y) => x / y, (x, y, hx, hy) => x * hx / y * hy);
+            return Oper(a1, a2, (x, y) => x / y);
         }
-        private static Cur Oper(Cur a1, Cur a2, Func<double, double, double> f1,
-            Func<double, double, double, double, double> f2)
+        private static Cur Oper(Cur a1, Cur a2, Func<double, double, double> f1)
         {
             if (a1.CurName == a2.CurName || a1.CurName == "NNN" || a2.CurName == "NNN")
             {
@@ -41,18 +40,24 @@ namespace Currencies
                 return new Cur
                 {
                     CurName = "USD",
-                    Count =
-                        f2(a1.Count, CurrenciesAPI.Coefficient(a1.CurName), a2.Count,
-                            CurrenciesAPI.Coefficient(a2.CurName))
+                    Count = f1(a1.Count * CurrenciesAPI.Coefficient(a1.CurName),
+                                a2.Count * CurrenciesAPI.Coefficient(a2.CurName))
                 };
             }
 
         }
 
+        private static void Argument(Cur a1, Cur a2)
+        {
+            if (a1.CurName == "NNN" & a2.CurName != "NNN" | a2.CurName == "NNN" & a1.CurName != "NNN")
+                throw new ArgumentException("нельзя произвести \"+/-\" между валютой и числом");
+        }
+
+
         public Cur(string str)
         {
-            CurName = str.Substring(str.Length - 4, 3);
-            Count = Double.Parse(str.Remove(str.Length - 4, 3));
+            CurName = str.Substring(str.Length - 3, 3);
+            Count = double.Parse(str.Remove(str.Length - 3, 3));
         }
         public Cur(double d)
         {
@@ -60,7 +65,7 @@ namespace Currencies
             Count = d;
         }
 
-        public override string ToString() => Count + CurName == "NNN" ? "" : CurName.ToUpper();
+        public override string ToString() => Count + (CurName == "NNN" ? "" : CurName.ToUpper());
         
         public void Convert(string newCur)
         {

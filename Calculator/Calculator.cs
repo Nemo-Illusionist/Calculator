@@ -71,16 +71,19 @@ namespace Calculator
         private void trigonometrics_Click(object sender, EventArgs e)
         {
             calculationsRTB.SelectedText = (sender as Button).Text + "()";
+            calculationsRTB.Focus();
         }
 
         private void multiParameter_Click(object sender, EventArgs e)
         {
             calculationsRTB.SelectedText = (sender as Button).Text + "( ; )";
+            calculationsRTB.Focus();
         }
 
         private void oneParameter_Click(object sender, EventArgs e)
         {
             calculationsRTB.SelectedText = (sender as Button).Tag.ToString();
+            calculationsRTB.Focus();
         }
 
         private void calculationsRTB_TextChanged(object sender, EventArgs e)

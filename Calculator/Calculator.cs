@@ -157,6 +157,22 @@ namespace Calculator
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             else;
         }
+        private void xTB_KeyPress(object sender, KeyPressEventArgs e)
+        {
+            if ((e.KeyChar == '.' || e.KeyChar == ','))
+            {
+                if ((sender as TextBox).Text.Contains(',')) e.Handled = true;
+                else
+                {
+                    e.KeyChar = ',';
+                }
+            }
+            else
+            {
+                if (Char.IsDigit(e.KeyChar) || e.KeyChar == 8 || ((sender as TextBox).Text.Length<1&&e.KeyChar=='-')) return;
+                else e.Handled = true;
+            }
+        }
 
         #endregion
 
@@ -291,20 +307,18 @@ namespace Calculator
 
         private void RUP_Value_KeyPress(object sender, KeyPressEventArgs e)
         {
+            if ((e.KeyChar == '.' || e.KeyChar == ','))
             {
-                if ((e.KeyChar == '.' || e.KeyChar == ','))
-                {
-                    if (RUP_Value.Text.Contains(',')) e.Handled = true;
-                    else
-                    {
-                        e.KeyChar = ',';
-                    }
-                }
+                if (RUP_Value.Text.Contains(',')) e.Handled = true;
                 else
                 {
-                    if (Char.IsDigit(e.KeyChar) || e.KeyChar == 8) return;
-                    else e.Handled = true;
+                    e.KeyChar = ',';
                 }
+            }
+            else
+            {
+                if (Char.IsDigit(e.KeyChar) || e.KeyChar == 8) return;
+                else e.Handled = true;
             }
             CurrenciesAPI.RupValue = Double.Parse(RUP_Value.Text);
         }
@@ -322,6 +336,21 @@ namespace Calculator
             aboutForm.ShowDialog();
         }
         #endregion
+
+        private void engSaveTSMI_Click(object sender, EventArgs e)
+        {
+            calculationsRTB.SaveFile(Environment.CurrentDirectory + @"\SavedCalculations\" + "engineer-" +
+                                     DateTime.Now.ToString("yyyy-MM-d.txt"), RichTextBoxStreamType.PlainText);
+        }
+
+        private void curSaveTSMI_Click(object sender, EventArgs e)
+        {
+            calculationsRTB.SaveFile(Environment.CurrentDirectory + @"\SavedCalculations\" + "currencies-" +
+                                     DateTime.Now.ToString("yyyy-MM-d.txt"), RichTextBoxStreamType.PlainText);
+
+        }
+
+
 
 
 

@@ -20,6 +20,8 @@ namespace Calculator
             Application.SetCompatibleTextRenderingDefault(false);
             if (!Directory.Exists(Environment.CurrentDirectory + "\\CurrenciesHistory\\"))
                 Directory.CreateDirectory(Environment.CurrentDirectory + "\\CurrenciesHistory\\");
+            if (!Directory.Exists(Environment.CurrentDirectory + "\\SavedCalculations\\"))
+                Directory.CreateDirectory(Environment.CurrentDirectory + "\\SavedCalculations\\");
             Application.Run(new Calculator(new Parser()));
         }
     }

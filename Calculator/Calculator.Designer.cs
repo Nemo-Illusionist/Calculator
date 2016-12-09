@@ -129,6 +129,7 @@
             this.helpTSMI = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutTSMI = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.curSaveTSMI = new System.Windows.Forms.ToolStripMenuItem();
             this.tabControl.SuspendLayout();
             this.engTabPage.SuspendLayout();
             this.engineerTLP.SuspendLayout();
@@ -678,6 +679,7 @@
             this.textBox2.Name = "textBox2";
             this.textBox2.Size = new System.Drawing.Size(111, 20);
             this.textBox2.TabIndex = 3;
+            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.xTB_KeyPress);
             // 
             // textBox1
             // 
@@ -686,6 +688,7 @@
             this.textBox1.Name = "textBox1";
             this.textBox1.Size = new System.Drawing.Size(111, 20);
             this.textBox1.TabIndex = 2;
+            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.xTB_KeyPress);
             // 
             // buildGraphBtn
             // 
@@ -724,6 +727,7 @@
             this.xTB.Name = "xTB";
             this.xTB.Size = new System.Drawing.Size(111, 20);
             this.xTB.TabIndex = 1;
+            this.xTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.xTB_KeyPress);
             // 
             // groupBox6
             // 
@@ -1129,6 +1133,7 @@
             // 
             this.файлToolStripMenuItem.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.engSaveTSMI,
+            this.curSaveTSMI,
             this.toolStripSeparator1,
             this.закрытьToolStripMenuItem});
             this.файлToolStripMenuItem.Name = "файлToolStripMenuItem";
@@ -1140,6 +1145,7 @@
             this.engSaveTSMI.Name = "engSaveTSMI";
             this.engSaveTSMI.Size = new System.Drawing.Size(281, 22);
             this.engSaveTSMI.Text = "Инженерный: сохранить вычисления";
+            this.engSaveTSMI.Click += new System.EventHandler(this.engSaveTSMI_Click);
             // 
             // toolStripSeparator1
             // 
@@ -1208,6 +1214,13 @@
             // 
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
+            // 
+            // curSaveTSMI
+            // 
+            this.curSaveTSMI.Name = "curSaveTSMI";
+            this.curSaveTSMI.Size = new System.Drawing.Size(281, 22);
+            this.curSaveTSMI.Text = "Валюта: сохранить вычисления";
+            this.curSaveTSMI.Click += new System.EventHandler(this.curSaveTSMI_Click);
             // 
             // Calculator
             // 
@@ -1353,6 +1366,7 @@
         private System.Windows.Forms.Label fragmentTB;
         private System.Windows.Forms.Label endIntervalTB;
         private System.Windows.Forms.Label startIntervalTB;
+        private System.Windows.Forms.ToolStripMenuItem curSaveTSMI;
     }
 }
 

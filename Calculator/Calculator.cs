@@ -25,10 +25,12 @@ namespace Calculator
 
         private readonly IGraph _graph;
         private readonly Parser _parser;
+
         private readonly Hashtable _highlight = new Hashtable()
         {
             {"symbols", @"(\(|\)|\[|\]|\<|\>|\{|\}|\+|\-|\*|\/|\:|\^|\!|\!\!|mod|div|\=)"},
-            {"functions", @"(sin\(|cos\(|tg\(|ctg\(|asin\(|acos\(|atg\(|actg\(|sh\(|ch\(|th\(|cth\(" +
+            {
+                "functions", @"(sin\(|cos\(|tg\(|ctg\(|asin\(|acos\(|atg\(|actg\(|sh\(|ch\(|th\(|cth\(" +
                              @"|sec\(|csec\(|sech\(|csch\(|div\(|mod\(|abs\(|exp\(|root\(|pow\(|max\(|min\(|sqr\(|sqrt\(|log\(|lg\(|ln\()"
             },
             {"constants", @"(pi|e)"},
@@ -89,7 +91,7 @@ namespace Calculator
 
         private void calculationsRTB_TextChanged(object sender, EventArgs e)
         {
-            if(engSynHighlightTSMI.Checked) HighlightText();
+            if (engSynHighlightTSMI.Checked) HighlightText();
             Focus();
             calculationsRTB.Focus();
         }
@@ -126,6 +128,7 @@ namespace Calculator
                 eng_ShowBtnsTSMI.Checked = true;
             }
         }
+
         private void engSynHighlightTSMI_Click(object sender, EventArgs e)
         {
             if (engSynHighlightTSMI.Checked)
@@ -153,22 +156,27 @@ namespace Calculator
 
         private void buildGraphBtn_Click(object sender, EventArgs e)
         {
-            if (funcTB.Text == "" || xTB.Text == "")
+            if (funcTB.Text == "" || startIntervalTB.Text == ""||endIntervalTB.Text==""||fragmentTB.Text=="")
                 MessageBox.Show("Введите выражение и задайте область определения!", "STOP!",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
             {
-                double a = double.Parse(xTB.Text);
-                double b = double.Parse(textBox1.Text);
-                double h = double.Parse(textBox2.Text);
+                double a = double.Parse(startIntervalTB.Text);
+                double b = double.Parse(endIntervalTB.Text);
+                double h = double.Parse(fragmentTB.Text);
                 List<double> x = new List<double>();
                 for (double i = a < b ? a : b; i < (a > b ? a : b); i += h)
                     x.Add(i);
                 List<double> y = _parser.SolveGraph(funcTB.Text, a, b, h);
-                _graph.AddLine(x,y);
+                _graph.AddLine(x, y);
+                graphicsList.Items.Add(new ListViewItem(funcTB.Text)
+                {
+                    SubItems = {startIntervalTB.Text + " - " + endIntervalTB.Text + "; " + fragmentTB.Text}
+                });
             }
 
         }
+
         private void xTB_KeyPress(object sender, KeyPressEventArgs e)
         {
             if ((e.KeyChar == '.' || e.KeyChar == ','))
@@ -181,14 +189,35 @@ namespace Calculator
             }
             else
             {
-                if (Char.IsDigit(e.KeyChar) || e.KeyChar == 8 || ((sender as TextBox).Text.Length<1&&e.KeyChar=='-')) return;
+                if (Char.IsDigit(e.KeyChar) || e.KeyChar == 8 ||
+                    ((sender as TextBox).Text.Length < 1 && e.KeyChar == '-')) return;
                 else e.Handled = true;
             }
+        }
+
+        private void deleteLineTSMI_Click(object sender, EventArgs e)
+        {
+            _graph.Clear(graphicsList.SelectedItems[0].Index);
+            graphicsList.Items.Remove(graphicsList.SelectedItems[0]);
+            _graph.Update();
+        }
+
+        private void deleteAllLinesTSMI_Click(object sender, EventArgs e)
+        {
+            graphicsList.Items.Clear();
+            _graph.Clear();
+            _graph.Update();
+        }
+
+        private void contextMenu_Opening(object sender, System.ComponentModel.CancelEventArgs e)
+        {
+            if (graphicsList.SelectedItems.Count == 0) e.Cancel = true;
         }
 
         #endregion
 
         #region Dates
+
         private void firstDateMC_DateChanged(object sender, DateRangeEventArgs e)
         {
             firstDate.Value = firstDateMC.SelectionEnd;
@@ -208,6 +237,7 @@ namespace Calculator
         {
             lastDateMC.TodayDate = lastDate.Value;
         }
+
         private void calcDateBtn_Click(object sender, EventArgs e)
         {
             dateResultList.Items.Clear();
@@ -215,13 +245,16 @@ namespace Calculator
             if (firstDate.Value > lastDate.Value) ts = firstDate.Value - lastDate.Value;
             else ts = lastDate.Value - firstDate.Value;
             dateResultList.Items.Add(new ListViewItem(String.Format("{0:00} секунд", ts.TotalSeconds)));
-            if (ts.TotalSeconds > 60) dateResultList.Items.Add(new ListViewItem(
-                String.Format("{0:00} минут {1:00} секунд", ts.TotalMinutes, ts.Seconds)));
-            if (ts.TotalMinutes > 60) dateResultList.Items.Add(new ListViewItem(
-                String.Format("{0:00} часов {1:00} минут {2:00} секунд", ts.TotalHours, ts.Minutes, ts.Seconds)));
-            if (ts.TotalHours > 24) dateResultList.Items.Add(new ListViewItem(
-                String.Format("{0:00} дней, {1:00} часов {2:00} минут {3:00} секунд",
-                ts.TotalDays, ts.Hours, ts.Minutes, ts.Seconds)));
+            if (ts.TotalSeconds > 60)
+                dateResultList.Items.Add(new ListViewItem(
+                    String.Format("{0:00} минут {1:00} секунд", ts.TotalMinutes, ts.Seconds)));
+            if (ts.TotalMinutes > 60)
+                dateResultList.Items.Add(new ListViewItem(
+                    String.Format("{0:00} часов {1:00} минут {2:00} секунд", ts.TotalHours, ts.Minutes, ts.Seconds)));
+            if (ts.TotalHours > 24)
+                dateResultList.Items.Add(new ListViewItem(
+                    String.Format("{0:00} дней, {1:00} часов {2:00} минут {3:00} секунд",
+                        ts.TotalDays, ts.Hours, ts.Minutes, ts.Seconds)));
             /*if (ts.TotalDays > 28) dateResultList.Items.Add(new ListViewItem(
                 String.Format("{0:00} месяцев {1:00} дней, {2:00} часов {3:00} минут {4:00} секунд",
                 new DateTime(ts.Ticks).Year * 12 + new DateTime(ts.Ticks).Month, new DateTime(ts.Ticks).Day, ts.Hours, ts.Minutes, ts.Seconds)));
@@ -248,6 +281,7 @@ namespace Calculator
                 MessageBox.Show(ex.Message, "Произошла ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         private void currencyDate_ValueChanged(object sender, EventArgs e)
         {
             try
@@ -260,17 +294,19 @@ namespace Calculator
                 MessageBox.Show(ex.Message, "Произошла ошибка", MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
+
         private void curTabPage_Layout(object sender, LayoutEventArgs e)
         {
             currencyDate.MaxDate = DateTime.Now;
             DateTime actual = new DateTime(1999, 01, 01);
             CurrenciesAPI.SelectedDate = currencyDate.Value;
             CurrenciesAPI.RupValue = Double.Parse(RUP_Value.Text);
+            currenciesList.Items.Clear();
             var json = Properties.Resources.currencies;
             JObject o = JObject.Parse(json);
             foreach (var token in o)
             {
-                currenciesList.Items.Add(new ListViewItem(token.Key) { SubItems = { token.Value.ToString() } });
+                currenciesList.Items.Add(new ListViewItem(token.Key) {SubItems = {token.Value.ToString()}});
             }
             foreach (var file in Directory.GetFiles(Environment.CurrentDirectory + "\\CurrenciesHistory\\"))
             {
@@ -282,11 +318,13 @@ namespace Calculator
                 actualDateLabel.Text = actual.ToString("dd.MM.yyyy");
             }
         }
+
         private void currenciesRTB_TextChanged(object sender, EventArgs e)
         {
             this.Focus();
             currenciesRTB.Focus();
         }
+
         private void currenciesRTB_KeyDown(object sender, KeyEventArgs e)
         {
             try
@@ -310,9 +348,11 @@ namespace Calculator
             }
             catch (Exception ex)
             {
-                MessageBox.Show(ex.Message, "Произошла ошибка, да, у нас их много", MessageBoxButtons.OK, MessageBoxIcon.Error);
+                MessageBox.Show(ex.Message, "Произошла ошибка, да, у нас их много", MessageBoxButtons.OK,
+                    MessageBoxIcon.Error);
             }
         }
+
         private void RUP_Value_TextChanged(object sender, EventArgs e)
         {
         }
@@ -334,33 +374,43 @@ namespace Calculator
             }
             CurrenciesAPI.RupValue = Double.Parse(RUP_Value.Text);
         }
+
         #endregion
 
         #region Misc
+
         private void helpTSMI_Click(object sender, EventArgs e)
         {
             HelpForm helpForm = new HelpForm();
             helpForm.Show();
         }
+
         private void aboutTSMI_Click(object sender, EventArgs e)
         {
             AboutForm aboutForm = new AboutForm();
             aboutForm.ShowDialog();
         }
-        #endregion
 
         private void engSaveTSMI_Click(object sender, EventArgs e)
         {
             calculationsRTB.SaveFile(Environment.CurrentDirectory + @"\SavedCalculations\" + "engineer-" +
                                      DateTime.Now.ToString("yyyy-MM-d.txt"), RichTextBoxStreamType.PlainText);
+            MessageBox.Show("Вычисления успешно сохранены", "Вычисления режима: Инженерный", 
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 
         private void curSaveTSMI_Click(object sender, EventArgs e)
         {
             calculationsRTB.SaveFile(Environment.CurrentDirectory + @"\SavedCalculations\" + "currencies-" +
                                      DateTime.Now.ToString("yyyy-MM-d.txt"), RichTextBoxStreamType.PlainText);
+            MessageBox.Show("Вычисления успешно сохранены", "Вычисления режима: Курс валют",
+                MessageBoxButtons.OK, MessageBoxIcon.Information);
 
         }
+
+        #endregion
+
+
 
 
 

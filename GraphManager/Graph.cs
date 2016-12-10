@@ -27,9 +27,11 @@ namespace GraphManager {
             Grid(pane);
 
             // Подпись осей
+            pane.Title.Text = "Графики введенных функций:";
+            
             pane.XAxis.Title.Text = "Значения x";
             pane.YAxis.Title.Text = "Значения y";
-            pane.XAxis.Title.FontSpec.Size = pane.YAxis.Title.FontSpec.Size = 10;
+            pane.XAxis.Title.FontSpec.Size = pane.YAxis.Title.FontSpec.Size = pane.Title.FontSpec.Size = 10;
             Legend(pane);
 
             // Опорные точки выделяться не будут (SymbolType.None)
@@ -69,7 +71,7 @@ namespace GraphManager {
             KnownColor[] names = (KnownColor[])Enum.GetValues(typeof(KnownColor));
             KnownColor randomColorName = names[randomGen.Next(names.Length)];
             Color randomColor = Color.FromKnownColor(randomColorName);
-            _graph.GraphPane.AddCurve("", new PointPairList(x.ToArray(), y.ToArray()), randomColor);
+            _graph.GraphPane.AddCurve("", new PointPairList(x.ToArray(), y.ToArray()), randomColor,SymbolType.None).Line.Width = 2;
             Update();
         }
 
@@ -81,6 +83,10 @@ namespace GraphManager {
         public void Clear()
         {
             _graph.GraphPane.CurveList.Clear();
+        }
+        public void Clear(int index)
+        {
+            _graph.GraphPane.CurveList.RemoveAt(index);
         }
     }
 }

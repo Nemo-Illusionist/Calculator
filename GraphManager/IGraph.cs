@@ -6,6 +6,7 @@ namespace GraphManager
     {
         void AddLine(List<double> x, List<double> y);
         void Clear();
+        void Clear(int index);
         void Update();
     }
 }

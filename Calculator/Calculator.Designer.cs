@@ -70,15 +70,15 @@
             this.matTabPage = new System.Windows.Forms.TabPage();
             this.graTabPage = new System.Windows.Forms.TabPage();
             this.groupBox10 = new System.Windows.Forms.GroupBox();
-            this.fragmentTB = new System.Windows.Forms.Label();
-            this.endIntervalTB = new System.Windows.Forms.Label();
-            this.startIntervalTB = new System.Windows.Forms.Label();
-            this.textBox2 = new System.Windows.Forms.TextBox();
-            this.textBox1 = new System.Windows.Forms.TextBox();
+            this.fragmentLbl = new System.Windows.Forms.Label();
+            this.endIntervalLbl = new System.Windows.Forms.Label();
+            this.startIntervallbl = new System.Windows.Forms.Label();
+            this.fragmentTB = new System.Windows.Forms.TextBox();
+            this.endIntervalTB = new System.Windows.Forms.TextBox();
             this.buildGraphBtn = new System.Windows.Forms.Button();
             this.label7 = new System.Windows.Forms.Label();
             this.funcTB = new System.Windows.Forms.TextBox();
-            this.xTB = new System.Windows.Forms.TextBox();
+            this.startIntervalTB = new System.Windows.Forms.TextBox();
             this.groupBox6 = new System.Windows.Forms.GroupBox();
             this.graphicsList = new System.Windows.Forms.ListView();
             this.columnHeader3 = ((System.Windows.Forms.ColumnHeader)(new System.Windows.Forms.ColumnHeader()));
@@ -120,6 +120,7 @@
             this.menuStrip1 = new System.Windows.Forms.MenuStrip();
             this.файлToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.engSaveTSMI = new System.Windows.Forms.ToolStripMenuItem();
+            this.curSaveTSMI = new System.Windows.Forms.ToolStripMenuItem();
             this.toolStripSeparator1 = new System.Windows.Forms.ToolStripSeparator();
             this.закрытьToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
             this.видToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
@@ -129,7 +130,7 @@
             this.helpTSMI = new System.Windows.Forms.ToolStripMenuItem();
             this.aboutTSMI = new System.Windows.Forms.ToolStripMenuItem();
             this.contextMenuStrip1 = new System.Windows.Forms.ContextMenuStrip(this.components);
-            this.curSaveTSMI = new System.Windows.Forms.ToolStripMenuItem();
+            this.textBox1 = new System.Windows.Forms.TextBox();
             this.tabControl.SuspendLayout();
             this.engTabPage.SuspendLayout();
             this.engineerTLP.SuspendLayout();
@@ -144,6 +145,7 @@
             this.groupBox4.SuspendLayout();
             this.groupBox3.SuspendLayout();
             this.datTabPage.SuspendLayout();
+            this.groupBox9.SuspendLayout();
             this.groupBox8.SuspendLayout();
             this.groupBox7.SuspendLayout();
             this.groupBox5.SuspendLayout();
@@ -626,15 +628,15 @@
             // 
             // groupBox10
             // 
+            this.groupBox10.Controls.Add(this.fragmentLbl);
+            this.groupBox10.Controls.Add(this.endIntervalLbl);
+            this.groupBox10.Controls.Add(this.startIntervallbl);
             this.groupBox10.Controls.Add(this.fragmentTB);
             this.groupBox10.Controls.Add(this.endIntervalTB);
-            this.groupBox10.Controls.Add(this.startIntervalTB);
-            this.groupBox10.Controls.Add(this.textBox2);
-            this.groupBox10.Controls.Add(this.textBox1);
             this.groupBox10.Controls.Add(this.buildGraphBtn);
             this.groupBox10.Controls.Add(this.label7);
             this.groupBox10.Controls.Add(this.funcTB);
-            this.groupBox10.Controls.Add(this.xTB);
+            this.groupBox10.Controls.Add(this.startIntervalTB);
             this.groupBox10.Location = new System.Drawing.Point(4, 10);
             this.groupBox10.Name = "groupBox10";
             this.groupBox10.Size = new System.Drawing.Size(232, 188);
@@ -642,53 +644,54 @@
             this.groupBox10.TabStop = false;
             this.groupBox10.Text = "Входные данные";
             // 
+            // fragmentLbl
+            // 
+            this.fragmentLbl.AutoSize = true;
+            this.fragmentLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.fragmentLbl.Location = new System.Drawing.Point(6, 136);
+            this.fragmentLbl.Name = "fragmentLbl";
+            this.fragmentLbl.Size = new System.Drawing.Size(30, 13);
+            this.fragmentLbl.TabIndex = 12;
+            this.fragmentLbl.Text = "Шаг:";
+            // 
+            // endIntervalLbl
+            // 
+            this.endIntervalLbl.AutoSize = true;
+            this.endIntervalLbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.endIntervalLbl.Location = new System.Drawing.Point(6, 110);
+            this.endIntervalLbl.Name = "endIntervalLbl";
+            this.endIntervalLbl.Size = new System.Drawing.Size(97, 13);
+            this.endIntervalLbl.TabIndex = 11;
+            this.endIntervalLbl.Text = "Конец интервала:";
+            // 
+            // startIntervallbl
+            // 
+            this.startIntervallbl.AutoSize = true;
+            this.startIntervallbl.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
+            this.startIntervallbl.Location = new System.Drawing.Point(6, 84);
+            this.startIntervallbl.Name = "startIntervallbl";
+            this.startIntervallbl.Size = new System.Drawing.Size(103, 13);
+            this.startIntervallbl.TabIndex = 10;
+            this.startIntervallbl.Text = "Начало интервала:";
+            // 
             // fragmentTB
             // 
-            this.fragmentTB.AutoSize = true;
-            this.fragmentTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.fragmentTB.Location = new System.Drawing.Point(6, 136);
+            this.fragmentTB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.fragmentTB.Location = new System.Drawing.Point(115, 133);
             this.fragmentTB.Name = "fragmentTB";
-            this.fragmentTB.Size = new System.Drawing.Size(30, 13);
-            this.fragmentTB.TabIndex = 12;
-            this.fragmentTB.Text = "Шаг:";
+            this.fragmentTB.Size = new System.Drawing.Size(111, 20);
+            this.fragmentTB.TabIndex = 3;
+            this.fragmentTB.Text = "0,1";
+            this.fragmentTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.xTB_KeyPress);
             // 
             // endIntervalTB
             // 
-            this.endIntervalTB.AutoSize = true;
-            this.endIntervalTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.endIntervalTB.Location = new System.Drawing.Point(6, 110);
+            this.endIntervalTB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.endIntervalTB.Location = new System.Drawing.Point(115, 107);
             this.endIntervalTB.Name = "endIntervalTB";
-            this.endIntervalTB.Size = new System.Drawing.Size(97, 13);
-            this.endIntervalTB.TabIndex = 11;
-            this.endIntervalTB.Text = "Конец интервала:";
-            // 
-            // startIntervalTB
-            // 
-            this.startIntervalTB.AutoSize = true;
-            this.startIntervalTB.Font = new System.Drawing.Font("Microsoft Sans Serif", 8.25F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(204)));
-            this.startIntervalTB.Location = new System.Drawing.Point(6, 84);
-            this.startIntervalTB.Name = "startIntervalTB";
-            this.startIntervalTB.Size = new System.Drawing.Size(103, 13);
-            this.startIntervalTB.TabIndex = 10;
-            this.startIntervalTB.Text = "Начало интервала:";
-            // 
-            // textBox2
-            // 
-            this.textBox2.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox2.Location = new System.Drawing.Point(115, 133);
-            this.textBox2.Name = "textBox2";
-            this.textBox2.Size = new System.Drawing.Size(111, 20);
-            this.textBox2.TabIndex = 3;
-            this.textBox2.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.xTB_KeyPress);
-            // 
-            // textBox1
-            // 
-            this.textBox1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.textBox1.Location = new System.Drawing.Point(115, 107);
-            this.textBox1.Name = "textBox1";
-            this.textBox1.Size = new System.Drawing.Size(111, 20);
-            this.textBox1.TabIndex = 2;
-            this.textBox1.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.xTB_KeyPress);
+            this.endIntervalTB.Size = new System.Drawing.Size(111, 20);
+            this.endIntervalTB.TabIndex = 2;
+            this.endIntervalTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.xTB_KeyPress);
             // 
             // buildGraphBtn
             // 
@@ -720,17 +723,19 @@
             this.funcTB.Size = new System.Drawing.Size(217, 43);
             this.funcTB.TabIndex = 0;
             // 
-            // xTB
+            // startIntervalTB
             // 
-            this.xTB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
-            this.xTB.Location = new System.Drawing.Point(115, 81);
-            this.xTB.Name = "xTB";
-            this.xTB.Size = new System.Drawing.Size(111, 20);
-            this.xTB.TabIndex = 1;
-            this.xTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.xTB_KeyPress);
+            this.startIntervalTB.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Right)));
+            this.startIntervalTB.Location = new System.Drawing.Point(115, 81);
+            this.startIntervalTB.Name = "startIntervalTB";
+            this.startIntervalTB.Size = new System.Drawing.Size(111, 20);
+            this.startIntervalTB.TabIndex = 1;
+            this.startIntervalTB.KeyPress += new System.Windows.Forms.KeyPressEventHandler(this.xTB_KeyPress);
             // 
             // groupBox6
             // 
+            this.groupBox6.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left)));
             this.groupBox6.Controls.Add(this.graphicsList);
             this.groupBox6.Location = new System.Drawing.Point(4, 204);
             this.groupBox6.Name = "groupBox6";
@@ -749,6 +754,7 @@
             this.graphicsList.FullRowSelect = true;
             this.graphicsList.GridLines = true;
             this.graphicsList.Location = new System.Drawing.Point(3, 16);
+            this.graphicsList.MultiSelect = false;
             this.graphicsList.Name = "graphicsList";
             this.graphicsList.Size = new System.Drawing.Size(229, 236);
             this.graphicsList.TabIndex = 5;
@@ -771,18 +777,21 @@
             this.deleteAllLinesTSMI});
             this.contextMenu.Name = "contextMenu";
             this.contextMenu.Size = new System.Drawing.Size(140, 48);
+            this.contextMenu.Opening += new System.ComponentModel.CancelEventHandler(this.contextMenu_Opening);
             // 
             // deleteLineTSMI
             // 
             this.deleteLineTSMI.Name = "deleteLineTSMI";
             this.deleteLineTSMI.Size = new System.Drawing.Size(139, 22);
             this.deleteLineTSMI.Text = "Удалить";
+            this.deleteLineTSMI.Click += new System.EventHandler(this.deleteLineTSMI_Click);
             // 
             // deleteAllLinesTSMI
             // 
             this.deleteAllLinesTSMI.Name = "deleteAllLinesTSMI";
             this.deleteAllLinesTSMI.Size = new System.Drawing.Size(139, 22);
             this.deleteAllLinesTSMI.Text = "Удалить все";
+            this.deleteAllLinesTSMI.Click += new System.EventHandler(this.deleteAllLinesTSMI_Click);
             // 
             // zedGraph
             // 
@@ -1005,6 +1014,7 @@
             // 
             this.groupBox9.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
+            this.groupBox9.Controls.Add(this.textBox1);
             this.groupBox9.Location = new System.Drawing.Point(441, 6);
             this.groupBox9.Name = "groupBox9";
             this.groupBox9.Size = new System.Drawing.Size(319, 178);
@@ -1147,6 +1157,13 @@
             this.engSaveTSMI.Text = "Инженерный: сохранить вычисления";
             this.engSaveTSMI.Click += new System.EventHandler(this.engSaveTSMI_Click);
             // 
+            // curSaveTSMI
+            // 
+            this.curSaveTSMI.Name = "curSaveTSMI";
+            this.curSaveTSMI.Size = new System.Drawing.Size(281, 22);
+            this.curSaveTSMI.Text = "Валюта: сохранить вычисления";
+            this.curSaveTSMI.Click += new System.EventHandler(this.curSaveTSMI_Click);
+            // 
             // toolStripSeparator1
             // 
             this.toolStripSeparator1.Name = "toolStripSeparator1";
@@ -1215,12 +1232,19 @@
             this.contextMenuStrip1.Name = "contextMenuStrip1";
             this.contextMenuStrip1.Size = new System.Drawing.Size(61, 4);
             // 
-            // curSaveTSMI
+            // textBox1
             // 
-            this.curSaveTSMI.Name = "curSaveTSMI";
-            this.curSaveTSMI.Size = new System.Drawing.Size(281, 22);
-            this.curSaveTSMI.Text = "Валюта: сохранить вычисления";
-            this.curSaveTSMI.Click += new System.EventHandler(this.curSaveTSMI_Click);
+            this.textBox1.BackColor = System.Drawing.Color.White;
+            this.textBox1.BorderStyle = System.Windows.Forms.BorderStyle.None;
+            this.textBox1.Dock = System.Windows.Forms.DockStyle.Fill;
+            this.textBox1.Location = new System.Drawing.Point(3, 16);
+            this.textBox1.Multiline = true;
+            this.textBox1.Name = "textBox1";
+            this.textBox1.ReadOnly = true;
+            this.textBox1.ScrollBars = System.Windows.Forms.ScrollBars.Vertical;
+            this.textBox1.Size = new System.Drawing.Size(313, 159);
+            this.textBox1.TabIndex = 0;
+            this.textBox1.Text = resources.GetString("textBox1.Text");
             // 
             // Calculator
             // 
@@ -1255,6 +1279,8 @@
             this.groupBox3.ResumeLayout(false);
             this.groupBox3.PerformLayout();
             this.datTabPage.ResumeLayout(false);
+            this.groupBox9.ResumeLayout(false);
+            this.groupBox9.PerformLayout();
             this.groupBox8.ResumeLayout(false);
             this.groupBox7.ResumeLayout(false);
             this.groupBox5.ResumeLayout(false);
@@ -1336,7 +1362,7 @@
         private System.Windows.Forms.ToolStripMenuItem eng_ShowBtnsTSMI;
         private System.Windows.Forms.ToolStripMenuItem helpTSMI;
         private System.Windows.Forms.ToolStripMenuItem aboutTSMI;
-        private System.Windows.Forms.TextBox xTB;
+        private System.Windows.Forms.TextBox startIntervalTB;
         private System.Windows.Forms.TextBox funcTB;
         private System.Windows.Forms.Label label7;
         private System.Windows.Forms.Button buildGraphBtn;
@@ -1361,12 +1387,13 @@
         private System.Windows.Forms.ColumnHeader columnHeader5;
         private System.Windows.Forms.ToolStripMenuItem engSynHighlightTSMI;
         private System.Windows.Forms.GroupBox groupBox10;
-        private System.Windows.Forms.TextBox textBox2;
-        private System.Windows.Forms.TextBox textBox1;
-        private System.Windows.Forms.Label fragmentTB;
-        private System.Windows.Forms.Label endIntervalTB;
-        private System.Windows.Forms.Label startIntervalTB;
+        private System.Windows.Forms.TextBox fragmentTB;
+        private System.Windows.Forms.TextBox endIntervalTB;
+        private System.Windows.Forms.Label fragmentLbl;
+        private System.Windows.Forms.Label endIntervalLbl;
+        private System.Windows.Forms.Label startIntervallbl;
         private System.Windows.Forms.ToolStripMenuItem curSaveTSMI;
+        private System.Windows.Forms.TextBox textBox1;
     }
 }
 

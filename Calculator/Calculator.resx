@@ -59,8 +59,8 @@
             : using a System.ComponentModel.TypeConverter
             : and then encoded with base64 encoding.
     -->
-  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/xMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
-    <xsd:import namespace="http://www.w3.org/xML/1998/namespace" />
+  <xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+    <xsd:import namespace="http://www.w3.org/XML/1998/namespace" />
     <xsd:element name="root" msdata:IsDataSet="true">
       <xsd:complexType>
         <xsd:choice maxOccurs="unbounded">
@@ -120,6 +120,12 @@
   <metadata name="contextMenu.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>132, 3</value>
   </metadata>
+  <data name="textBox1.Text" xml:space="preserve">
+    <value>Можно выбрать дату из календаря, можно выбрать из переключателя дат ниже. Внимание: при выборе даты с календаря учитывается последний выделенный из выделяемого диапазона дней, и время не меняется при выборе даты с календаря. При выборе даты из переключателя дат, текущая выбранная дата задается в календаре выше (обозначается как сегодняшняя).
+
+При нажатии на кнопку "Показать разницу", из двух дата определяется та, что больше(позже), и из нее вычитается вторая. Результаты показываются в зависимости от ширины диапазона разницы. Если он ограничен секундами, то калькулятор покажет разницу только в секундах, если же допустим, в днях - покажет в секундах, минутах (с остатком в секундах), часах (тоже с остатком) и днях (с остатком). 
+</value>
+  </data>
   <metadata name="menuStrip1.TrayLocation" type="System.Drawing.Point, System.Drawing, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b03f5f7f11d50a3a">
     <value>17, 17</value>
   </metadata>

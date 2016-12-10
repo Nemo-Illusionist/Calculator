@@ -21,20 +21,19 @@ namespace Calculator
             InitializeComponent();
             _parser = parser;
             _graph = new Graph(zedGraph);
+            _highlight = new Hashtable{
+                {"symbols", @"(\(|\)|\[|\]|\<|\>|\{|\}|\+|\-|\*|\/|\:|\^|\!|\!\!|mod|div|\=)"},
+                {
+                    "functions", @"(sin\(|cos\(|tg\(|ctg\(|asin\(|acos\(|atg\(|actg\(|sh\(|ch\(|th\(|cth\(" +
+                                 @"|sec\(|csec\(|sech\(|csch\(|div\(|mod\(|abs\(|exp\(|root\(|pow\(|max\(|min\(|sqr\(|sqrt\(|log\(|lg\(|ln\()"
+                },
+                {"constants", @"(pi|e)"},
+            };
         }
 
         private readonly IGraph _graph;
         private readonly Parser _parser;
-
-        private readonly Hashtable _highlight = new Hashtable()
-        {
-            {"symbols", @"(\(|\)|\[|\]|\<|\>|\{|\}|\+|\-|\*|\/|\:|\^|\!|\!\!|mod|div|\=)"},
-            {
-                "functions", @"(sin\(|cos\(|tg\(|ctg\(|asin\(|acos\(|atg\(|actg\(|sh\(|ch\(|th\(|cth\(" +
-                             @"|sec\(|csec\(|sech\(|csch\(|div\(|mod\(|abs\(|exp\(|root\(|pow\(|max\(|min\(|sqr\(|sqrt\(|log\(|lg\(|ln\()"
-            },
-            {"constants", @"(pi|e)"},
-        };
+        private readonly Hashtable _highlight;
 
         #region Engineer
 
@@ -98,20 +97,28 @@ namespace Calculator
 
         private void calculationsRTB_KeyDown(object sender, KeyEventArgs e)
         {
-            switch (e.KeyCode)
+            try
             {
-                case Keys.Enter:
-                    var line = calculationsRTB.GetLineFromCharIndex(calculationsRTB.SelectionStart);
-                    var s = calculationsRTB.GetFirstCharIndexOfCurrentLine() + calculationsRTB.Lines[line].Length;
-                    calculationsRTB.SelectionStart = s;
-                    calculationsRTB.SelectedText = _parser.SolveEngineer(calculationsRTB.Lines[line]);
-                    break;
-                case Keys.Z:
-                    if (e.Control) calculationsRTB.Undo();
-                    break;
-                case Keys.Y:
-                    if (e.Control) calculationsRTB.Redo();
-                    break;
+                switch (e.KeyCode)
+                {
+                    case Keys.Enter:
+                        var line = calculationsRTB.GetLineFromCharIndex(calculationsRTB.SelectionStart);
+                        var s = calculationsRTB.GetFirstCharIndexOfCurrentLine() + calculationsRTB.Lines[line].Length;
+                        calculationsRTB.SelectionStart = s;
+                        calculationsRTB.SelectedText = _parser.SolveEngineer(calculationsRTB.Lines[line]);
+                        break;
+                    case Keys.Z:
+                        if (e.Control) calculationsRTB.Undo();
+                        break;
+                    case Keys.Y:
+                        if (e.Control) calculationsRTB.Redo();
+                        break;
+                }
+            }
+            catch (Exception ex)
+            {
+                MessageBox.Show(ex.Message, "Error!",
+                    MessageBoxButtons.OK, MessageBoxIcon.Error);
             }
         }
 
@@ -156,7 +163,7 @@ namespace Calculator
 
         private void buildGraphBtn_Click(object sender, EventArgs e)
         {
-            if (funcTB.Text == "" || startIntervalTB.Text == ""||endIntervalTB.Text==""||fragmentTB.Text=="")
+            if (funcTB.Text == "" || startIntervalTB.Text == "" || endIntervalTB.Text == "" || fragmentTB.Text == "")
                 MessageBox.Show("Введите выражение и задайте область определения!", "STOP!",
                     MessageBoxButtons.OK, MessageBoxIcon.Error);
             else
@@ -165,13 +172,12 @@ namespace Calculator
                 double b = double.Parse(endIntervalTB.Text);
                 double h = double.Parse(fragmentTB.Text);
                 List<double> x = new List<double>();
-                for (double i = a < b ? a : b; i < (a > b ? a : b); i += h)
-                    x.Add(i);
-                List<double> y = _parser.SolveGraph(funcTB.Text, a, b, h);
+                for (double i = a < b ? a : b; i <= (a > b ? a : b); i += h) x.Add(i);
+                List<double> y = _parser.SolveGraph(funcTB.Text, x);
                 _graph.AddLine(x, y);
                 graphicsList.Items.Add(new ListViewItem(funcTB.Text)
                 {
-                    SubItems = {startIntervalTB.Text + " - " + endIntervalTB.Text + "; " + fragmentTB.Text}
+                    SubItems = { startIntervalTB.Text + " - " + endIntervalTB.Text + "; " + fragmentTB.Text }
                 });
             }
 
@@ -306,7 +312,7 @@ namespace Calculator
             JObject o = JObject.Parse(json);
             foreach (var token in o)
             {
-                currenciesList.Items.Add(new ListViewItem(token.Key) {SubItems = {token.Value.ToString()}});
+                currenciesList.Items.Add(new ListViewItem(token.Key) { SubItems = { token.Value.ToString() } });
             }
             foreach (var file in Directory.GetFiles(Environment.CurrentDirectory + "\\CurrenciesHistory\\"))
             {
@@ -395,7 +401,7 @@ namespace Calculator
         {
             calculationsRTB.SaveFile(Environment.CurrentDirectory + @"\SavedCalculations\" + "engineer-" +
                                      DateTime.Now.ToString("yyyy-MM-d.txt"), RichTextBoxStreamType.PlainText);
-            MessageBox.Show("Вычисления успешно сохранены", "Вычисления режима: Инженерный", 
+            MessageBox.Show("Вычисления успешно сохранены", "Вычисления режима: Инженерный",
                 MessageBoxButtons.OK, MessageBoxIcon.Information);
         }
 

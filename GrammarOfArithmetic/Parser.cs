@@ -1,5 +1,7 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Globalization;
+using System.Linq;
 using Antlr.Runtime;
 using Generated;
 using MathNet.Numerics.LinearAlgebra;
@@ -30,27 +32,19 @@ namespace GrammarOfArithmetic
             }
         }
 
-        public List<double> SolveGraph(string s, double a, double b, double h)
+        public List<double> SolveGraph(string s, List<double> x)
         {
-            List<double> y = new List<double>();
-            for (double i = a<b?a:b; i < (a > b ? a : b); i +=h)
-            {
-                GrammarOfArithmeticLexer lexer = new GrammarOfArithmeticLexer(input(s.Replace("x", i.ToString())));
-                CommonTokenStream tokens = new CommonTokenStream(lexer);
-                GrammarOfArithmeticParser parser = new GrammarOfArithmeticParser(tokens);
-                y.Add(parser.graph());
-
-            }
-            
-            
-            return y;
+            return (from i in x select 
+                    new GrammarOfArithmeticLexer(input("x="+ i + "\r\n" + s)) 
+                    into lexer select new CommonTokenStream(lexer) 
+                    into tokens select new GrammarOfArithmeticParser(tokens) 
+                    into parser select parser.graph()).ToList();
         }
 
         public string SolveCurrency(string s)
         {
             try
             {
-                
                 GrammarOfCurrencyLexer lexer = new GrammarOfCurrencyLexer(input(s));
                 CommonTokenStream tokens = new CommonTokenStream(lexer);
                 GrammarOfCurrencyParser parser = new GrammarOfCurrencyParser(tokens);

@@ -36,7 +36,13 @@ options
 
 
 public graph returns[double value]
-	: expr  NEWLINE { $value = $expr.value; }
+	: ID '=' a1 = expr NEWLINE 
+		{ if(!memory.ContainsKey($ID.text))
+			memory.Add($ID.text, $a1.value);
+		  else
+			memory[$ID.text] = $a1.value;
+		}
+	a2 = expr { $value = $a2.value; } NEWLINE
 	| NEWLINE
 	;
 
